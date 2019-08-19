@@ -9,6 +9,7 @@
 
 * Nota: estos 4 pasos se ejecutan una sola vez
 
+___
 ## Haz tu asignación:
 
 Elige una de dos alternativas en función del tipo de asignación:
