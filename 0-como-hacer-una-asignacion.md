@@ -1,4 +1,4 @@
-# ¿Cómo crear un repositorio con tu asignación y, posteriormente, como hacerla?
+# ¿Cómo crear un repositorio con tu asignación y, posteriormente, cómo hacerla?
 
 ## Crea un repositorio con tu asignación:
 
@@ -17,11 +17,11 @@ A. Usa la interfaz web de GitHub si no vas a ejecutar código. Por ejemplo, usa 
 
 1. Inicia una sesión en GitHub con tu usuario/contraseña.
 2. Localiza el repo que contiene la asignación, donde podrás hacer cambios a un archivo existente o crear uno nuevo (dependerá de lo asignado):
-    2.1. Para actualizar un archivo existente, haz clic sobre su nombre y luego en el lápiz del encabezado. Haz los cambios que correspondan según lo asignado.
-    2.2. Para crear un nuevo documento, presiona el botón "Create new file", se creará un documento en blanco, ponle un nombre en el cuadro "Name your file" y, en el documento, añade el texto que corresponda según lo asignado.
+   2.1. Para actualizar un archivo existente, haz clic sobre su nombre y luego en el lápiz del encabezado. Haz los cambios que correspondan según lo asignado.
+   2.2. Para crear un nuevo documento, presiona el botón "Create new file", se creará un documento en blanco, ponle un nombre en el cuadro "Name your file" y, en el documento, añade el texto que corresponda según lo asignado.
 3. Al terminar de añadir texto/hacer cambios, ve al final de la página y presiona "Commit changes". Más detalles, en el aula.
 
-B. Utiliza RStudio si vas a ejecutar código de R, como por ejemplo crear objetos de R, importar datos a R, analizar matrices de comunidad, calcular diversidad, crear gráficos de ordenación, hacer análisis de agrupamiento (**cluster analysis**) o tareas similares. Sigue estos pasos:
+B. Utiliza RStudio si vas a ejecutar código de R, como por ejemplo crear objetos de R, importar datos a R, analizar matrices de comunidad, calcular diversidad, crear gráficos de ordenación, hacer análisis de agrupamiento (*cluster analysis*) o tareas similares. Sigue estos pasos:
 
 1. Abre RStudio. Recomiendo utilizar el servidor de RStudio habilitado por el profesor, para lo cual sólo necesitas una conexión a internet y una computadora con navegador. Alternativamente, puedes instalar y ejecutar RStudio Desktop en la computadora de tu preferencia (hay muchos tutoriales disponibles en línea). En cualquier caso, lo importante es que actualices tus cambios en el repo de Github periódicamente (actualiza mientras avanzas, no esperes hasta el final). En el último paso explico cómo actualizar tu repo de GitHub según los cambios que hayas hecho localmente.
 2. Crea un proyecto mediante "File>New Project" en RStudio. Esto llamará la ventana "Create Project". Elige la opción "Version Control", lo cual hará avanzar automáticamente hacia la Ventana "Create Project from Version Control" automáticamente.
