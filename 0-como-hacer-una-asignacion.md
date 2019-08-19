@@ -17,15 +17,15 @@ A. Usa la interfaz web de GitHub si no vas a ejecutar código. Por ejemplo, usa 
 
 1. Inicia una sesión en GitHub con tu usuario/contraseña.
 2. Localiza el repo que contiene la asignación, donde podrás hacer cambios a un archivo existente o crear uno nuevo (dependerá de lo asignado):
-    2.1. Para actualizar un archivo existente, haz clic sobre su nombre y luego en el lápiz del encabezado. Haz los cambios que correspondan según lo asignado.
-    2.2. Para crear un nuevo documento, presiona el botón "Create new file", se creará un documento en blanco, ponle un nombre en el cuadro "Name your file" y, en el documento, añade el texto que corresponda según lo asignado.
+    2.1.  Para actualizar un archivo existente, haz clic sobre su nombre y luego en el lápiz del encabezado. Haz los cambios que correspondan según lo asignado.
+    2.2.  Para crear un nuevo documento, presiona el botón "Create new file", se creará un documento en blanco, ponle un nombre en el cuadro "Name your file" y, en el documento, añade el texto que corresponda según lo asignado.
 3. Al terminar de añadir texto/hacer cambios, ve al final de la página y presiona "Commit changes". Más detalles, en el aula.
 
 B. Utiliza RStudio si vas a ejecutar código de R, como por ejemplo crear objetos de R, importar datos a R, analizar matrices de comunidad, calcular diversidad, crear gráficos de ordenación, hacer análisis de agrupamiento (*cluster analysis*) o tareas similares. Sigue estos pasos:
 
 1. Abre RStudio. Recomiendo utilizar el servidor de RStudio habilitado por el profesor, para lo cual sólo necesitas una conexión a internet y una computadora con navegador. Alternativamente, puedes instalar y ejecutar RStudio Desktop en la computadora de tu preferencia (hay muchos tutoriales disponibles en línea). En cualquier caso, lo importante es que actualices tus cambios en el repo de Github periódicamente (actualiza mientras avanzas, no esperes hasta el final). En el último paso explico cómo actualizar tu repo de GitHub según los cambios que hayas hecho localmente.
 2. Crea un proyecto mediante "File>New Project" en RStudio. Esto llamará la ventana "Create Project". Elige la opción "Version Control", lo cual hará avanzar automáticamente hacia la Ventana "Create Project from Version Control" automáticamente.
-3. En la ventana "Create Project from Version Control", elige "Git". Esto hará avanzar automáticamente hacia la ventana "Clon Git Repository". Para rellenar el cuadro "Repository URL" necesitas ir a tu repo de asignación.
+3. En la ventana "Create Project from Version Control", elige "Git". Esto hará avanzar automáticamente hacia la ventana "Clone Git Repository". Para rellenar el cuadro "Repository URL" necesitas ir a tu repo de asignación.
 4. Ve al navegador y, en tu repo de asignación, copia la URL del repo presionando el botón verde "Clone or download" ![](img/bt_clone_or_download.png) y luego el botón "Copiar URL del repo" ![](img/bt_copy_repo_url.png). La URL se encuentra ahora en el clipboard.
 5. Regresa a RStudio. En el cuadro "Repository URL", pega la URL que tienes en el portapapeles (en Linux y Windows, `Ctrl+V`). Dicho texto será algo tal que "https://github.com/biogeografia-master/<nombredelrepo>.git".
 6. En el cuadro "Project directory name", puedes dejar el valor por defecto, que será el mismo nombre del repo (por ejemplo, `unidad-0-asignacion-0`). Este será el nombre del directorio donde se clonará el repo.
