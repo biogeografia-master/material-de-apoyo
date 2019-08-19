@@ -17,7 +17,7 @@ A. Usa la interfaz web de GitHub si no vas a ejecutar código. Por ejemplo, usa 
 
 1. Inicia una sesión en GitHub con tu usuario/contraseña.
 2. Localiza el repo que contiene la asignación, donde podrás hacer cambios a un archivo existente o crear uno nuevo (dependerá de lo asignado):
-   2.1. Para actualizar un archivo existente, haz clic sobre su nombre y luego en el lápiz del encabezado. Haz los cambios que correspondan según lo asignado.
+    2.1. Para actualizar un archivo existente, haz clic sobre su nombre y luego en el lápiz del encabezado. Haz los cambios que correspondan según lo asignado.
     2.2. Para crear un nuevo documento, presiona el botón "Create new file", se creará un documento en blanco, ponle un nombre en el cuadro "Name your file" y, en el documento, añade el texto que corresponda según lo asignado.
 3. Al terminar de añadir texto/hacer cambios, ve al final de la página y presiona "Commit changes". Más detalles, en el aula.
 
