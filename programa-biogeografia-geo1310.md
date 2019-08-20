@@ -84,17 +84,17 @@ Dispondrás de 15 minutos para presentar oralmente tu trabajo al final del semes
 
 ### Trabajo de campo e identificación
 
-Tomarás al menos 10 muestras (a mayor número, mejor) en igual número de polígonos (*plots*) previamente delimitados del campus de la UASD. Utilizarás el método del cebo (en clase explicaré por qué). En cada polígono colocarás al menos 16 estaciones de cebo. Las colocarás en forma de malla de 4x4 estaciones, separadas al menos 2 metros entre sí, por lo que la malla tendrá $8\times8=64 m^2$ de tamaño 
+Tomarás al menos 10 muestras (a mayor número, mejor) en igual número de polígonos (*plots*) previamente delimitados del campus de la UASD. Utilizarás el método del cebo de atún (en clase explicaré por qué).
 
-Si tienes experiencia, o quieres asumir retos, puedes implementar métodos de muestreo diferentes y más intensivos que el planteado. Ahora bien, para la asignatura, sólo es necesario implementar el mencionado.
+En cada polígono colocarás al menos 16 estaciones de cebo de atún directamente en el suelo, formando una malla cuadrada de 4x4 estaciones colocada aproximadamente en el centro del polígono. Separarás cada estación al menos 2 metros entre sí, por lo que la malla tendrá 8x8=64m<sup>2</sup> de tamaño.
 
+Dejarás los cebos por 30 minutos y luego colectarás las hormigas que visiten cada estación con un pincel humedecido en alcohol (puedes utilizar otro equipamiento), en el mismo orden que los colocaste. Colectarás las hormigas de las 16 estaciones de un polígono en un único frasco con alcohol al 80% (cualquier pote de compota te vale). Recalco: un polígono contendrá 16 estaciones y las hormigas de todas las estaciones de un mismo polígono se mezclarán en un único frasco. Por lo tanto, al finalizar el trabajo de campo deberás tener 10 frascos, uno por polígono.
 
+En cada polígono registrarás la actividad de las hormigas, en función del número de ellas que encuentres (daré más detalles). También tomarás algunos datos "ambientales" básicos mediante formularios electrónicos. Fíjate en cuestiones relevantes para las hormigas, por ejemplo si se trata de una zona de paso de personas, si hay basurero cercano, si el suelo es de concreto o de tierra o de hierba, si conoces las especies arbóreas también anótalas, 
 
+Identificarás, con mi ayuda, todos los individuos hasta nivel de género; si quieres llegar hasta especie es opción tuya, y existen buenas claves para ello. Dado que las hormigas son insectos sociales, utilizarás datos de presencia/ausencia, por lo que no contarás individuos. Tus análisis se basarán en incidencia. Más detalles en el aula. 
 
-
-
-
-
+Nota: Si tienes experiencia, o quieres asumir retos, puedes implementar métodos de muestreo diferentes y más intensivos que el planteado. Ahora bien, para la asignatura, sólo es necesario implementar el mencionado.
 
 ### Código informático reproducible
 
