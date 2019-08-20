@@ -46,7 +46,7 @@ B. Utiliza RStudio si vas a ejecutar código de R, como por ejemplo crear objeto
  1 file changed, 19 insertions(+), 5 deletions(-)
     ```
     5. Presiona el botón `Close`. Volverás al cuadro `Review Changes`. Presiona el botón `Push`. Automáticamente te aparecerá un cuadro para escribir tu usuario y otro para escribir tu contraseña. Si todo sale bien, los cambios se habrán sincronizado y te aparecerá un mensaje de confirmación que te informa sobre la actualización de la rama máster, algo tal que esto:
-    <figure><img src="img/master_branch_updated.png" width="500"></figure>
+    <figure><img src="img/master_branch_updated.png" width="300"></figure>
 11. Si has llegado hasta este punto, ¡Felicidades! Pasaste varios mundos y ya estás preparado/a para realizar tus asignaciones de manera fluida.
 
 ¡Servicio público de radio guarachita! No utilices el servidor de RStudio habilitado por el profesor como repositorio central. Por razones de presupuesto y operativas, el servidor está configurado con un mínimo de seguridad. Por lo tanto, los cambios que hagas a tus repos de asignaciones desde el servidor, debes actualizarlos inmediatamente en el repo remoto de GitHub. Aviso emitido.
