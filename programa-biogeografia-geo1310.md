@@ -38,6 +38,6 @@ Al finalizar la asignatura, esta afirmación debería ser cierta: aplicas y publ
 
 ## Manuscrito
 
-Se seguirán las normas para autores/as del [Anuario de Investigaciones Científicas de la UASD]().
+Se seguirán las normas para autores/as del [Anuario de Investigaciones Científicas de la UASD](instrucciones-para-autores-anuario-investigaciones-cientificas-UASD.pdf).
 
 ## Contenido
