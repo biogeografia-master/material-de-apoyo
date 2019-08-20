@@ -45,18 +45,18 @@ Brevemente, cada ítem a evaluar consistirá en lo siguiente (más detalles por 
 ### Manuscrito
 
 Tratará sobre hormigas del campus de la UASD, se elaborará siguiendo las siguientes fases:
-    1. Formulación del problema/pregunta(s) de investigación, siendo preceptiva la sencillez de diseño. Las preguntas de investigación a responder las diseñarás tú.
-    2. Revisión bibliográfica. Busca fuentes en línea, pero evita abrumarte con la enorme disponibilidad de publicaciones científicas sobre biogeografía y ecología. Prefiere las publicaciones disponibles en acceso libre.
-    3. Selección de metodología, incluyendo técnicas cuantitativas de forma preceptiva. 
-    4. Recogida de datos de campo.
-    5. Análisis de datos.
-    6. Redacción.
+1. Formulación del problema/pregunta(s) de investigación, siendo preceptiva la sencillez de diseño. Las preguntas de investigación a responder las diseñarás tú.
+2. Revisión bibliográfica. Busca fuentes en línea, pero evita abrumarte con la enorme disponibilidad de publicaciones científicas sobre biogeografía y ecología. Prefiere las publicaciones disponibles en acceso libre.
+3. Selección de metodología, incluyendo técnicas cuantitativas de forma preceptiva. 
+4. Recogida de datos de campo.
+5. Análisis de datos.
+6. Redacción.
 
 Los criterios de evaluación que usaré para el manuscrito son:
-    1 Cumplimiento de los requisitos exigidos por el Anuario, tanto los de forma (estilos de documento) como los de fondo.
-    2 Redacción coherente y concisa. 
-    3 Rsultados, con el debido apoyo estadístico y gráfico, que respondan a las preguntas formuladas.
-    4 Concisa extracción de conclusiones. Los resultados negativos son igualmente válidos.
+1. Cumplimiento de los requisitos exigidos por el Anuario, tanto los de forma (estilos de documento) como los de fondo.
+2. Redacción coherente y concisa. 
+3. Rsultados, con el debido apoyo estadístico y gráfico, que respondan a las preguntas formuladas.
+4. Concisa extracción de conclusiones. Los resultados negativos son igualmente válidos.
 
 Para preparar tu manuscrito, sigue las normas para autores/as del [Anuario de Investigaciones Científicas de la UASD](instrucciones-para-autores-anuario-investigaciones-cientificas-UASD.pdf). Fungiré como editor ficticio de la revista, e incluso como revisor.
 
