@@ -1,5 +1,5 @@
-# Universidad Autónoma de Santo Domingo (UASD) \
-Programa de Biogeografía (GEO-131), \
+# Universidad Autónoma de Santo Domingo (UASD) <br/>
+Programa de Biogeografía (GEO-131) <br/>
 Semestre 2019-02
 *José Ramón Martínez Batlle*
 
@@ -117,5 +117,5 @@ Bueno, sobre ésto tengo poco que decir, sólo que preferiría no evaluar conten
 8. Historia de los linajes. Brown y Lomolino (1998), capítulo 11.
 9. Biogeografía insular. Brown y Lomolino (1998), capítulos 13 y 14
 
-## Fuentes
+## Referencias bibliográficas
 * Consulta tu buzón de correo.
