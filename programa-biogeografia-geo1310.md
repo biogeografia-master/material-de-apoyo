@@ -32,10 +32,10 @@ Al finalizar la asignatura, esta afirmación debería ser cierta: aplicas y publ
 | Trabajo de campo | 30% |
 | Código informático reproducible | 20% |
 | Manuscrito | 30% |
-| Examen parcial 1 | 10%[^1] |
-| Examen parcial 2 | 10%[^1] |
+| Examen parcial 1 | 10%<sup>1</sup> |
+| Examen parcial 2 | 10%<sup>1</sup> |
 
-[^1]: Implementaré un sistema adaptativo. Si a la fecha del examen parcial 1 (medio término) el/la estudiante ha realizado las asignaciones prácticas solicitadas (sobre trabajo de campo, código informático reproducible y manuscrito), el valor de ambos exámenes será el que aparece en la tabla de referencia (10% cada uno). En caso contrario, el/la estudiante será evaluado de la siguiente manera: examen parcial 1 50%, examen parcial 50%.
+<sup>1</sup> Implementaré un sistema adaptativo. Si a la fecha del examen parcial 1 (medio término) el/la estudiante ha realizado las asignaciones prácticas solicitadas (sobre trabajo de campo, código informático reproducible y manuscrito), el valor de ambos exámenes será el que aparece en la tabla de referencia (10% cada uno). En caso contrario, el/la estudiante será evaluado de la siguiente manera: examen parcial 1 50%, examen parcial 50%.
 
 ## Manuscrito
 
