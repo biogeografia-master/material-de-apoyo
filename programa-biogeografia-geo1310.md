@@ -98,7 +98,6 @@ Bueno, sobre ésto tengo poco que decir, sólo que preferiría no evaluar conten
 
 ## Fechas de evaluación
 
-
 | Fecha | ¿Qué evaluaré? |
 | - | - |
 | 24 de Septiembre | **Manuscrito**: asignaciones sobre introducción y metodología realizadas <br/> **Trabajo de campo e identificación**: todas las asignaciones realizadas <br/> **Código informático reproducible**: lo asignado hasta la semana anterior |
