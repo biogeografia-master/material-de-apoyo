@@ -9,7 +9,7 @@
 * Lugar y horario: Aula FC-203 (SIGCART), Martes de 2 a 6 pm
 
 ## URLs del contenido del curso:
-* General: https://github.com/biogeografia-master/material-de-apoyo/programa-biogeografia-geo1310.md
+* [Programa](programa-biogeografia-geo1310.md)
 * Asignaciones: se enviarán por correo electrónico
 
 ## Descripción
