@@ -31,12 +31,12 @@ Al finalizar la asignatura, esta afirmación debería ser cierta: aplicas y reda
 
 | Ítem | % de la \ nota final |
 |-|-:|
-| Manuscrito | 25% |
-| Presentación oral | 5% |
-| Trabajo de campo e identificación | 30% |
-| Código informático reproducible | 20% |
-| Examen parcial 1 | 10%<sup>1</sup> |
-| Examen parcial 2 | 10%<sup>1</sup> |
+| [Manuscrito](#manuscrito) | 25% |
+| [Presentación oral](#presentación-oral) | 5% |
+| [Trabajo de campo e identificación](#trabajo-de-campo-e-identificación) | 30% |
+| [Código informático reproducible](#código-informático-reproducible) | 20% |
+| [Examen parcial 1](#examen-parcial-1) | 10%<sup>1</sup> |
+| [Examen parcial 2](#examen-parcial-2) | 10%<sup>1</sup> |
 
 <sup>1</sup> Implementaré un sistema adaptativo. Si a la fecha del examen parcial 1 (medio término), has realizado las asignaciones prácticas solicitadas (ver sección [Fechas de evaluación](#fechas-de-evaluación)), el valor de ambos exámenes será el que aparece en la tabla de referencia (10% cada uno). En caso contrario, evaluaré de la siguiente manera: examen parcial 1 50%, examen parcial 50%.
 
@@ -82,9 +82,19 @@ Toma en consideración lo siguiente:
 
 Dispondrás de 15 minutos para presentar oralmente tu trabajo al final del semestre. Valoraré el dominio que muestres sobre tu trabajo.
 
-### Trabajo de campo e identificación hasta género
+### Trabajo de campo e identificación
 
-Tomarás al menos 10 muestras (a mayor número, mejor) en igual número de polígonos (*plots*) previamente delimitados del campus de la UASD. Cada muestra
+Tomarás al menos 10 muestras (a mayor número, mejor) en igual número de polígonos (*plots*) previamente delimitados del campus de la UASD. Utilizarás el método del cebo (en clase explicaré por qué). En cada polígono colocarás al menos 16 estaciones de cebo. Las colocarás en forma de malla de 4x4 estaciones, separadas al menos 2 metros entre sí, por lo que la malla tendrá $8\times8=64 m^2$ de tamaño 
+
+Si tienes experiencia, o quieres asumir retos, puedes implementar métodos de muestreo diferentes y más intensivos que el planteado. Ahora bien, para la asignatura, sólo es necesario implementar el mencionado.
+
+
+
+
+
+
+
+
 
 ### Código informático reproducible
 
