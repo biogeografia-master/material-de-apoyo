@@ -38,12 +38,12 @@ B. Utiliza RStudio si vas a ejecutar código de R, como por ejemplo crear objeto
     2. Para crear un nuevo documento, presiona el botón `Create new file`, se creará un documento en blanco, ponle un nombre en la caja `Name your file` y, en el documento, añade el texto que corresponda según lo asignado.
 10. Finalmente, para actualizar cambios desde el repo local al remoto, haz lo siguiente:
     1. Abre la pestaña `Git` (revisa los paneles de RStudio). Si has hecho cambios o has añadido archivos, te encontrarás con una lista de archivos cambiados o añadidos. Haz clic en la marca de cotejo de cada uno de los archivos que te interesa actualizar con el repo remoto.
-    2. Presiona el botón `Commit`, lo cual abrirá la ventana de `Preview Changes`. Aquí puedes revisar los cambios que has hecho a cada archivo. El texto añadido aparece sombreado en verde, y el borrado en rojo.
+    2. Presiona el botón `Commit`, lo cual abrirá la ventana de `Review Changes`. Aquí puedes revisar los cambios que has hecho a cada archivo. El texto añadido aparece sombreado en verde, y el borrado en rojo.
     3. En la caja `Commit message` escribe un mensaje de que resuma el conjunto de cambios, por ejemplo, `actualizado archivo de asignación, añadido archivo de script`.
     4. Presiona el botón `Commit`. Con esto, los cambios pasan al `Stage`, pero aún no se han sincronizado con el repo remoto. Aparecerá un cuadro de diálogo informando los cambios realizados, algo como ésto:
     ```[master 9ac56dd] assignment md updated
  1 file changed, 19 insertions(+), 5 deletions(-)```
-    5. Presiona el botón `Close`. Volverás al  `Push`. Automáticamente te aparecerá un cuadro para escribir tu  
+    5. Presiona el botón `Close`. Volverás al cuadro `Review Changes`. Presiona el botón `Push`. Automáticamente te aparecerá un cuadro para escribir tu usuario y otro para escribir tu contraseña. Si todo sale bien, los cambios se habrán sincronizado y te aparecerá un mensaje de confirmación tal que
     
 
 ¡Servicio público de radio guarachita! No utilices el servidor de RStudio habilitado por el profesor como repositorio central. Por razones de presupuesto y operativas, el servidor está configurado con un mínimo de seguridad. Por lo tanto, los cambios que hagas a tus repos de asignaciones desde el servidor, debes actualizarlos inmediatamente en el repo remoto de GitHub. Aviso emitido, *surf at your own risk*.
