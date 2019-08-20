@@ -25,7 +25,7 @@ La biogeografía es la ciencia que intenta documentar y entender los patrones es
 
 ## Resultados esperados
 
-Al finalizar la asignatura, esta afirmación debería ser cierta: aplicas y publicas métodos de ecología numérica utilizando tus propios datos, especialmente aplicas técnicas de diseño de estudios de campo, análisis de la biodiversidad y, quizá, algo de análisis espacial. Complementariamente, intentas aprender en cabeza ajena sobre fundamentos de biogeografía. Comprendes los principios geográficos y ecológicos de la biogeografía, así como los procesos biogeográficos y la historia de la Tierra.
+Al finalizar la asignatura, esta afirmación debería ser cierta: aplicas y redactas métodos de ecología numérica utilizando tus propios datos, especialmente utilizas código reproducible para aplicar técnicas de diseño de estudios de campo, análisis de la biodiversidad y, quizá, algo de análisis espacial. Complementariamente, intentas aprender en cabeza ajena sobre fundamentos de biogeografía. Comprendes los principios geográficos y ecológicos de la biogeografía, así como los procesos biogeográficos y la historia de la Tierra.
 
 ## Evaluación
 
@@ -40,11 +40,26 @@ Al finalizar la asignatura, esta afirmación debería ser cierta: aplicas y publ
 
 <sup>1</sup> Implementaré un sistema adaptativo. Si a la fecha del examen parcial 1 (medio término), has realizado las asignaciones prácticas solicitadas (ver sección [Fechas de evaluación](#fechaseval)), el valor de ambos exámenes será el que aparece en la tabla de referencia (10% cada uno). En caso contrario, evaluaré de la siguiente manera: examen parcial 1 50%, examen parcial 50%.
 
-### Manuscrito.
+Brevemente, cada ítem a evaluar consistirá en lo siguiente (más detalles por medio de asignaciones a lo largo del curso):
 
-Sigue las normas para autores/as del [Anuario de Investigaciones Científicas de la UASD](instrucciones-para-autores-anuario-investigaciones-cientificas-UASD.pdf) para redactar tu manuscrito sobre hormigas del campus de la UASD. Fungiré como editor de la revista, e incluso como revisor. Las preguntas de investigación a responder las diseñarás tú. Antes comenzar a redactar, revisa lo siguiente:
+### Manuscrito
 
-* Consulta [cualquier número del Anuario](https://www.uasd.edu.do/index.php/publicaciones-cientificas) para que te familiarices con el estilo de redacción.
+Tratará sobre hormigas del campus de la UASD, se elaborará siguiendo las siguientes fases:
+    1. Formulación del problema/pregunta(s) de investigación, siendo preceptiva la sencillez de diseño. Las preguntas de investigación a responder las diseñarás tú.
+    2. Revisión bibliográfica. Busca fuentes en línea, pero evita abrumarte con la enorme disponibilidad de publicaciones científicas sobre biogeografía y ecología. Prefiere las publicaciones disponibles en acceso libre.
+    3. Selección de metodología, incluyendo técnicas cuantitativas de forma preceptiva. 
+    4. Recogida de datos de campo.
+    5. Análisis de datos.
+    6. Redacción.
+
+Los criterios de evaluación que usaré para el manuscrito son:
+    1. Cumplimiento de los requisitos exigidos por el Anuario, tanto los de forma (estilos de documento) como los de fondo.
+    2. Redacción coherente y concisa. 
+    3. Rsultados, con el debido apoyo estadístico y gráfico, que respondan a las preguntas formuladas.
+    4. Concisa extracción de conclusiones. Los resultados negativos son igualmente válidos.
+
+Para preparar tu manuscrito, sigue las normas para autores/as del [Anuario de Investigaciones Científicas de la UASD](instrucciones-para-autores-anuario-investigaciones-cientificas-UASD.pdf). Fungiré como editor ficticio de la revista, e incluso como revisor.
+
 * Como verás, el manuscrito requiere los siguientes ítems:
     * Título.
     * Nombre de autor/a.
@@ -57,21 +72,11 @@ Sigue las normas para autores/as del [Anuario de Investigaciones Científicas de
     * Referencias citadas.
     * Declaración de cumplimientos legales y de no conflictos de intereses (optativo).
     * Otros requerimientos (ponle atención también a esta parte en las normas).
-    
-* El manuscrito, que tratará sobre hormigas del campus de la UASD, se elaborará siguiendo las siguientes fases:
-    1. Formulación del problema/pregunta(s) de investigación, siendo preceptiva la sencillez de diseño.
-    2. Revisión bibliográfica. Busca fuentes en línea, pero evita abrumarte con la enorme disponibilidad de publicaciones científicas sobre biogeografía y ecología. Prefiere las publicaciones disponibles en acceso libre.
-    3. Selección de metodología, incluyendo técnicas cuantitativas de forma preceptiva. 
-    4. Recogida de datos de campo.
-    5. Análisis de datos.
-    6. Redacción.
-* Los criterios de evaluación que usaré para el manuscrito son estos:
-    1. Cumplimiento de los requisitos exigidos por el Anuario, tanto los de forma (estilos de documento) como los de fondo.
-    2. Redacción coherente y concisa. 
-    3. Rsultados, con el debido apoyo estadístico y gráfico, que respondan a las preguntas formuladas.
-    4. Concisa extracción de conclusiones. Los resultados negativos son igualmente válidos.
+
+Toma en consideración lo siguiente:
 * No impartiré lecciones sobre redacción ni sobre procesadores de texto, por lo que se recomienda consultar material tanto vía web como en el economato, como forma de mejorar dichas capacidades. 
 * El plagio y la falsificación de datos supondrán la reprobación inmediata de la asignatura.
+* Te recomiendo consultar [uno o varios artículos de cualquier número del Anuario](https://www.uasd.edu.do/index.php/publicaciones-cientificas), para que te familiarices con el estilo de redacción.
 
 ### Presentación oral
 
@@ -83,8 +88,9 @@ Dispondrás de 15 minutos para presentar oralmente tu trabajo al final del semes
 
 ### Código informático reproducible
 
-* Orientaré con ejemplos y soluciones de forma pública a través de `issues` que abrirás tú o yo en el GitHub. De esta forma las discusiones quedan disponibles para otras personas.
-* Al abrir un `issue` de GitHub debes plantear el problema al que te enfrentas, cómo has intentado resolverlo o qué soluciones has probado. Si se trata de cuestión relacionada con programación o análisis de datos, deberás facilitar **código reproducible y mensaje de error (si lo hubiere)**. Evita el típico "da error".
+Por correo electrónico, te enviaré asignaciones para desarrollar tu código reproducible.
+Orientaré con ejemplos y soluciones de forma pública a través de `issues` que abrirás tú o yo en el GitHub. De esta forma las discusiones quedan disponibles para otras personas.
+Al abrir un `issue` de GitHub debes plantear el problema al que te enfrentas, cómo has intentado resolverlo o qué soluciones has probado. Si se trata de cuestión relacionada con programación o análisis de datos, deberás facilitar **código reproducible y mensaje de error (si lo hubiere)**. Evita el típico "da error".
 
 ### Exámenes
 
@@ -95,8 +101,8 @@ Bueno, sobre ésto tengo poco que decir, sólo que preferiría no evaluar conten
 
 | Fecha | ¿Qué evaluaré? |
 | - | - |
-| 24 de Septiembre | **Trabajo de campo**: realizado. **Manuscrito**: Introducción, Metodología |
-| 22 de Octubre (medio término) |  Examen parcial 1 |
+| 24 de Septiembre | **Manuscrito**: asignaciones sobre introducción y metodología realizadas <br/> **Trabajo de campo**: todas las asignaciones realizadas <br/> **Código informático reproducible**: lo asignado hasta la semana anterior |
+| 22 de Octubre (medio término) | **Manuscrito**: asignaciones sobre resultados realizadas <br/> **Código informático reproducible**: lo asignado hasta la semana anterior <br/> **Examen parcial 1** |
 | 19 de Noviembre |  |
 | Diciembre, por precisar (final) |  |
 
