@@ -33,12 +33,12 @@ Al finalizar la asignatura, esta afirmación debería ser cierta: aplicas y reda
 |-|-:|
 | Manuscrito | 25% |
 | Presentación oral | 5% |
-| Trabajo de campo | 30% |
+| Trabajo de campo e identificación | 30% |
 | Código informático reproducible | 20% |
 | Examen parcial 1 | 10%<sup>1</sup> |
 | Examen parcial 2 | 10%<sup>1</sup> |
 
-<sup>1</sup> Implementaré un sistema adaptativo. Si a la fecha del examen parcial 1 (medio término), has realizado las asignaciones prácticas solicitadas (ver sección [Fechas de evaluación](#fechaseval)), el valor de ambos exámenes será el que aparece en la tabla de referencia (10% cada uno). En caso contrario, evaluaré de la siguiente manera: examen parcial 1 50%, examen parcial 50%.
+<sup>1</sup> Implementaré un sistema adaptativo. Si a la fecha del examen parcial 1 (medio término), has realizado las asignaciones prácticas solicitadas (ver sección [Fechas de evaluación](#fechas-de-evaluación)), el valor de ambos exámenes será el que aparece en la tabla de referencia (10% cada uno). En caso contrario, evaluaré de la siguiente manera: examen parcial 1 50%, examen parcial 50%.
 
 Brevemente, cada ítem a evaluar consistirá en lo siguiente (más detalles por medio de asignaciones a lo largo del curso):
 
@@ -82,9 +82,9 @@ Toma en consideración lo siguiente:
 
 Dispondrás de 15 minutos para presentar oralmente tu trabajo al final del semestre. Valoraré el dominio que muestres sobre tu trabajo.
 
-### Trabajo de campo
+### Trabajo de campo e identificación hasta género
 
-
+Tomarás al menos 10 muestras (a mayor número, mejor) en igual número de polígonos (*plots*) previamente delimitados del campus de la UASD. Cada muestra
 
 ### Código informático reproducible
 
@@ -96,12 +96,12 @@ Al abrir un `issue` de GitHub debes plantear el problema al que te enfrentas, c�
 
 Bueno, sobre ésto tengo poco que decir, sólo que preferiría no evaluar contenido teórico.
 
-## <a name="fechaseval"></a> Fechas de evaluación
+## Fechas de evaluación
 
 
 | Fecha | ¿Qué evaluaré? |
 | - | - |
-| 24 de Septiembre | **Manuscrito**: asignaciones sobre introducción y metodología realizadas <br/> **Trabajo de campo**: todas las asignaciones realizadas <br/> **Código informático reproducible**: lo asignado hasta la semana anterior |
+| 24 de Septiembre | **Manuscrito**: asignaciones sobre introducción y metodología realizadas <br/> **Trabajo de campo e identificación**: todas las asignaciones realizadas <br/> **Código informático reproducible**: lo asignado hasta la semana anterior |
 | 22 de Octubre (medio término) | **Manuscrito**: asignaciones sobre resultados realizadas <br/> **Código informático reproducible**: lo asignado hasta la semana anterior <br/> **Examen parcial 1** |
 | 19 de Noviembre | **Manuscrito**: asignaciones sobre resultados y discusión realizadas <br/> **Código informático reproducible**: lo asignado hasta la semana anterior |
 | Diciembre, por precisar (final) | **Manuscrito**: todas las asignaciones completadas <br/> **Código informático reproducible**: todas las asignaciones completadas <br/> **Examen parcial 2** |
