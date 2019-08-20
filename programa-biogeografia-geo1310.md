@@ -1,6 +1,6 @@
 # Universidad Autónoma de Santo Domingo (UASD) <br/>
 Programa de Biogeografía (GEO-131) <br/>
-Semestre 2019-02
+Semestre 2019-02 <br/>
 *José Ramón Martínez Batlle*
 
 ## Básicos:
