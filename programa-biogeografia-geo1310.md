@@ -53,10 +53,10 @@ Tratará sobre hormigas del campus de la UASD, se elaborará siguiendo las sigui
     6. Redacción.
 
 Los criterios de evaluación que usaré para el manuscrito son:
-    1. Cumplimiento de los requisitos exigidos por el Anuario, tanto los de forma (estilos de documento) como los de fondo.
-    2. Redacción coherente y concisa. 
-    3. Rsultados, con el debido apoyo estadístico y gráfico, que respondan a las preguntas formuladas.
-    4. Concisa extracción de conclusiones. Los resultados negativos son igualmente válidos.
+    1 Cumplimiento de los requisitos exigidos por el Anuario, tanto los de forma (estilos de documento) como los de fondo.
+    2 Redacción coherente y concisa. 
+    3 Rsultados, con el debido apoyo estadístico y gráfico, que respondan a las preguntas formuladas.
+    4 Concisa extracción de conclusiones. Los resultados negativos son igualmente válidos.
 
 Para preparar tu manuscrito, sigue las normas para autores/as del [Anuario de Investigaciones Científicas de la UASD](instrucciones-para-autores-anuario-investigaciones-cientificas-UASD.pdf). Fungiré como editor ficticio de la revista, e incluso como revisor.
 
@@ -90,7 +90,7 @@ Dispondrás de 15 minutos para presentar oralmente tu trabajo al final del semes
 
 Por correo electrónico, te enviaré asignaciones para desarrollar tu código reproducible.
 Orientaré con ejemplos y soluciones de forma pública a través de `issues` que abrirás tú o yo en el GitHub. De esta forma las discusiones quedan disponibles para otras personas.
-Al abrir un `issue` de GitHub debes plantear el problema al que te enfrentas, cómo has intentado resolverlo o qué soluciones has probado. Si se trata de cuestión relacionada con programación o análisis de datos, deberás facilitar **código reproducible y mensaje de error (si lo hubiere)**. Evita el típico "da error".
+Al abrir un `issue` de GitHub debes plantear el problema al que te enfrentas, cómo has intentado resolverlo o qué soluciones has probado. Si se trata de cuestión relacionada con programación o análisis de datos, deberás facilitar **código reproducible y mensaje de error (si lo hubiere)**. Evita el típico comentario "da error", puesto que no conduce a nada.
 
 ### Exámenes
 
@@ -103,8 +103,8 @@ Bueno, sobre ésto tengo poco que decir, sólo que preferiría no evaluar conten
 | - | - |
 | 24 de Septiembre | **Manuscrito**: asignaciones sobre introducción y metodología realizadas <br/> **Trabajo de campo**: todas las asignaciones realizadas <br/> **Código informático reproducible**: lo asignado hasta la semana anterior |
 | 22 de Octubre (medio término) | **Manuscrito**: asignaciones sobre resultados realizadas <br/> **Código informático reproducible**: lo asignado hasta la semana anterior <br/> **Examen parcial 1** |
-| 19 de Noviembre |  |
-| Diciembre, por precisar (final) |  |
+| 19 de Noviembre | **Manuscrito**: asignaciones sobre resultados y discusión realizadas <br/> **Código informático reproducible**: lo asignado hasta la semana anterior |
+| Diciembre, por precisar (final) | **Manuscrito**: todas las asignaciones completadas <br/> **Código informático reproducible**: todas las asignaciones completadas <br/> **Examen parcial 2** |
 
 ## Contenido teórico
 1. Introducción e historia de la biogeografía. Brown y Lomolino (1998) capítulos 1 y 2. Okolodkov (2010) capítulos 1 y 2.
