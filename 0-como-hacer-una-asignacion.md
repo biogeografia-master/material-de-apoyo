@@ -5,7 +5,7 @@
 1. Desde el navegador, entra en [Github](https://github.com/) e [inicia sesión](https://github.com/login) con tu cuenta. Si usas una PC pública o compartida, es preferible que inicies el navegador en modo incógnito. Si no tienes cuenta de Github, [crea una](https://github.com/join). Ésta será la cuenta que usarás durante el curso.
 2. Ve a tu buzón de correo y, en el mensaje enviado por el profesor (podría caer en spam), haz clic en el vínculo (será algo tal que https://<i></i>classroom.github.com/...).
 3. Al hacer clic, el navegador te dirigirá a aceptar la asignación (te pedirá que inicies tu cuenta de Github si aún no lo has hecho). Presiona `Accept this assignment`. Cuando quieras volver a tu asignación, puedes usar este vínculo del mensaje de invitación.
-4. Automáticamente se creará, en tu cuenta de Github, un repo conteniendo tu asignación. Listo, tienes ya un repo con tu asignación, donde harás tus actualizaciones.
+4. Automáticamente se creará, en la organización de GitHub [biogeografia-201902](https://github.com/biogeografia-201902) (administrada por el profesor), un repo conteniendo tu asignación. Listo, tienes ya un repo con tu asignación, donde realizarás tus actualizaciones. Tú y el profesor serán los únicos contribuidores del repo.
 
 * Nota: estos 4 pasos se ejecutan una sola vez
 
@@ -13,7 +13,7 @@
 
 Elige una de dos alternativas en función del tipo de asignación:
 
-A. Usa la interfaz web de GitHub si no vas a ejecutar código. Por ejemplo, usa esta alternativa si vas a hacer un documento de texto en Markdown que contenga tus preguntas de investigación ([tutorial sobre Markdown](https://www.youtube.com/watch?v=y6XdzBNC0_0)). Este interfaz es bastante sencillo. Sigue estos pasos:
+A. Usa la interfaz web de GitHub si no necesitas ejecutar código. Por ejemplo, usa esta alternativa si vas a hacer un documento de texto en Markdown que contenga tus preguntas de investigación ([tutorial sobre Markdown](https://www.youtube.com/watch?v=y6XdzBNC0_0), [buen blog en inglés sobre Markdown](https://girlknowstech.com/how-to-write-in-markdown/), [este otro con vídeos cortos y concisos](https://instructor-support.datacamp.com/en/articles/2336337-markdown-tutorial) y [buen tutorial en inglés sobre redacción académica](https://www.youtube.com/watch?v=hpAJMSS8pvs)). El interfaz web de GitHub es bastante sencillo. Sigue estos pasos:
 
 1. Inicia una sesión en GitHub con tu usuario/contraseña.
 2. Localiza el repo que contiene la asignación, donde podrás hacer cambios a un archivo existente o crear uno nuevo (dependerá de lo asignado):
@@ -21,11 +21,15 @@ A. Usa la interfaz web de GitHub si no vas a ejecutar código. Por ejemplo, usa 
     2. Para crear un nuevo documento, presiona el botón `Create new file`, se creará un documento en blanco, ponle un nombre en la caja `Name your file` y, en el documento, añade el texto que corresponda según lo asignado.
 3. Al terminar de añadir texto/hacer cambios, ve al final de la página y presiona `Commit changes`.
 
-Más detalles, en el aula.
+Hasta aquí cómo usar la interfaz web de GitHub para realizar tus asignaciones. Recuerda, esta modalidad es útil si no necesitas ejecutar código, para redactar documentos de Markdown o para pequeñas ediciones de código. Más detalles, en el aula.
 
-B. Utiliza RStudio si vas a ejecutar código de R, como por ejemplo crear objetos de R, importar datos a R, analizar matrices de comunidad, calcular diversidad, crear gráficos de ordenación, hacer análisis de agrupamiento (*cluster analysis*) o tareas similares. Sigue estos pasos:
+B. Utiliza RStudio como editor o cuaderno (*notebook*) si vas a ejecutar código de R, como por ejemplo crear objetos de R, importar datos a R, analizar matrices de comunidad, calcular diversidad, crear gráficos de ordenación, hacer análisis de agrupamiento (*cluster analysis*) o tareas similares. Sigue estos pasos:
 
-1. Abre RStudio. Si dispones de una conexión a Internet y una computadora con navegador, te recomiendo utilizar el servidor de RStudio habilitado por el profesor. Esta modalidad tiene como ventaja que el servidor ya cuenta con los programas y paquetes a utilizar en el curso.  Alternativamente, puedes instalar y ejecutar RStudio Desktop en una computadora de tu preferencia (hay muchos tutoriales disponibles en línea). Esta modalidad tiene como ventaja que no necesitas una conexión a Internet permanentemente, sólo cuando actualices tus cambios en el GitHub, aunque es altamente recomendable que actualices con frecuencia (actualiza mientras avances, no esperes hasta el final). Más adelante leerás cómo actualizar tu repo de GitHub con los cambios que hayas hecho localmente.
+1. Abre RStudio. Dispones de dos alternativas para ejecutar RStudio:
+
+    1. Si tienes una conexión a Internet y una computadora con navegador, te recomiendo utilizar el servidor de RStudio habilitado por el profesor. Esta modalidad tiene como ventaja que el servidor ya cuenta con los programas y paquetes necesarios para el curso.
+    2. Alternativamente, puedes instalar y ejecutar RStudio Desktop en una computadora de tu preferencia (hay muchos tutoriales disponibles en línea). Esta modalidad tiene como ventaja que no necesitas una conexión a Internet permanentemente, sólo cuando actualices tus cambios en el GitHub, aunque es altamente recomendable que actualices con frecuencia (actualiza mientras avances, no esperes hasta el final). Más adelante leerás cómo actualizar tu repo de GitHub con los cambios que hayas hecho localmente.
+    
 2. En el menú `File` de RStudio, presiona `New Project` para crear un proyecto. Esto llamará la ventana `Create Project`.
 3. Elige la opción `Version Control`, lo cual hará avanzar automáticamente hacia la Ventana `Create Project from Version Control` automáticamente.
 4. En la ventana `Create Project from Version Control`, elige `Git`. Esto hará avanzar automáticamente hacia la ventana "Clone Git Repository". Para rellenar la caja `Repository URL` necesitas ir a tu repo de asignación.
@@ -51,4 +55,7 @@ B. Utiliza RStudio si vas a ejecutar código de R, como por ejemplo crear objeto
     
 12. Si has llegado hasta este punto, ¡Felicidades! Pasaste varios mundos y ya estás preparado/a para realizar tus asignaciones de manera fluida.
 
-¡Servicio público de radio guarachita! No utilices el servidor de RStudio habilitado por el profesor como repositorio central. Por razones de presupuesto y operativas, el servidor está configurado con un mínimo de seguridad. Por lo tanto, los cambios que hagas a tus repos de asignaciones desde el servidor, debes actualizarlos inmediatamente en el repo remoto de GitHub. Aviso emitido.
+¡Servicio público de radio guarachita!
+1. No utilices el servidor de RStudio habilitado por el profesor como repositorio central. Por razones de presupuesto y operativas, el servidor está configurado con un mínimo de seguridad. Por lo tanto, los cambios que hagas a tus repos de asignaciones desde el servidor, debes actualizarlos inmediatamente en el repo remoto de GitHub. Aviso 1 emitido.
+2. Si usas una computadora compartida (por ejemplo, las del aula), es preferible que inicies tu sesión de GitHub y de correo (y cualquier otro servicio) en una ventana de incógnito o privada. Aviso 2 emitido.
+3. 
