@@ -55,7 +55,7 @@ Tratará sobre hormigas del campus de la UASD, se elaborará siguiendo las sigui
 Los criterios de evaluación que usaré para el manuscrito son:
 1. Cumplimiento de los requisitos exigidos por el Anuario, tanto los de forma (estilos de documento) como los de fondo.
 2. Redacción coherente y concisa. 
-3. Rsultados, con el debido apoyo estadístico y gráfico, que respondan a las preguntas formuladas.
+3. Resultados, con el debido apoyo estadístico y gráfico, que respondan a las preguntas formuladas.
 4. Concisa extracción de conclusiones. Los resultados negativos son igualmente válidos.
 
 Para preparar tu manuscrito, sigue las normas para autores/as del [Anuario de Investigaciones Científicas de la UASD](instrucciones-para-autores-anuario-investigaciones-cientificas-UASD.pdf). Fungiré como editor ficticio de la revista, e incluso como revisor.
