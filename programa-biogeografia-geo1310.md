@@ -19,7 +19,7 @@ Semestre 2019-02 <br/>
 
 La ciencia está en crisis, una crisis de reproducibilidad. Difícilmente un equipo científico reproduce el resultado que obtuvo otro. Se atribuye este déficit a que, al publicar los resultados, no se aportan ni las fuentes, ni los métodos empleados. El panorama está cambiando, pero la única forma de aumentar la reproducibilidad consiste en abrir las fuentes y utilizar métodos reproducibles que normalmente implican utilizar código abierto. La biogeografía no escapa a esta realidad, por lo que en esta asignatura intentarás contribuir a romper el círculo cerrado del conocimiento, empleando métodos para producir en abierto.
 
-Puedes sospechar desde ya que R estará de fondo (a fin de cuentas, este tali usa mucho R), sobre todo por tratarse de una asignatura meramente ecológica. Sin embargo, son bienvenidos todos los lenguajes de programación que quieras utilizar. Si sabes python, C o cualquier otro lenguaje con el que puedas ayudarte a responder preguntas ecológicas, puedes usarlos sin inconveniente alguno. La única condición es que tienes que publicar tu código y tus fuentes. Hay una comunidad allá fuera que explica cómo atender los típicos desafíos y los mensajes de error, y yo también podré ayudar.
+Puedes sospechar desde ya que R estará de fondo (a fin de cuentas, este tali usa mucho R), sobre todo por tratarse de una asignatura meramente ecológica. Sin embargo, son bienvenidos todos los lenguajes de programación que quieras utilizar. Si sabes python, C o cualquier otro lenguaje con el que puedas ayudarte a responder preguntas ecológicas, puedes usarlos sin inconveniente alguno. La única condición es que tienes que publicar tu código y tus fuentes. Hay una comunidad allá fuera que explica cómo atender los típicos desafíos y los mensajes de error, y yo también podré ayudar. Además, esa misma comunidad también podría interesarse por o necesitar tus aportes.
 
 La biogeografía es la ciencia que intenta documentar y entender los patrones espaciales de la diversidad biológica. Modernamente estudia todos los patrones de variación geográfica (y temporal) de la diversidad biológica de elementos naturales (desde genes hasta comunidad y ecosistema) asociados a gradientes de variables tales como el área, el aislamiento, la latitud, la profundidad o la elevación. También se le suele definir como el estudio de la distribución de organismos, tanto en el presente como en el pasado.
 
@@ -58,7 +58,7 @@ Los criterios de evaluación que usaré para el manuscrito son:
 3. Resultados, con el debido apoyo estadístico y gráfico, que respondan a las preguntas formuladas.
 4. Concisa extracción de conclusiones. Los resultados negativos son igualmente válidos.
 
-Para preparar tu manuscrito, sigue las normas para autores/as del [Anuario de Investigaciones Científicas de la UASD](instrucciones-para-autores-anuario-investigaciones-cientificas-UASD.pdf). Fungiré como editor ficticio de la revista, e incluso como revisor.
+Para preparar tu manuscrito, sigue las normas para autores/as del [Anuario de Investigaciones Científicas de la UASD](docs/instrucciones-para-autores-anuario-investigaciones-cientificas-UASD.pdf). Fungiré como editor ficticio de la revista, e incluso como revisor.
 
 * Como verás, el manuscrito requiere los siguientes ítems:
     * Título.
@@ -68,10 +68,10 @@ Para preparar tu manuscrito, sigue las normas para autores/as del [Anuario de In
     * Metodología.
     * Resultados.
     * Discusión.
-    * Agradecimeintos (optativo).
+    * Agradecimientos (optativo).
     * Referencias citadas.
     * Declaración de cumplimientos legales y de no conflictos de intereses (optativo).
-    * Otros requerimientos (ponle atención también a esta parte en las normas).
+    * Otros requerimientos (ponle atención también a esta parte en las [normas](docs/instrucciones-para-autores-anuario-investigaciones-cientificas-UASD.pdf)).
 
 Toma en consideración lo siguiente:
 * No impartiré lecciones sobre redacción ni sobre procesadores de texto, por lo que se recomienda consultar material tanto vía web como en el economato, como forma de mejorar dichas capacidades. 
