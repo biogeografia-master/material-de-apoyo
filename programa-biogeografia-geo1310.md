@@ -12,8 +12,9 @@ Semestre 2019-02 <br/>
 * Lugar y horario: Aula FC-203 (SIGCART), Martes de 2 a 6 pm
 
 ## URLs del contenido del curso:
-* [Programa (hipervínculo recursivo)](programa-biogeografia-geo1310.md)
-* [Asignaciones](ref/como-hacer-una-asignacion.md). Las asignaciones se enviarán por correo electrónico.
+* [Programa (hipervínculo recursivo)](programa-biogeografia-geo1310.md).
+* Asignaciones. Se enviarán por correo electrónico.
+* [¿Cómo realizar una asignación?](ref/como-hacer-una-asignacion.md).
 
 ## Descripción
 
