@@ -13,7 +13,7 @@ Semestre 2019-02 <br/>
 
 ## URLs del contenido del curso:
 * [Programa (hipervínculo recursivo)](programa-biogeografia-geo1310.md)
-* Asignaciones: se enviarán por correo electrónico
+* [Asignaciones](ref/como-hacer-una-asignacion.md). Las asignaciones se enviarán por correo electrónico.
 
 ## Descripción
 
