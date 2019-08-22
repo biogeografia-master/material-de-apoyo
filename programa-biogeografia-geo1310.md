@@ -100,6 +100,7 @@ Nota: Si tienes experiencia, o quieres asumir retos, puedes implementar métodos
 
 Por correo electrónico, te enviaré asignaciones para desarrollar tu código reproducible.
 Orientaré con ejemplos y soluciones de forma pública a través de `issues` que abrirás tú o yo en el GitHub. De esta forma las discusiones quedan disponibles para otras personas.
+
 Al abrir un `issue` de GitHub debes plantear el problema al que te enfrentas, cómo has intentado resolverlo o qué soluciones has probado. Si se trata de cuestión relacionada con programación o análisis de datos, deberás facilitar **código reproducible y mensaje de error (si lo hubiere)**. Evita el típico comentario "da error", puesto que no conduce a nada.
 
 ### Exámenes

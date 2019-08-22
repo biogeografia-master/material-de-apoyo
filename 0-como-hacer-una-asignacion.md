@@ -1,6 +1,8 @@
-# ¿Cómo crear un repositorio con tu asignación y, posteriormente, cómo hacerla?
+# ¿Cómo realizar una asignación?
 
-## Crea un repositorio con tu asignación:
+En este documento te explico cómo crear un propio repositorio con tu asignación, cómo realizarla, cómo notificarme al terminarla y cómo crear un *issue* o incidencia para pedir ayuda.
+
+## Crea un repositorio con tu asignación
 
 1. Desde el navegador, entra en [Github](https://github.com/) e [inicia sesión](https://github.com/login) con tu cuenta. Si usas una PC pública o compartida, es preferible que inicies el navegador en modo incógnito. Si no tienes cuenta de Github, [crea una](https://github.com/join). Ésta será la cuenta que usarás durante el curso.
 
@@ -8,11 +10,11 @@
 
 3. Al hacer clic, el navegador te dirigirá a aceptar la asignación (te pedirá que inicies tu cuenta de Github si aún no lo has hecho). Presiona `Accept this assignment`. Cuando quieras volver a tu asignación, puedes usar este vínculo del mensaje de invitación.
 
-4. Automáticamente se creará, en la organización de GitHub [biogeografia-201902](https://github.com/biogeografia-201902) (administrada por el profesor), un repo conteniendo tu asignación. Listo, tienes ya un repo con tu asignación, donde realizarás tus actualizaciones. Tú y el profesor serán los únicos contribuidores del repo.
+4. Automáticamente se creará, en una "organización" de GitHub que se corresponde con la asignatura y el semestre actual ([biogeografia-201902](https://github.com/biogeografia-201902), administrada por el profesor y de la cual formas parte), un repo conteniendo tu asignación. Listo, tienes ya un repo con tu asignación, donde realizarás tus actualizaciones. Tú y el profesor serán los únicos contribuidores del repo.
 
 * Nota: estos 4 pasos se ejecutan una sola vez
 
-## Haz tu asignación:
+## Realiza tu asignación
 
 Elige una de dos alternativas en función del tipo de asignación:
 
@@ -78,8 +80,45 @@ B. Utiliza RStudio como editor o cuaderno (*notebook*) si vas a ejecutar código
     
 12. Si has llegado hasta este punto, ¡Felicidades! Pasaste varios mundos y ya estás preparado/a para realizar tus asignaciones de manera fluida.
 
+## Notifícame que has terminado
+
+Puedes notificarme cuando hayas realizado todos tus *commits* por medio de la interfaz web de GitHub. Este sería un camino idóneo:
+
+1. Ve al repo de tu asignación. Para ello inicia sesión en GitHub. En el panel lateral izquierdo verás tus repos, localiza el que te interesa.
+
+2. Presiona en la pestaña ![](img/bt_commits.png) localizada sobre los botones del repo (el número de *commits* podría ser diferente en tu caso). Esto te llevará a la lista de *commits* del repo.
+
+3. Selecciona el botón que contiene el nombre de la revisión (*SHA-1 hash*), localizado a la derecha del *commit*, el cual luce como éste ![](img/bt_sha_1_hash.png).
+
+4. En la caja al final de la página, escribe un mensaje indicándome que terminaste o cualquier otra indicación que quieras hacerme saber. Al principio, al final o entre palabras, es imprescindible que escribas una mención a mí usando `@geofis`. Te quedaría algo tal que esto:
+
+    <figure><img src="img/mention_on_comment.png" width="500"></figure>
+    
+No es imprescindible que me notifiques, porque estaré pendiente de tu repo y, en última instancia, lo evaluaré tal cual esté tras finalizar el plazo. Sin embargo, el comentario con mención a mí me indicaría que has terminado, o lo que sea que quieras comunicarme.
+
+Puedes utilizar este mismo procedimiento para llamar mi atención, o para que verifique tus avances. No necesitas haber concluido para colocar comentario con mención a mí. Ahora bien, **no utilices este procedimiento para pedir ayuda, porque para ese caso existe un procedimiento separado que te explico en el siguiente punto**.
+
+## Pide ayuda creando un *issue* o incidencia
+
+Utiliza la sección `Issues` para pedir ayuda o reportar errores. Aunque puedes hacerlo, no necesitas incluir una mención a mí (@geofis) para notificarme, puesto que GitHub me informa tan pronto creas el *issue*. Sigue este procedimiento.
+
+1. Ve al repo de tu asignación. Para ello inicia sesión en GitHub. En el panel lateral izquierdo verás tus repos, localiza el que te interesa.
+
+2. Presiona en la pestaña ![](img/bt_issues.png) localizada en la parte superior del repo (el número de *issues* podría ser diferente en tu caso). Esto te llevará a la lista de *issues* del repo.
+
+3. Crea un nuevo *issue* presionando el botón verde `New issue`.
+
+4. Escibe un título para el *issue* en la caja `Title`.
+
+5. En la caja `Leave a comment` describe el problema al que te enfrentaste, cómo intentaste resolverlo o qué soluciones probaste. Si se trata de un tema de programación o de análisis de datos, deberás facilitar **código reproducible y mensaje de error (si lo hubiere)**. Evita el típico comentario "da error", puesto que no conduce a nada. Puedes dar formato a tu mensaje utilizando sintaxis markdown.
+
+6. Cuando hayas terminado, presiona el botón verde `Submit new issue` localizado en la parte inferior. Inmediatamente me llegarán notificaciones a mi cuenta de GitHub y por correo electrónico.
+
+
+## Notas finales
+
 ¡Servicio público de radio guarachita!
 
-1. No utilices el servidor de RStudio habilitado por el profesor como repositorio central. Por razones de presupuesto y operativas, el servidor está configurado con un mínimo de seguridad. Por lo tanto, los cambios que hagas a los repos que alojes en el el servidor, debes actualizarlos inmediatamente en el repo remoto de GitHub. Aviso 1 emitido.
+1. No utilices el servidor de RStudio habilitado por el profesor como repositorio central. Por razones de presupuesto y operativas, el servidor está configurado con un mínimo de seguridad. Por lo tanto, los cambios que hagas a los repos alojados en el servidor, debes actualizarlos tan pronto te sea posible en el repo remoto de GitHub. Aviso 1 emitido.
 
 2. Si usas una computadora compartida (por ejemplo, en el aula), es preferible que inicies tu sesión de GitHub y de correo (y cualquier otro servicio) en una ventana de incógnito o privada. Aviso 2 emitido.
