@@ -6,7 +6,7 @@ En este documento te explico cómo crear un propio repositorio con tu asignació
 
 1. Desde el navegador, entra en [Github](https://github.com/) e [inicia sesión](https://github.com/login) con tu cuenta. Si usas una PC pública o compartida, es preferible que inicies el navegador en modo incógnito. Si no tienes cuenta de Github, [crea una](https://github.com/join). Ésta será la cuenta que usarás durante el curso.
 
-2. Ve a tu buzón de correo y, en el mensaje enviado por el profesor (podría caer en spam), haz clic en el vínculo (será algo tal que https://<i></i>classroom.github.com/...).
+2. Ve a tu buzón de correo y, en el mensaje enviado por el profesor (podría caer en spam), haz clic en el vínculo (será algo tal que https<i></i>://classroom.github.com/...).
 
 3. Al hacer clic, el navegador te dirigirá a aceptar la asignación (te pedirá que inicies tu cuenta de Github si aún no lo has hecho). Presiona `Accept this assignment`. Cuando quieras volver a tu asignación, puedes usar este vínculo del mensaje de invitación.
 
@@ -48,7 +48,7 @@ B. Utiliza RStudio como editor o cuaderno (*notebook*) si vas a ejecutar código
 
 5. Ve al navegador y, en tu repo de asignación, copia la URL del repo presionando el botón verde `Clone or download` ![](img/bt_clone_or_download.png) y luego el botón `Copiar URL del repo` ![](img/bt_copy_repo_url.png). La URL se encuentra ahora en el clipboard.
 
-6. Regresa a RStudio. En la caja `Repository URL`, pega la URL que tienes en el portapapeles (en Linux y Windows, `Ctrl+V`). Dicho texto será algo tal que https://<i></i>github.com/biogeografia-master/<nombredelrepo>.git.
+6. Regresa a RStudio. En la caja `Repository URL`, pega la URL que tienes en el portapapeles (en Linux y Windows, `Ctrl+V`). Dicho texto será algo tal que https<i></i>://github.com/biogeografia-201902/\<nombredelrepo\>.git.
 
 7. En la caja `Project directory name`, puedes dejar el valor por defecto, que será el mismo nombre del repo (por ejemplo, `unidad-0-asignacion-0`). Este será el nombre del directorio donde se clonará el repo.
 
