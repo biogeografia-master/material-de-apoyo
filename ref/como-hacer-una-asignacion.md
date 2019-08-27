@@ -18,7 +18,9 @@ En este documento te explico cómo crear un propio repositorio con tu asignació
 
 Elige una de dos alternativas en función del tipo de asignación:
 
-A. Usa la interfaz web de GitHub si no necesitas ejecutar código. Por ejemplo, usa esta alternativa si vas a hacer un documento de texto en Markdown que contenga tus preguntas de investigación ([tutorial sobre Markdown](https://www.youtube.com/watch?v=y6XdzBNC0_0), [buen blog en inglés sobre Markdown](https://girlknowstech.com/how-to-write-in-markdown/), [este otro con vídeos cortos y concisos](https://instructor-support.datacamp.com/en/articles/2336337-markdown-tutorial) y [buen tutorial en inglés sobre redacción académica](https://www.youtube.com/watch?v=hpAJMSS8pvs)). El interfaz web de GitHub es bastante sencillo. Sigue estos pasos:
+### Usando la interfaz web de GitHub
+
+Usa la interfaz web de GitHub si no necesitas ejecutar código. Por ejemplo, usa esta alternativa si vas a hacer un documento de texto en Markdown que contenga tus preguntas de investigación ([tutorial sobre Markdown](https://www.youtube.com/watch?v=y6XdzBNC0_0), [buen blog en inglés sobre Markdown](https://girlknowstech.com/how-to-write-in-markdown/), [este otro con vídeos cortos y concisos](https://instructor-support.datacamp.com/en/articles/2336337-markdown-tutorial) y [buen tutorial en inglés sobre redacción académica](https://www.youtube.com/watch?v=hpAJMSS8pvs)). El interfaz web de GitHub es bastante sencillo. Sigue estos pasos:
 
 1. Inicia una sesión en GitHub con tu usuario/contraseña.
 
@@ -32,7 +34,9 @@ A. Usa la interfaz web de GitHub si no necesitas ejecutar código. Por ejemplo, 
 
 Hasta aquí cómo usar la interfaz web de GitHub para realizar tus asignaciones. Recuerda, esta modalidad es útil si no necesitas ejecutar código, para redactar documentos de Markdown o para pequeñas ediciones de código. Más detalles, en el aula.
 
-B. Utiliza RStudio como editor o cuaderno (*notebook*) si vas a ejecutar código de R, como por ejemplo crear objetos de R, importar datos a R, analizar matrices de comunidad, calcular diversidad, crear gráficos de ordenación, hacer análisis de agrupamiento (*cluster analysis*) o tareas similares. Sigue estos pasos:
+### Usando RStudio
+
+Utiliza RStudio como editor o cuaderno (*notebook*) si vas a ejecutar código de R, como por ejemplo crear objetos de R, importar datos a R, analizar matrices de comunidad, calcular diversidad, crear gráficos de ordenación, hacer análisis de agrupamiento (*cluster analysis*) o tareas similares. Sigue estos pasos:
 
 1. Abre RStudio. Dispones de dos alternativas para ejecutar RStudio:
 
@@ -46,7 +50,7 @@ B. Utiliza RStudio como editor o cuaderno (*notebook*) si vas a ejecutar código
 
 4. En la ventana `Create Project from Version Control`, elige `Git`. Esto hará avanzar automáticamente hacia la ventana "Clone Git Repository". Para rellenar la caja `Repository URL` necesitas ir a tu repo de asignación.
 
-5. Ve al navegador y, en tu repo de asignación, copia la URL del repo presionando el botón verde `Clone or download` ![](img/bt_clone_or_download.png) y luego el botón `Copiar URL del repo` ![](img/bt_copy_repo_url.png). La URL se encuentra ahora en el clipboard.
+5. Ve al navegador y, en tu repo de asignación, copia la URL del repo presionando el botón verde `Clone or download` ![](../img/bt_clone_or_download.png) y luego el botón `Copiar URL del repo` ![](../img/bt_copy_repo_url.png). La URL se encuentra ahora en el clipboard.
 
 6. Regresa a RStudio. En la caja `Repository URL`, pega la URL que tienes en el portapapeles (en Linux y Windows, `Ctrl+V`). Dicho texto será algo tal que https<i></i>://github.com/biogeografia-201902/\<nombredelrepo\>.git.
 
@@ -72,11 +76,11 @@ B. Utiliza RStudio como editor o cuaderno (*notebook*) si vas a ejecutar código
     
     4. Presiona el botón `Commit` para que los cambios pasen al `Stage` (¡tus cambios aún no se han sincronizado con el repo remoto!). Aparecerá un cuadro de diálogo informando los cambios realizados, algo tal que ésto (variará mucho en función de los cambios realizados):
     
-    <figure><img src="img/master_branch_changes.png" width="400"></figure>
+    <figure><img src="../img/master_branch_changes.png" width="400"></figure>
     
     5. Presiona el botón `Close` para regresar al cuadro `Review Changes`. Al regresar, presiona el botón `Push` y, automáticamente, te aparecerá un cuadro para escribir tu usuario de GitHub y otro para escribir tu contraseña. Si todo sale bien, tus cambios se habrán sincronizado y te aparecerá un mensaje de confirmación informando sobre la actualización de la rama máster, algo tal que esto:
     
-    <figure><img src="img/master_branch_updated.png" width="400"></figure>
+    <figure><img src="../img/master_branch_updated.png" width="400"></figure>
     
 12. Si has llegado hasta este punto, ¡Felicidades! Pasaste varios mundos y ya estás preparado/a para realizar tus asignaciones de manera fluida.
 
@@ -86,13 +90,13 @@ Puedes notificarme cuando hayas realizado todos tus *commits* por medio de la in
 
 1. Ve al repo de tu asignación. Para ello inicia sesión en GitHub. En el panel lateral izquierdo verás tus repos, localiza el que te interesa.
 
-2. Presiona en la pestaña ![](img/bt_commits.png) localizada sobre los botones del repo (el número de *commits* podría ser diferente en tu caso). Esto te llevará a la lista de *commits* del repo.
+2. Presiona en la pestaña ![](../img/bt_commits.png) localizada sobre los botones del repo (el número de *commits* podría ser diferente en tu caso). Esto te llevará a la lista de *commits* del repo.
 
-3. Selecciona el botón que contiene el nombre de la revisión (*SHA-1 hash*), localizado a la derecha del *commit*, el cual luce como éste ![](img/bt_sha_1_hash.png).
+3. Selecciona el botón que contiene el nombre de la revisión (*SHA-1 hash*), localizado a la derecha del *commit*, el cual luce como éste ![](../img/bt_sha_1_hash.png).
 
 4. En la caja al final de la página, escribe un mensaje indicándome que terminaste o cualquier otra indicación que quieras hacerme saber. Al principio, al final o entre palabras, es imprescindible que escribas una mención a mí usando `@geofis`. Te quedaría algo tal que esto:
 
-    <figure><img src="img/mention_on_comment.png" width="500"></figure>
+    <figure><img src="../img/mention_on_comment.png" width="500"></figure>
     
 No es imprescindible que me notifiques, porque estaré pendiente de tu repo y, en última instancia, lo evaluaré tal cual esté tras finalizar el plazo. Sin embargo, el comentario con mención a mí me indicaría que has terminado, o lo que sea que quieras comunicarme.
 
@@ -104,7 +108,7 @@ Utiliza la sección `Issues` para pedir ayuda o reportar errores. Aunque puedes 
 
 1. Ve al repo de tu asignación. Para ello inicia sesión en GitHub. En el panel lateral izquierdo verás tus repos, localiza el que te interesa.
 
-2. Presiona en la pestaña ![](img/bt_issues.png) localizada en la parte superior del repo (el número de *issues* podría ser diferente en tu caso). Esto te llevará a la lista de *issues* del repo.
+2. Presiona en la pestaña ![](../img/bt_issues.png) localizada en la parte superior del repo (el número de *issues* podría ser diferente en tu caso). Esto te llevará a la lista de *issues* del repo.
 
 3. Crea un nuevo *issue* presionando el botón verde `New issue`.
 
