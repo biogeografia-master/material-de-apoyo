@@ -18,7 +18,9 @@ En este documento te explico cómo crear un propio repositorio con tu asignació
 
 Elige una de dos alternativas en función del tipo de asignación:
 
-A. Usa la interfaz web de GitHub si no necesitas ejecutar código. Por ejemplo, usa esta alternativa si vas a hacer un documento de texto en Markdown que contenga tus preguntas de investigación ([tutorial sobre Markdown](https://www.youtube.com/watch?v=y6XdzBNC0_0), [buen blog en inglés sobre Markdown](https://girlknowstech.com/how-to-write-in-markdown/), [este otro con vídeos cortos y concisos](https://instructor-support.datacamp.com/en/articles/2336337-markdown-tutorial) y [buen tutorial en inglés sobre redacción académica](https://www.youtube.com/watch?v=hpAJMSS8pvs)). El interfaz web de GitHub es bastante sencillo. Sigue estos pasos:
+### Usando la interfaz web de GitHub
+
+Usa la interfaz web de GitHub si no necesitas ejecutar código. Por ejemplo, usa esta alternativa si vas a hacer un documento de texto en Markdown que contenga tus preguntas de investigación ([tutorial sobre Markdown](https://www.youtube.com/watch?v=y6XdzBNC0_0), [buen blog en inglés sobre Markdown](https://girlknowstech.com/how-to-write-in-markdown/), [este otro con vídeos cortos y concisos](https://instructor-support.datacamp.com/en/articles/2336337-markdown-tutorial) y [buen tutorial en inglés sobre redacción académica](https://www.youtube.com/watch?v=hpAJMSS8pvs)). El interfaz web de GitHub es bastante sencillo. Sigue estos pasos:
 
 1. Inicia una sesión en GitHub con tu usuario/contraseña.
 
@@ -32,7 +34,9 @@ A. Usa la interfaz web de GitHub si no necesitas ejecutar código. Por ejemplo, 
 
 Hasta aquí cómo usar la interfaz web de GitHub para realizar tus asignaciones. Recuerda, esta modalidad es útil si no necesitas ejecutar código, para redactar documentos de Markdown o para pequeñas ediciones de código. Más detalles, en el aula.
 
-B. Utiliza RStudio como editor o cuaderno (*notebook*) si vas a ejecutar código de R, como por ejemplo crear objetos de R, importar datos a R, analizar matrices de comunidad, calcular diversidad, crear gráficos de ordenación, hacer análisis de agrupamiento (*cluster analysis*) o tareas similares. Sigue estos pasos:
+### Usando RStudio
+
+Utiliza RStudio como editor o cuaderno (*notebook*) si vas a ejecutar código de R, como por ejemplo crear objetos de R, importar datos a R, analizar matrices de comunidad, calcular diversidad, crear gráficos de ordenación, hacer análisis de agrupamiento (*cluster analysis*) o tareas similares. Sigue estos pasos:
 
 1. Abre RStudio. Dispones de dos alternativas para ejecutar RStudio:
 
