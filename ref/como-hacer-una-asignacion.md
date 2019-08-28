@@ -62,8 +62,8 @@ Utiliza RStudio como editor o cuaderno (*notebook*) si vas a ejecutar código de
 
 10. **Identifícate**. En la pestaña `Git` ve a la rueda dentada `More` ![](../img/bt_more.png) y presiona el comando `Shell...`. Se abrirá una ventana del intérprete de línea de órdenes (CLI). Debes escribir las siguientes dos sentencias, una a una.
 
-    1. `git config user.email "tuemailengithubsincomillas"`. Presiona <enter>
-    2. `git config user.name "tuusuariodegithubsincomillas". Presiona <enter>
+    1. `git config user.email "tuemailengithubsincomillas"`. Presiona `<enter>`
+    2. `git config user.name "tuusuariodegithubsincomillas". Presiona `<enter>`
     
     * Si no realizas este paso, al intentar hacer `Commit`, te aparecerá el siguiente mensaje: `***Please tell me who you are`
 
