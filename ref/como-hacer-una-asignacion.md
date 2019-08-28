@@ -60,7 +60,7 @@ Utiliza RStudio como editor o cuaderno (*notebook*) si vas a ejecutar código de
 
 9. Presiona el botón `Create Project`. Automáticamente, RStudio clonará el repositorio de tu asignación localmente. Esta copia local puede ser editada mediante el editor de RStudio y sincronizada con el repo remoto.
 
-10. **Identifícate**. En la pestaña `Git` ve a la rueda dentada `More` ![](bt_more.png)
+10. **Identifícate**. En la pestaña `Git` ve a la rueda dentada `More` ![](bt_more.png). 
 
 11. Al igual que en el interfaz web de GitHub, a partir de este punto RStudio te permite actualizar un archivo existente en tu repo o crear uno nuevo. Todo dependerá de la naturaleza de la asignación:
 
