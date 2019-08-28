@@ -8,7 +8,7 @@ En este documento te explico cómo crear un propio repositorio con tu asignació
 
 2. Ve a tu buzón de correo y, en el mensaje enviado por el profesor (podría caer en spam), haz clic en el vínculo (será algo tal que https<i></i>://classroom.github.com/...).
 
-3. Al hacer clic, el navegador te dirigirá a aceptar la asignación (te pedirá que inicies tu cuenta de Github si aún no lo has hecho). Presiona `Accept this assignment`. Cuando quieras volver a tu asignación, puedes usar este vínculo del mensaje de invitación.
+3. Al hacer clic, el navegador te dirigirá a aceptar la asignación. Te pedirá que inicies tu cuenta de Github si aún no lo has hecho. Usa siempre una ventana de incógnito o privada, asegurándote de que es tu cuenta la que figura como cuenta iniciada en GitHub (compruébalo en el botón derecho superior, donde verás tu avatar o imagen de perfil). Presiona `Accept this assignment`. Cuando quieras volver a tu asignación, puedes usar el vínculo del mensaje de invitación (...siempre que el tali no la borre, ejem).
 
 4. Automáticamente se creará, en una "organización" de GitHub que se corresponde con la asignatura y el semestre actual ([biogeografia-201902](https://github.com/biogeografia-201902), administrada por el profesor y de la cual formas parte), un repo conteniendo tu asignación. Listo, tienes ya un repo con tu asignación, donde realizarás tus actualizaciones. Tú y el profesor serán los únicos contribuidores del repo.
 
@@ -60,7 +60,7 @@ Utiliza RStudio como editor o cuaderno (*notebook*) si vas a ejecutar código de
 
 9. Presiona el botón `Create Project`. Automáticamente, RStudio clonará el repositorio de tu asignación localmente. Esta copia local puede ser editada mediante el editor de RStudio y sincronizada con el repo remoto.
 
-10. **Identifícate**. En la pestaña `Git` ve a la rueda dentada `More` ![](../img/bt_more.png) y presiona el comando `Shell...`. Se abrirá una ventana del intérprete de línea de órdenes (CLI). Debes escribir las siguientes dos sentencias, una a una.
+10. **Identifícate**. En la pestaña `Git` ve a la rueda dentada `More` ![](../img/bt_more.png) y presiona el comando `Shell...`. Se abrirá una ventana del intérprete de línea de órdenes (CLI). Debes ejecutar las dos sentencias siguientes, una a una.
 
     1. `git config user.email "tuemailengithubsincomillas"`. Presiona `<enter>`
     2. `git config user.name "tuusuariodegithubsincomillas"`. Presiona `<enter>`
@@ -130,6 +130,8 @@ Utiliza la sección `Issues` para pedir ayuda o reportar errores. Aunque puedes 
 
 ¡Servicio público de radio guarachita!
 
-1. No utilices el servidor de RStudio habilitado por el profesor como repositorio central. Por razones de presupuesto y operativas, el servidor está configurado con un mínimo de seguridad. Por lo tanto, los cambios que hagas a los repos alojados en el servidor, debes actualizarlos tan pronto te sea posible en el repo remoto de GitHub. Aviso 1 emitido.
+1. No utilices el servidor de RStudio habilitado por el profesor como repositorio central. Por razones de presupuesto y operativas, el servidor está configurado con un mínimo de seguridad. Por lo tanto, los cambios que hagas a los repos alojados en el servidor, debes actualizarlos tan pronto te sea posible en el repo remoto de GitHub. **Aviso 1 emitido**.
 
-2. Si usas una computadora compartida (por ejemplo, en el aula), es preferible que inicies tu sesión de GitHub y de correo (y cualquier otro servicio) en una ventana de incógnito o privada. Aviso 2 emitido.
+2. Si usas una computadora compartida (por ejemplo, en el aula), es preferible que inicies tu sesión de GitHub y de correo (y cualquier otro servicio) en una ventana de incógnito o privada. **Aviso 2 emitido**.
+
+3. En GitHub, asegúrate siempre de que es tu cuenta la que figura como cuenta iniciada. Compruébalo en el botón derecho superior, donde verás tu avatar o imagen de perfil. **Aviso 3 emitido**.
