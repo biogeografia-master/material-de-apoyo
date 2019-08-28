@@ -60,7 +60,12 @@ Utiliza RStudio como editor o cuaderno (*notebook*) si vas a ejecutar código de
 
 9. Presiona el botón `Create Project`. Automáticamente, RStudio clonará el repositorio de tu asignación localmente. Esta copia local puede ser editada mediante el editor de RStudio y sincronizada con el repo remoto.
 
-10. **Identifícate**. En la pestaña `Git` ve a la rueda dentada `More` ![](../img/bt_more.png). Si no realizas este paso, al intentar hacer `Commit` te aparecerá el siguiente mensaje: `***Please tell me who you are`
+10. **Identifícate**. En la pestaña `Git` ve a la rueda dentada `More` ![](../img/bt_more.png) y presiona el comando `Shell...`. Se abrirá una ventana del intérprete de línea de órdenes (CLI). Debes escribir las siguientes dos sentencias, una a una.
+
+    1. `git config user.email "tuemailengithubsincomillas"`. Presiona <enter>
+    2. `git config user.name "tuusuariodegithubsincomillas". Presiona <enter>
+    
+    * Si no realizas este paso, al intentar hacer `Commit`, te aparecerá el siguiente mensaje: `***Please tell me who you are`
 
 11. Al igual que en el interfaz web de GitHub, a partir de este punto RStudio te permite actualizar un archivo existente en tu repo o crear uno nuevo. Todo dependerá de la naturaleza de la asignación:
 
