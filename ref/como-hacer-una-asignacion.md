@@ -52,7 +52,7 @@ Utiliza RStudio como editor o cuaderno (*notebook*) si vas a ejecutar código de
 
 5. Ve al navegador y, en tu repo de asignación, copia la URL del repo presionando el botón verde `Clone or download` ![](../img/bt_clone_or_download.png) y luego el botón `Copiar URL del repo` ![](../img/bt_copy_repo_url.png). La URL se encuentra ahora en el clipboard.
 
-6. Regresa a RStudio. En la caja `Repository URL`, pega la URL que tienes en el portapapeles (en Linux y Windows, `Ctrl+V`). Dicho texto será algo tal que https<i></i>://github.com/biogeografia-201902/\<nombredelrepo\>.git.
+6. Regresa a RStudio. En la caja `Repository URL`, pega la URL que tienes en el portapapeles (en Linux y Windows, `Ctrl+V`). Dicho texto será algo tal que https<i></i>://github.com/biogeografia-201902/\<nombredelrepo\>.git. El nombre del repo normalmente termina con tu nombre de usuario, por ejemplo, https<i></i>://github.com/biogeografia-201902/\<unidad-0-asignacion-1-preguntas-investigacion-estudianteficticio\>.git
 
 7. En la caja `Project directory name`, puedes dejar el valor por defecto, que será el mismo nombre del repo (por ejemplo, `unidad-0-asignacion-0`). Este será el nombre del directorio donde se clonará el repo.
 
@@ -60,11 +60,11 @@ Utiliza RStudio como editor o cuaderno (*notebook*) si vas a ejecutar código de
 
 9. Presiona el botón `Create Project`. Automáticamente, RStudio clonará el repositorio de tu asignación localmente. Esta copia local puede ser editada mediante el editor de RStudio y sincronizada con el repo remoto.
 
-10. Al igual que en el interfaz web de GitHub, a partir de este punto, puedes actualizar un archivo existente en tu repo o crear uno nuevo. Todo dependerá de la naturaleza de la asignación:
+10. Al igual que en el interfaz web de GitHub, a partir de este punto RStudio te permite actualizar un archivo existente en tu repo o crear uno nuevo. Todo dependerá de la naturaleza de la asignación:
 
-    1. Para actualizar un archivo existente, abre la pestaña `Files` (revisa los paneles de RStudio) y cliquea sobre el nombre del archivo que te interesa editar. Haz los cambios que correspondan según lo asignado. No te olvides de guardar inmediatamente cualquier cambio que hagas, pero ten en cuenta que estarás guardando sólo la copia local, no la del repo de GitHub (más adelante verás como actualizar el repo remoto).
+    1. Para actualizar un archivo existente, abre la pestaña `Files` (revisa los distintos paneles de RStudio) y cliquea sobre el nombre del archivo que te interesa editar. Haz los cambios que correspondan, según lo asignado. **No te olvides de guardar cualquier cambio que hagas inmediatamente**, mediante el comando `File>Save` de RStudio, pero ten en cuenta que **estarás guardando sólo la copia local**, no la del repo de GitHub (más adelante verás cómo actualizar el repo remoto).
     
-    2. Para crear un nuevo documento, presiona el botón `Create new file`, se creará un documento en blanco, ponle un nombre en la caja `Name your file` y, en el documento, añade el texto que corresponda según lo asignado.
+    2. Para crear un nuevo documento, presiona el comando `File>New File>Text File` de RStudio. Se abrirá un documento en blanco, guárdalo inmediatamente en el comando `File>Save` y asegúrate que se guarda en la ruta que corresponda dentro del repo. En el documento, añade el texto que tengas que añadir y guarda frecuentemente.
     
 11. Finalmente, para actualizar cambios desde el repo local al remoto, haz lo siguiente:
 
