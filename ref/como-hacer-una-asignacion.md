@@ -60,17 +60,19 @@ Utiliza RStudio como editor o cuaderno (*notebook*) si vas a ejecutar código de
 
 9. Presiona el botón `Create Project`. Automáticamente, RStudio clonará el repositorio de tu asignación localmente. Esta copia local puede ser editada mediante el editor de RStudio y sincronizada con el repo remoto.
 
-10. Al igual que en el interfaz web de GitHub, a partir de este punto RStudio te permite actualizar un archivo existente en tu repo o crear uno nuevo. Todo dependerá de la naturaleza de la asignación:
+10. **Identifícate**. En la pestaña `Git` ve a la rueda dentada `More` ![](bt_more.png)
 
-    1. Para actualizar un archivo existente, abre la pestaña `Files` (revisa los distintos paneles de RStudio) y cliquea sobre el nombre del archivo que te interesa editar. Haz los cambios que correspondan, según lo asignado. **No te olvides de guardar cualquier cambio que hagas inmediatamente**, mediante el comando `File>Save` de RStudio, pero ten en cuenta que **estarás guardando sólo la copia local**, no la del repo de GitHub (más adelante verás cómo actualizar el repo remoto). Si no guardas el documento, no podrás hacer `Commit` más adelante.
-    
-    2. Para crear un nuevo documento, presiona el comando `File>New File>Text File` de RStudio. Se abrirá un documento en blanco, guárdalo inmediatamente en el comando `File>Save` y asegúrate que se guarda en la ruta que corresponda dentro del repo. En el documento, añade el texto que tengas que añadir y guarda frecuentemente.
-    
-11. Finalmente, para actualizar cambios desde el repo local al remoto, haz lo siguiente:
+11. Al igual que en el interfaz web de GitHub, a partir de este punto RStudio te permite actualizar un archivo existente en tu repo o crear uno nuevo. Todo dependerá de la naturaleza de la asignación:
 
-    1. Abre la pestaña `Git` (revisa los paneles de RStudio). Si has hecho cambios o has añadido archivos, te encontrarás en esta pestaña con una lista de archivos cambiados o añadidos. Lógicamente, si no has creado o guardado archivos, no habrá lista de alguna, y la pestaña estará vacía. Haz clic en la marca de cotejo bajo la columna `Staged` de cada uno de los archivos que te interesa actualizar con el repo remoto. En algunos casos se tratará de modificaciones a archivos existentes (aparecerán con una `M`), o de archivos para añadir (aparecerán con un `?` o con una `A`). Asegúrate de hacer clic hasta que aparezca como marca de cotejo o aspa (como ésta: ![](../img/aspa.png)), y **no** como cuadro relleno. ¡IMPORTANTE! Sólo los archivos que cotejes se actualizarán con el repo remoto.
+    1. **Para actualizar un archivo existente**, abre la pestaña `Files` (revisa los distintos paneles de RStudio) y cliquea sobre el nombre del archivo que te interesa editar. Haz los cambios que correspondan, según lo asignado. **No te olvides de guardar cualquier cambio que hagas inmediatamente**, mediante el comando `File>Save` de RStudio, pero ten en cuenta que **estarás guardando sólo la copia local**, no la del repo de GitHub (más adelante verás cómo actualizar el repo remoto). Si no guardas el documento, no podrás hacer `Commit` más adelante.
     
-    2. Presiona el botón `Commit`, lo cual abrirá la ventana de `Review Changes`. Aquí puedes revisar los cambios que has hecho a cada archivo. El texto añadido aparece sombreado en verde, y el borrado en rojo.
+    2. **Para crear un nuevo documento**, presiona el comando `File>New File>Text File` de RStudio. Se abrirá un documento en blanco, guárdalo inmediatamente en el comando `File>Save` y asegúrate que se guarda en la ruta que corresponda dentro del repo. En el documento, añade el texto que tengas que añadir y guarda frecuentemente.
+    
+12. Finalmente, para sincronizar cambios desde el repo local al remoto, haz lo siguiente:
+
+    1. Abre la pestaña `Git` (revisa los paneles de RStudio hasta encontrarla, o usa el botón ![](bt_git.png)). Si has hecho cambios o has añadido archivos, te encontrarás en esta pestaña con una lista de archivos cambiados o añadidos. Lógicamente, si no has creado o guardado archivos, no habrá lista de alguna, y la pestaña estará vacía. Haz clic en la marca de cotejo bajo la columna `Staged` de cada uno de los archivos que te interesa actualizar con el repo remoto. En algunos casos se tratará de modificaciones a archivos existentes (aparecerán con una `M`), o de archivos para añadir (aparecerán con un `?` o con una `A`). Asegúrate de hacer clic hasta que aparezca como marca de cotejo o aspa (como ésta: ![](../img/aspa.png)), y **no** como cuadro relleno. ¡IMPORTANTE! Sólo los archivos que cotejes se actualizarán con el repo remoto.
+    
+    2. Presiona el botón `Commit`, lo cual abrirá la ventana `Review Changes`. Aquí puedes revisar los cambios que has hecho a cada archivo. El texto añadido aparece sombreado en verde, y el borrado en rojo.
     
     3. En la caja `Commit message` escribe un mensaje que resuma el conjunto de cambios, por ejemplo, `actualizado archivo de asignación` o `añadido archivo de script`.
     
@@ -82,7 +84,7 @@ Utiliza RStudio como editor o cuaderno (*notebook*) si vas a ejecutar código de
     
     <figure><img src="../img/master_branch_updated.png" width="400"></figure>
     
-12. Si has llegado hasta este punto, ¡Felicidades! Pasaste varios mundos y ya estás preparado/a para realizar tus asignaciones de manera fluida.
+13. Si has llegado hasta este punto, ¡Felicidades! Pasaste varios mundos y ya estás preparado/a para realizar tus asignaciones de manera fluida.
 
 ## Notifícame que has terminado
 
