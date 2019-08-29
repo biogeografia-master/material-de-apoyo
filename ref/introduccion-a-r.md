@@ -1,0 +1,99 @@
+
+<!-- Este .md fue generado a partir del .Rmd homónimo. Edítese el .Rmd -->
+Introducción a R
+================
+
+Introducción
+------------
+
+Te dejo a continuación algunas fuentes (mayoritariamente en español) sobre las aplicaciones que manejarás y otros recursos.
+
+-   [R](https://www.r-project.org/)
+    -   [Historia](https://es.coursera.org/lecture/intro-data-science-programacion-estadistica-r/historia-e-introduccion-a-r-alNk0). Aquí podrás aprender sobre las características de R y el software libre en general, ventajas y desventajas de R, así como algunas aplicaciones.
+    -   [Esta web](https://oscarperpinan.github.io/R/) es un buen punto de partida.
+    -   [Este libro](https://cran.r-project.org/doc/contrib/rdebuts_es.pdf) es una introducción bastante completa, un clásico.
+    -   [Este libro](https://r4ds.had.co.nz/) en un esfuerzo colaborativo muy completo, y fue [traducido a español](https://es.r4ds.hadley.nz/) por la comunidad R hispanohablante.
+    -   La comunidad R, tanto por su diversidad como por su ingente actividad, es una de las razones por las que frecuentemente muchos/as usuarios/as usan este entorno de programación. [Abajo](#twitter) coloqué algunas cuentas de Twitter con las que podrás obtener una visión parcial de la comunidad.
+    -   [RStudio](https://www.rstudio.com/). Tanto la página de Wikipedia como [este vídeo](https://www.youtube.com/watch?v=5XeFFoTf2IY) explican muy bien en qué consiste este entorno de desarrollo integrado, además de que hace una breve introducción a qué es R.
+-   [Git](https://git-scm.com/). Bueno, esta es una larga historia, que parece estar bien resumida en [Wikipedia](https://es.wikipedia.org/wiki/Git). Busca en YouTube, y verás otros aportes.
+-   [GitHub](https://github.com/). Es un servicio público, y diría que [aquí](https://www.deustoformacion.com/blog/programacion-diseno-web/que-es-para-que-sirve-github) está bien explicado.
+-   [GitHub Classroom](https://github.com/education/classroom%5D). [Aquí](https://www.genbeta.com/desarrollo/classroom-for-github-ayudando-a-los-profesores-a-gestionar-los-ejercicios-de-sus-clases) está bien explicado para qué sirve. Con este servicio estoy asignándote trabajo. Te recomiendo que leas [ésta aclaración](https://github.com/education/classroom#who-is-classroom-for).
+-   [R-help](https://stat.ethz.ch/mailman/listinfo/r-help), [R-devel](https://stat.ethz.ch/mailman/listinfo/r-devel), [Stackoverflow](https://stackoverflow.com/) son tres foros de ayuda. Las preguntas deben plantearse con un ejemplo reproducible. Si vas a plantear una pregunta en alguno de ellos, no dejes de leer las guías de publicación.
+-   <a name="twitter"></a>Twitter:
+    -   [The R Foundation](https://twitter.com/_r_foundation)
+    -   [RStudio](https://twitter.com/rstudio)
+    -   [RLadies](https://twitter.com/RLadiesGlobal)
+    -   [We Are R-Ladies](https://twitter.com/WeAreRLadies)
+    -   [Comunidad R Hispano](https://twitter.com/r_hisp?lang=es)
+    -   [Hadley Wickham](https://twitter.com/hadleywickham)
+    -   [Gabriela de Queiroz](https://twitter.com/gdequeiroz)
+    -   [R Consortium](https://twitter.com/rconsortium)
+    -   [UseR! 2020](https://twitter.com/useR2020stl)
+    -   [UseR! 2019](https://twitter.com/UseR2019_Conf)
+    -   [Rstats](https://twitter.com/rstatstweet)
+
+R y RStudio: instalación y ejecución
+------------------------------------
+
+-   Recibirás, o habrás recibido un correo electrónico con los detalles de acceso al servidor RStudio habilitado por el profesor.
+
+-   Si prefieres trabajar en tu propia PC, instala R y RStudio. La guía de instalación varía mucho según el sistema operativo:
+    -   [R](https://cloud.r-project.org/)
+    -   [RStudio](https://www.rstudio.com/products/rstudio/download/#download)
+-   Igualmente, la forma de ejecutar estas aplicaciones dependerá del sistema operativo.
+    -   En GNU/Linux es posible ejecutar tanto R como RStudio desde el gestor de ventanas como desde el intérprete de línea de órdenes (CLI) o "terminal" (por ejemplo, para ejecutar R, presiona `CRTL+ALT+T`, escribe `R` y presiona `<enter>`).
+    -   En Windows y MacOS la ejecución se realiza desde el GUI.
+
+CRAN (Comprehensive R Archive Network)
+--------------------------------------
+
+-   [¿Qué es CRAN?](https://cran.r-project.org/doc/FAQ/R-FAQ.html#What-is-CRAN_003f)
+-   Instalar paquetes: Ejemplo: `install.packages('vegan', dependencies = T)`. Si realizas tus asignaciones en el servidor RStudio habilitado por el profesor, no necesitarás instalar paquetes.
+
+Ayuda en R
+----------
+
+``` r
+help(package = 'base') #Ayuda sobre un paquete
+library(help = 'base') #Documentación sobre un paquete
+help(lm) #Ayuda sobre una función
+?lm #Ídem
+example(lm) #Ejemplo(s) sobre una función
+help.search("matrix") #Busca la palabra clave en las ayudas de los paquetes
+??matrix #Ídem
+```
+
+Situaciones comunes
+-------------------
+
+-   En RStudio, ¿Qué atajo de teclas es que usan para poner el símbolo de asignación `<-`? `ALT+-`. Sólo funciona en RStudio.
+-   ¿Y el *pipe* `%>%`? `CTRL+SHIFT+M`.
+-   Lista de atajos de teclado de RStudio `ALT+SHIFT+K`.
+-   *Me quedé "trancá" en la consola de R con un signo de `+`*, [e'to e' pa' ti](https://support.rstudio.com/hc/en-us/community/posts/200792676-stuck-on-).
+
+Directorio de trabajo
+---------------------
+
+-   Para consultar tu directorio de trabajo en R: `getwd()`.
+-   Si usas el servidor RStudio habilitado por el profesor, la ruta por defecto será algo parecido a ésto: `'/home/<tunombredeusuario>'`. Esta ruta se denomina "carpeta personal".
+-   Puedes cambiar tu directorio de trabajo mediante `setwd('<rutademipreferencia>')`.
+
+Objetos
+-------
+
+-   Crear.
+-   Tipos.
+-   Guardar.
+
+Scripts
+-------
+
+-   Crear.
+-   Guardar.
+
+Tablas (`data.frame`, `tibble`)
+-------------------------------
+
+-   Crear.
+-   Importar.
+-   Operaciones básicas.
