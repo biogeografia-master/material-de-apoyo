@@ -38,7 +38,7 @@ Hasta aquí cómo usar la interfaz web de GitHub para realizar tus asignaciones.
 
 ### Usando RStudio
 
-Utiliza RStudio como editor o cuaderno (*notebook*) si vas a ejecutar código de R, como por ejemplo crear objetos de R, importar datos a R, analizar matrices de comunidad, calcular diversidad, crear gráficos de ordenación, hacer análisis de agrupamiento (*cluster analysis*) o tareas similares. Sigue estos pasos:
+Utiliza RStudio como editor o cuaderno (*notebook*) si necesitas ejecutar código de R e incluir los resultados de la consola en el documento de Markdown. Por ejemplo, una asignación consistirá en crear objetos o importar tablas a R, analizar matrices de comunidad, calcular índices diversidad, crear gráficos de ordenación, hacer análisis de agrupamiento (*cluster analysis*) o tareas similares. Todas esas tareas producen resultados, tanto gráficos como texto. Si hace todo el flujo de trabajo en RStudio, tendrás la ventaja de que, tanto gráficos como resultados textuales, se insertarán automáticamente en e documento Markdown (en concreto, se usa un formato denominado RMarkdown como puente, más detalles en el aula). Sigue estos pasos:
 
 1. Abre RStudio. Dispones de dos alternativas para ejecutar RStudio:
 
