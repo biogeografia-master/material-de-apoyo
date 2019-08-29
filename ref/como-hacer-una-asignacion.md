@@ -1,8 +1,6 @@
 # ¿Cómo realizar una asignación?
 
-En este documento te explico cómo crear un propio repositorio con tu asignación, cómo realizarla, cómo notificarme al terminarla y cómo crear un *issue* o incidencia para pedir ayuda.
-
-En el fondo subyace la necesidad de que hagas tus cambios con control de versiones para evitar [esto](http://phdcomics.com/comics/archive.php?comicid=1531).
+En este documento te explico cómo crear un repositorio con tu asignación, cómo realizarla, cómo notificarme al terminarla y cómo crear un *issue* o incidencia para pedir ayuda. Recuerda que en el fondo subyace la necesidad de que hagas tus cambios con control de versiones para evitar [esto](http://phdcomics.com/comics/archive.php?comicid=1531).
 
 No olvides leer también la sección [Aclaración sobre flujos de trabajo "no lineales"](#Aclaración-sobre-flujos-de-trabajo-no-lineales)
 
@@ -14,7 +12,7 @@ No olvides leer también la sección [Aclaración sobre flujos de trabajo "no li
 
 3. Al hacer clic, el navegador te dirigirá a aceptar la asignación. Te pedirá que inicies tu cuenta de Github si aún no lo has hecho. Usa siempre una ventana de incógnito o privada, asegurándote de que es tu cuenta la que figura como cuenta iniciada en GitHub (compruébalo en el botón derecho superior, donde verás tu avatar o imagen de perfil). Presiona `Accept this assignment`. Cuando quieras volver a tu asignación, puedes usar el vínculo del mensaje de invitación (...siempre que el tali no la borre, ejem).
 
-4. Automáticamente se creará, en una "organización" de GitHub que se corresponde con la asignatura y el semestre actual ([biogeografia-201902](https://github.com/biogeografia-201902), administrada por el profesor y de la cual formas parte), un repo conteniendo tu asignación. Listo, tienes ya un repo con tu asignación, donde realizarás tus actualizaciones. Tú y el profesor serán los únicos contribuidores del repo.
+4. Automáticamente se creará, en una "organización" de GitHub que se corresponde con la asignatura y el semestre actual ([biogeografia-201902](https://github.com/biogeografia-201902), administrada por el profesor y de la cual formas parte), un repo conteniendo tu asignación. Listo, tienes ya un repo con tu asignación, donde realizarás tus actualizaciones. Normalmente, tú y el profesor serán los únicos contribuidores de dicho repo.
 
 * Nota: estos 4 pasos se ejecutan una sola vez
 
@@ -26,7 +24,7 @@ Elige una de dos alternativas en función del tipo de asignación:
 
 Usa la interfaz web de GitHub si no necesitas ejecutar código. Por ejemplo, usa esta alternativa si vas a hacer un documento de texto en Markdown que contenga tus preguntas de investigación ([tutorial sobre Markdown](https://www.youtube.com/watch?v=y6XdzBNC0_0), [buen blog en inglés sobre Markdown](https://girlknowstech.com/how-to-write-in-markdown/), [este otro con vídeos cortos y concisos](https://instructor-support.datacamp.com/en/articles/2336337-markdown-tutorial) y [buen tutorial en inglés sobre redacción académica](https://www.youtube.com/watch?v=hpAJMSS8pvs)). El interfaz web de GitHub es bastante sencillo. Sigue estos pasos:
 
-1. Inicia una sesión en GitHub con tu usuario/contraseña.
+1. Inicia sesión en GitHub con tu usuario/contraseña. Reitero: **no olvides asegurarte de que iniciaste con tu cuenta**.
 
 2. Localiza el repo que contiene la asignación, donde podrás hacer cambios a un archivo existente o crear uno nuevo (dependerá de lo asignado):
 
@@ -36,7 +34,7 @@ Usa la interfaz web de GitHub si no necesitas ejecutar código. Por ejemplo, usa
     
 3. Al terminar de añadir texto/hacer cambios, ve al final de la página y presiona `Commit changes`.
 
-Hasta aquí cómo usar la interfaz web de GitHub para realizar tus asignaciones. Recuerda, esta modalidad es útil si no necesitas ejecutar código, para redactar documentos de Markdown o para pequeñas ediciones de código. Más detalles, en el aula.
+Hasta aquí cómo usar la interfaz web de GitHub para realizar tus asignaciones. Recuerda, esta modalidad es útil si no necesitas ejecutar código, para redactar documentos de Markdown o para pequeñas ediciones de código. Es posible usar este interfaz para traer resultados generados en R, pero es probable que obtengas texto mal formateado. R está preparado para insertar los resultados de la consola dentro de un documento formateado en Markdown. Más detalles, en el aula.
 
 ### Usando RStudio
 
@@ -115,7 +113,7 @@ Puedes utilizar este mismo procedimiento para llamar mi atención, o para que ve
 
 ## Pide ayuda creando un *issue* o incidencia
 
-Utiliza la sección `Issues` para pedir ayuda o reportar errores. Aunque puedes hacerlo, no necesitas incluir una mención a mí (@geofis) para notificarme, puesto que GitHub me informa tan pronto creas el *issue*. Sigue este procedimiento.
+Utiliza la sección `Issues` para pedir ayuda o reportar errores. Aunque puedes hacerlo, no necesitas incluir una mención a mí (`@geofis`) para notificarme, puesto que GitHub me informa tan pronto creas el *issue*. Sigue este procedimiento.
 
 1. Ve al repo de tu asignación. Para ello inicia sesión en GitHub. En el panel lateral izquierdo verás tus repos, localiza el que te interesa.
 
