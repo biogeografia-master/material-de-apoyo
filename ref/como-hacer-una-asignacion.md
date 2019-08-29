@@ -44,7 +44,7 @@ Utiliza RStudio como editor o cuaderno (*notebook*) si necesitas ejecutar códig
 
     1. Si tienes una conexión a Internet y una computadora con navegador, te recomiendo utilizar el servidor de RStudio habilitado por el profesor. Esta modalidad tiene como ventaja que el servidor ya cuenta con los programas y paquetes necesarios para el curso.
     
-    2. Alternativamente, puedes instalar y ejecutar RStudio Desktop en una computadora de tu preferencia (hay muchos tutoriales disponibles en línea). Esta modalidad tiene como ventaja que no necesitas una conexión a Internet permanentemente, sólo cuando actualices tus cambios en el GitHub, aunque es altamente recomendable que actualices con frecuencia (actualiza mientras avances, no esperes hasta el final). Más adelante leerás cómo actualizar tu repo de GitHub con los cambios que hayas hecho localmente.
+    2. Alternativamente, puedes instalar y ejecutar RStudio Desktop en una computadora de tu preferencia (hay muchos tutoriales disponibles en línea). Esta modalidad tiene como ventaja que no necesitas una conexión a Internet permanentemente, sólo cuando actualices tus cambios en el GitHub, aunque es altamente recomendable que actualices con frecuencia (actualiza mientras avances, no esperes hasta el final). La desventaja principal es que tendrás que instalar los paquetes de R por tu cuenta. Más adelante leerás cómo actualizar tu repo de GitHub con los cambios que hayas hecho localmente.
     
 2. En el menú `File` de RStudio, presiona `New Project` para crear un proyecto. Esto llamará la ventana `Create Project`.
 
@@ -54,7 +54,7 @@ Utiliza RStudio como editor o cuaderno (*notebook*) si necesitas ejecutar códig
 
 5. Ve al navegador y, en tu repo de asignación, copia la URL del repo presionando el botón verde `Clone or download` ![](../img/bt_clone_or_download.png) y luego el botón `Copiar URL del repo` ![](../img/bt_copy_repo_url.png). La URL se encuentra ahora en el clipboard.
 
-6. Regresa a RStudio. En la caja `Repository URL`, pega la URL que tienes en el portapapeles (en Linux y Windows, `Ctrl+V`). Dicho texto será algo tal que https<i></i>://github.com/biogeografia-201902/\<nombredelrepo\>.git. El nombre del repo normalmente termina con tu nombre de usuario, por ejemplo, https<i></i>://github.com/biogeografia-201902/\<unidad-0-asignacion-1-preguntas-investigacion-estudianteficticio\>.git
+6. Regresa a RStudio. En la caja `Repository URL`, pega la URL que tienes en el portapapeles (en Linux y Windows, `Ctrl+V`). Dicho texto será algo tal que `https<i></i>://github.com/biogeografia-201902/\<nombredelrepo\>.git`. El nombre del repo normalmente termina con tu nombre de usuario, por ejemplo, `https<i></i>://github.com/biogeografia-201902/\<unidad-0-asignacion-1-preguntas-investigacion-estudianteficticio\>.git`
 
 7. En la caja `Project directory name`, puedes dejar el valor por defecto, que será el mismo nombre del repo (por ejemplo, `unidad-0-asignacion-0`). Este será el nombre del directorio donde se clonará el repo.
 
