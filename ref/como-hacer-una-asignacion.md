@@ -73,7 +73,7 @@ Utiliza RStudio como editor o cuaderno (*notebook*) si necesitas ejecutar códig
 
     1. **Para actualizar un archivo existente**, abre la pestaña `Files` (revisa los distintos paneles de RStudio) y cliquea sobre el nombre del archivo que te interesa editar. Haz los cambios que correspondan, según lo asignado. **No te olvides de guardar cualquier cambio que hagas inmediatamente**, mediante el comando `File>Save` de RStudio o presionando `Ctrl+S`, pero ten en cuenta que **estarás guardando sólo una copia local**, no la del repo de GitHub (más adelante verás cómo actualizar el repo remoto). ¡IMPORTANTE! Si no guardas el documento, no podrás hacer `Commit` más adelante.
     
-    2. **Para crear un nuevo documento**, presiona el comando `File>New File>Text File` de RStudio. Se abrirá un documento en blanco, guárdalo inmediatamente en el comando `File>Save` o presionando `Ctrl+S`, y asegúrate que se guarda en la ruta que corresponda dentro del repo. En el documento, añade el texto que tengas que añadir y guarda frecuentemente (`Ctrl+S` te hace más eficiente).
+    2. **Para crear un archivo nuevo**, presiona el comando `File>New File>Text File` de RStudio. Se abrirá una ventana en blanco normalmente con el nombre `Untitled1`. Guárdalo inmediatamente con el comando `File>Save` o presionando `Ctrl+S`, y asegúrate que se guarda en la ruta que corresponda dentro del repo. En el documento, añade el texto que tengas que añadir y guarda frecuentemente (`Ctrl+S` te hace más eficiente).
     
 12. Finalmente, para sincronizar cambios desde el repo local al remoto, haz lo siguiente:
 
@@ -131,7 +131,7 @@ Utiliza la sección `Issues` para pedir ayuda o reportar errores. Aunque puedes 
 
 Es más fácil citar las razones por las que una computadora y una persona frente a ella pueden trabajar de manera fluida y sin tropiezos. La lista de las innumerables razones por las que ocurre lo contrario es tan larga como un día de hambre. Por lo tanto, debes estar preparaod/a para los flujos de trabajo no lineales.
 
-Tendrás que afrontar incidencias y situaciones muy diferentes a las descritas en esta guía, sobre todo mientras aumente tu actividad en un determinado repo. Probablemente las catalogues como "situaciones indeseadas" o tremendas vainas, pero lo importante es que te ocurrirán. Te presento dos de ellas:
+Tendrás que afrontar incidencias y situaciones muy diferentes a las descritas en esta guía, sobre todo mientras aumente tu actividad en un determinado repo. Probablemente las catalogues como "situaciones indeseadas" o tremendas vainas, pero lo único seguro es que te ocurrirán. Te presento dos de ellas:
 
 1. Imagina esta situación. Clonaste localmente un repo (por ejemplo, usando RStudio), realizaste cambios que sólo guardaste en tu PC y no los sincronizaste al repo origen. Paralelamente, hiciste cambios y `Commit` al repo origen (por ejemplo, tú en la web de GitHub o alguien con privilegios empujó cambios). Si en tu repo clonado localmente intentas hacer `Commit>Push` al origen, ocurrirá un conflicto que tendrás que atender. Lo recomendable es resolverlos haciendo `Pull` localmente, para traer los cambios desde el origen. Así podrás mostrar los conflictos y resolverlos manualmente.  Para evitar este tipo de conflictos es recomendable que, antes de hacer cambios en tu repo localmente, hagas `Pull` para sincronizar con el origen.
 
@@ -147,3 +147,5 @@ Tendrás que afrontar incidencias y situaciones muy diferentes a las descritas e
 2. Si usas una computadora compartida (por ejemplo, en el aula), es preferible que inicies tu sesión de GitHub y de correo (y cualquier otro servicio) en una ventana de incógnito o privada. Al terminar, **no olvides cerrar tu sesión e igualmente cerrar la ventana del navegador**. Dos "ventanas de incógnito" usan la misma cuenta, por lo que si alguien inició de incógnito, iniciarás con su cuenta. **Aviso 2 emitido**.
 
 3. En GitHub, asegúrate siempre de que es tu cuenta la que figura como cuenta iniciada. Compruébalo en el botón derecho superior, donde verás tu avatar o imagen de perfil. **Aviso 3 emitido**.
+
+4. Si actualizas archivos de tu repo localmente, guarda muy pero muy frecuentemente. Te recomiendo usar `Ctrl+S`. Abandona ese veneno del ratón. **Aviso 4 emitido**.
