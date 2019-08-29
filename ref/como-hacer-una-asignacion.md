@@ -67,7 +67,7 @@ Utiliza RStudio como editor o cuaderno (*notebook*) si necesitas ejecutar códig
     1. `git config user.email "tuemailengithub"`. Presiona `<enter>`. Cambia `"tuemailengithub"` por tu email registado en GitHub. Conserva las comillas.
     2. `git config user.name "tuusuariodegithub"`. Presiona `<enter>`. Cambia `"tuusuariodegithub"` por tu usuario registrado en GitHub. Conserva las comillas.
     
-    * Si no realizas este paso, al intentar hacer `Commit`, te aparecerá el siguiente mensaje: `***Please tell me who you are`
+    * Si no realizas este paso, al intentar hacer `Commit`, te aparecerá el mensaje `***Please tell me who you are`, y no podrás seguir avanzando.
 
 11. Al igual que en el interfaz web de GitHub, a partir de este punto RStudio te permite actualizar un archivo existente en tu repo o crear uno nuevo. Todo dependerá de la naturaleza de la asignación:
 
