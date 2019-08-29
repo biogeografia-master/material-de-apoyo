@@ -2,6 +2,8 @@
 
 En este documento te explico cómo crear un propio repositorio con tu asignación, cómo realizarla, cómo notificarme al terminarla y cómo crear un *issue* o incidencia para pedir ayuda.
 
+En el fondo subyace la necesidad de que hagas tus cambios con control de versiones para evitar [esto](http://phdcomics.com/comics/archive.php?comicid=1531).
+
 No olvides leer también la sección [Aclaración sobre flujos de trabajo "no lineales"](#Aclaración-sobre-flujos-de-trabajo-no-lineales)
 
 ## Crea un repositorio con tu asignación
@@ -129,9 +131,13 @@ Utiliza la sección `Issues` para pedir ayuda o reportar errores. Aunque puedes 
 
 ## Aclaración sobre flujos de trabajo "no lineales"
 
-Se te van presentarán incidencias y situaciones en la medida que aumente tu actividad en un repo. Probablemente las tildes de "situaciones indeseadas", pero lo importante es que te ocurrirán. Conócelas y prepárate para pedir ayuda cuando te ocurran:
+Es más fácil citar las razones por las que una computadora y una persona frente a ella pueden trabajar de manera fluida y sin tropiezos. La lista de las innumerables razones por las que ocurre lo contrario es tan larga como un día de hambre. Por lo tanto, debes estar preparaod/a para los flujos de trabajo no lineales.
 
-1. Si por alguna razón, realizas cambios en RStudio y, paralelamente realizas cambios en el repo de GitHub, es posible
+Tendrás que afrontar incidencias y situaciones muy diferentes a las descritas en esta guía, sobre todo mientras aumente tu actividad en un determinado repo. Probablemente las catalogues como "situaciones indeseadas" o tremendas vainas, pero lo importante es que te ocurrirán. Te presento dos de ellas:
+
+1. Imagina esta situación. Clonaste localmente un repo (por ejemplo, usando RStudio), realizaste cambios que sólo guardaste en tu PC y no los sincronizaste al repo origen. Paralelamente, hiciste cambios y `Commit` al repo origen (por ejemplo, tú en la web de GitHub o alguien con privilegios empujó cambios). Si en tu repo clonado localmente intentas hacer `Commit>Push` al origen, ocurrirá un conflicto que tendrás que atender. Lo recomendable es resolverlos haciendo `Pull` localmente, para traer los cambios desde el origen. Así podrás mostrar los conflictos y resolverlos manualmente.  Para evitar este tipo de conflictos es recomendable que, antes de hacer cambios en tu repo localmente, hagas `Pull` para sincronizar con el origen.
+
+2. En algún momento tendrás que usar el intérprete de línea de órdenes (CLI, *command line interpreter*), mal llamada "ventana terminal". Te ocurrirá cuando tengas que ejecutar acciones que superen las herramientas gráficas de RStudio. Ni CLI ni su emulador ensucian las manos ni muerden, así que no hay que tenerles miedo.
 
 
 ## Notas finales
@@ -140,6 +146,6 @@ Se te van presentarán incidencias y situaciones en la medida que aumente tu act
 
 1. No utilices el servidor de RStudio habilitado por el profesor como repositorio central. Por razones de presupuesto y operativas, el servidor está configurado con un mínimo de seguridad. Por lo tanto, los cambios que hagas a los repos alojados en el servidor, debes actualizarlos tan pronto te sea posible en el repo remoto de GitHub. **Aviso 1 emitido**.
 
-2. Si usas una computadora compartida (por ejemplo, en el aula), es preferible que inicies tu sesión de GitHub y de correo (y cualquier otro servicio) en una ventana de incógnito o privada. **Aviso 2 emitido**.
+2. Si usas una computadora compartida (por ejemplo, en el aula), es preferible que inicies tu sesión de GitHub y de correo (y cualquier otro servicio) en una ventana de incógnito o privada. Al terminar, **no olvides cerrar tu sesión e igualmente cerrar la ventana del navegador**. Dos "ventanas de incógnito" usan la misma cuenta, por lo que si alguien inició de incógnito, iniciarás con su cuenta. **Aviso 2 emitido**.
 
 3. En GitHub, asegúrate siempre de que es tu cuenta la que figura como cuenta iniciada. Compruébalo en el botón derecho superior, donde verás tu avatar o imagen de perfil. **Aviso 3 emitido**.
