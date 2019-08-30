@@ -63,7 +63,7 @@ help.search("matrix") #Busca la palabra clave en las ayudas de los paquetes
 ??matrix #Ídem
 ```
 
-¡Usa los foros! Si introduces un mensaje de error de R en un buscador (el mensaje en inglés devuelve más resultados), encontrarás varias entradas de foros con posibles soluciones.
+¡Usa los foros! Si introduces un mensaje de error de R en el buscador de tu preferencia (en inglés obtienes más resultados), encontrarás varios punteros a foros con posibles soluciones.
 
 Visualización de datos
 ----------------------
@@ -74,8 +74,14 @@ Wickham & Grolemund (2017) afirman que, durante la producción de resultados com
 
 Las múltiples herramientas ofrecidas por los paquetes de la colección `tidyverse` te servirán para agilizar sustancialmente el EDA. Los paquetes `dplyr`, `tidyr` y otros, te ayudarán a importar, ordenar y transformar datos, mientras `ggplot2` te ayudará a crear gráficos estilizados eficientemente. Wickham & Grolemund (2017) aseguran que estas herramientas mantienen la motivación en el aprendizaje por sus flujos de trabajo lineales.
 
-Usemos el conjunto de datos `doubs`, del paquete `ade4`, que son además los utilizados en el libro de Borcard, Gillet, & Legendre (2018).
+Usemos el conjunto de datos `doubs` de Verneaux (1973), y que cargarás mediante el paquete `ade4`. Estos datos se utilizan también en Borcard, Gillet, & Legendre (2018).
 
+`doubs` es una lista de 4 tablas o `data.frame`, etiquetadas como `env`, `fish`, `xy` y `species`. Las filas de las tres primeras corresponden a 30 sitios a lo largo del río franco-suizo Doubs. `doubs$env` contiene información ambiental con las siguientes variables: `dfs`-distancia desde cabecera (en *k**m* × 10), `alt`-altitud (en m), `slo` pendiente (*l**o**g*(*x* + 1), donde *x* es la pendiente en tantos por 1000)
+
+<!-- The rows of doubs$env, doubs$fish and doubs$xy are 30 sites along the Doubs, a French and Switzerland river. -->
+<!-- doubs$env contains the following variables: dfs - distance from the source (km * 10), alt - altitude (m), slo (log(x + 1) where x is the slope (per mil * 100), flo - minimum average stream flow (m3/s * 100), pH (* 10), har - total hardness of water (mg/l of Calcium), pho - phosphates (mg/l * 100), nit - nitrates (mg/l * 100), amm - ammonia nitrogen (mg/l * 100), oxy - dissolved oxygen (mg/l * 10), bdo - biological demand for oxygen (mg/l * 10). -->
+<!-- doubs$fish contains the abundance of the following fish species: Cottus gobio (Cogo), Salmo trutta fario (Satr), Phoxinus phoxinus (Phph), Nemacheilus barbatulus (Neba), Thymallus thymallus (Thth), Telestes soufia agassizi (Teso), Chondrostoma nasus (Chna), Chondostroma toxostoma (Chto), Leuciscus leuciscus (Lele), Leuciscus cephalus cephalus (Lece), Barbus barbus (Baba), Spirlinus bipunctatus (Spbi), Gobio gobio (Gogo), Esox lucius (Eslu), Perca fluviatilis (Pefl), Rhodeus amarus (Rham), Lepomis gibbosus (Legi), Scardinius erythrophtalmus (Scer), Cyprinus carpio (Cyca), Tinca tinca (Titi), Abramis brama (Abbr), Ictalurus melas (Icme), Acerina cernua (Acce), Rutilus rutilus (Ruru), Blicca bjoerkna (Blbj), Alburnus alburnus (Alal), Anguilla anguilla (Anan). -->
+<!-- doubs$species contains the names of the 27 fish species. The four columns correspond to: 1 = scientific name (Genus species), 2 = French common name, 3 = English common name, 4 = Four character code. -->
 <!-- ## Directorio de trabajo -->
 <!-- * Para consultar tu directorio de trabajo en R: `getwd()`. -->
 <!-- * Si usas el servidor RStudio habilitado por el profesor, la ruta por defecto será algo parecido a ésto: `'/home/<tunombredeusuario>'`. Esta ruta se denomina "carpeta personal". -->
@@ -108,11 +114,13 @@ Situaciones comunes
 -   *"En RStudio, ¿Qué atajo de teclas es que usan para poner el operador de asignación `<-`?"* Debería funcionarte `ALT+-`, pero recuerda, sólo lo podrás usar en RStudio.
 -   *"¿Y el *pipe\* `%>%`?"\* `CTRL+SHIFT+M`.
 -   Más atajos de teclado de RStudio: `ALT+SHIFT+K`.
--   *"Me quedé trancá' en la consola de R con un signo de `+`. ¿Qué hago pa' salir de eso?"*. Suele resolverse presionando la tecla `Escape` (`Esc`). Lee [este texto](https://support.rstudio.com/hc/en-us/community/posts/200792676-stuck-on-).
+-   *"Me quedé trancá' en la consola de R con un signo de `+`. ¿Qué hago pa' salir de eso?"* Suele resolverse presionando la tecla `Escape` (`Esc`). Lee [este texto](https://support.rstudio.com/hc/en-us/community/posts/200792676-stuck-on-).
 
 Referencias
-===========
+-----------
 
 Borcard, D., Gillet, F., & Legendre, P. (2018). *Numerical ecology with r*. Springer.
+
+Verneaux, J. (1973). *Cours d’eau de franche-comté (massif du jura): Recherches écologiques sur le réseau hydrographique du doubs: Essai de biotypologie* (PhD thesis). Institut des Sciences Naturelles.
 
 Wickham, H., & Grolemund, G. (2017). *R for data science: Import, tidy, transform, visualize, and model data* (1st ed.). Retrieved from <http://r4ds.had.co.nz/>
