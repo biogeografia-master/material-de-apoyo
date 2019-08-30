@@ -82,45 +82,45 @@ Las múltiples herramientas ofrecidas por los paquetes de la colección `tidyver
 
 Usemos el conjunto de datos `doubs`, del paquete `ade4`, que son además los utilizados en el libro de @borcard2018numerical.
 
-## Directorio de trabajo
-* Para consultar tu directorio de trabajo en R: `getwd()`.
-* Si usas el servidor RStudio habilitado por el profesor, la ruta por defecto será algo parecido a ésto: `'/home/<tunombredeusuario>'`. Esta ruta se denomina "carpeta personal".
-* Puedes cambiar tu directorio de trabajo mediante `setwd('<rutademipreferencia>')`.
+<!-- ## Directorio de trabajo -->
+<!-- * Para consultar tu directorio de trabajo en R: `getwd()`. -->
+<!-- * Si usas el servidor RStudio habilitado por el profesor, la ruta por defecto será algo parecido a ésto: `'/home/<tunombredeusuario>'`. Esta ruta se denomina "carpeta personal". -->
+<!-- * Puedes cambiar tu directorio de trabajo mediante `setwd('<rutademipreferencia>')`. -->
 
 
 
-## Objetos
+<!-- ## Objetos -->
 
 
 
-### Crear objetos
+<!-- ### Crear objetos -->
 
-El operador de asignación ` <- ` te da la bienvenida, aunque también se puede escribir ` -> `. Transfórmalo en una flecha: hacia donde apunta es el valor que asume el nombre de objeto que se encuentra en el lado contrario. Lee `a <- 'Hola R'` como al objeto `a` es un vector cuyo valor es la cadena de caracteres `'Hola R'`. Creado el objeto, pedimos por ejemplo que se nos muestre su valor. En la consola se vería así:
-```{r}
-a <- 'Hola R'
-a
-```
+<!-- El operador de asignación ` <- ` te da la bienvenida, aunque también se puede escribir ` -> `. Transfórmalo en una flecha: hacia donde apunta es el valor que asume el nombre de objeto que se encuentra en el lado contrario. Lee `a <- 'Hola R'` como al objeto `a` es un vector cuyo valor es la cadena de caracteres `'Hola R'`. Creado el objeto, pedimos por ejemplo que se nos muestre su valor. En la consola se vería así: -->
+<!-- ```{r} -->
+<!-- a <- 'Hola R' -->
+<!-- a -->
+<!-- ``` -->
 
-Al escribir `a` estamos llamando el objeto, y pedimos que se imprima su valor. Es equivalente a:
-```{r}
-print(a)
-```
-Encontrarás largas discusiones y acalorados debates sobre si usar ` <- ` como asignador o `=`. Por limpieza de código, y para evitar confusión entre argumentos de funciones y declaraciones de objetos, recomiendo usar ` <- ` como asignador.
+<!-- Al escribir `a` estamos llamando el objeto, y pedimos que se imprima su valor. Es equivalente a: -->
+<!-- ```{r} -->
+<!-- print(a) -->
+<!-- ``` -->
+<!-- Encontrarás largas discusiones y acalorados debates sobre si usar ` <- ` como asignador o `=`. Por limpieza de código, y para evitar confusión entre argumentos de funciones y declaraciones de objetos, recomiendo usar ` <- ` como asignador. -->
 
-### Tipos
+<!-- ### Tipos -->
 
 
 
-### Guardar
+<!-- ### Guardar -->
 
-## Scripts
-* Crear.
-* Guardar.
+<!-- ## Scripts -->
+<!-- * Crear. -->
+<!-- * Guardar. -->
 
-## Tablas (`data.frame`, `tibble`)
-* Crear.
-* Importar.
-* Operaciones básicas.
+<!-- ## Tablas (`data.frame`, `tibble`) -->
+<!-- * Crear. -->
+<!-- * Importar. -->
+<!-- * Operaciones básicas. -->
 
 ## Situaciones comunes
 * R es sensible a las mayúsculas. No es lo mismo `Mi_objeto` que `mi_objeto`.

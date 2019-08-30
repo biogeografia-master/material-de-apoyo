@@ -16,9 +16,9 @@ Te paso a continuación algunas fuentes (mayoritariamente en español) sobre las
     -   La existencia de una diversa y activa comunidad R, motiva a muchos/as usuarios/as a usar este entorno de programación. [Abajo](#twitter) coloqué algunas cuentas de Twitter donde podrás observar en vivo una mínima parte de la actividad de la comunidad R. Hay muchas otras cuentas, foros, sitios web e incluso reuniones periódicas donde podrás interactuar con la comunidad. Te animo a descubrirlas.
     -   [RStudio](https://www.rstudio.com/). Tanto la página de Wikipedia como [este vídeo](https://www.youtube.com/watch?v=5XeFFoTf2IY) explican muy bien en qué consiste este entorno de desarrollo integrado, además de que hace una breve introducción a qué es R.
 -   [Git](https://git-scm.com/). Bueno, esta es una larga historia, que parece estar bien resumida en [Wikipedia](https://es.wikipedia.org/wiki/Git). Busca en YouTube, y verás otros aportes.
--   [GitHub](https://github.com/). Se erige como un servicio público para desarrolladores y desarrolladoras, y diría que [aquí](https://www.deustoformacion.com/blog/programacion-diseno-web/que-es-para-que-sirve-github) está bien explicado.
--   [GitHub Classroom](https://github.com/education/classroom%5D). En [esta web](https://www.genbeta.com/desarrollo/classroom-for-github-ayudando-a-los-profesores-a-gestionar-los-ejercicios-de-sus-clases) se explica para qué sirve. Con este servicio estoy asignándote trabajo. Te también recomiendo que leas [ésta afirmación](https://github.com/education/classroom#who-is-classroom-for).
--   Foros de ayuda, entre los que destacan [R-help](https://stat.ethz.ch/mailman/listinfo/r-help), [R-devel](https://stat.ethz.ch/mailman/listinfo/r-devel), [Stackoverflow](https://stackoverflow.com/). Las preguntas deben plantearse con un ejemplo reproducible. Si vas a plantear una, no dejes de leer las guías de publicación. Existe una [lista de distribución de R-help en español](https://stat.ethz.ch/mailman/listinfo/r-help-es), así como de [Stackoverflow en español](https://es.stackoverflow.com/).
+-   [GitHub](https://github.com/). Se erige como un servicio público para desarrolladores y desarrolladoras. Luce bien explicado [aquí](https://www.deustoformacion.com/blog/programacion-diseno-web/que-es-para-que-sirve-github).
+-   [GitHub Classroom](https://github.com/education/classroom%5D). En [esta web](https://www.genbeta.com/desarrollo/classroom-for-github-ayudando-a-los-profesores-a-gestionar-los-ejercicios-de-sus-clases) te explican para qué sirve. Con este servicio estoy asignándote trabajo. También te recomiendo que leas [ésta afirmación](https://github.com/education/classroom#who-is-classroom-for).
+-   Foros de ayuda y listas de distribución, entre los que destacan [R-help](https://stat.ethz.ch/mailman/listinfo/r-help), [R-devel](https://stat.ethz.ch/mailman/listinfo/r-devel), [Stackoverflow](https://stackoverflow.com/). Las preguntas deben plantearse con un ejemplo reproducible. Si vas a plantear una, lee antes las guías de publicación. Existe una [lista de distribución de R-help en español](https://stat.ethz.ch/mailman/listinfo/r-help-es), así como de [Stackoverflow en español](https://es.stackoverflow.com/).
 -   <a name="twitter"></a>Twitter:
     -   [The R Foundation](https://twitter.com/_r_foundation)
     -   [RStudio](https://twitter.com/rstudio)
@@ -41,7 +41,7 @@ Instalación y ejecución de R y RStudio
     -   [R](https://cloud.r-project.org/)
     -   [RStudio](https://www.rstudio.com/products/rstudio/download/#download)
 -   Igualmente, la forma de ejecutar estas aplicaciones dependerá del sistema operativo.
-    -   En GNU/Linux es posible ejecutar tanto R como RStudio desde el gestor de ventanas como desde el intérprete de línea de órdenes (CLI) o "terminal" (por ejemplo, para ejecutar R, presiona `CRTL+ALT+T`, escribe `R` y presiona `<enter>`).
+    -   En GNU/Linux es posible ejecutar tanto aplicaciones tanto desde el gestor de ventanas como desde el intérprete de línea de órdenes (CLI) o "terminal" (por ejemplo, para ejecutar R, presiona `CRTL+ALT+T`, escribe `R` y presiona `<enter>`).
     -   En Windows y MacOS la ejecución se realiza desde el GUI.
 
 CRAN (Comprehensive R Archive Network)
@@ -76,52 +76,31 @@ Las múltiples herramientas ofrecidas por los paquetes de la colección `tidyver
 
 Usemos el conjunto de datos `doubs`, del paquete `ade4`, que son además los utilizados en el libro de Borcard, Gillet, & Legendre (2018).
 
-Directorio de trabajo
----------------------
-
--   Para consultar tu directorio de trabajo en R: `getwd()`.
--   Si usas el servidor RStudio habilitado por el profesor, la ruta por defecto será algo parecido a ésto: `'/home/<tunombredeusuario>'`. Esta ruta se denomina "carpeta personal".
--   Puedes cambiar tu directorio de trabajo mediante `setwd('<rutademipreferencia>')`.
-
-Objetos
--------
-
-### Crear objetos
-
-El operador de asignación `<-` te da la bienvenida, aunque también se puede escribir `->`. Transfórmalo en una flecha: hacia donde apunta es el valor que asume el nombre de objeto que se encuentra en el lado contrario. Lee `a <- 'Hola R'` como al objeto `a` es un vector cuyo valor es la cadena de caracteres `'Hola R'`. Creado el objeto, pedimos por ejemplo que se nos muestre su valor. En la consola se vería así:
-
-``` r
-a <- 'Hola R'
-a
-## [1] "Hola R"
-```
-
-Al escribir `a` estamos llamando el objeto, y pedimos que se imprima su valor. Es equivalente a:
-
-``` r
-print(a)
-## [1] "Hola R"
-```
-
-Encontrarás largas discusiones y acalorados debates sobre si usar `<-` como asignador o `=`. Por limpieza de código, y para evitar confusión entre argumentos de funciones y declaraciones de objetos, recomiendo usar `<-` como asignador.
-
-### Tipos
-
-### Guardar
-
-Scripts
--------
-
--   Crear.
--   Guardar.
-
-Tablas (`data.frame`, `tibble`)
--------------------------------
-
--   Crear.
--   Importar.
--   Operaciones básicas.
-
+<!-- ## Directorio de trabajo -->
+<!-- * Para consultar tu directorio de trabajo en R: `getwd()`. -->
+<!-- * Si usas el servidor RStudio habilitado por el profesor, la ruta por defecto será algo parecido a ésto: `'/home/<tunombredeusuario>'`. Esta ruta se denomina "carpeta personal". -->
+<!-- * Puedes cambiar tu directorio de trabajo mediante `setwd('<rutademipreferencia>')`. -->
+<!-- ## Objetos -->
+<!-- ### Crear objetos -->
+<!-- El operador de asignación ` <- ` te da la bienvenida, aunque también se puede escribir ` -> `. Transfórmalo en una flecha: hacia donde apunta es el valor que asume el nombre de objeto que se encuentra en el lado contrario. Lee `a <- 'Hola R'` como al objeto `a` es un vector cuyo valor es la cadena de caracteres `'Hola R'`. Creado el objeto, pedimos por ejemplo que se nos muestre su valor. En la consola se vería así: -->
+<!-- ```{r} -->
+<!-- a <- 'Hola R' -->
+<!-- a -->
+<!-- ``` -->
+<!-- Al escribir `a` estamos llamando el objeto, y pedimos que se imprima su valor. Es equivalente a: -->
+<!-- ```{r} -->
+<!-- print(a) -->
+<!-- ``` -->
+<!-- Encontrarás largas discusiones y acalorados debates sobre si usar ` <- ` como asignador o `=`. Por limpieza de código, y para evitar confusión entre argumentos de funciones y declaraciones de objetos, recomiendo usar ` <- ` como asignador. -->
+<!-- ### Tipos -->
+<!-- ### Guardar -->
+<!-- ## Scripts -->
+<!-- * Crear. -->
+<!-- * Guardar. -->
+<!-- ## Tablas (`data.frame`, `tibble`) -->
+<!-- * Crear. -->
+<!-- * Importar. -->
+<!-- * Operaciones básicas. -->
 Situaciones comunes
 -------------------
 
