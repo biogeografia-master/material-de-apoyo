@@ -124,7 +124,7 @@ doubs$env
 
 `doubs$env` contiene información ambiental con las siguientes variables: `dfs`-distancia desde cabecera (en km x 10), `alt`-altitud (en m), `slo`-pendiente (log(x+1), donde x es la pendiente en tantos por 1000), `flo`-caudal promedio mínimo (m<sup>3</sup>/s 100), `pH` ( x 10), `har`-dureza del agua (mg/l de calcio), `pho`-fostados (mg/l x 100), `nit`-nitratos, `amm`-amoníaco, `nit`-nitrógeno (mg/l x 100), `oxy`-oxígeno disuelto (mg/l x 100), `bdo`-demanda biológica de oxígeno (mg/l x 10)
 
-La tabla `doubs$fish` contiene la abundancia de las especies (entre paréntesis, abreviatura usada como nombre de columna).
+La tabla `doubs$fish` contiene la abundancia de las especies. La abreviatura usada como nombre de columna se explica en la tabla `doubs$species`.
 
 ``` r
 doubs$fish
@@ -226,9 +226,7 @@ doubs$species
 ## 27           Anguilla anguilla           anguille               eel Anan
 ```
 
-Las cuatro columnas <!-- doubs$species contains the names of the 27 fish species. The four columns correspond to: 1 = scientific name (Genus species), 2 = French common name, 3 = English common name, 4 = Four character code. -->
-
-Las especies son: *Cottus gobio* (Cogo), *Salmo trutta fario* (Satr), *Phoxinus phoxinus* (Phph), *Nemacheilus barbatulus* (Neba), *Thymallus thymallus* (Thth), *Telestes soufia agassizi* (Teso), *Chondrostoma nasus* (Chna), *Chondostroma toxostoma* (Chto), *Leuciscus leuciscus* (Lele), *Leuciscus cephalus cephalus* (Lece), *Barbus barbus* (Baba), *Spirlinus bipunctatus* (Spbi), *Gobio gobio* (Gogo), *Esox lucius* (Eslu), *Perca fluviatilis* (Pefl), *Rhodeus amarus* (Rham), *Lepomis gibbosus* (Legi), *Scardinius erythrophtalmus* (Scer), *Cyprinus carpio* (Cyca), *Tinca tinca* (Titi), *Abramis brama* (Abbr), *Ictalurus melas* (Icme), *Acerina cernua* (Acce), *Rutilus rutilus* (Ruru), *Blicca bjoerkna* (Blbj), *Alburnus alburnus* (Alal), *Anguilla anguilla* (Anan).
+Las cuatro columnas corresponden a: `Scientific`-nombre científico, `French` y `English`-nombres comunes en francés y en inglés, `code` códigos de cuatro caracteres usados como nombres de columnas en la tabal `doubs$fish`.
 
 <!-- ## Directorio de trabajo -->
 <!-- * Para consultar tu directorio de trabajo en R: `getwd()`. -->
@@ -259,7 +257,7 @@ Situaciones comunes
 -------------------
 
 -   R es sensible a las mayúsculas. No es lo mismo `Mi_objeto` que `mi_objeto`.
--   *"En RStudio, ¿Qué atajo de teclas es que usan para poner el operador de asignación `<-`?"* Debería funcionarte `ALT+-`, pero recuerda, sólo lo podrás usar en RStudio.
+-   *"En RStudio, ¿Qué atajo de teclado es que usan para poner el operador de asignación `<-`?"* Debería funcionarte `ALT+-`, pero recuerda, sólo lo podrás usar en RStudio.
 -   *"¿Y el *pipe\* `%>%`?"\* `CTRL+SHIFT+M`.
 -   Más atajos de teclado de RStudio: `ALT+SHIFT+K`.
 -   *"Me quedé trancá' en la consola de R con un signo de `+`. ¿Qué hago pa' salir de eso?"* Suele resolverse presionando la tecla `Escape` (`Esc`). Lee [este texto](https://support.rstudio.com/hc/en-us/community/posts/200792676-stuck-on-).
