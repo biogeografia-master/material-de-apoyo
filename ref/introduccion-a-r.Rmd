@@ -80,17 +80,42 @@ knitr::include_graphics("https://es.r4ds.hadley.nz/diagrams_w_text_as_path/es/da
 
 Las múltiples herramientas ofrecidas por los paquetes de la colección `tidyverse` te servirán para agilizar sustancialmente el EDA. Los paquetes `dplyr`, `tidyr` y otros, te ayudarán a importar, ordenar y transformar datos, mientras `ggplot2` te ayudará a crear gráficos estilizados eficientemente. @Wickham2017R aseguran que estas herramientas mantienen la motivación en el aprendizaje por sus flujos de trabajo lineales.
 
-Usemos el conjunto de datos `doubs` de @verneaux1973cours, y que cargarás mediante el paquete `ade4`. Estos datos se utilizan también en @borcard2018numerical.
+Usarás el conjunto de datos `doubs` de @verneaux1973cours, y lo cargarás mediante el paquete `ade4`. Estos datos se utilizan también en @borcard2018numerical.
 
-`doubs` es una lista de 4 tablas o `data.frame`, etiquetadas como `env`, `fish`, `xy` y `species`. Las filas de las tres primeras corresponden a 30 sitios a lo largo del río franco-suizo Doubs. `doubs$env` contiene información ambiental con las siguientes variables: `dfs`-distancia desde cabecera (en $km\times10$), `alt`-altitud (en m), `slo` pendiente ($log(x+1)$, donde $x$ es la pendiente en tantos por 1000)
+```{r}
+library(ade4)
+data(doubs)
+```
 
-<!-- The rows of doubs$env, doubs$fish and doubs$xy are 30 sites along the Doubs, a French and Switzerland river. -->
+Nota: Si usas tu propia PC, instálalo con `install.packages('ade4', dependencies = T)`
 
-<!-- doubs$env contains the following variables: dfs - distance from the source (km * 10), alt - altitude (m), slo (log(x + 1) where x is the slope (per mil * 100), flo - minimum average stream flow (m3/s * 100), pH (* 10), har - total hardness of water (mg/l of Calcium), pho - phosphates (mg/l * 100), nit - nitrates (mg/l * 100), amm - ammonia nitrogen (mg/l * 100), oxy - dissolved oxygen (mg/l * 10), bdo - biological demand for oxygen (mg/l * 10). -->
+`doubs` es una lista de 4 tablas o *data.frame*, etiquetadas como `env`-matriz ambiental, `fish`-matriz de comunidad usando abundancia, `xy`-matriz de coordenadas de las muestras y `species`-nombres de las 27 especies encontradas. Las filas de los tres primeros *data.frame* corresponden a 30 sitios muestreados a lo largo del río franco-suizo Doubs.
 
-<!-- doubs$fish contains the abundance of the following fish species: Cottus gobio (Cogo), Salmo trutta fario (Satr), Phoxinus phoxinus (Phph), Nemacheilus barbatulus (Neba), Thymallus thymallus (Thth), Telestes soufia agassizi (Teso), Chondrostoma nasus (Chna), Chondostroma toxostoma (Chto), Leuciscus leuciscus (Lele), Leuciscus cephalus cephalus (Lece), Barbus barbus (Baba), Spirlinus bipunctatus (Spbi), Gobio gobio (Gogo), Esox lucius (Eslu), Perca fluviatilis (Pefl), Rhodeus amarus (Rham), Lepomis gibbosus (Legi), Scardinius erythrophtalmus (Scer), Cyprinus carpio (Cyca), Tinca tinca (Titi), Abramis brama (Abbr), Ictalurus melas (Icme), Acerina cernua (Acce), Rutilus rutilus (Ruru), Blicca bjoerkna (Blbj), Alburnus alburnus (Alal), Anguilla anguilla (Anan). -->
+Para llamar un objeto de una lista se usa el operador `$`. Así, `doubs$env`, llama a la matriz ambiental.
 
-<!-- doubs$species contains the names of the 27 fish species. The four columns correspond to: 1 = scientific name (Genus species), 2 = French common name, 3 = English common name, 4 = Four character code. -->
+```{r}
+doubs$env
+```
+
+`doubs$env` contiene información ambiental con las siguientes variables: `dfs`-distancia desde cabecera (en km&nbsp;x&nbsp;10), `alt`-altitud (en m), `slo`-pendiente (log(x+1), donde x es la pendiente en tantos por 1000), `flo`-caudal promedio mínimo (m<sup>3</sup>/s&nbsp;100), `pH` (&nbsp;x&nbsp;10), `har`-dureza del agua (mg/l de calcio), `pho`-fostados (mg/l&nbsp;x&nbsp;100), `nit`-nitratos, `amm`-amoníaco, `nit`-nitrógeno (mg/l&nbsp;x&nbsp;100), `oxy`-oxígeno disuelto (mg/l&nbsp;x&nbsp;100), `bdo`-demanda biológica de oxígeno (mg/l&nbsp;x&nbsp;10)
+
+La tabla `doubs$fish` contiene la abundancia de las especies. La abreviatura usada como nombre de columna se explica en la tabla `doubs$species`.
+
+```{r}
+doubs$fish
+```
+
+La tabla `doubs$species` contiene los nombre de las 27 especies de peces.
+
+```{r}
+doubs$species
+```
+
+
+Las cuatro columnas corresponden a: `Scientific`-nombre científico, `French` y `English`-nombres comunes en francés y en inglés, `code` códigos de cuatro caracteres usados como nombres de columnas en la tabal `doubs$fish`.
+
+
+
 
 <!-- ## Directorio de trabajo -->
 <!-- * Para consultar tu directorio de trabajo en R: `getwd()`. -->
