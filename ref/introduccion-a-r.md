@@ -286,11 +286,10 @@ ggplot(data = doubs$env) +
 
 ![](../img/intro-dfscatter-out-3.png)
 
-Aunque no son muy informativos sin una barra de error, puedes hacer gráficos de barras. Utilizaré la escala semi-cuantitativa de abundancia para responder a la pregunta: ¿cuál es el nivel de abundancia predominante de `Salmo trutta fario`?
+Aunque no son muy informativos sin una barra de error, puedes hacer gráficos de barras. Utilizaré la escala semi-cuantitativa de abundancia para responder a la pregunta: ¿cuál es el nivel de abundancia predominante de `Salmo trutta fario` en la muestra?
 
 ``` r
-ggplot(data = doubs$fish) +
-  geom_bar(aes(x=Satr))
+ggplot(data = doubs$fish) + geom_bar(aes(x=Satr))
 ```
 
 ![](../img/intro-barplot-1.png)

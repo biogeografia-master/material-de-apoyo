@@ -164,11 +164,10 @@ ggplot(data = doubs$env) +
   geom_point(mapping = aes(x = dfs, y = flo, shape = flo_outlier))
 ```
 
-Aunque no son muy informativos sin una barra de error, puedes hacer gráficos de barras. Utilizaré la escala semi-cuantitativa de abundancia para responder a la pregunta: ¿cuál es el nivel de abundancia predominante de `Salmo trutta fario`?
+Aunque no son muy informativos sin una barra de error, puedes hacer gráficos de barras. Utilizaré la escala semi-cuantitativa de abundancia para responder a la pregunta: ¿cuál es el nivel de abundancia predominante de `Salmo trutta fario` en la muestra?
 
 ```{r intro-barplot}
-ggplot(data = doubs$fish) +
-  geom_bar(aes(x=Satr))
+ggplot(data = doubs$fish) + geom_bar(aes(x=Satr))
 ```
 
 El gráfico está informando que el nivel de abundancia más común es 0, es decir, la subespecie está ausente en 13 de los 30 sitios, es decir, es más común no encontrarla. Si ordenásemos los datos de `Satr` de menor a mayor, podríamos también percatarnos de lo que informa este gráfico, razón por la que se les considera poco útiles.
