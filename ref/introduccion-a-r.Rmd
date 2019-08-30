@@ -5,15 +5,21 @@ csl: apa.csl
 ---
 
 ```{r, echo = FALSE}
-knitr::opts_chunk$set(results='hold', collapse=TRUE)
+knitr::opts_chunk$set(
+  results='hold',
+  collapse=TRUE,
+  fig.path = "../img/"
+)
 ```
 
 
 <!-- Este .md fue generado a partir del .Rmd homónimo. Edítese el .Rmd -->
 
-# Introducción a R. Guión de referencia
+# Introducción a R y Visualización rápida de datos
 
-## Introducción
+## Introducción a R
+
+### Recursos
 
 Te paso a continuación algunas fuentes (mayoritariamente en español) sobre las aplicaciones que manejarás y otros recursos.
 
@@ -41,7 +47,7 @@ Te paso a continuación algunas fuentes (mayoritariamente en español) sobre las
     * [UseR! 2019](https://twitter.com/UseR2019_Conf)
     * [Rstats](https://twitter.com/rstatstweet)
 
-## Instalación y ejecución de R y RStudio
+### Instalación y ejecución de R y RStudio
 
 * Puedes usar el servidor RStudio habilitado por el profesor. Habrás recibido un correo electrónico con los detalles de acceso.
 
@@ -52,11 +58,11 @@ Te paso a continuación algunas fuentes (mayoritariamente en español) sobre las
     * En GNU/Linux es posible ejecutar tanto aplicaciones tanto desde el gestor de ventanas como desde el intérprete de línea de órdenes (CLI) o "terminal" (por ejemplo, para ejecutar R, presiona `CRTL+ALT+T`, escribe `R` y presiona `<enter>`).
     * En Windows y MacOS la ejecución se realiza desde el GUI.
 
-## CRAN (Comprehensive R Archive Network)
+### CRAN (Comprehensive R Archive Network)
 * [¿Qué es CRAN?](https://cran.r-project.org/doc/FAQ/R-FAQ.html#What-is-CRAN_003f)
 * Instalar paquetes: Ejemplo: `install.packages('vegan', dependencies = T)`. Si realizas tus asignaciones en el servidor RStudio habilitado por el profesor, no necesitarás instalar paquetes.
 
-## Ayuda de R
+### Ayuda de R
 
 ```{r, eval=F}
 help(package = 'base') #Ayuda sobre un paquete
@@ -80,18 +86,20 @@ knitr::include_graphics("https://es.r4ds.hadley.nz/diagrams_w_text_as_path/es/da
 
 Las múltiples herramientas ofrecidas por los paquetes de la colección `tidyverse` te servirán para agilizar sustancialmente el EDA. Los paquetes `dplyr`, `tidyr` y otros, te ayudarán a importar, ordenar y transformar datos, mientras `ggplot2` te ayudará a crear gráficos estilizados eficientemente. @Wickham2017R aseguran que estas herramientas mantienen la motivación en el aprendizaje por sus flujos de trabajo lineales.
 
-Usarás el conjunto de datos `doubs` de @verneaux1973cours, y lo cargarás mediante el paquete `ade4`. Estos datos se utilizan también en @borcard2018numerical.
+### El conjunto de datos `doubs`
+
+En esta guía de referencia, utilizo el conjunto de datos `doubs` de @verneaux1973cours, cargándolo mediante el paquete `ade4`. Estos datos se utilizan también en @borcard2018numerical.
 
 ```{r}
 library(ade4)
 data(doubs)
 ```
 
-Nota: Si usas tu propia PC, instálalo con `install.packages('ade4', dependencies = T)`
+>**Nota**. Si no usas el servidor RStudio habilitado por el profesor, instala `ade4` con `install.packages('ade4', dependencies = T)`
 
-`doubs` es una lista de 4 tablas o *data.frame*, etiquetadas como `env`-matriz ambiental, `fish`-matriz de comunidad usando abundancia, `xy`-matriz de coordenadas de las muestras y `species`-nombres de las 27 especies encontradas. Las filas de los tres primeros *data.frame* corresponden a 30 sitios muestreados a lo largo del río franco-suizo Doubs.
+La sentencia anterior carga el objeto `doubs` a memoria, pero no lo imprime en pantalla. `doubs` es una lista de 4 tablas o *data.frame*, etiquetadas como `env`-matriz ambiental, `fish`-matriz de comunidad usando abundancia semi-cuantitativa (más explicación abajo), `xy`-matriz de coordenadas de las muestras y `species`-nombres de las 27 especies encontradas. Las filas de los tres primeros *data.frame* corresponden a 30 sitios muestreados a lo largo del río franco-suizo Doubs.
 
-Para llamar un objeto de una lista se usa el operador `$`. Así, `doubs$env`, llama a la matriz ambiental.
+<a name="doubs"></a>Como ves, el objeto `doubs` se compone de varios elementos, por lo que es preferible imprimirlo en pantalla por separado. Para imprimir sólo un objeto de una lista, se usa el operador `$`. Así, `doubs$env`, imprime sólo la matriz ambiental.
 
 ```{r}
 doubs$env
@@ -99,7 +107,8 @@ doubs$env
 
 `doubs$env` contiene información ambiental con las siguientes variables: `dfs`-distancia desde cabecera (en km&nbsp;x&nbsp;10), `alt`-altitud (en m), `slo`-pendiente (log(x+1), donde x es la pendiente en tantos por 1000), `flo`-caudal promedio mínimo (m<sup>3</sup>/s&nbsp;100), `pH` (&nbsp;x&nbsp;10), `har`-dureza del agua (mg/l de calcio), `pho`-fostados (mg/l&nbsp;x&nbsp;100), `nit`-nitratos, `amm`-amoníaco, `nit`-nitrógeno (mg/l&nbsp;x&nbsp;100), `oxy`-oxígeno disuelto (mg/l&nbsp;x&nbsp;100), `bdo`-demanda biológica de oxígeno (mg/l&nbsp;x&nbsp;10)
 
-La tabla `doubs$fish` contiene la abundancia de las especies. La abreviatura usada como nombre de columna se explica en la tabla `doubs$species`.
+La tabla `doubs$fish` contiene la abundancia de especies. Los valores de las celdas no son individuos; la abundancia está representada en una escala semi-cuantitativa específica por especie, que va de 0 a 5. Por lo tanto, los valores no pueden entenderse como estimadores insesgados de la abundancia real o de la biomasa por sitio [@borcard2018numerical]. La abreviatura usada como nombre de columna se explica en la tabla `doubs$species`.
+
 
 ```{r}
 doubs$fish
@@ -111,10 +120,96 @@ La tabla `doubs$species` contiene los nombre de las 27 especies de peces.
 doubs$species
 ```
 
+Las cuatro columnas corresponden a: `Scientific`-nombre científico, `French` y `English`-nombres comunes en francés y en inglés, `code` códigos de cuatro caracteres usados como nombres de columnas en la tabla `doubs$fish`.
 
-Las cuatro columnas corresponden a: `Scientific`-nombre científico, `French` y `English`-nombres comunes en francés y en inglés, `code` códigos de cuatro caracteres usados como nombres de columnas en la tabal `doubs$fish`.
+### Diagrama de dispersión
+
+Lee sobre el [diagrama de dispersión](https://es.wikipedia.org/wiki/Diagrama_de_dispersi%C3%B3n). Si observas detenedimante las variables `dfs` y `flo` de la [tabla `doubs$env`](#doubs), quizá no detectes a golpe de vista que existe correlación entre ambas, y es precisamente en este punto donde los gráficos te pueden ayudar.
+
+```{r, message=FALSE}
+library(tidyverse)
+```
+
+>**Nota**. Si no realizas tu asignación en el servidor RStudio habilitado por el profesor, debes asegurarte de instalar la colección `tidyverse` (`install.packages(tidyverse, dependencies=T)`).
+
+El gráfico de dispersión a continuación muestra que existe  correlación positiva entre las variables seleccionadas.
+
+```{r intro-dfscatter}
+ggplot(data = doubs$env) +
+  geom_point(mapping = aes(x = dfs, y = flo))
+```
+
+Lógicamente, como es de esperar, a mayor distancia de la cabecera, mayor el caudal. Destacan también dos observaciones atípicas en el extremo superior derecho del gráfico, que corresponden a dos puntos de colecta que obtuvieron valores de flujo muy altos. Volveré sobre estos valores extremos (*outliers*) maś adelante.
+
+`ggplot` crea el sistema de coordenadas a partir del objeto introducido en el argumento `data`, es decir, a partir del conjunto de datos (`ggplot` convierte este objeto a un `data.frame` si al entrar en la función aún no lo es). Por lo tanto, si ejecutaras `ggplot(data = dfs_flo)` obtendrás un gráfico vacío.
+
+A partir de este punto, se pueden añadir una o más capas. En este caso, se añadió una de puntos mediante `geom_point`. Las capas usan el argumento `mapping` para definir la posición y el rol de cada variable en el gráfico. Por lo tanto, los elementos básicos son crear el sistema de coordenadas (`ggplot`), especificar los datos, crear una capa (e.g. `geom_point`) y decclarar cómo se posicionarán las variables. [Aquí](https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf) tienes una guía de referencia sobre las capas más comunes.
+
+Puedes editar la forma y el tamaño de todos los elementos del gráfico: rótulos, simbología, cuadrícula, ejes, etc. Existen múltiples argumentos disponibles para gráficos estéticos, que encontrarás en guías de `ggplot2` en línea, como [ésta](https://www.rdocumentation.org/packages/ggplot2/versions/3.2.1) y [esta](https://swcarpentry.github.io/r-novice-gapminder-es/08-plot-ggplot2/index.html). También puedes ver [esta galería](http://www.ggplot2-exts.org/gallery/) para conocer distintas formas de visualizar datos. Puedes también consultar @wickham2016ggplot2, un material de contenido exhaustivo y de referencia, donde verás las distintas capas y configuraciones estéticas.
+
+Mostraré los puntos en función de su condición de *outliers*, utilizando distintos colores y formas. No prestes mucha atención a la primera línea de código, sino al gráfico resultante
+
+```{r, fig.keep='none'}
+doubs$env$flo_outlier <- ifelse(
+  doubs$env$flo %in% invisible(boxplot(doubs$env$flo)$out),
+  'outlier', 'no outlier')
+```
+
+```{r intro-dfscatter-out}
+ggplot(data = doubs$env) +
+  geom_point(mapping = aes(x = dfs, y = flo, colour = flo_outlier))
+ggplot(data = doubs$env) +
+  geom_point(mapping = aes(x = dfs, y = flo, size = flo_outlier))
+ggplot(data = doubs$env) +
+  geom_point(mapping = aes(x = dfs, y = flo, shape = flo_outlier))
+```
+
+Aunque no son muy informativos sin una barra de error, puedes hacer gráficos de barras. Utilizaré la escala semi-cuantitativa de abundancia para responder a la pregunta: ¿cuál es el nivel de abundancia predominante de `Salmo trutta fario`?
+
+```{r intro-barplot}
+ggplot(data = doubs$fish) +
+  geom_bar(aes(x=Satr))
+```
+
+El gráfico está informando que el nivel de abundancia más común es 0, es decir, la subespecie está ausente en 13 de los 30 sitios, es decir, es más común no encontrarla. Si ordenásemos los datos de `Satr` de menor a mayor, podríamos también percatarnos de lo que informa este gráfico, razón por la que se les considera poco útiles.
+
+```{r}
+sort(doubs$fish[,2])
+```
+
+Las variables cualitativas suelen representarse como conteos de observaciones en este tipo de gráfico. Así, si en tus datos hay variables cualitativas, podrías hacer gráficos de barra, pero no olvides explorar cómo incluir la barra de error.
+
+Por ejemplo, si probar con otros pares de variables, par a par, pero `ggplot2` trae funciones incorporadas para asistirte en dicha tarea, construyendo facetas o paneles de gráficos.
 
 
+### Panel de correlaciones
+
+El paquete `ez`, apoyándose en `ggplot2`, construye gráficos de dispersión, gráficos de densidad e imprime a su vez el valor del coeficiente `r`. Muy útil cuando se quiere explorar muchas variables al mismo tiempo.
+
+```{r intro-ezscatter}
+library(ez)
+ezCor(
+  doubs$env[sapply(doubs$env, is.numeric)],
+  r_size_lims = c(4,8),
+  label_size = 7
+)
+```
+
+>**Nota**. la función `ezCor` sólo admite `data.frame` con columnas numéricas.
+
+
+Aunque los paquetes de análisis de datos ecológicos no están "saborizados" al estilo `tidyverse`, al menos el EDA lo podrás realizar utilizando tuberías de esta potente colección de paquetes.
+
+
+##
+
+```{r}
+dfs_flo <- doubs$env %>% select(dfs, flo)
+dfs_flo
+```
+
+
+El operador `%>%`, bautizado como "pipa" (*pipe*), pertenece al paquete `magrittr`, el cual es importado automáticamente cuando se instala la colección `tidyverse`. Este operador utiliza la salida de la función a su izquierda y la coloca como primer argumento de la función a la derecha. Así, la sentencia anterior se lee como "del objeto `doubs$env`, selecciona las columnas `dfs` y `flo` y con el resultado crea el objeto `dfs_flo`".
 
 
 <!-- ## Directorio de trabajo -->
