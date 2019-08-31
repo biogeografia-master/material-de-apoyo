@@ -327,7 +327,7 @@ Aunque los paquetes de análisis de datos ecológicos no están "saborizados" al
 ## Situaciones comunes
 * R es sensible a las mayúsculas. No es lo mismo `Mi_objeto` que `mi_objeto`.
 * *"En RStudio, ¿Qué atajo de teclado es que usan para poner el operador de asignación ` <- `?"* Debería funcionarte `ALT+-`, pero recuerda, sólo lo podrás usar en RStudio.
-* *"¿Y el *pipe* ` %>% `?"* `CTRL+SHIFT+M`.
+* *"¿Y el pipe ` %>% `?"* `CTRL+SHIFT+M`.
 * Más atajos de teclado de RStudio: `ALT+SHIFT+K`.
 * *"Me quedé trancá' en la consola de R con un signo de `+`. ¿Qué hago pa' salir de eso?"* Suele resolverse presionando la tecla `Escape` (`Esc`). Lee [este texto](https://support.rstudio.com/hc/en-us/community/posts/200792676-stuck-on-).
 
