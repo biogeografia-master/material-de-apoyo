@@ -75,7 +75,7 @@ Las múltiples herramientas ofrecidas por los paquetes de la colección `tidyver
 
 ### El conjunto de datos `doubs`
 
-En esta guía de referencia, utilizo el conjunto de datos `doubs` de Verneaux (1973), cargándolo mediante el paquete `ade4`. Estos datos se utilizan también en Borcard, Gillet, & Legendre (2018).
+Una de las fuentes que utilizo en esta guía de referencia, es el conjunto de datos `doubs` de Verneaux (1973). Se cargan meidante el paquete `ade4`. Estos datos se utilizan también en Borcard, Gillet, & Legendre (2018).
 
 ``` r
 library(ade4)
@@ -123,9 +123,9 @@ doubs$env
 ## 30 4530 172 1.099 6900 82 109  65 160  10  82  44
 ```
 
-`doubs$env` contiene información ambiental con las siguientes variables: `dfs`-distancia desde cabecera (en km x 10), `alt`-altitud (en m), `slo`-pendiente (log(x+1), donde x es la pendiente en tantos por 1000), `flo`-caudal promedio mínimo (m<sup>3</sup>/s 100), `pH` ( x 10), `har`-dureza del agua (mg/l de calcio), `pho`-fostados (mg/l x 100), `nit`-nitratos, `amm`-amoníaco, `nit`-nitrógeno (mg/l x 100), `oxy`-oxígeno disuelto (mg/l x 100), `bdo`-demanda biológica de oxígeno (mg/l x 10)
+`doubs$env` contiene información ambiental de los 30 sitios de colecta (filas) con las siguientes variables (columnas): `dfs`-distancia desde cabecera (en km x 10), `alt`-altitud (en m), `slo`-pendiente (log(x+1), donde x es la pendiente en tantos por 1000), `flo`-caudal promedio mínimo (m<sup>3</sup>/s 100), `pH` ( x 10), `har`-dureza del agua (mg/l de calcio), `pho`-fostados (mg/l x 100), `nit`-nitratos, `amm`-amoníaco, `nit`-nitrógeno (mg/l x 100), `oxy`-oxígeno disuelto (mg/l x 100), `bdo`-demanda biológica de oxígeno (mg/l x 10)
 
-La tabla `doubs$fish` contiene la abundancia de especies. Los valores de las celdas no son individuos; la abundancia está representada en una escala semi-cuantitativa específica por especie, que va de 0 a 5. Por lo tanto, los valores no pueden entenderse como estimadores insesgados de la abundancia real o de la biomasa por sitio (Borcard et al., 2018). La abreviatura usada como nombre de columna se explica en la tabla `doubs$species`.
+La tabla `doubs$fish`, asociada a la anterior, contiene la abundancia de especies por sitio. Los valores de las celdas no son individuos; la abundancia está representada en una escala semi-cuantitativa específica por especie, que va de 0 a 5. Por lo tanto, los valores no pueden entenderse como estimadores insesgados de la abundancia real o de la biomasa por sitio (Borcard et al., 2018). La abreviatura usada como nombre de columna se explica en la tabla `doubs$species`.
 
 ``` r
 doubs$fish
@@ -229,9 +229,142 @@ doubs$species
 
 Las cuatro columnas corresponden a: `Scientific`-nombre científico, `French` y `English`-nombres comunes en francés y en inglés, `code` códigos de cuatro caracteres usados como nombres de columnas en la tabla `doubs$fish`.
 
+### El conjunto de datos BCI
+
+`BCI` es una matriz de comunidad, muy popular en ecología, porque se utiliza como conjunto de datos modelo en el paquete `vegan`, muy usado en ecología (Oksanen et al., 2013). `BCI` contiene conteos (abundancias reales) de árboles de al menos 10 cm de diámetro a la altura de pecho (DAP o *DBH*) registrados en 50 parcelas (filas de la matriz) de 1 hectárea cada una, para un total de 225 especies (columnas de la matriz). Los nombres científicos se muestran íntegramente, aunque el espacio separador entre género y especie es sustituido por un `.`. A continuación se muestra una selección aleatoria de 6 parcelas y 3 especies de la matriz de comunidad.
+
+``` r
+library(vegan)
+data(BCI)
+set.seed(10)
+BCI[sample(1:50, 6), sample(1:225, 3)]
+##    Lacmellea.panamensis Eugenia.nesiotica Hirtella.americana
+## 35                    1                 0                  0
+## 5                     2                 0                  0
+## 11                    0                 0                  0
+## 13                    1                 2                  0
+## 47                    2                 1                  0
+## 28                    0                 1                  0
+```
+
+En el mismo paquete se encuentra también la matriz ambiental `BCI.env`, asociada a la anterior. `BCI.env` es un `data.frame` de 50 parcelas (filas) y nueve variables de sitio (columnas) descritas a continuación. `UTM.EW` y `UTM.NS`-coordenadas UTM de falso Este y falso Norte (zona 17N), `Precipitation`-precipitación en mm por año, `Elevation`-elevación en metros sobre el nivel del mar, `Age.cat`-categoría de edad del bosque, `Geology`-formación geológica subyacente, `Habitat`-tipo hábitat dominante predominante, `Stream`-"*Yes*" si hay un hábitat de ribera fluvial en la parcela, `EnvHet`-heterogeneidad ambiental evaluada por medio de la diversidad de frecuencia de tipos de hábitat de Simpson en 25 celdas de cuadrícula dentro de la parcela. Puedes consultar información detallada sobre cada variable en Harms, Condit, Hubbell, & Foster (2001).
+
+``` r
+data(BCI.env)
+BCI.env
+##    UTM.EW  UTM.NS Precipitation Elevation Age.cat Geology  Habitat Stream
+## 1  625754 1011569          2530       120      c3      Tb OldSlope    Yes
+## 2  625754 1011669          2530       120      c3      Tb   OldLow    Yes
+## 3  625754 1011769          2530       120      c3      Tb   OldLow     No
+## 4  625754 1011869          2530       120      c3      Tb   OldLow     No
+## 5  625754 1011969          2530       120      c3      Tb OldSlope     No
+## 6  625854 1011569          2530       120      c3      Tb   OldLow     No
+## 7  625854 1011669          2530       120      c3      Tb   OldLow    Yes
+## 8  625854 1011769          2530       120      c3      Tb   OldLow    Yes
+## 9  625854 1011869          2530       120      c3      Tb   OldLow     No
+## 10 625854 1011969          2530       120      c3      Tb   OldLow     No
+## 11 625954 1011569          2530       120      c3      Tb   OldLow     No
+## 12 625954 1011669          2530       120      c3      Tb   OldLow     No
+## 13 625954 1011769          2530       120      c3      Tb   OldLow    Yes
+## 14 625954 1011869          2530       120      c3      Tb   OldLow     No
+## 15 625954 1011969          2530       120      c3      Tb   OldLow     No
+## 16 626054 1011569          2530       120      c3      Tb OldSlope     No
+## 17 626054 1011669          2530       120      c3      Tb   OldLow     No
+## 18 626054 1011769          2530       120      c3      Tb    Swamp     No
+## 19 626054 1011869          2530       120      c3      Tb   OldLow     No
+## 20 626054 1011969          2530       120      c3      Tb   OldLow     No
+## 21 626154 1011569          2530       120      c3      Tb OldSlope     No
+## 22 626154 1011669          2530       120      c3      Tb   OldLow     No
+## 23 626154 1011769          2530       120      c3      Tb    Swamp     No
+## 24 626154 1011869          2530       120      c3      Tb   OldLow     No
+## 25 626154 1011969          2530       120      c3      Tb   OldLow     No
+## 26 626254 1011569          2530       120      c3      Tb OldSlope     No
+## 27 626254 1011669          2530       120      c3      Tb   OldLow     No
+## 28 626254 1011769          2530       120      c3      Tb   OldLow     No
+## 29 626254 1011869          2530       120      c3      Tb  OldHigh     No
+## 30 626254 1011969          2530       120      c3      Tb    Young     No
+## 31 626354 1011569          2530       120      c3      Tb   OldLow     No
+## 32 626354 1011669          2530       120      c3      Tb  OldHigh     No
+## 33 626354 1011769          2530       120      c2      Tb  OldHigh     No
+## 34 626354 1011869          2530       120      c3      Tb  OldHigh     No
+## 35 626354 1011969          2530       120      c3      Tb    Young     No
+## 36 626454 1011569          2530       120      c3      Tb OldSlope     No
+## 37 626454 1011669          2530       120      c3      Tb  OldHigh     No
+## 38 626454 1011769          2530       120      c3      Tb  OldHigh     No
+## 39 626454 1011869          2530       120      c3      Tb  OldHigh     No
+## 40 626454 1011969          2530       120      c3      Tb  OldHigh     No
+## 41 626554 1011569          2530       120      c3      Tb OldSlope     No
+## 42 626554 1011669          2530       120      c3      Tb OldSlope     No
+## 43 626554 1011769          2530       120      c3      Tb OldSlope     No
+## 44 626554 1011869          2530       120      c3      Tb OldSlope     No
+## 45 626554 1011969          2530       120      c3      Tb OldSlope    Yes
+## 46 626654 1011569          2530       120      c3      Tb   OldLow     No
+## 47 626654 1011669          2530       120      c3      Tb   OldLow     No
+## 48 626654 1011769          2530       120      c3      Tb   OldLow     No
+## 49 626654 1011869          2530       120      c3      Tb   OldLow     No
+## 50 626654 1011969          2530       120      c3      Tb OldSlope    Yes
+##    EnvHet
+## 1  0.6272
+## 2  0.3936
+## 3  0.0000
+## 4  0.0000
+## 5  0.4608
+## 6  0.0768
+## 7  0.3808
+## 8  0.2112
+## 9  0.0000
+## 10 0.0000
+## 11 0.4032
+## 12 0.0000
+## 13 0.6624
+## 14 0.1472
+## 15 0.0000
+## 16 0.4608
+## 17 0.0000
+## 18 0.6592
+## 19 0.0768
+## 20 0.2112
+## 21 0.2688
+## 22 0.2112
+## 23 0.6240
+## 24 0.4352
+## 25 0.6080
+## 26 0.3648
+## 27 0.0000
+## 28 0.3328
+## 29 0.6528
+## 30 0.6144
+## 31 0.4928
+## 32 0.7264
+## 33 0.0768
+## 34 0.0000
+## 35 0.3328
+## 36 0.4032
+## 37 0.3648
+## 38 0.0000
+## 39 0.0000
+## 40 0.6208
+## 41 0.4032
+## 42 0.1472
+## 43 0.0768
+## 44 0.5568
+## 45 0.3424
+## 46 0.1472
+## 47 0.3648
+## 48 0.4608
+## 49 0.4992
+## 50 0.6368
+```
+
+### Un **"detallito"** sobre matrices de comunidad y ambientales en R
+
+Los paquetes para análisis en ecología que conozco asumen que el orden de las filas de ambas matrices es consistente. Por ejemplo, `vegan` asume que la fila `n` de las matrices de comunidad y ambiental se refieren al mismo "sitio". Si por accidente, o deliberadamente, se reordenara el orden de filas de una matriz, sin hacerlo igualmente en la otra, cualquier análisis que intente poner en relación datos composicionales con ambientales será fútil e inconsistente.
+
+Se trata de un **pequeño detalle a tener muy presente** al momento de manipular datos ecológicos. Una medida para evitar inconsistencias, sería crear columnas de nombres de sitios a partir de los nombres de filas en ambas matrices, justo después de cargarlas. Si se perdiera la integridad entre ambas siempre se podrían hacer uniones a partir de dichas columnas.
+
 ### Diagrama de dispersión
 
-Lee sobre el [diagrama de dispersión](https://es.wikipedia.org/wiki/Diagrama_de_dispersi%C3%B3n). Si observas detenedimante las variables `dfs` y `flo` de la [tabla `doubs$env`](#doubs), quizá no detectes a golpe de vista que existe correlación entre ambas, y es precisamente en este punto donde los gráficos te pueden ayudar.
+Lee sobre el [diagrama de dispersión](https://es.wikipedia.org/wiki/Diagrama_de_dispersi%C3%B3n). Si observas detenidamente las variables `dfs` y `flo` de la [tabla `doubs$env`](#doubs), quizá no detectes a golpe de vista que existe correlación entre ambas; es precisamente en este punto donde los gráficos te pueden ayudar.
 
 ``` r
 library(tidyverse)
@@ -246,7 +379,7 @@ ggplot(data = doubs$env) +
   geom_point(mapping = aes(x = dfs, y = flo))
 ```
 
-![](../img/intro-dfscatter-1.png)
+![](../img/intro-doubscatter-1.png)
 
 Lógicamente, como es de esperar, a mayor distancia de la cabecera, mayor el caudal. Destacan también dos observaciones atípicas en el extremo superior derecho del gráfico, que corresponden a dos puntos de colecta que obtuvieron valores de flujo muy altos. Volveré sobre estos valores extremos (*outliers*) maś adelante.
 
@@ -259,7 +392,7 @@ Puedes editar la forma y el tamaño de todos los elementos del gráfico: rótulo
 Mostraré los puntos en función de su condición de *outliers*, utilizando distintos colores y formas. No prestes mucha atención a la primera línea de código, sino al gráfico resultante
 
 ``` r
-doubs$env$flo_outlier <- ifelse(
+flo_outlier <- ifelse(
   doubs$env$flo %in% invisible(boxplot(doubs$env$flo)$out),
   'outlier', 'no outlier')
 ```
@@ -269,7 +402,7 @@ ggplot(data = doubs$env) +
   geom_point(mapping = aes(x = dfs, y = flo, colour = flo_outlier))
 ```
 
-![](../img/intro-dfscatter-out-1.png)
+![](../img/intro-doubscatter-out-1.png)
 
 ``` r
 ggplot(data = doubs$env) +
@@ -277,50 +410,89 @@ ggplot(data = doubs$env) +
 ## Warning: Using size for a discrete variable is not advised.
 ```
 
-![](../img/intro-dfscatter-out-2.png)
+![](../img/intro-doubscatter-out-2.png)
 
 ``` r
 ggplot(data = doubs$env) +
   geom_point(mapping = aes(x = dfs, y = flo, shape = flo_outlier))
 ```
 
-![](../img/intro-dfscatter-out-3.png)
+![](../img/intro-doubscatter-out-3.png)
 
-Aunque no son muy informativos sin una barra de error, puedes hacer gráficos de barras. Utilizaré la escala semi-cuantitativa de abundancia para responder a la pregunta: ¿cuál es el nivel de abundancia predominante de `Salmo trutta fario` en la muestra?
+Aunque no son muy informativos sin barras de error, los gráficos de barras pueden ser útiles en determinados contextos. Utilizaré la escala semi-cuantitativa de abundancia para responder a la pregunta: ¿cuál es el nivel de abundancia predominante de `Salmo trutta fario` en la muestra?
 
 ``` r
-ggplot(data = doubs$fish) + geom_bar(aes(x=Satr))
+ggplot(data = doubs$fish) + geom_bar(mapping = aes(x=Satr))
 ```
 
-![](../img/intro-barplot-1.png)
+![](../img/intro-doubsbarplot-1.png)
 
-El gráfico está informando que el nivel de abundancia más común es 0, es decir, la subespecie está ausente en 13 de los 30 sitios, es decir, es más común no encontrarla. Si ordenásemos los datos de `Satr` de menor a mayor, podríamos también percatarnos de lo que informa este gráfico, razón por la que se les considera poco útiles.
+Este gráfico "informa" que el nivel de abundancia más común es 0, es decir, la subespecie está ausente en 13 de los 30 sitios, con lo que es más común no encontrarla. Si ordenásemos las pseudo-abundancias de `Satr` de menor a mayor, podríamos igualmente notar este patrón, lo cual sugiere que el gráfico no aporta mucho más que lo que lo haría un vector ordenado.
 
 ``` r
 sort(doubs$fish[,2])
 ##  [1] 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 2 2 3 3 3 3 4 4 5 5 5 5 5 5
 ```
 
-Las variables cualitativas suelen representarse como conteos de observaciones en este tipo de gráfico. Así, si en tus datos hay variables cualitativas, podrías hacer gráficos de barra, pero no olvides explorar cómo incluir la barra de error.
+Fíjate en este otro gráfico de barras usando el conjunto de datos `BCI`. El argumento `fill` en el segundo gráfico rellena las barras de manera que se pueden diferencias los distintos hábitat con mayor facilidad. Es posible configurar los colores en cada caso con la funcipon `scale_fill_discrete`
 
-Por ejemplo, si probar con otros pares de variables, par a par, pero `ggplot2` trae funciones incorporadas para asistirte en dicha tarea, construyendo facetas o paneles de gráficos.
+``` r
+ggplot(data = BCI.env) +  geom_bar(mapping = aes(x = Habitat))
+```
+
+![](../img/intro-bcibarplot-1.png)
+
+``` r
+
+ggplot(data = BCI.env) +
+  geom_bar(mapping = aes(x = Habitat, fill = Habitat))
+```
+
+![](../img/intro-bcibarplot-2.png)
+
+Nota que hay dos hábitats escasamente representados, que son *Swamp* y *Young*. El EDA está informando que, en determinados análisis, estos grupos no aportarían efectos sistemáticos o, en su defecto, harían que determinados supuestos no se cumplieran. No entraré en detalles sobre cómo filtro los datos para excluir ambos grupos (más adelante verás cómo usar `tidyverse` para filtrar datos), así que ignora la parte del código y fíjate en el gráfico.
+
+``` r
+grupos_numerosos <- droplevels(
+  BCI.env[!BCI.env$Habitat %in% c('Swamp', 'Young'), ]
+)
+ggplot(data = grupos_numerosos) +
+  geom_bar(mapping = aes(x = Habitat, fill = Habitat))
+```
+
+![](../img/intro-bcibarplot2-1.png)
+
+Para variables cuantitativas, el diagrama de cajas, mejor conocido como *boxplot*, es sin duda un apoyo fundamental. Te recomiendo la [entrada de Wikipedia](https://es.wikipedia.org/wiki/Diagrama_de_caja) sobre este útil gráfico. A golpe de vista, verás a continuación la variable "heterogeneidad ambiental" según hábitats, utilizando el objeto `grupos_numerosos` (excluidos los hábitats poco representados).
+
+``` r
+ggplot(data = grupos_numerosos) +
+  geom_boxplot(mapping = aes(x = Habitat, y = EnvHet, fill = Habitat))
+```
+
+![](../img/intro-bciboxplots-1.png)
+
+¿Qué patrón encuentras? ¿Cómo es la heterogeneidad ambiental en los bosques viejos sobre vertiente (`OldSlope`)?
+
+### Facetas o paneles
+
+Es posible prrobar con otros pares de variables, par a par, pero `ggplot2` trae funciones incorporadas para asistirte en dicha tarea, construyendo facetas o paneles de gráficos.
 
 ### Panel de correlaciones
 
-El paquete `ez`, apoyándose en `ggplot2`, construye gráficos de dispersión, gráficos de densidad e imprime a su vez el valor del coeficiente `r`. Muy útil cuando se quiere explorar muchas variables al mismo tiempo.
+El paquete `ez`, apoyándose en `ggplot2`, construye gráficos de dispersión, gráficos de densidad e imprime a su vez el valor del coeficiente `r`. Muy útil cuando se quiere explorar muchas variables al mismo tiempo. Fíjate en este útil panel de correlaciones usando el conjunto `doubs`.
 
 ``` r
 library(ez)
 ezCor(
-  doubs$env[sapply(doubs$env, is.numeric)],
+  doubs$env,
   r_size_lims = c(4,8),
   label_size = 7
 )
 ```
 
-![](../img/intro-ezscatter-1.png)
+![](../img/intro-doubsezscatter-1.png)
 
-> **Nota**. la función `ezCor` sólo admite `data.frame` con columnas numéricas.
+> **Nota**. la función `ezCor` sólo admite `data.frame` compuestos por columnas numéricas.
 
 Aunque los paquetes de análisis de datos ecológicos no están "saborizados" al estilo `tidyverse`, al menos el EDA lo podrás realizar utilizando tuberías de esta potente colección de paquetes.
 
@@ -400,6 +572,10 @@ Referencias
 -----------
 
 Borcard, D., Gillet, F., & Legendre, P. (2018). *Numerical ecology with r*. Springer.
+
+Harms, K. E., Condit, R., Hubbell, S. P., & Foster, R. B. (2001). Habitat associations of trees and shrubs in a 50-ha neotropical forest plot. *Journal of Ecology*, *89*(6), 947–959.
+
+Oksanen, J., Blanchet, F. G., Kindt, R., Legendre, P., Minchin, P. R., O’hara, R., … others. (2013). Package “vegan”. *Community Ecology Package, Version*, *2*(9), 1–295.
 
 Verneaux, J. (1973). *Cours d’eau de franche-comté (massif du jura): Recherches écologiques sur le réseau hydrographique du doubs: Essai de biotypologie* (PhD thesis). Institut des Sciences Naturelles.
 
