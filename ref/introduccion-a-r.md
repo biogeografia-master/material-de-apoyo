@@ -89,38 +89,15 @@ La sentencia anterior carga el objeto `doubs` a memoria, pero no lo imprime en p
 <a name="doubs"></a>Como ves, el objeto `doubs` se compone de varios elementos, por lo que es preferible imprimirlo en pantalla por separado. Para imprimir sólo un objeto de una lista, se usa el operador `$`. Así, `doubs$env`, imprime sólo la matriz ambiental.
 
 ``` r
-doubs$env
+set.seed(98)
+doubs$env[sample(1:30, 6), ] #Sólo 6 filas mostradas, elegidas al azar
 ##     dfs alt   slo  flo pH har pho nit amm oxy bdo
-## 1     3 934 6.176   84 79  45   1  20   0 122  27
-## 2    22 932 3.434  100 80  40   2  20  10 103  19
-## 3   102 914 3.638  180 83  52   5  22   5 105  35
-## 4   185 854 3.497  253 80  72  10  21   0 110  13
-## 5   215 849 3.178  264 81  84  38  52  20  80  62
-## 6   324 846 3.497  286 79  60  20  15   0 102  53
+## 15 1645 415 1.792 2300 86  86  40 100   0 117  21
+## 10  990 617 4.605 1000 77  82   6  75   1 100  43
+## 29 4220 183 1.946 6770 78 110  45 162  10  90  42
+## 13 1436 450 3.091 2110 81  98   6  52   0 124  24
 ## 7   268 841 4.205  400 81  88   7  15   0 111  22
 ## 8   491 792 3.258  130 81  94  20  41  12  70  81
-## 9   705 752 2.565  480 80  90  30  82  12  72  52
-## 10  990 617 4.605 1000 77  82   6  75   1 100  43
-## 11 1234 483 3.738 1990 81  96  30 160   0 115  27
-## 12 1324 477 2.833 2000 79  86   4  50   0 122  30
-## 13 1436 450 3.091 2110 81  98   6  52   0 124  24
-## 14 1522 434 2.565 2120 83  98  27 123   0 123  38
-## 15 1645 415 1.792 2300 86  86  40 100   0 117  21
-## 16 1859 375 3.045 1610 80  88  20 200   5 103  27
-## 17 1985 348 1.792 2430 80  92  20 250  20 102  46
-## 18 2110 332 2.197 2500 80  90  50 220  20 103  28
-## 19 2246 310 1.792 2590 81  84  60 220  15 106  33
-## 20 2477 286 2.197 2680 80  86  30 300  30 103  28
-## 21 2812 262 2.398 2720 79  85  20 220  10  90  41
-## 22 2940 254 2.708 2790 81  88  20 162   7  91  48
-## 23 3043 246 2.565 2880 81  97 260 350 115  63 164
-## 24 3147 241 1.386 2976 80  99 140 250  60  52 123
-## 25 3278 231 1.792 3870 79 100 422 620 180  41 167
-## 26 3579 214 1.792 3910 79  94 143 300  30  62  89
-## 27 3732 206 2.565 3960 81  90  58 300  26  72  63
-## 28 3947 195 1.386 4320 83 100  74 400  30  81  45
-## 29 4220 183 1.946 6770 78 110  45 162  10  90  42
-## 30 4530 172 1.099 6900 82 109  65 160  10  82  44
 ```
 
 `doubs$env` contiene información ambiental de los 30 sitios de colecta (filas) con las siguientes variables (columnas): `dfs`-distancia desde cabecera (en km x 10), `alt`-altitud (en m), `slo`-pendiente (log(x+1), donde x es la pendiente en tantos por 1000), `flo`-caudal promedio mínimo (m<sup>3</sup>/s 100), `pH` ( x 10), `har`-dureza del agua (mg/l de calcio), `pho`-fostados (mg/l x 100), `nit`-nitratos, `amm`-amoníaco, `nit`-nitrógeno (mg/l x 100), `oxy`-oxígeno disuelto (mg/l x 100), `bdo`-demanda biológica de oxígeno (mg/l x 10)
@@ -128,69 +105,15 @@ doubs$env
 La tabla `doubs$fish`, asociada a la anterior, contiene la abundancia de especies por sitio. Los valores de las celdas no son individuos; la abundancia está representada en una escala semi-cuantitativa específica por especie, que va de 0 a 5. Por lo tanto, los valores no pueden entenderse como estimadores insesgados de la abundancia real o de la biomasa por sitio (Borcard et al., 2018). La abreviatura usada como nombre de columna se explica en la tabla `doubs$species`.
 
 ``` r
-doubs$fish
-##    Cogo Satr Phph Neba Thth Teso Chna Chto Lele Lece Baba Spbi Gogo Eslu
-## 1     0    3    0    0    0    0    0    0    0    0    0    0    0    0
-## 2     0    5    4    3    0    0    0    0    0    0    0    0    0    0
-## 3     0    5    5    5    0    0    0    0    0    0    0    0    0    1
-## 4     0    4    5    5    0    0    0    0    0    1    0    0    1    2
-## 5     0    2    3    2    0    0    0    0    5    2    0    0    2    4
-## 6     0    3    4    5    0    0    0    0    1    2    0    0    1    1
-## 7     0    5    4    5    0    0    0    0    1    1    0    0    0    0
-## 8     0    0    0    0    0    0    0    0    0    0    0    0    0    0
-## 9     0    0    1    3    0    0    0    0    0    5    0    0    0    0
-## 10    0    1    4    4    0    0    0    0    2    2    0    0    1    0
-## 11    1    3    4    1    1    0    0    0    0    1    0    0    0    0
-## 12    2    5    4    4    2    0    0    0    0    1    0    0    0    0
-## 13    2    5    5    2    3    2    0    0    0    0    0    0    0    0
-## 14    3    5    5    4    4    3    0    0    0    1    1    0    1    1
-## 15    3    4    4    5    2    4    0    0    3    3    2    0    2    0
-## 16    2    3    3    5    0    5    0    4    5    2    2    1    2    1
-## 17    1    2    4    4    1    2    1    4    3    2    3    4    1    1
-## 18    1    1    3    3    1    1    1    3    2    3    3    3    2    1
-## 19    0    0    3    5    0    1    2    3    2    1    2    2    4    1
-## 20    0    0    1    2    0    0    2    2    2    3    4    3    4    2
-## 21    0    0    1    1    0    0    2    2    2    2    4    2    5    3
-## 22    0    0    0    1    0    0    3    2    3    4    5    1    5    3
-## 23    0    0    0    0    0    0    0    0    0    1    0    0    0    0
-## 24    0    0    0    0    0    0    1    0    0    2    0    0    1    0
-## 25    0    0    0    0    0    0    0    0    1    1    0    0    2    1
-## 26    0    0    0    1    0    0    1    0    1    2    2    1    3    2
-## 27    0    0    0    1    0    0    1    1    2    3    4    1    4    4
-## 28    0    0    0    1    0    0    1    1    2    4    3    1    4    3
-## 29    0    1    1    1    1    1    2    2    3    4    5    3    5    5
-## 30    0    0    0    0    0    0    1    2    3    3    3    5    5    4
-##    Pefl Rham Legi Scer Cyca Titi Abbr Icme Acce Ruru Blbj Alal Anan
-## 1     0    0    0    0    0    0    0    0    0    0    0    0    0
-## 2     0    0    0    0    0    0    0    0    0    0    0    0    0
-## 3     0    0    0    0    0    0    0    0    0    0    0    0    0
-## 4     2    0    0    0    0    1    0    0    0    0    0    0    0
-## 5     4    0    0    2    0    3    0    0    0    5    0    0    0
-## 6     1    0    0    0    0    2    0    0    0    1    0    0    0
-## 7     0    0    0    0    0    0    0    0    0    0    0    0    0
-## 8     0    0    0    0    0    0    0    0    0    0    0    0    0
-## 9     0    0    0    0    0    1    0    0    0    4    0    0    0
-## 10    0    0    0    0    0    0    0    0    0    0    0    0    0
-## 11    0    0    0    0    0    0    0    0    0    0    0    0    0
-## 12    0    0    0    0    0    0    0    0    0    0    0    0    0
-## 13    0    0    0    0    0    0    0    0    0    0    0    0    0
-## 14    0    0    0    0    0    0    0    0    0    0    0    0    0
-## 15    0    0    0    0    0    1    0    0    0    0    0    0    0
-## 16    1    0    1    0    1    1    0    0    0    1    0    0    0
-## 17    2    1    1    0    1    1    0    0    0    2    0    2    1
-## 18    3    2    1    0    1    1    0    0    1    2    0    2    1
-## 19    1    2    1    1    1    2    1    0    1    5    1    3    1
-## 20    2    3    2    2    1    4    1    0    2    5    2    5    2
-## 21    3    3    2    2    2    4    3    1    3    5    3    5    2
-## 22    4    3    3    2    3    4    4    2    4    5    4    5    2
-## 23    0    0    0    0    0    0    0    0    0    1    0    2    0
-## 24    0    0    1    0    0    0    0    0    2    2    1    5    0
-## 25    0    0    0    1    0    0    0    0    1    1    0    3    0
-## 26    1    2    2    1    1    3    2    1    4    4    2    5    2
-## 27    1    3    3    1    2    5    3    2    5    5    4    5    3
-## 28    2    4    4    2    4    4    3    3    5    5    5    5    4
-## 29    4    5    5    2    3    3    4    4    5    5    4    5    4
-## 30    5    5    3    5    5    5    5    5    5    5    5    5    5
+set.seed(99)
+doubs$fish[sample(1:30, 6), sample(1:27, 6)] #Sólo 6 filas y columnas mostradas, elegidas al azar
+##    Rham Phph Scer Ruru Gogo Icme
+## 21    3    1    2    5    5    1
+## 9     0    1    0    4    0    0
+## 11    0    4    0    0    0    0
+## 5     0    3    2    5    2    0
+## 15    0    4    0    0    2    0
+## 13    0    5    0    0    0    0
 ```
 
 La tabla `doubs$species` contiene los nombre de las 27 especies de peces.
@@ -229,7 +152,7 @@ doubs$species
 
 Las cuatro columnas corresponden a: `Scientific`-nombre científico, `French` y `English`-nombres comunes en francés y en inglés, `code` códigos de cuatro caracteres usados como nombres de columnas en la tabla `doubs$fish`.
 
-### El conjunto de datos BCI
+### El conjunto de datos `BCI`
 
 `BCI` es una matriz de comunidad, muy popular en ecología, porque se utiliza como conjunto de datos modelo en el paquete `vegan`, muy usado en ecología (Oksanen et al., 2013). `BCI` contiene conteos (abundancias reales) de árboles de al menos 10 cm de diámetro a la altura de pecho (DAP o *DBH*) registrados en 50 parcelas (filas de la matriz) de 1 hectárea cada una, para un total de 225 especies (columnas de la matriz). Los nombres científicos se muestran íntegramente, aunque el espacio separador entre género y especie es sustituido por un `.`. A continuación se muestra una selección aleatoria de 6 parcelas y 3 especies de la matriz de comunidad.
 
@@ -237,7 +160,7 @@ Las cuatro columnas corresponden a: `Scientific`-nombre científico, `French` y 
 library(vegan)
 data(BCI)
 set.seed(10)
-BCI[sample(1:50, 6), sample(1:225, 3)]
+BCI[sample(1:50, 6), sample(1:225, 3)] #Sólo 6 filas y 3 columnas mostradas, elegidas al azar
 ##    Lacmellea.panamensis Eugenia.nesiotica Hirtella.americana
 ## 35                    1                 0                  0
 ## 5                     2                 0                  0
@@ -251,116 +174,76 @@ En el mismo paquete se encuentra también la matriz ambiental `BCI.env`, asociad
 
 ``` r
 data(BCI.env)
-BCI.env
+set.seed(11)
+BCI.env[sample(1:50, 6), ] #Sólo 6 filas mostradas, elegidas al azar
 ##    UTM.EW  UTM.NS Precipitation Elevation Age.cat Geology  Habitat Stream
-## 1  625754 1011569          2530       120      c3      Tb OldSlope    Yes
-## 2  625754 1011669          2530       120      c3      Tb   OldLow    Yes
-## 3  625754 1011769          2530       120      c3      Tb   OldLow     No
-## 4  625754 1011869          2530       120      c3      Tb   OldLow     No
-## 5  625754 1011969          2530       120      c3      Tb OldSlope     No
-## 6  625854 1011569          2530       120      c3      Tb   OldLow     No
-## 7  625854 1011669          2530       120      c3      Tb   OldLow    Yes
-## 8  625854 1011769          2530       120      c3      Tb   OldLow    Yes
-## 9  625854 1011869          2530       120      c3      Tb   OldLow     No
-## 10 625854 1011969          2530       120      c3      Tb   OldLow     No
-## 11 625954 1011569          2530       120      c3      Tb   OldLow     No
-## 12 625954 1011669          2530       120      c3      Tb   OldLow     No
-## 13 625954 1011769          2530       120      c3      Tb   OldLow    Yes
 ## 14 625954 1011869          2530       120      c3      Tb   OldLow     No
-## 15 625954 1011969          2530       120      c3      Tb   OldLow     No
-## 16 626054 1011569          2530       120      c3      Tb OldSlope     No
-## 17 626054 1011669          2530       120      c3      Tb   OldLow     No
-## 18 626054 1011769          2530       120      c3      Tb    Swamp     No
-## 19 626054 1011869          2530       120      c3      Tb   OldLow     No
-## 20 626054 1011969          2530       120      c3      Tb   OldLow     No
-## 21 626154 1011569          2530       120      c3      Tb OldSlope     No
-## 22 626154 1011669          2530       120      c3      Tb   OldLow     No
-## 23 626154 1011769          2530       120      c3      Tb    Swamp     No
-## 24 626154 1011869          2530       120      c3      Tb   OldLow     No
+## 1  625754 1011569          2530       120      c3      Tb OldSlope    Yes
 ## 25 626154 1011969          2530       120      c3      Tb   OldLow     No
-## 26 626254 1011569          2530       120      c3      Tb OldSlope     No
-## 27 626254 1011669          2530       120      c3      Tb   OldLow     No
-## 28 626254 1011769          2530       120      c3      Tb   OldLow     No
-## 29 626254 1011869          2530       120      c3      Tb  OldHigh     No
-## 30 626254 1011969          2530       120      c3      Tb    Young     No
-## 31 626354 1011569          2530       120      c3      Tb   OldLow     No
-## 32 626354 1011669          2530       120      c3      Tb  OldHigh     No
-## 33 626354 1011769          2530       120      c2      Tb  OldHigh     No
-## 34 626354 1011869          2530       120      c3      Tb  OldHigh     No
-## 35 626354 1011969          2530       120      c3      Tb    Young     No
-## 36 626454 1011569          2530       120      c3      Tb OldSlope     No
-## 37 626454 1011669          2530       120      c3      Tb  OldHigh     No
-## 38 626454 1011769          2530       120      c3      Tb  OldHigh     No
-## 39 626454 1011869          2530       120      c3      Tb  OldHigh     No
-## 40 626454 1011969          2530       120      c3      Tb  OldHigh     No
-## 41 626554 1011569          2530       120      c3      Tb OldSlope     No
-## 42 626554 1011669          2530       120      c3      Tb OldSlope     No
-## 43 626554 1011769          2530       120      c3      Tb OldSlope     No
-## 44 626554 1011869          2530       120      c3      Tb OldSlope     No
-## 45 626554 1011969          2530       120      c3      Tb OldSlope    Yes
-## 46 626654 1011569          2530       120      c3      Tb   OldLow     No
-## 47 626654 1011669          2530       120      c3      Tb   OldLow     No
-## 48 626654 1011769          2530       120      c3      Tb   OldLow     No
 ## 49 626654 1011869          2530       120      c3      Tb   OldLow     No
-## 50 626654 1011969          2530       120      c3      Tb OldSlope    Yes
+## 3  625754 1011769          2530       120      c3      Tb   OldLow     No
+## 43 626554 1011769          2530       120      c3      Tb OldSlope     No
 ##    EnvHet
-## 1  0.6272
-## 2  0.3936
-## 3  0.0000
-## 4  0.0000
-## 5  0.4608
-## 6  0.0768
-## 7  0.3808
-## 8  0.2112
-## 9  0.0000
-## 10 0.0000
-## 11 0.4032
-## 12 0.0000
-## 13 0.6624
 ## 14 0.1472
-## 15 0.0000
-## 16 0.4608
-## 17 0.0000
-## 18 0.6592
-## 19 0.0768
-## 20 0.2112
-## 21 0.2688
-## 22 0.2112
-## 23 0.6240
-## 24 0.4352
+## 1  0.6272
 ## 25 0.6080
-## 26 0.3648
-## 27 0.0000
-## 28 0.3328
-## 29 0.6528
-## 30 0.6144
-## 31 0.4928
-## 32 0.7264
-## 33 0.0768
-## 34 0.0000
-## 35 0.3328
-## 36 0.4032
-## 37 0.3648
-## 38 0.0000
-## 39 0.0000
-## 40 0.6208
-## 41 0.4032
-## 42 0.1472
-## 43 0.0768
-## 44 0.5568
-## 45 0.3424
-## 46 0.1472
-## 47 0.3648
-## 48 0.4608
 ## 49 0.4992
-## 50 0.6368
+## 3  0.0000
+## 43 0.0768
+```
+
+### El conjunto de datos `mite`
+
+`mite` es un conjunto de tres `data.frame` sobre ácaros oribatidos y sus variables ambientales, colectados en 70 sitios mediante núcleos de suelo en una parcela de 2.5 x 10 m, los cuales fueron publicados en dos trabajos (Borcard & Legendre, 1994; Borcard, Legendre, & Drapeau, 1992). Al igual que los anteriores, este conjunto de datos se carga a través del paquete `vegan`. El primero, `mite` propiamente, contiene la matriz de comunidad con los datos de abundancia de 35 especies (columnas) de ácaros oribátidos para cada uno de los 70 sitios (filas).
+
+``` r
+data(mite)
+set.seed(40)
+mite[sample(1:70, 6), sample(1:35, 6)] #Sólo 6 filas y 6 columnas mostradas, elegidas al azar
+##    PPEL Miniglmn Trhypch1 RARD MEGR ONOV
+## 15    2        1        0    0    1    7
+## 41    0        0        0    0    0    5
+## 26    0        0        0    1    1   27
+## 10    0        2        0    3    0   33
+## 7     0        0        0    2    3   27
+## 46    0        0        0    0    2   22
+```
+
+`mite.env` contiene datos ambientales de los sitios de colecta, que incluye `SubsDens`-densidad del sustrato (g/L); `WatrCont`-contenido de agua del substrato (g/L); `Substrate`-tipo de substrato, pudiendo tomar los valores `Sphagn1`, `Sphagn2`, `Sphagn3`, `Sphagn`, `Litter`, `Barepeat` e `Interface`; `Shrub`-que indica la densidad de arbustos, pudieno tomar tres posibles niveles `1`, `2` o `3`; finalmente la variable `Topo`-que puede tomar los valores `Blanket` y `Hummock`.
+
+``` r
+data(mite.env)
+set.seed(30)
+mite.env[sample(1:70,6),] #Sólo 6 filas mostradas, elegidas al azar
+##    SubsDens WatrCont Substrate Shrub    Topo
+## 7     36.95   378.93   Sphagn1   Few Hummock
+## 34    53.17   367.11 Interface  Many Blanket
+## 25    35.30   293.49 Interface  Many Blanket
+## 29    32.86   323.12 Interface  Many Hummock
+## 20    38.61   145.68 Interface  Many Hummock
+## 10    32.14   220.73   Sphagn1  Many Hummock
+```
+
+Finalmente, `mite.xy` contiene las coordenadas (con origen arbitrario) de los 70 sitios.
+
+``` r
+data(mite.xy)
+set.seed(50)
+mite.xy[sample(1:70,6),] #Sólo 6 filas mostras, elegidas al azar
+##       x   y
+## 50 0.60 6.9
+## 31 0.20 4.7
+## 14 2.00 2.3
+## 52 0.05 7.3
+## 34 1.00 5.3
+## 3  1.20 0.3
 ```
 
 ### Un **"detallito"** sobre matrices de comunidad y ambientales en R
 
-Los paquetes para análisis en ecología que conozco asumen que el orden de las filas de ambas matrices es consistente. Por ejemplo, `vegan` asume que la fila `n` de las matrices de comunidad y ambiental se refieren al mismo "sitio". Si por accidente, o deliberadamente, se reordenara el orden de filas de una matriz, sin hacerlo igualmente en la otra, cualquier análisis que intente poner en relación datos composicionales con ambientales será fútil e inconsistente.
+**La mayoría de los paquetes para análisis en ecología asumen que el orden de las filas de ambas matrices es consistente**. Por ejemplo, `vegan` asume que la fila `n` de las matrices de comunidad y ambiental se refieren al mismo "sitio". Si por accidente, o deliberadamente, el usuario reordenara las filas de una matriz, sin hacerlo igualmente en la otra, cualquier análisis que intente poner en relación datos composicionales con ambientales será fútil e inconsistente.
 
-Se trata de un **pequeño detalle a tener muy presente** al momento de manipular datos ecológicos. Una medida para evitar inconsistencias, sería crear columnas de nombres de sitios a partir de los nombres de filas en ambas matrices, justo después de cargarlas. Si se perdiera la integridad entre ambas siempre se podrían hacer uniones a partir de dichas columnas.
+Se trata de un **pequeño detalle a tener muy presente** al momento de manipular datos ecológicos. Una medida para evitar posibles errores, sería crear columnas de nombres de sitios a partir de los nombres de filas en ambas matrices, justo después de cargarlas. Si se perdiera la integridad entre ambas siempre se podrían hacer uniones a partir de dichas columnas.
 
 ### Diagrama de dispersión
 
@@ -450,7 +333,7 @@ ggplot(data = BCI.env) +
 
 ![](../img/intro-bcibarplot-2.png)
 
-Nota que hay dos hábitats escasamente representados, que son *Swamp* y *Young*. El EDA está informando que, en determinados análisis, estos grupos no aportarían efectos sistemáticos o, en su defecto, harían que determinados supuestos no se cumplieran. No entraré en detalles sobre cómo filtro los datos para excluir ambos grupos (más adelante verás cómo usar `tidyverse` para filtrar datos), así que ignora la parte del código y fíjate en el gráfico.
+Nota que hay dos hábitats escasamente representados, que son *Swamp* y *Young*. El EDA está informando que, en determinados análisis, estos grupos no aportarían efectos sistemáticos o, en su defecto, harían que determinados supuestos no se cumplieran. No entraré en detalles sobre cómo filtro los datos para excluir ambos grupos (más adelante verás cómo usar `tidyverse` para filtrar datos y otras tareas), así que ignora la parte "fea" del código y fíjate en el gráfico.
 
 ``` r
 grupos_numerosos <- droplevels(
@@ -462,7 +345,7 @@ ggplot(data = grupos_numerosos) +
 
 ![](../img/intro-bcibarplot2-1.png)
 
-Para variables cuantitativas, el diagrama de cajas, mejor conocido como *boxplot*, es sin duda un apoyo fundamental. Te recomiendo la [entrada de Wikipedia](https://es.wikipedia.org/wiki/Diagrama_de_caja) sobre este útil gráfico. A golpe de vista, verás a continuación la variable "heterogeneidad ambiental" según hábitats, utilizando el objeto `grupos_numerosos` (excluidos los hábitats poco representados).
+Para variables cuantitativas, el diagrama de cajas, mejor conocido como *boxplot*, es sin duda un apoyo fundamental. Te recomiendo la [entrada de Wikipedia](https://es.wikipedia.org/wiki/Diagrama_de_caja) sobre este útil gráfico. A golpe de vista, verás a continuación la variable "heterogeneidad ambiental" según hábitats, utilizando el objeto `grupos_numerosos` creado en el trozo de código anterior (excluye los hábitats poco representados).
 
 ``` r
 ggplot(data = grupos_numerosos) +
@@ -471,11 +354,13 @@ ggplot(data = grupos_numerosos) +
 
 ![](../img/intro-bciboxplots-1.png)
 
-¿Qué patrón encuentras? ¿Cómo es la heterogeneidad ambiental en los bosques viejos sobre vertiente (`OldSlope`)?
+¿Qué patrón percibes? Compara la heterogeneidad ambiental en los bosques viejos sobre vertiente (`OldSlope`) con la de los demás hábitats. ¿Qué diferencias notas?
+
+Finalmente, veamos algunos gráficos con el conjunto de datos `mite`.
 
 ### Facetas o paneles
 
-Es posible prrobar con otros pares de variables, par a par, pero `ggplot2` trae funciones incorporadas para asistirte en dicha tarea, construyendo facetas o paneles de gráficos.
+Es posible probar con otros pares de variables, par a par, pero `ggplot2` trae funciones incorporadas para asistirte en dicha tarea, construyendo facetas o paneles de gráficos.
 
 ### Panel de correlaciones
 
@@ -571,7 +456,11 @@ Situaciones comunes
 Referencias
 -----------
 
+Borcard, D., & Legendre, P. (1994). Environmental control and spatial structure in ecological communities: An example using oribatid mites (acari, oribatei). *Environmental and Ecological Statistics*, *1*(1), 37–61.
+
 Borcard, D., Gillet, F., & Legendre, P. (2018). *Numerical ecology with r*. Springer.
+
+Borcard, D., Legendre, P., & Drapeau, P. (1992). Partialling out the spatial component of ecological variation. *Ecology*, *73*(3), 1045–1055.
 
 Harms, K. E., Condit, R., Hubbell, S. P., & Foster, R. B. (2001). Habitat associations of trees and shrubs in a 50-ha neotropical forest plot. *Journal of Ecology*, *89*(6), 947–959.
 
