@@ -1,7 +1,7 @@
 
 <!-- Este .md fue generado a partir del .Rmd homónimo. Edítese el .Rmd -->
-Introducción a R y Visualización rápida de datos
-================================================
+Introducción a R y análisis exploratorio de datos gráficamente (EDA)
+====================================================================
 
 Introducción a R
 ----------------
@@ -64,8 +64,8 @@ help.search("matrix") #Busca la palabra clave en las ayudas de los paquetes
 
 ¡Usa los foros! Si introduces un mensaje de error de R en el buscador de tu preferencia (en inglés obtienes más resultados), encontrarás varios punteros a foros con posibles soluciones.
 
-Visualización de datos
-----------------------
+Análisis exploratorio de datos gráficamente
+-------------------------------------------
 
 Wickham & Grolemund (2017) afirman que, durante la producción de resultados comunicables, subyace la necesidad de realizar el **análisis exploratorio de datos (AED o EDA)** lo más rápidamente posible, pero nunca obviarlo. Subyace la idea de que es necesario aligerar el EDA para descubrir tantos patrones como sea posible sin que haya "pelearse" con los datos para hacer simples gráficos. Esto permitirá al investigador/a concentrarse en interpretar resultados. El esquema a continuación, de la misma fuente, resume este proceso:
 
