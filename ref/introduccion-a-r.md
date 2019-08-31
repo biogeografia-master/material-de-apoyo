@@ -67,11 +67,11 @@ help.search("matrix") #Busca la palabra clave en las ayudas de los paquetes
 Visualización de datos
 ----------------------
 
-Wickham & Grolemund (2017) afirman que, durante la producción de resultados comunicables, subyace la necesidad de realizar el análisis exploratorio de datos (AED o EDA) lo más rápidamente posible. El esquema a continuación, de la misma fuente, resume este proceso:
+Wickham & Grolemund (2017) afirman que, durante la producción de resultados comunicables, subyace la necesidad de realizar el **análisis exploratorio de datos (AED o EDA)** lo más rápidamente posible, pero nunca obviarlo. Subyace la idea de que es necesario aligerar el EDA para descubrir tantos patrones como sea posible sin que haya "pelearse" con los datos para hacer simples gráficos. Esto permitirá al investigador/a concentrarse en interpretar resultados. El esquema a continuación, de la misma fuente, resume este proceso:
 
 <img src="https://es.r4ds.hadley.nz/diagrams_w_text_as_path/es/data-science-explore.svg" width="65%" />
 
-Las múltiples herramientas ofrecidas por los paquetes de la colección `tidyverse` te servirán para agilizar sustancialmente el EDA. Los paquetes `dplyr`, `tidyr` y otros, te ayudarán a importar, ordenar y transformar datos, mientras `ggplot2` te ayudará a crear gráficos estilizados eficientemente. Wickham & Grolemund (2017) aseguran que estas herramientas mantienen la motivación en el aprendizaje por sus flujos de trabajo lineales.
+**Las múltiples herramientas ofrecidas por los paquetes de la colección `tidyverse` te servirán para agilizar sustancialmente el EDA**. Los paquetes `dplyr`, `tidyr` y otros, te ayudarán a importar, ordenar y transformar datos, mientras `ggplot2` te ayudará a crear gráficos estilizados eficientemente. Wickham & Grolemund (2017) aseguran que estas herramientas mantienen la motivación en el aprendizaje por sus flujos de trabajo lineales.
 
 ### El conjunto de datos `doubs`
 
@@ -84,7 +84,7 @@ data(doubs)
 
 > **Nota**. Si no usas el servidor RStudio habilitado por el profesor, instala `ade4` con `install.packages('ade4', dependencies = T)`
 
-La sentencia anterior carga el objeto `doubs` a memoria, pero no lo imprime en pantalla. `doubs` es una lista de 4 tablas o *data.frame*, etiquetadas como `env`-matriz ambiental, `fish`-matriz de comunidad usando abundancia semi-cuantitativa (más explicación abajo), `xy`-matriz de coordenadas de las muestras y `species`-nombres de las 27 especies encontradas. Las filas de los tres primeros *data.frame* corresponden a 30 sitios muestreados a lo largo del río franco-suizo Doubs.
+La sentencia anterior carga el objeto `doubs` a memoria, pero no lo imprime en pantalla. `doubs` es una lista de 4 tablas o `data.frame`, etiquetadas como `env`-matriz ambiental, `fish`-matriz de comunidad usando abundancia semi-cuantitativa (más explicación abajo), `xy`-matriz de coordenadas de las muestras y `species`-nombres de las 27 especies encontradas. Las filas de los tres primeros `data.frame` corresponden a 30 sitios muestreados a lo largo del río franco-suizo Doubs.
 
 <a name="doubs"></a>Como ves, el objeto `doubs` se compone de varios elementos, por lo que es preferible imprimirlo en pantalla por separado. Para imprimir sólo un objeto de una lista, se usa el operador `$`. Así, `doubs$env`, imprime sólo la matriz ambiental.
 
@@ -102,7 +102,7 @@ doubs$env[sample(1:30, 6), ] #Sólo 6 filas mostradas, elegidas al azar
 
 `doubs$env` contiene información ambiental de los 30 sitios de colecta (filas) con las siguientes variables (columnas): `dfs`-distancia desde cabecera (en km x 10), `alt`-altitud (en m), `slo`-pendiente (log(x+1), donde x es la pendiente en tantos por 1000), `flo`-caudal promedio mínimo (m<sup>3</sup>/s 100), `pH` ( x 10), `har`-dureza del agua (mg/l de calcio), `pho`-fostados (mg/l x 100), `nit`-nitratos, `amm`-amoníaco, `nit`-nitrógeno (mg/l x 100), `oxy`-oxígeno disuelto (mg/l x 100), `bdo`-demanda biológica de oxígeno (mg/l x 10)
 
-La tabla `doubs$fish`, asociada a la anterior, contiene la abundancia de especies por sitio. Los valores de las celdas no son individuos; la abundancia está representada en una escala semi-cuantitativa específica por especie, que va de 0 a 5. Por lo tanto, los valores no pueden entenderse como estimadores insesgados de la abundancia real o de la biomasa por sitio (Borcard et al., 2018). La abreviatura usada como nombre de columna se explica en la tabla `doubs$species`.
+La tabla `doubs$fish`, asociada a la anterior, contiene la abundancia de especies por sitio. Los valores de las celdas no son individuos; la abundancia está representada en una escala semi-cuantitativa específica por especie, que va de 0 a 5, es decir, se trata de una escala de pseudo-abundancia más propiamente. Por lo tanto, los valores no pueden entenderse como estimadores insesgados de la abundancia real o de la biomasa por sitio (Borcard et al., 2018).
 
 ``` r
 set.seed(99)
@@ -116,7 +116,7 @@ doubs$fish[sample(1:30, 6), sample(1:27, 6)] #Sólo 6 filas y columnas mostradas
 ## 13    0    5    0    0    0    0
 ```
 
-La tabla `doubs$species` contiene los nombre de las 27 especies de peces.
+Determinados gráficos de ordenación se vuelven ilegibles cuando se usan los nombres completos de las especies. Por tal razón, es práctica común abreviarlos, tal como verás en los nombres de columnas, donde se usan abreviaturas de cuatro caracteres. La correspondencia entre estas abreviaturas y los nombres completos de las especies, se encuentra explicada en la tabla `doubs$species`.
 
 ``` r
 doubs$species
@@ -209,7 +209,7 @@ mite[sample(1:70, 6), sample(1:35, 6)] #Sólo 6 filas y 6 columnas mostradas, el
 ## 46    0        0        0    0    2   22
 ```
 
-`mite.env` contiene datos ambientales de los sitios de colecta, que incluye `SubsDens`-densidad del sustrato (g/L); `WatrCont`-contenido de agua del substrato (g/L); `Substrate`-tipo de substrato, pudiendo tomar los valores `Sphagn1`, `Sphagn2`, `Sphagn3`, `Sphagn`, `Litter`, `Barepeat` e `Interface`; `Shrub`-que indica la densidad de arbustos, pudieno tomar tres posibles niveles `1`, `2` o `3`; finalmente la variable `Topo`-que puede tomar los valores `Blanket` y `Hummock`.
+`mite.env` contiene datos ambientales de los sitios de colecta, que incluye `SubsDens`-densidad del sustrato (g/L); `WatrCont`-contenido de agua del substrato (g/L); `Substrate`-tipo de substrato, pudiendo tomar los valores `Sphagn1`, `Sphagn2`, `Sphagn3`, `Sphagn`, `Litter`, `Barepeat` e `Interface`; `Shrub`-que indica la densidad de arbustos, pudieno tomar tres posibles niveles `None` (ninguno), `Few` (pocos) o `Many` (muchos); finalmente la variable `Topo`-que puede tomar los valores `Blanket` y `Hummock`.
 
 ``` r
 data(mite.env)
@@ -229,7 +229,7 @@ Finalmente, `mite.xy` contiene las coordenadas (con origen arbitrario) de los 70
 ``` r
 data(mite.xy)
 set.seed(50)
-mite.xy[sample(1:70,6),] #Sólo 6 filas mostras, elegidas al azar
+mite.xy[sample(1:70,6),] #Sólo 6 filas mostradas, elegidas al azar
 ##       x   y
 ## 50 0.60 6.9
 ## 31 0.20 4.7
@@ -241,7 +241,7 @@ mite.xy[sample(1:70,6),] #Sólo 6 filas mostras, elegidas al azar
 
 ### Un **"detallito"** sobre matrices de comunidad y ambientales en R
 
-**La mayoría de los paquetes para análisis en ecología asumen que el orden de las filas de ambas matrices es consistente**. Por ejemplo, `vegan` asume que la fila `n` de las matrices de comunidad y ambiental se refieren al mismo "sitio". Si por accidente, o deliberadamente, el usuario reordenara las filas de una matriz, sin hacerlo igualmente en la otra, cualquier análisis que intente poner en relación datos composicionales con ambientales será fútil e inconsistente.
+**La mayoría de los paquetes para análisis en ecología asumen que el orden de las filas de ambas matrices es consistente**. Por ejemplo, `vegan` asume que la fila `n` de las matrices de comunidad y ambiental se refiere al mismo "sitio". Es decir, la fila `n` informa del mismo sitio sobre las especies, y por otro sobre las variables ambientales. Si por accidente, o deliberadamente, el usuario reordenara las filas de una matriz, sin hacerlo igualmente en la otra, cualquier análisis que intente poner en relación datos composicionales con ambientales será fútil e inconsistente.
 
 Se trata de un **pequeño detalle a tener muy presente** al momento de manipular datos ecológicos. Una medida para evitar posibles errores, sería crear columnas de nombres de sitios a partir de los nombres de filas en ambas matrices, justo después de cargarlas. Si se perdiera la integridad entre ambas siempre se podrían hacer uniones a partir de dichas columnas.
 
@@ -302,7 +302,16 @@ ggplot(data = doubs$env) +
 
 ![](../img/intro-doubscatter-out-3.png)
 
-Aunque no son muy informativos sin barras de error, los gráficos de barras pueden ser útiles en determinados contextos. Utilizaré la escala semi-cuantitativa de abundancia para responder a la pregunta: ¿cuál es el nivel de abundancia predominante de `Salmo trutta fario` en la muestra?
+El estético `size` admite variables cuantitativas. El gráfico a continuación nos informa con bastante propiedad sobre una combinación de variables, usando la elevación como estético de tamaño y dureza del dureza del agua como color. Nótese, por ejemplo, que la elevación y están inversamente relacionados, a menor elevación (círculos más pequeños) mayor dureza (rellenos más azules).
+
+``` r
+ggplot(data = doubs$env) +
+  geom_point(mapping = aes(x = dfs, y = flo, size = alt, colour = har))
+```
+
+![](../img/intro-doubscatter-comb-1.png)
+
+Aunque no son muy informativos sin barras de error, los diagramas de barras pueden ser útiles en determinados contextos. Utilizaré la escala semi-cuantitativa de abundancia (pseudo-abundancia) para responder a la pregunta: ¿Cuál es el nivel de pseudo-abundancia predominante de `Salmo trutta fario` en la muestra?
 
 ``` r
 ggplot(data = doubs$fish) + geom_bar(mapping = aes(x=Satr))
@@ -310,7 +319,7 @@ ggplot(data = doubs$fish) + geom_bar(mapping = aes(x=Satr))
 
 ![](../img/intro-doubsbarplot-1.png)
 
-Este gráfico "informa" que el nivel de abundancia más común es 0, es decir, la subespecie está ausente en 13 de los 30 sitios, con lo que es más común no encontrarla. Si ordenásemos las pseudo-abundancias de `Satr` de menor a mayor, podríamos igualmente notar este patrón, lo cual sugiere que el gráfico no aporta mucho más que lo que lo haría un vector ordenado.
+Este gráfico "informa" que el nivel de de pseudo-abundancia más común es 0, es decir, la subespecie está ausente en 13 de los 30 sitios, con lo que es más común no encontrarla. Si ordenásemos las pseudo-abundancias de `Satr` de menor a mayor, podríamos igualmente notar este patrón, lo cual sugiere que el gráfico no aporta mucho más que lo que lo haría un vector ordenado.
 
 ``` r
 sort(doubs$fish[,2])
@@ -356,13 +365,66 @@ ggplot(data = grupos_numerosos) +
 
 ¿Qué patrón percibes? Compara la heterogeneidad ambiental en los bosques viejos sobre vertiente (`OldSlope`) con la de los demás hábitats. ¿Qué diferencias notas?
 
-Finalmente, veamos algunos gráficos con el conjunto de datos `mite`.
+El histograma es otra herramienta gráfica utilizada en el EDA. Nos informa sobre las características de la distribución (sesgo, varianza, etc.) de la muestra respecto de una variable cuantativa. Te recomiendo que estudies sobre los conceptos y la interpretación del histograma, comenzando si lo deseas por [Wikipedia](https://es.wikipedia.org/wiki/Histograma), pero no olvides utilizar referencias sobre su uso en ecología (Borcard et al., 2018). El siguiente histograma muestra la distribución de dos variables ambientales del conjunto de datos `mite`. El primero muestra la densidad de substrato, el segundo el contenido de agua.
 
-### Facetas o paneles
+``` r
+ggplot(data = mite.env) +
+  geom_histogram(mapping = aes(x = SubsDens))
+## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+```
 
-Es posible probar con otros pares de variables, par a par, pero `ggplot2` trae funciones incorporadas para asistirte en dicha tarea, construyendo facetas o paneles de gráficos.
+![](../img/intro-mitehist1-1.png)
 
-### Panel de correlaciones
+``` r
+
+ggplot(data = mite.env) +
+  geom_histogram(mapping = aes(x = WatrCont))
+## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+```
+
+![](../img/intro-mitehist1-2.png)
+
+El gráfico es informativo, y de hecho se observan patrones, pero las barras están separadas; mientras más pequeña es la muestra, peor se verá el resultado. Antes de interpretarlo es preferible corregirlo. Para ello, se podría usar el consejo que aparece en la advertencia devuelta por la consola (elegir una anchura de intervalo mejor), aunque por simplicidad es reduciré el número de intervalos. Los gráficos siguientes muestran un mejor resultado:
+
+``` r
+ggplot(data = mite.env) +
+  geom_histogram(mapping = aes(x = SubsDens), bins = 15)
+```
+
+![](../img/intro-mitehist2-1.png)
+
+``` r
+
+ggplot(data = mite.env) +
+  geom_histogram(mapping = aes(x = WatrCont), bins = 15)
+```
+
+![](../img/intro-mitehist2-2.png)
+
+El resultado es más legible ahora. En ambos casos podemos ver que existe un sesgo a la derecha (o positivo), más acentuado en la variable `SubsDens` que en `WatrCont`. Esto significa que la media probablemente está a la derecha del intervalo modal, es decir, los valores extremos "tiran" de ella hacia la derecha, un hecho evidente especialmente en el histograma de la densidad de substrato. Notarás igualmente que el histograma de la variable `WatrCont` se aproxima más a una forma acampanada, mientras que el histograma de `SubsDens` está un poco más alejado de dicha forma. En ecología, la mayoría de los datos no muestran distribución normal, por lo que las técnicas de estadística paramétrica en muchos casos son inútiles (Borcard et al., 2018). El histograma es el primer paso para descubrir este fenómeno, y es sin duda de gran ayuda para elegir apropiadamente las técnicas a utilizar. A modo de referencia, incluyo a continuación un histograma con forma acampanada de una muestra ficticia de 5000 elementos construida a partir de desviaciones aleatorias usando la distribución normal.
+
+``` r
+set.seed(500)
+alenorm <- data.frame(alenorm = rnorm(5000))
+ggplot(data = alenorm) +
+  geom_histogram(mapping = aes(x = alenorm), bins = 50)
+```
+
+![](../img/intro-campana-1.png)
+
+Finalmente, introduzco a continuación los gráficos de facetas o paneles, una herramienta muy potente de `ggplot2`. Para ello, utilizaré el conjunto de datos `mite`. Supón que necesitas mostrar el comportamiento de una variable en un único panel, para tener una idea rápida de tu muestra (también se pueden hacer paneles de muchas variables, previa reorganización de los datos con `tidyr`, pero eso lo veremos más adelante). La función `facet_grid` es tu aliada. Supongamos que necesitamos ver diagramas de dispersión de la densidad de substrato y el contenido de agua para cada uno de los subconjuntos de muestra según densidad de arbustos (recordemos que existen tres tipos de densidades de arbustos: `None<Few<Many`). Esto podría ser útil para evaluar si existe algún grado de asociación diferente entre los distintos subconjuntos. Veamos el gráfico
+
+``` r
+ggplot(mite.env) +
+  geom_point(aes(x = SubsDens, y = WatrCont)) +
+  facet_wrap(~Shrub)
+```
+
+![](../img/intro-facet-1.png)
+
+El panel está mostrando que existe correlación entre las variables densidad de substrato y contenido de agua para los subconjuntos de sitios donde hay pocos o nulos arbustos. En los sitios donde hay muchos arbustos, la correlación se difumina ligeramente, porque aparecen valores atípicos que habría que tratar de manera especial.
+
+### BONUS: panel de correlaciones
 
 El paquete `ez`, apoyándose en `ggplot2`, construye gráficos de dispersión, gráficos de densidad e imprime a su vez el valor del coeficiente `r`. Muy útil cuando se quiere explorar muchas variables al mismo tiempo. Fíjate en este útil panel de correlaciones usando el conjunto `doubs`.
 
@@ -370,80 +432,22 @@ El paquete `ez`, apoyándose en `ggplot2`, construye gráficos de dispersión, g
 library(ez)
 ezCor(
   doubs$env,
-  r_size_lims = c(4,8),
-  label_size = 7
+  r_size_lims = c(3,6),
+  label_size = 5
 )
 ```
 
 ![](../img/intro-doubsezscatter-1.png)
 
-> **Nota**. la función `ezCor` sólo admite `data.frame` compuestos por columnas numéricas.
+> **Nota**. la función `ezCor` sólo admite `data.frame` de columnas numéricas.
 
-Aunque los paquetes de análisis de datos ecológicos no están "saborizados" al estilo `tidyverse`, al menos el EDA lo podrás realizar utilizando tuberías de esta potente colección de paquetes.
+Conclusión
+----------
 
-``` r
-dfs_flo <- doubs$env %>% select(dfs, flo)
-dfs_flo
-##     dfs  flo
-## 1     3   84
-## 2    22  100
-## 3   102  180
-## 4   185  253
-## 5   215  264
-## 6   324  286
-## 7   268  400
-## 8   491  130
-## 9   705  480
-## 10  990 1000
-## 11 1234 1990
-## 12 1324 2000
-## 13 1436 2110
-## 14 1522 2120
-## 15 1645 2300
-## 16 1859 1610
-## 17 1985 2430
-## 18 2110 2500
-## 19 2246 2590
-## 20 2477 2680
-## 21 2812 2720
-## 22 2940 2790
-## 23 3043 2880
-## 24 3147 2976
-## 25 3278 3870
-## 26 3579 3910
-## 27 3732 3960
-## 28 3947 4320
-## 29 4220 6770
-## 30 4530 6900
-```
+Conociste las herramientas básicas para realizar un EDA ágilmente y generando gráficos informativos. **El EDA es un paso imprescindible en cualquier investigación**, así que, ya que no te lo podrás saltar, es necesario que practiques con los datos de ejemplo mostrados aquí, o con los tuyos propiamente.
 
-El operador `%>%`, bautizado como "pipa" (*pipe*), pertenece al paquete `magrittr`, el cual es importado automáticamente cuando se instala la colección `tidyverse`. Este operador utiliza la salida de la función a su izquierda y la coloca como primer argumento de la función a la derecha. Así, la sentencia anterior se lee como "del objeto `doubs$env`, selecciona las columnas `dfs` y `flo` y con el resultado crea el objeto `dfs_flo`".
+Aunque los paquetes de análisis de datos ecológicos no están "saborizados" al estilo `tidyverse`, al menos el EDA lo podrás realizar utilizando tuberías de esta potente colección de paquetes. Conocerás más herramientas en el siguiente capítulo de esta novela.
 
-<!-- ## Directorio de trabajo -->
-<!-- * Para consultar tu directorio de trabajo en R: `getwd()`. -->
-<!-- * Si usas el servidor RStudio habilitado por el profesor, la ruta por defecto será algo parecido a ésto: `'/home/<tunombredeusuario>'`. Esta ruta se denomina "carpeta personal". -->
-<!-- * Puedes cambiar tu directorio de trabajo mediante `setwd('<rutademipreferencia>')`. -->
-<!-- ## Objetos -->
-<!-- ### Crear objetos -->
-<!-- El operador de asignación ` <- ` te da la bienvenida, aunque también se puede escribir ` -> `. Transfórmalo en una flecha: hacia donde apunta es el valor que asume el nombre de objeto que se encuentra en el lado contrario. Lee `a <- 'Hola R'` como al objeto `a` es un vector cuyo valor es la cadena de caracteres `'Hola R'`. Creado el objeto, pedimos por ejemplo que se nos muestre su valor. En la consola se vería así: -->
-<!-- ```{r} -->
-<!-- a <- 'Hola R' -->
-<!-- a -->
-<!-- ``` -->
-<!-- Al escribir `a` estamos llamando el objeto, y pedimos que se imprima su valor. Es equivalente a: -->
-<!-- ```{r} -->
-<!-- print(a) -->
-<!-- ``` -->
-<!-- Encontrarás largas discusiones y acalorados debates sobre si usar ` <- ` como asignador o `=`. Por limpieza de código, y para evitar confusión entre argumentos de funciones y declaraciones de objetos, recomiendo usar ` <- ` como asignador. -->
-<!-- ### Tipos -->
-<!-- ### Guardar -->
-<!-- ## Scripts -->
-<!-- * Crear. -->
-<!-- * Guardar. -->
-<!-- ## Tablas (`data.frame`, `tibble`) -->
-<!-- * Crear. -->
-<!-- * Importar. -->
-<!-- * Operaciones básicas. -->
 Situaciones comunes
 -------------------
 
