@@ -264,13 +264,13 @@ Finalmente, introducimos el vector `quincefilas` dentro de los corchetes luego d
 ``` r
 nfbci <- nrow(BCI)
 nfbci
+## [1] 50
 set.seed(300)
 quincefilas <- sample(1:nfbci, 15)
 quincefilas
+##  [1] 46 38 39 35 32  1 34 22 20 37 49 13 31 43 24
 miBCI <- BCI[quincefilas,]
 miBCI[,1:3]
-## [1] 50
-##  [1] 46 38 39 35 32  1 34 22 20 37 49 13 31 43 24
 ##    Abarema.macradenia Vachellia.melanoceras Acalypha.diversifolia
 ## 46                  0                     0                     0
 ## 38                  0                     0                     0
@@ -327,19 +327,19 @@ sort(specnumber(doubs$fish))
 ``` r
 #BCI
 nrow(BCI)
-sort(specnumber(BCI))
-
-#mite
-nrow(mite)
-sort(specnumber(mite))
 ## [1] 50
+sort(specnumber(BCI))
 ##  31  40  44  45   7  38  35   2  12  39   6  28  29  33  43  46  11  42 
 ##  77  80  81  81  82  82  83  84  84  84  85  85  86  86  86  86  87  87 
 ##   8  32  37  18   3   9  22  26  48  49  34  36   1  13  15  16  17  50 
 ##  88  88  88  89  90  90  91  91  91  91  92  92  93  93  93  93  93  93 
 ##   4  10  24  30  14  21  23  27  20   5  41  47  25  19 
-##  94  94  95  97  98  99  99  99 100 101 102 102 105 109 
+##  94  94  95  97  98  99  99  99 100 101 102 102 105 109
+
+#mite
+nrow(mite)
 ## [1] 70
+sort(specnumber(mite))
 ## 44 57 62 67 59 54 29 55 61 42 39 41 50 56 58 40 43 48 52 60 24 49 64 65 68 
 ##  5  5  6  6  7  8  9  9  9 10 11 11 11 11 11 12 12 12 12 12 13 13 13 13 13 
 ## 17 22 38 47 51 66 23 31 53 70  7  9 21 32 33 37 46 63 16 26 45 69 13 15 18 
@@ -354,249 +354,36 @@ Un resultado que también debe salir del EDA es la riqueza de la toda la muestra
 # doubs
 doubs_comb <- colSums(doubs$fish)
 doubs_comb
+## Cogo Satr Phph Neba Thth Teso Chna Chto Lele Lece Baba Spbi Gogo Eslu Pefl 
+##   15   57   68   73   15   19   18   26   43   56   43   27   55   40   36 
+## Rham Legi Scer Cyca Titi Abbr Icme Acce Ruru Blbj Alal Anan 
+##   33   29   21   25   45   26   18   38   63   31   57   27
 specnumber(doubs_comb)
+## [1] 27
 
 # BCI
 BCI_comb <- colSums(BCI)
-BCI_comb
+BCI_comb[1:20] #Dado que son tantas especies, imprimo sólo las primeras 20
+##       Abarema.macradenia    Vachellia.melanoceras    Acalypha.diversifolia 
+##                        1                        3                        2 
+##    Acalypha.macrostachya           Adelia.triloba     Aegiphila.panamensis 
+##                        1                       92                       23 
+##  Alchornea.costaricensis      Alchornea.latifolia         Alibertia.edulis 
+##                      156                        1                        1 
+##  Allophylus.psilospermus         Alseis.blackiana        Amaioua.corymbosa 
+##                       27                      983                        3 
+##      Anacardium.excelsum           Andira.inermis          Annona.spraguei 
+##                       22                       28                       27 
+##            Apeiba.glabra         Apeiba.tibourbou  Aspidosperma.desmanthum 
+##                      236                       21                       52 
+## Astrocaryum.standleyanum     Astronium.graveolens 
+##                      201                       39
 specnumber(BCI_comb)
+## [1] 225
 
 # mite
 mite_comb <- colSums(mite)
 mite_comb
-specnumber(mite_comb)
-## Cogo Satr Phph Neba Thth Teso Chna Chto Lele Lece Baba Spbi Gogo Eslu Pefl 
-##   15   57   68   73   15   19   18   26   43   56   43   27   55   40   36 
-## Rham Legi Scer Cyca Titi Abbr Icme Acce Ruru Blbj Alal Anan 
-##   33   29   21   25   45   26   18   38   63   31   57   27 
-## [1] 27
-##               Abarema.macradenia            Vachellia.melanoceras 
-##                                1                                3 
-##            Acalypha.diversifolia            Acalypha.macrostachya 
-##                                2                                1 
-##                   Adelia.triloba             Aegiphila.panamensis 
-##                               92                               23 
-##          Alchornea.costaricensis              Alchornea.latifolia 
-##                              156                                1 
-##                 Alibertia.edulis          Allophylus.psilospermus 
-##                                1                               27 
-##                 Alseis.blackiana                Amaioua.corymbosa 
-##                              983                                3 
-##              Anacardium.excelsum                   Andira.inermis 
-##                               22                               28 
-##                  Annona.spraguei                    Apeiba.glabra 
-##                               27                              236 
-##                 Apeiba.tibourbou          Aspidosperma.desmanthum 
-##                               21                               52 
-##         Astrocaryum.standleyanum             Astronium.graveolens 
-##                              201                               39 
-##                Attalea.butyracea                Banara.guianensis 
-##                               33                                1 
-##            Beilschmiedia.pendula              Brosimum.alicastrum 
-##                              294                              188 
-##               Brosimum.guianense          Calophyllum.longifolium 
-##                                1                               55 
-##                Casearia.aculeata                 Casearia.arborea 
-##                               23                              100 
-##           Casearia.commersoniana              Casearia.guianensis 
-##                                3                                2 
-##              Casearia.sylvestris           Cassipourea.guianensis 
-##                               54                               87 
-##        Cavanillesia.platanifolia                Cecropia.insignis 
-##                               19                              264 
-##             Cecropia.obtusifolia                  Cedrela.odorata 
-##                               25                                2 
-##                  Ceiba.pentandra                  Celtis.schippii 
-##                               39                               38 
-##            Cespedesia.spathulata               Chamguava.schippii 
-##                                2                                3 
-##            Chimarrhis.parviflora                Maclura.tinctoria 
-##                                1                                1 
-##            Chrysochlamys.eclipes          Chrysophyllum.argenteum 
-##                                2                               85 
-##            Chrysophyllum.cainito               Coccoloba.coronata 
-##                               25                               22 
-##         Coccoloba.manzinellensis             Colubrina.glandulosa 
-##                               13                                1 
-##                 Cordia.alliodora                   Cordia.bicolor 
-##                               63                              325 
-##                Cordia.lasiocalyx             Coussarea.curvigemma 
-##                              364                               55 
-##             Croton.billbergianus                  Cupania.cinerea 
-##                               98                                1 
-##                Cupania.latifolia                Cupania.rufescens 
-##                               12                                4 
-##                Cupania.seemannii             Dendropanax.arboreus 
-##                               47                               88 
-##             Desmopsis.panamensis          Diospyros.artanthifolia 
-##                               13                               16 
-##                Dipteryx.oleifera               Drypetes.standleyi 
-##                               33                              285 
-##                  Elaeis.oleifera        Enterolobium.schomburgkii 
-##                               21                                2 
-##          Erythrina.costaricensis        Erythroxylum.macrophyllum 
-##                               26                               18 
-##                  Eugenia.florida             Eugenia.galalonensis 
-##                               81                               12 
-##                Eugenia.nesiotica              Eugenia.oerstediana 
-##                               55                              177 
-##             Faramea.occidentalis                 Ficus.colubrinae 
-##                             1717                                1 
-##                Ficus.costaricana                   Ficus.insipida 
-##                                7                                3 
-##                     Ficus.maxima                Ficus.obtusifolia 
-##                                4                                7 
-##                   Ficus.popenoei                   Ficus.tonduzii 
-##                                3                               23 
-##                  Ficus.trigonata                 Ficus.yoponensis 
-##                                5                                6 
-##              Garcinia.intermedia                 Garcinia.madruno 
-##                               92                               12 
-##                 Genipa.americana               Guapira.myrtiflora 
-##                               23                               99 
-##                     Guarea.fuzzy               Guarea.grandifolia 
-##                               68                               10 
-##                  Guarea.guidonia              Guatteria.dumetorum 
-##                              376                              244 
-##                Guazuma.ulmifolia               Guettarda.foliacea 
-##                               38                               85 
-##                 Gustavia.superba             Hampea.appendiculata 
-##                              644                               13 
-##             Hasseltia.floribunda              Heisteria.acuminata 
-##                              229                                7 
-##               Heisteria.concinna               Hirtella.americana 
-##                              288                                5 
-##                Hirtella.triandra                   Hura.crepitans 
-##                              681                              101 
-##          Hieronyma.alchorneoides                   Inga.acuminata 
-##                               41                               26 
-##                  Inga.cocleensis                   Inga.goldmanii 
-##                               52                               49 
-##                     Inga.laurina                   Inga.semialata 
-##                               10                               98 
-##                     Inga.nobilis                 Inga.oerstediana 
-##                               67                                2 
-##                  Inga.pezizifera                    Inga.punctata 
-##                               20                               10 
-##                    Inga.ruiziana                 Inga.sapindoides 
-##                                5                               76 
-##                 Inga.spectabilis                 Inga.umbellifera 
-##                               14                               14 
-##                 Jacaranda.copaia             Lacistema.aggregatum 
-##                              236                               33 
-##             Lacmellea.panamensis                   Laetia.procera 
-##                               51                               12 
-##                   Laetia.thamnia            Lafoensia.punicifolia 
-##                               27                                5 
-##                Licania.hypoleuca                 Licania.platypus 
-##                               14                               10 
-##              Lindackeria.laurina        Lonchocarpus.heptaphyllus 
-##                               64                              121 
-##                 Luehea.seemannii               Macrocnemum.roseum 
-##                               93                               25 
-##   Maquira.guianensis.costaricana             Margaritaria.nobilis 
-##                              167                                2 
-##                 Marila.laxiflora                Maytenus.schippii 
-##                               10                               21 
-##                  Miconia.affinis                 Miconia.argentea 
-##                                8                               70 
-##                    Miconia.elata              Miconia.hondurensis 
-##                                1                                7 
-##              Mosannona.garwoodii                Myrcia.gatunensis 
-##                               15                                5 
-##           Myrospermum.frutescens             Nectandra.cissiflora 
-##                                7                               33 
-##                Nectandra.lineata               Nectandra.purpurea 
-##                               10                                4 
-##               Ochroma.pyramidale                    Ocotea.cernua 
-##                                5                               29 
-##                   Ocotea.oblonga                  Ocotea.puberula 
-##                               36                               22 
-##                    Ocotea.whitei                Oenocarpus.mapora 
-##                              184                              788 
-##                Ormosia.amazonica                 Ormosia.coccinea 
-##                                1                                5 
-##               Ormosia.macrocalyx                  Pachira.quinata 
-##                                3                                1 
-##                 Pachira.sessilis              Perebea.xanthochyma 
-##                                9                               21 
-##           Cinnamomum.triplinerve              Picramnia.latifolia 
-##                               16                               45 
-##                Piper.reticulatum            Platymiscium.pinnatum 
-##                                9                               61 
-##              Platypodium.elegans             Posoqueria.latifolia 
-##                               43                               15 
-##                 Poulsenia.armata                 Pourouma.bicolor 
-##                              755                               13 
-##               Pouteria.fossicola              Pouteria.reticulata 
-##                                2                              203 
-##               Pouteria.stipitata                Prioria.copaifera 
-##                               31                              345 
-##             Protium.costaricense                Protium.panamense 
-##                              111                               50 
-##              Protium.tenuifolium          Pseudobombax.septenatum 
-##                              381                                8 
-##      Psidium.friedrichsthalianum               Psychotria.grandis 
-##                                4                                2 
-##               Pterocarpus.rohrii           Quararibea.asterolepis 
-##                               80                              724 
-##                    Quassia.amara                    Randia.armata 
-##                                4                              248 
-##                 Sapium.broadleaf               Sapium.glandulosum 
-##                                3                               17 
-##            Schizolobium.parahyba                  Senna.dariensis 
-##                                2                                1 
-##                  Simarouba.amara              Siparuna.guianensis 
-##                              289                               13 
-##              Siparuna.pauciflora               Sloanea.terniflora 
-##                               16                               78 
-##               Socratea.exorrhiza                  Solanum.hayesii 
-##                              346                               12 
-##                  Sorocea.affinis              Spachea.membranacea 
-##                               28                                8 
-##                  Spondias.mombin              Spondias.radlkoferi 
-##                               29                               63 
-##                Sterculia.apetala Swartzia.simplex.var.grandiflora 
-##                               26                              218 
-##   Swartzia.simplex.continentalis            Symphonia.globulifera 
-##                              118                               26 
-##            Handroanthus.guayacan                   Tabebuia.rosea 
-##                               30                               68 
-##          Tabernaemontana.arborea             Tachigali.versicolor 
-##                              322                               98 
-##                  Talisia.nervosa                 Talisia.princeps 
-##                                1                                3 
-##              Terminalia.amazonia               Terminalia.oblonga 
-##                               28                               43 
-##          Tetragastris.panamensis        Tetrathylacium.johansenii 
-##                              379                                7 
-##                  Theobroma.cacao                  Thevetia.ahouai 
-##                               12                                2 
-##                Tocoyena.pittieri             Trattinnickia.aspera 
-##                                5                               40 
-##                  Trema.micrantha            Trichanthera.gigantea 
-##                               15                                2 
-##                Trichilia.pallida            Trichilia.tuberculata 
-##                               82                             1681 
-##          Trichospermum.galeottii             Triplaris.cumingiana 
-##                                1                              147 
-##                  Trophis.caucana                 Trophis.racemosa 
-##                               33                               32 
-##            Turpinia.occidentalis               Unonopsis.pittieri 
-##                               58                              163 
-##                Virola.multiflora                  Virola.sebifera 
-##                               25                              617 
-##              Virola.surinamensis                 Vismia.baccifera 
-##                              164                                1 
-##              Vochysia.ferruginea                Xylopia.macrantha 
-##                               12                              143 
-##              Zanthoxylum.ekmanii          Zanthoxylum.juniperinum 
-##                              149                               45 
-##            Zanthoxylum.panamense            Zanthoxylum.setulosum 
-##                               67                                1 
-##                Zuelania.guidonia 
-##                               10 
-## [1] 225
 ##   Brachy     PHTH     HPAV     RARD     SSTR  Protopl     MEGR     MPRO 
 ##      611       89      596       85       22       26      153       11 
 ##     TVIE     HMIN    HMIN2     NPRA     TVEL     ONOV     SUCT     LCIL 
@@ -606,7 +393,8 @@ specnumber(mite_comb)
 ##     NCOR     SLAT     FSET Lepidzts Eupelops Miniglmn     LRUG    PLAG2 
 ##       79       28      130       12       45       17      730       56 
 ## Ceratoz3 Oppiminu Trimalc2 
-##       91       78      145 
+##       91       78      145
+specnumber(mite_comb)
 ## [1] 35
 ```
 

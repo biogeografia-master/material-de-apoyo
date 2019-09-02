@@ -6,7 +6,7 @@ csl: apa.csl
 
 ```{r, echo = FALSE}
 knitr::opts_chunk$set(
-  results='hold',
+  # results='hold',
   collapse=TRUE,
   fig.path = "../img/"
 )
@@ -247,7 +247,7 @@ specnumber(doubs_comb)
 
 # BCI
 BCI_comb <- colSums(BCI)
-BCI_comb
+BCI_comb[1:20] #Dado que son tantas especies, imprimo sólo las primeras 20
 specnumber(BCI_comb)
 
 # mite
