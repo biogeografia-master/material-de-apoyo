@@ -88,6 +88,8 @@ La sentencia anterior carga el objeto `doubs` a memoria, pero no lo imprime en p
 
 <a name="doubs"></a>Como ves, el objeto `doubs` se compone de varios elementos, por lo que es preferible imprimirlo en pantalla por separado. Para imprimir sólo un objeto de una lista, se usa el operador `$`. Así, `doubs$env`, imprime sólo la matriz ambiental.
 
+> Nota. Fíjate que tanto en estos datos de ejemplo, como en los siguientes, utilizaré una combinación de funciones y operadores para mostrar sólo una parte de las tablas. Esta operación la podemos denominar "filtrado". Si la omitimos, la consola de R se desbordaría, y se generaría un documento innecesariamente largo. Más adelante descompongo en trocitos los pasos necesarios para filtrar, porque en tus asignaciones tendrás que hacerlo.
+
 ``` r
 set.seed(98)
 doubs$env[sample(1:30, 6), ] #Sólo 6 filas mostradas, elegidas al azar
@@ -245,6 +247,369 @@ mite.xy[sample(1:70,6),] #Sólo 6 filas mostradas, elegidas al azar
 
 Se trata de un **pequeño detalle a tener muy presente** al momento de manipular datos ecológicos. Una medida para evitar posibles errores, sería crear columnas de nombres de sitios a partir de los nombres de filas en ambas matrices, justo después de cargarlas. Si se perdiera la integridad entre ambas siempre se podrían hacer uniones a partir de dichas columnas.
 
+### Una pequeña parada para explicar cómo filtrar
+
+Habrás visto en las sentencias anteriores que utilicé una combinación de funciones (`set.seed` y `sample`) y el operador `[`. Aunque con la colección `tidyverse` verás una sintaxis más "fluida" para filtrar `data.frame`, en este apartado lo haré usando los operador `[` y `<-`, así como las funciones `subset`, `set.seed`, `sample` y `nrow`, todas del paquete `base`.
+
+Supón que el tali te pide que separes, de la matriz de comunidad `BCI`, un subconjunto aleatorio de 15 muestras (cada muestra es una fila). Primero crearé un objeto que contenga el número de filas de `BCI` y, posteriormente, de ese número total pediré que tome una muestra de 15 números.
+
+El primer paso, crear el objeto con el número de filas de `BCI`, lo realizo con la función `nrow` (*number of rows*), asignando su resultado a un nuevo objeto, que denomino `nfbci`. Fíjate que, para crear dicho objeto es necesario incluir el operador de asignación (`<-`); míralo como una flecha, hacia donde apunta es el nombre del objeto nuevo que deseo crear (`nfbci`), mientras que el lado contrario contiene el valor que asumirá dicho objeto, `nrow(BCI)`. Cuando el objeto `nfbci` es impreso en pantalla devuelve el valor 50, que es el número de filas de `BCI`.
+
+Bien, ahora que tenemos el número de filas de `BCI`, hay que seleccionar 15 números aleatorios entre el 1 y el 50. El objeto `quincefilas` toma el valor del resultado de la función `sample(1:nfbci, 15)`. Los argumentos de esta función se explican así: el primer argumento es `1:nfbci`, que devuelve un vector de 50 números, del 1 al 50, en orden secuencial. El segundo argumento de la función es el número de valores a seleccionar del vector, que en este caso es 15. Así, `quincefilas` es un vector de 15 elementos, cuyos valores se encuentran entre 1 y 50.
+
+> Nota. La función `set.seed` sirve para garantizar que este ejemplo sea reproducible, porque fija una "semilla" (forma de colectar datos en el generador de números aleatorios). El número dentro de dicha función es arbitrario. Así, con independencia de las veces que ejeuctes este ejemplo, `set.seed` garantizará que siempre se elijan los mismo 15 números. Prueba excluyendo la función, y notarás que en cada corrida obtienes conjuntos diferentes de 15 números diferentes.
+
+Finalmente, introducimos el vector `quincefilas` dentro de los corchetes luego de `BCI` y lo asignamos a `miBCI`. Veamos dicha línea descompuesta en partes. Denominemos `x` a un `data.frame`. Podemos filtrar a `x` mediante índices de extracción de filas `i` y columnas `j`, de la siguiente manera: `x[i,j]`. Como ves, el índice de filas corresponde a la primera parte dentro de los corchetes, y el índice de columnas a la segunda. Así, si necesito la fila 1 de `x`, con todas sus columnas, sólo escribo `x[1,]`; si sólo necesito la fila 1 columna 1 ejecuto `x[1,1]`. En el caso que nos ocupa abajo, `BCI` es el `data.frame`, y el índice de filas es el objeto `quincefilas`. Dado que no especifico columnas, las devuelve todas. Así, el nuevo `miBCI` es un subconjunto de `BCI`, con quince filas elegidas aleatoriamente. Nota que al asignar no se especifican columnas, pero al imprimir sí especifico columnas (`miBCI[,1:3]`), concretamente las tres primeras, para así evitar desbordar el documento. A continuación te explico cómo explorar la estructura básica de la matriz de comunidad.
+
+``` r
+nfbci <- nrow(BCI)
+nfbci
+set.seed(300)
+quincefilas <- sample(1:nfbci, 15)
+quincefilas
+miBCI <- BCI[quincefilas,]
+miBCI[,1:3]
+## [1] 50
+##  [1] 46 38 39 35 32  1 34 22 20 37 49 13 31 43 24
+##    Abarema.macradenia Vachellia.melanoceras Acalypha.diversifolia
+## 46                  0                     0                     0
+## 38                  0                     0                     0
+## 39                  0                     0                     0
+## 35                  0                     0                     0
+## 32                  0                     1                     0
+## 1                   0                     0                     0
+## 34                  0                     0                     1
+## 22                  0                     0                     0
+## 20                  0                     0                     0
+## 37                  0                     0                     0
+## 49                  0                     0                     0
+## 13                  0                     0                     0
+## 31                  0                     0                     0
+## 43                  0                     0                     0
+## 24                  0                     0                     0
+```
+
+### Básicos de una matriz de comunidad
+
+Una de las primeras tareas en el EDA consiste en saber cuántos sitios y cuántas especies tiene nuestra muestra. Veamos todas las matrices comunidad, compáremoslas. El número de sitios es equivalente al número de filas, por lo que se puede determinar con la siguiente sentencia:
+
+> Nota. Recuerda que la matriz de comunidad del conjunto de datos `doubs` es un `data.frame` dentro de una lista, y se obtiene por medio de `doubs$fish`.
+
+``` r
+nrow(doubs$fish)
+## [1] 30
+```
+
+El número de especies por sitio se cuenta con la función `specnumber` del paquete `vegan`. La función sólo cuenta aquellas columnas que no tengan ceros.
+
+``` r
+specnumber(doubs$fish)
+##  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 
+##  1  3  4  8 11 10  5  0  5  6  6  6  6 10 11 17 22 23 23 22 23 22  3  8  8 
+## 26 27 28 29 30 
+## 21 22 22 26 21
+```
+
+Nota que la parte superior del resultado es el nombre del sitio, y la inferior es el número de especies. Por ejemplo, el sitio 1 tiene 1 especie, el 2 tiene 3, el 3 tiene 4, el 4 tiene 8, ..., el 30 tiene 21.
+
+Notarás que los sitios están ordenados según el orden secuencial de filas, y por ello no vemos claramente cuál sitio tiene mayor riqueza y cuál tiene la menor. Mejor ordenamos el resultado...
+
+``` r
+sort(specnumber(doubs$fish))
+##  8  1  2 23  3  7  9 10 11 12 13  4 24 25  6 14  5 15 16 26 30 17 20 22 27 
+##  0  1  3  3  4  5  5  6  6  6  6  8  8  8 10 10 11 11 17 21 21 22 22 22 22 
+## 28 18 19 21 29 
+## 22 23 23 23 26
+```
+
+...y nos damos cuenta rápidamente que el sitio 29 es el de mayor riqueza numérica, y que en el sitio 8 no se registró ninguna especie. Si aplicamos estas mismas sentencias a los demás conjntos de datos veremos resultados interesantes.
+
+``` r
+#BCI
+nrow(BCI)
+sort(specnumber(BCI))
+
+#mite
+nrow(mite)
+sort(specnumber(mite))
+## [1] 50
+##  31  40  44  45   7  38  35   2  12  39   6  28  29  33  43  46  11  42 
+##  77  80  81  81  82  82  83  84  84  84  85  85  86  86  86  86  87  87 
+##   8  32  37  18   3   9  22  26  48  49  34  36   1  13  15  16  17  50 
+##  88  88  88  89  90  90  91  91  91  91  92  92  93  93  93  93  93  93 
+##   4  10  24  30  14  21  23  27  20   5  41  47  25  19 
+##  94  94  95  97  98  99  99  99 100 101 102 102 105 109 
+## [1] 70
+## 44 57 62 67 59 54 29 55 61 42 39 41 50 56 58 40 43 48 52 60 24 49 64 65 68 
+##  5  5  6  6  7  8  9  9  9 10 11 11 11 11 11 12 12 12 12 12 13 13 13 13 13 
+## 17 22 38 47 51 66 23 31 53 70  7  9 21 32 33 37 46 63 16 26 45 69 13 15 18 
+## 14 14 14 14 14 14 15 15 15 15 16 16 16 16 16 16 16 16 17 17 17 17 18 18 18 
+## 28 35 36  3  5 10 12 25  1 20  6  8 19 30 34 27  2  4 14 11 
+## 18 18 18 19 19 19 19 19 20 20 21 21 21 21 21 22 23 23 23 25
+```
+
+Un resultado que también debe salir del EDA es la riqueza de la toda la muestra. Para ello necesitamos que `vegan` vea nuestra matriz de forma combinada (*pooled*), lo cual haremos con la función `colSums`. Así, generamos un vector que contiene las sumas de individuos por especie (en el caso del conjunto `doubs` no, por tratarse de una matriz de escala semi-cuantitativa). A dicha matriz le podemos calcular su riqueza numérica con `specnumber`.
+
+``` r
+# doubs
+doubs_comb <- colSums(doubs$fish)
+doubs_comb
+specnumber(doubs_comb)
+
+# BCI
+BCI_comb <- colSums(BCI)
+BCI_comb
+specnumber(BCI_comb)
+
+# mite
+mite_comb <- colSums(mite)
+mite_comb
+specnumber(mite_comb)
+## Cogo Satr Phph Neba Thth Teso Chna Chto Lele Lece Baba Spbi Gogo Eslu Pefl 
+##   15   57   68   73   15   19   18   26   43   56   43   27   55   40   36 
+## Rham Legi Scer Cyca Titi Abbr Icme Acce Ruru Blbj Alal Anan 
+##   33   29   21   25   45   26   18   38   63   31   57   27 
+## [1] 27
+##               Abarema.macradenia            Vachellia.melanoceras 
+##                                1                                3 
+##            Acalypha.diversifolia            Acalypha.macrostachya 
+##                                2                                1 
+##                   Adelia.triloba             Aegiphila.panamensis 
+##                               92                               23 
+##          Alchornea.costaricensis              Alchornea.latifolia 
+##                              156                                1 
+##                 Alibertia.edulis          Allophylus.psilospermus 
+##                                1                               27 
+##                 Alseis.blackiana                Amaioua.corymbosa 
+##                              983                                3 
+##              Anacardium.excelsum                   Andira.inermis 
+##                               22                               28 
+##                  Annona.spraguei                    Apeiba.glabra 
+##                               27                              236 
+##                 Apeiba.tibourbou          Aspidosperma.desmanthum 
+##                               21                               52 
+##         Astrocaryum.standleyanum             Astronium.graveolens 
+##                              201                               39 
+##                Attalea.butyracea                Banara.guianensis 
+##                               33                                1 
+##            Beilschmiedia.pendula              Brosimum.alicastrum 
+##                              294                              188 
+##               Brosimum.guianense          Calophyllum.longifolium 
+##                                1                               55 
+##                Casearia.aculeata                 Casearia.arborea 
+##                               23                              100 
+##           Casearia.commersoniana              Casearia.guianensis 
+##                                3                                2 
+##              Casearia.sylvestris           Cassipourea.guianensis 
+##                               54                               87 
+##        Cavanillesia.platanifolia                Cecropia.insignis 
+##                               19                              264 
+##             Cecropia.obtusifolia                  Cedrela.odorata 
+##                               25                                2 
+##                  Ceiba.pentandra                  Celtis.schippii 
+##                               39                               38 
+##            Cespedesia.spathulata               Chamguava.schippii 
+##                                2                                3 
+##            Chimarrhis.parviflora                Maclura.tinctoria 
+##                                1                                1 
+##            Chrysochlamys.eclipes          Chrysophyllum.argenteum 
+##                                2                               85 
+##            Chrysophyllum.cainito               Coccoloba.coronata 
+##                               25                               22 
+##         Coccoloba.manzinellensis             Colubrina.glandulosa 
+##                               13                                1 
+##                 Cordia.alliodora                   Cordia.bicolor 
+##                               63                              325 
+##                Cordia.lasiocalyx             Coussarea.curvigemma 
+##                              364                               55 
+##             Croton.billbergianus                  Cupania.cinerea 
+##                               98                                1 
+##                Cupania.latifolia                Cupania.rufescens 
+##                               12                                4 
+##                Cupania.seemannii             Dendropanax.arboreus 
+##                               47                               88 
+##             Desmopsis.panamensis          Diospyros.artanthifolia 
+##                               13                               16 
+##                Dipteryx.oleifera               Drypetes.standleyi 
+##                               33                              285 
+##                  Elaeis.oleifera        Enterolobium.schomburgkii 
+##                               21                                2 
+##          Erythrina.costaricensis        Erythroxylum.macrophyllum 
+##                               26                               18 
+##                  Eugenia.florida             Eugenia.galalonensis 
+##                               81                               12 
+##                Eugenia.nesiotica              Eugenia.oerstediana 
+##                               55                              177 
+##             Faramea.occidentalis                 Ficus.colubrinae 
+##                             1717                                1 
+##                Ficus.costaricana                   Ficus.insipida 
+##                                7                                3 
+##                     Ficus.maxima                Ficus.obtusifolia 
+##                                4                                7 
+##                   Ficus.popenoei                   Ficus.tonduzii 
+##                                3                               23 
+##                  Ficus.trigonata                 Ficus.yoponensis 
+##                                5                                6 
+##              Garcinia.intermedia                 Garcinia.madruno 
+##                               92                               12 
+##                 Genipa.americana               Guapira.myrtiflora 
+##                               23                               99 
+##                     Guarea.fuzzy               Guarea.grandifolia 
+##                               68                               10 
+##                  Guarea.guidonia              Guatteria.dumetorum 
+##                              376                              244 
+##                Guazuma.ulmifolia               Guettarda.foliacea 
+##                               38                               85 
+##                 Gustavia.superba             Hampea.appendiculata 
+##                              644                               13 
+##             Hasseltia.floribunda              Heisteria.acuminata 
+##                              229                                7 
+##               Heisteria.concinna               Hirtella.americana 
+##                              288                                5 
+##                Hirtella.triandra                   Hura.crepitans 
+##                              681                              101 
+##          Hieronyma.alchorneoides                   Inga.acuminata 
+##                               41                               26 
+##                  Inga.cocleensis                   Inga.goldmanii 
+##                               52                               49 
+##                     Inga.laurina                   Inga.semialata 
+##                               10                               98 
+##                     Inga.nobilis                 Inga.oerstediana 
+##                               67                                2 
+##                  Inga.pezizifera                    Inga.punctata 
+##                               20                               10 
+##                    Inga.ruiziana                 Inga.sapindoides 
+##                                5                               76 
+##                 Inga.spectabilis                 Inga.umbellifera 
+##                               14                               14 
+##                 Jacaranda.copaia             Lacistema.aggregatum 
+##                              236                               33 
+##             Lacmellea.panamensis                   Laetia.procera 
+##                               51                               12 
+##                   Laetia.thamnia            Lafoensia.punicifolia 
+##                               27                                5 
+##                Licania.hypoleuca                 Licania.platypus 
+##                               14                               10 
+##              Lindackeria.laurina        Lonchocarpus.heptaphyllus 
+##                               64                              121 
+##                 Luehea.seemannii               Macrocnemum.roseum 
+##                               93                               25 
+##   Maquira.guianensis.costaricana             Margaritaria.nobilis 
+##                              167                                2 
+##                 Marila.laxiflora                Maytenus.schippii 
+##                               10                               21 
+##                  Miconia.affinis                 Miconia.argentea 
+##                                8                               70 
+##                    Miconia.elata              Miconia.hondurensis 
+##                                1                                7 
+##              Mosannona.garwoodii                Myrcia.gatunensis 
+##                               15                                5 
+##           Myrospermum.frutescens             Nectandra.cissiflora 
+##                                7                               33 
+##                Nectandra.lineata               Nectandra.purpurea 
+##                               10                                4 
+##               Ochroma.pyramidale                    Ocotea.cernua 
+##                                5                               29 
+##                   Ocotea.oblonga                  Ocotea.puberula 
+##                               36                               22 
+##                    Ocotea.whitei                Oenocarpus.mapora 
+##                              184                              788 
+##                Ormosia.amazonica                 Ormosia.coccinea 
+##                                1                                5 
+##               Ormosia.macrocalyx                  Pachira.quinata 
+##                                3                                1 
+##                 Pachira.sessilis              Perebea.xanthochyma 
+##                                9                               21 
+##           Cinnamomum.triplinerve              Picramnia.latifolia 
+##                               16                               45 
+##                Piper.reticulatum            Platymiscium.pinnatum 
+##                                9                               61 
+##              Platypodium.elegans             Posoqueria.latifolia 
+##                               43                               15 
+##                 Poulsenia.armata                 Pourouma.bicolor 
+##                              755                               13 
+##               Pouteria.fossicola              Pouteria.reticulata 
+##                                2                              203 
+##               Pouteria.stipitata                Prioria.copaifera 
+##                               31                              345 
+##             Protium.costaricense                Protium.panamense 
+##                              111                               50 
+##              Protium.tenuifolium          Pseudobombax.septenatum 
+##                              381                                8 
+##      Psidium.friedrichsthalianum               Psychotria.grandis 
+##                                4                                2 
+##               Pterocarpus.rohrii           Quararibea.asterolepis 
+##                               80                              724 
+##                    Quassia.amara                    Randia.armata 
+##                                4                              248 
+##                 Sapium.broadleaf               Sapium.glandulosum 
+##                                3                               17 
+##            Schizolobium.parahyba                  Senna.dariensis 
+##                                2                                1 
+##                  Simarouba.amara              Siparuna.guianensis 
+##                              289                               13 
+##              Siparuna.pauciflora               Sloanea.terniflora 
+##                               16                               78 
+##               Socratea.exorrhiza                  Solanum.hayesii 
+##                              346                               12 
+##                  Sorocea.affinis              Spachea.membranacea 
+##                               28                                8 
+##                  Spondias.mombin              Spondias.radlkoferi 
+##                               29                               63 
+##                Sterculia.apetala Swartzia.simplex.var.grandiflora 
+##                               26                              218 
+##   Swartzia.simplex.continentalis            Symphonia.globulifera 
+##                              118                               26 
+##            Handroanthus.guayacan                   Tabebuia.rosea 
+##                               30                               68 
+##          Tabernaemontana.arborea             Tachigali.versicolor 
+##                              322                               98 
+##                  Talisia.nervosa                 Talisia.princeps 
+##                                1                                3 
+##              Terminalia.amazonia               Terminalia.oblonga 
+##                               28                               43 
+##          Tetragastris.panamensis        Tetrathylacium.johansenii 
+##                              379                                7 
+##                  Theobroma.cacao                  Thevetia.ahouai 
+##                               12                                2 
+##                Tocoyena.pittieri             Trattinnickia.aspera 
+##                                5                               40 
+##                  Trema.micrantha            Trichanthera.gigantea 
+##                               15                                2 
+##                Trichilia.pallida            Trichilia.tuberculata 
+##                               82                             1681 
+##          Trichospermum.galeottii             Triplaris.cumingiana 
+##                                1                              147 
+##                  Trophis.caucana                 Trophis.racemosa 
+##                               33                               32 
+##            Turpinia.occidentalis               Unonopsis.pittieri 
+##                               58                              163 
+##                Virola.multiflora                  Virola.sebifera 
+##                               25                              617 
+##              Virola.surinamensis                 Vismia.baccifera 
+##                              164                                1 
+##              Vochysia.ferruginea                Xylopia.macrantha 
+##                               12                              143 
+##              Zanthoxylum.ekmanii          Zanthoxylum.juniperinum 
+##                              149                               45 
+##            Zanthoxylum.panamense            Zanthoxylum.setulosum 
+##                               67                                1 
+##                Zuelania.guidonia 
+##                               10 
+## [1] 225
+##   Brachy     PHTH     HPAV     RARD     SSTR  Protopl     MEGR     MPRO 
+##      611       89      596       85       22       26      153       11 
+##     TVIE     HMIN    HMIN2     NPRA     TVEL     ONOV     SUCT     LCIL 
+##       58      344      137      132      634     1209     1187     2468 
+## Oribatl1 Ceratoz1     PWIL Galumna1 Stgncrs2     HRUF Trhypch1     PPEL 
+##      132       90       76       67       51       16      183       12 
+##     NCOR     SLAT     FSET Lepidzts Eupelops Miniglmn     LRUG    PLAG2 
+##       79       28      130       12       45       17      730       56 
+## Ceratoz3 Oppiminu Trimalc2 
+##       91       78      145 
+## [1] 35
+```
+
 ### Diagrama de dispersión
 
 Lee sobre el [diagrama de dispersión](https://es.wikipedia.org/wiki/Diagrama_de_dispersi%C3%B3n). Si observas detenidamente las variables `dfs` y `flo` de la [tabla `doubs$env`](#doubs), quizá no detectes a golpe de vista que existe correlación entre ambas; es precisamente en este punto donde los gráficos te pueden ayudar.
@@ -342,7 +707,7 @@ ggplot(data = BCI.env) +
 
 ![](../img/intro-bcibarplot-2.png)
 
-Nota que hay dos hábitats escasamente representados, que son *Swamp* y *Young*. El EDA está informando que, en determinados análisis, estos grupos no aportarían efectos sistemáticos o, en su defecto, harían que determinados supuestos no se cumplieran. No entraré en detalles sobre cómo filtro los datos para excluir ambos grupos (más adelante verás cómo usar `tidyverse` para filtrar datos y otras tareas), así que ignora la parte "fea" del código y fíjate en el gráfico.
+Nota que hay dos hábitats escasamente representados, que son *Swamp* y *Young*. El EDA está informando que, en determinados análisis, estos grupos no aportarían efectos sistemáticos o, en su defecto, harían que determinados supuestos no se cumplieran. No entraré en detalles del filtro que apliqué a los datos para excluir ambos grupos (más adelante verás cómo usar `tidyverse` para filtrar datos y otras tareas), así que ignora la parte "fea" del código y fíjate en el gráfico.
 
 ``` r
 grupos_numerosos <- droplevels(
