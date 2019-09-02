@@ -1,7 +1,7 @@
 
 <!-- Este .md fue generado a partir del .Rmd homónimo. Edítese el .Rmd -->
-Introducción a R y análisis exploratorio de datos gráficamente (EDA)
-====================================================================
+Introducción a R y análisis exploratorio de datos (EDA)
+=======================================================
 
 Introducción a R
 ----------------
@@ -64,8 +64,8 @@ help.search("matrix") #Busca la palabra clave en las ayudas de los paquetes
 
 ¡Usa los foros! Si introduces un mensaje de error de R en el buscador de tu preferencia (en inglés obtienes más resultados), encontrarás varios punteros a foros con posibles soluciones.
 
-Análisis exploratorio de datos gráficamente
--------------------------------------------
+Análisis exploratorio de datos (EDA)
+------------------------------------
 
 Wickham & Grolemund (2017) afirman que, durante la producción de resultados comunicables, subyace la necesidad de realizar el **análisis exploratorio de datos (AED o EDA)** lo más rápidamente posible, pero nunca obviarlo. Subyace la idea de que es necesario aligerar el EDA para descubrir tantos patrones como sea posible sin que haya "pelearse" con los datos para hacer simples gráficos. Esto permitirá al investigador/a concentrarse en interpretar resultados. El esquema a continuación, de la misma fuente, resume este proceso:
 
@@ -627,7 +627,7 @@ ggplot(data = doubs$env) +
   geom_point(mapping = aes(x = dfs, y = flo))
 ```
 
-![](../img/intro-doubscatter-1.png)
+<img src="../img/intro-doubscatter-1.png" width="400" />
 
 Lógicamente, como es de esperar, a mayor distancia de la cabecera, mayor el caudal. Destacan también dos observaciones atípicas en el extremo superior derecho del gráfico, que corresponden a dos puntos de colecta que obtuvieron valores de flujo muy altos. Volveré sobre estos valores extremos (*outliers*) maś adelante.
 
@@ -650,7 +650,7 @@ ggplot(data = doubs$env) +
   geom_point(mapping = aes(x = dfs, y = flo, colour = flo_outlier))
 ```
 
-![](../img/intro-doubscatter-out-1.png)
+<img src="../img/intro-doubscatter-out-1.png" width="400" />
 
 ``` r
 ggplot(data = doubs$env) +
@@ -658,14 +658,14 @@ ggplot(data = doubs$env) +
 ## Warning: Using size for a discrete variable is not advised.
 ```
 
-![](../img/intro-doubscatter-out-2.png)
+<img src="../img/intro-doubscatter-out-2.png" width="400" />
 
 ``` r
 ggplot(data = doubs$env) +
   geom_point(mapping = aes(x = dfs, y = flo, shape = flo_outlier))
 ```
 
-![](../img/intro-doubscatter-out-3.png)
+<img src="../img/intro-doubscatter-out-3.png" width="400" />
 
 El estético `size` admite variables cuantitativas. El gráfico a continuación nos informa con bastante propiedad sobre una combinación de variables, usando la elevación como estético de tamaño y dureza del dureza del agua como color. Nótese, por ejemplo, que la elevación y están inversamente relacionados, a menor elevación (círculos más pequeños) mayor dureza (rellenos más azules).
 
@@ -674,7 +674,7 @@ ggplot(data = doubs$env) +
   geom_point(mapping = aes(x = dfs, y = flo, size = alt, colour = har))
 ```
 
-![](../img/intro-doubscatter-comb-1.png)
+<img src="../img/intro-doubscatter-comb-1.png" width="400" />
 
 Aunque no son muy informativos sin barras de error, los diagramas de barras pueden ser útiles en determinados contextos. Utilizaré la escala semi-cuantitativa de abundancia (pseudo-abundancia) para responder a la pregunta: ¿Cuál es el nivel de pseudo-abundancia predominante de `Salmo trutta fario` en la muestra?
 
@@ -682,7 +682,7 @@ Aunque no son muy informativos sin barras de error, los diagramas de barras pued
 ggplot(data = doubs$fish) + geom_bar(mapping = aes(x=Satr))
 ```
 
-![](../img/intro-doubsbarplot-1.png)
+<img src="../img/intro-doubsbarplot-1.png" width="400" />
 
 Este gráfico "informa" que el nivel de de pseudo-abundancia más común es 0, es decir, la subespecie está ausente en 13 de los 30 sitios, con lo que es más común no encontrarla. Si ordenásemos las pseudo-abundancias de `Satr` de menor a mayor, podríamos igualmente notar este patrón, lo cual sugiere que el gráfico no aporta mucho más que lo que lo haría un vector ordenado.
 
@@ -697,7 +697,7 @@ Fíjate en este otro gráfico de barras usando el conjunto de datos `BCI`. El ar
 ggplot(data = BCI.env) +  geom_bar(mapping = aes(x = Habitat))
 ```
 
-![](../img/intro-bcibarplot-1.png)
+<img src="../img/intro-bcibarplot-1.png" width="400" />
 
 ``` r
 
@@ -705,7 +705,7 @@ ggplot(data = BCI.env) +
   geom_bar(mapping = aes(x = Habitat, fill = Habitat))
 ```
 
-![](../img/intro-bcibarplot-2.png)
+<img src="../img/intro-bcibarplot-2.png" width="400" />
 
 Nota que hay dos hábitats escasamente representados, que son *Swamp* y *Young*. El EDA está informando que, en determinados análisis, estos grupos no aportarían efectos sistemáticos o, en su defecto, harían que determinados supuestos no se cumplieran. No entraré en detalles del filtro que apliqué a los datos para excluir ambos grupos (más adelante verás cómo usar `tidyverse` para filtrar datos y otras tareas), así que ignora la parte "fea" del código y fíjate en el gráfico.
 
@@ -717,7 +717,7 @@ ggplot(data = grupos_numerosos) +
   geom_bar(mapping = aes(x = Habitat, fill = Habitat))
 ```
 
-![](../img/intro-bcibarplot2-1.png)
+<img src="../img/intro-bcibarplot2-1.png" width="400" />
 
 Para variables cuantitativas, el diagrama de cajas, mejor conocido como *boxplot*, es sin duda un apoyo fundamental. Te recomiendo la [entrada de Wikipedia](https://es.wikipedia.org/wiki/Diagrama_de_caja) sobre este útil gráfico. A golpe de vista, verás a continuación la variable "heterogeneidad ambiental" según hábitats, utilizando el objeto `grupos_numerosos` creado en el trozo de código anterior (excluye los hábitats poco representados).
 
@@ -726,7 +726,7 @@ ggplot(data = grupos_numerosos) +
   geom_boxplot(mapping = aes(x = Habitat, y = EnvHet, fill = Habitat))
 ```
 
-![](../img/intro-bciboxplots-1.png)
+<img src="../img/intro-bciboxplots-1.png" width="400" />
 
 ¿Qué patrón percibes? Compara la heterogeneidad ambiental en los bosques viejos sobre vertiente (`OldSlope`) con la de los demás hábitats. ¿Qué diferencias notas?
 
@@ -738,7 +738,7 @@ ggplot(data = mite.env) +
 ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 ```
 
-![](../img/intro-mitehist1-1.png)
+<img src="../img/intro-mitehist1-1.png" width="400" />
 
 ``` r
 
@@ -747,7 +747,7 @@ ggplot(data = mite.env) +
 ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 ```
 
-![](../img/intro-mitehist1-2.png)
+<img src="../img/intro-mitehist1-2.png" width="400" />
 
 El gráfico es informativo, y de hecho se observan patrones, pero las barras están separadas; mientras más pequeña es la muestra, peor se verá el resultado. Antes de interpretarlo es preferible corregirlo. Para ello, se podría usar el consejo que aparece en la advertencia devuelta por la consola (elegir una anchura de intervalo mejor), aunque por simplicidad es reduciré el número de intervalos. Los gráficos siguientes muestran un mejor resultado:
 
@@ -756,7 +756,7 @@ ggplot(data = mite.env) +
   geom_histogram(mapping = aes(x = SubsDens), bins = 15)
 ```
 
-![](../img/intro-mitehist2-1.png)
+<img src="../img/intro-mitehist2-1.png" width="400" />
 
 ``` r
 
@@ -764,7 +764,7 @@ ggplot(data = mite.env) +
   geom_histogram(mapping = aes(x = WatrCont), bins = 15)
 ```
 
-![](../img/intro-mitehist2-2.png)
+<img src="../img/intro-mitehist2-2.png" width="400" />
 
 El resultado es más legible ahora. En ambos casos podemos ver que existe un sesgo a la derecha (o positivo), más acentuado en la variable `SubsDens` que en `WatrCont`. Esto significa que la media probablemente está a la derecha del intervalo modal, es decir, los valores extremos "tiran" de ella hacia la derecha, un hecho evidente especialmente en el histograma de la densidad de substrato. Notarás igualmente que el histograma de la variable `WatrCont` se aproxima más a una forma acampanada, mientras que el histograma de `SubsDens` está un poco más alejado de dicha forma. En ecología, la mayoría de los datos no muestran distribución normal, por lo que las técnicas de estadística paramétrica en muchos casos son inútiles (Borcard et al., 2018). El histograma es el primer paso para descubrir este fenómeno, y es sin duda de gran ayuda para elegir apropiadamente las técnicas a utilizar. A modo de referencia, incluyo a continuación un histograma con forma acampanada de una muestra ficticia de 5000 elementos construida a partir de desviaciones aleatorias usando la distribución normal.
 
@@ -775,7 +775,7 @@ ggplot(data = alenorm) +
   geom_histogram(mapping = aes(x = alenorm), bins = 50)
 ```
 
-![](../img/intro-campana-1.png)
+<img src="../img/intro-campana-1.png" width="400" />
 
 Finalmente, introduzco a continuación los gráficos de facetas o paneles, una herramienta muy potente de `ggplot2`. Para ello, utilizaré el conjunto de datos `mite`. Supón que necesitas mostrar el comportamiento de una variable en un único panel, para tener una idea rápida de tu muestra (también se pueden hacer paneles de muchas variables, previa reorganización de los datos con `tidyr`, pero eso lo veremos más adelante). La función `facet_grid` es tu aliada. Supongamos que necesitamos ver diagramas de dispersión de la densidad de substrato y el contenido de agua para cada uno de los subconjuntos de muestra según densidad de arbustos (recordemos que existen tres tipos de densidades de arbustos: `None<Few<Many`). Esto podría ser útil para evaluar si existe algún grado de asociación diferente entre los distintos subconjuntos. Veamos el gráfico
 
@@ -785,7 +785,7 @@ ggplot(mite.env) +
   facet_wrap(~Shrub)
 ```
 
-![](../img/intro-facet-1.png)
+<img src="../img/intro-facet-1.png" width="400" />
 
 El panel está mostrando que existe correlación entre las variables densidad de substrato y contenido de agua para los subconjuntos de sitios donde hay pocos o nulos arbustos. En los sitios donde hay muchos arbustos, la correlación se difumina ligeramente, porque aparecen valores atípicos que habría que tratar de manera especial.
 
@@ -802,7 +802,7 @@ ezCor(
 )
 ```
 
-![](../img/intro-doubsezscatter-1.png)
+<img src="../img/intro-doubsezscatter-1.png" width="400" />
 
 > **Nota**. la función `ezCor` sólo admite `data.frame` de columnas numéricas.
 
@@ -811,7 +811,7 @@ Conclusión
 
 Conociste las herramientas básicas para realizar un EDA ágilmente y generando gráficos informativos. **El EDA es un paso imprescindible en cualquier investigación**, así que, ya que no te lo podrás saltar, es necesario que practiques con los datos de ejemplo mostrados aquí, o con los tuyos propiamente.
 
-Aunque los paquetes de análisis de datos ecológicos no están "saborizados" al estilo `tidyverse`, al menos el EDA lo podrás realizar utilizando tuberías de esta potente colección de paquetes. Conocerás más herramientas en el siguiente capítulo de esta novela.
+Aunque los paquetes de análisis de datos ecológicos no están "saborizados" al estilo `tidyverse`, al menos el EDA lo podrás realizar utilizando tuberías de esta potente colección de paquetes. Conocerás más herramientas de `tidyverse` en el siguiente capítulo de esta novela.
 
 Situaciones comunes
 -------------------

@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
 
 <!-- Este .md fue generado a partir del .Rmd homónimo. Edítese el .Rmd -->
 
-# Introducción a R y análisis exploratorio de datos gráficamente (EDA)
+# Introducción a R y análisis exploratorio de datos (EDA)
 
 ## Introducción a R
 
@@ -76,7 +76,7 @@ help.search("matrix") #Busca la palabra clave en las ayudas de los paquetes
 
 ¡Usa los foros! Si introduces un mensaje de error de R en el buscador de tu preferencia (en inglés obtienes más resultados), encontrarás varios punteros a foros con posibles soluciones.
 
-## Análisis exploratorio de datos gráficamente
+## Análisis exploratorio de datos (EDA)
 
 @Wickham2017R afirman que, durante la producción de resultados comunicables, subyace la necesidad de realizar el **análisis exploratorio de datos (AED o EDA)** lo más rápidamente posible, pero nunca obviarlo. Subyace la idea de que es necesario aligerar el EDA para descubrir tantos patrones como sea posible sin que haya "pelearse" con los datos para hacer simples gráficos. Esto permitirá al investigador/a concentrarse en interpretar resultados. El esquema a continuación, de la misma fuente, resume este proceso:
 
@@ -403,7 +403,7 @@ ezCor(
 
 Conociste las herramientas básicas para realizar un EDA ágilmente y generando gráficos informativos. **El EDA es un paso imprescindible en cualquier investigación**, así que, ya que no te lo podrás saltar, es necesario que practiques con los datos de ejemplo mostrados aquí, o con los tuyos propiamente.
 
-Aunque los paquetes de análisis de datos ecológicos no están "saborizados" al estilo `tidyverse`, al menos el EDA lo podrás realizar utilizando tuberías de esta potente colección de paquetes. Conocerás más herramientas en el siguiente capítulo de esta novela.
+Aunque los paquetes de análisis de datos ecológicos no están "saborizados" al estilo `tidyverse`, al menos el EDA lo podrás realizar utilizando tuberías de esta potente colección de paquetes. Conocerás más herramientas de `tidyverse` en el siguiente capítulo de esta novela.
 
 ## Situaciones comunes
 * R es sensible a las mayúsculas. No es lo mismo `Mi_objeto` que `mi_objeto`.
