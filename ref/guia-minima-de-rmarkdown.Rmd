@@ -1,0 +1,34 @@
+---
+output: github_document
+bibliography: biblio.bib
+csl: apa.csl
+---
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  # results='hold',
+  collapse=TRUE,
+  fig.path = "../img/"
+)
+```
+
+
+<!-- Este .md fue generado a partir del .Rmd homónimo. Edítese el .Rmd -->
+
+# Guía mínima de RMarkdown
+
+Con RMarkdown puedes hacer tu artículo, tu trabajo de la universidad, tu informe, tu presentación de diapositivas, tu página web, tu libro, tu ... . Tu texto, tus figuras, tus referencias bibliográficas, tu código reproducible y los resultados de tu código, todo en un único lugar. RMarkdown es un *notebook* donde puedes hacer todo el flujo de trabajo reproducible para facilitarte la tarea de comunicar tus resultados. Profundiza con la versión en español de @Wickham2017R, el cual es igualmente mi referente. No necesitas más justificación, porque pa'colmo, el tali lo exige, qué más justificación que esa. Vamo' al mambo.
+
+## Lo básico
+
+Así comienza y continúa un archivo Rmd que, como verás, es texto plano:
+
+```{r echo = FALSE, comment = ""}
+cat(htmltools::includeText("ejemplo-rmd.Rmd"))
+```
+
+Las tres partes 
+
+
+## Referencias
+
