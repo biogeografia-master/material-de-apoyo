@@ -3,10 +3,14 @@
 Guía mínima de RMarkdown
 ========================
 
-Con RMarkdown puedes hacer tu artículo, tu trabajo de la universidad, tu informe, tu presentación de diapositivas, tu página web, tu libro, tu ... . Tu texto, tus figuras, tus referencias bibliográficas, tu código reproducible y los resultados de tu código, todo en un único lugar. RMarkdown es un *notebook* donde puedes hacer todo el flujo de trabajo reproducible para facilitarte la tarea de comunicar tus resultados. No necesitas más justificación, porque pa'colmo, el tali lo exige, qué más justificación que esa. Vamo' al mambo.
+Con RMarkdown puedes hacer tu artículo, tu trabajo de la universidad, tu informe, tu presentación de diapositivas, tu página web, tu libro y mucho más. RMarkdown integra las distintas partes de tu trabajo en un único lugar: texto, figuras, referencias bibliográficas, ódigo reproducible y los resultados de dicho código.
+
+RMarkdown es un *notebook* donde puedes hacer todo el flujo de trabajo reproducible para facilitarte la tarea de comunicar tus resultados. Profundiza con la versión en español de Wickham & Grolemund (2017), el cual es igualmente mi referente. No necesitas más justificación, porque pa'colmo, el tali lo exige, qué más justificación que esa. Vamo' al mambo.
 
 Lo básico
 ---------
+
+Así comienza y continúa un archivo Rmd que, como verás, es texto plano:
 
     ---
     output: github_document
@@ -14,9 +18,9 @@ Lo básico
     csl: apa.csl
     ---
 
-    ```{r, echo = FALSE}
+    ```{r setup, include=FALSE}
     knitr::opts_chunk$set(
-      # results='hold',
+      echo = TRUE,
       collapse=TRUE,
       fig.path = "../img/"
     )
@@ -52,5 +56,11 @@ Lo básico
       geom_point(mapping = aes(x = dfs, y = flo))
     ```
 
+Las tres partes principales son:
+
+-   
+
 Referencias
 -----------
+
+Wickham, H., & Grolemund, G. (2017). *R for data science: Import, tidy, transform, visualize, and model data* (1st ed.). Retrieved from <http://r4ds.had.co.nz/>
