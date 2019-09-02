@@ -27,7 +27,10 @@ data(doubs)
 
 ### Diagrama de dispersión
 
-Lee sobre el [diagrama de dispersión](https://es.wikipedia.org/wiki/Diagrama_de_dispersi%C3%B3n). Si observas detenidamente las variables `dfs` y `flo` de la [tabla `doubs$env`](#doubs), quizá no detectes a golpe de vista que existe correlación entre ambas; es precisamente en este punto donde los gráficos te pueden ayudar.
+Lee sobre el [diagrama de dispersión](https://es.wikipedia.org/wiki/Diagrama_de_dispersi%C3%B3n).
+Si observas detenidamente las variables `dfs` y `flo` de la [tabla `doubs$env`](#doubs), quizá
+no detectes a golpe de vista que existe correlación entre ambas; es precisamente en este punto
+donde los gráficos te pueden ayudar.
 
 ```{r, message=FALSE}
 library(tidyverse)
@@ -35,7 +38,8 @@ library(tidyverse)
 
 ...
 
-El gráfico de dispersión a continuación muestra que existe  correlación positiva entre las variables seleccionadas.
+El gráfico de dispersión a continuación muestra que existe  correlación positiva entre las
+variables seleccionadas.
 
 ```{r intro-doubscatter}
 ggplot(data = doubs$env) +

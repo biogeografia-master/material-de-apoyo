@@ -4,9 +4,9 @@ bibliography: biblio.bib
 csl: apa.csl
 ---
 
-```{r, echo = FALSE}
+```{r setup, include=FALSE}
 knitr::opts_chunk$set(
-  # results='hold',
+  echo = TRUE,
   collapse=TRUE,
   fig.path = "../img/"
 )
@@ -31,7 +31,9 @@ cat(htmltools::includeText("ejemplo-rmd.Rmd"))
 
 Las tres partes principales son:
 
-* 
+* Encabezado YAML, donde defines 
+
+Cada una de estas partes las encontrarás bien explicadas en el [capítulo 27 de @Wickham2017R](https://es.r4ds.hadley.nz/r-markdown.html), incluyendo una guía de referencia para las opciones. 
 
 
 ## Referencias

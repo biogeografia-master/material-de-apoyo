@@ -41,7 +41,10 @@ Así comienza y continúa un archivo Rmd que, como verás, es texto plano:
 
     ### Diagrama de dispersión
 
-    Lee sobre el [diagrama de dispersión](https://es.wikipedia.org/wiki/Diagrama_de_dispersi%C3%B3n). Si observas detenidamente las variables `dfs` y `flo` de la [tabla `doubs$env`](#doubs), quizá no detectes a golpe de vista que existe correlación entre ambas; es precisamente en este punto donde los gráficos te pueden ayudar.
+    Lee sobre el [diagrama de dispersión](https://es.wikipedia.org/wiki/Diagrama_de_dispersi%C3%B3n).
+    Si observas detenidamente las variables `dfs` y `flo` de la [tabla `doubs$env`](#doubs), quizá
+    no detectes a golpe de vista que existe correlación entre ambas; es precisamente en este punto
+    donde los gráficos te pueden ayudar.
 
     ```{r, message=FALSE}
     library(tidyverse)
@@ -49,7 +52,8 @@ Así comienza y continúa un archivo Rmd que, como verás, es texto plano:
 
     ...
 
-    El gráfico de dispersión a continuación muestra que existe  correlación positiva entre las variables seleccionadas.
+    El gráfico de dispersión a continuación muestra que existe  correlación positiva entre las
+    variables seleccionadas.
 
     ```{r intro-doubscatter}
     ggplot(data = doubs$env) +
@@ -58,7 +62,9 @@ Así comienza y continúa un archivo Rmd que, como verás, es texto plano:
 
 Las tres partes principales son:
 
--   
+-   Encabezado, donde defines
+
+Cada uno de las partes las encontrarás bien explicadas en el (capítulo 27 de Wickham & Grolemund, 2017)(<https://es.r4ds.hadley.nz/r-markdown.html>), incluyendo una guía de referencia sobre opciones.
 
 Referencias
 -----------
