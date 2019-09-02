@@ -4,9 +4,9 @@ bibliography: biblio.bib
 csl: apa.csl
 ---
 
-```{r, echo = FALSE}
+```{r setup, include=FALSE}
 knitr::opts_chunk$set(
-  # results='hold',
+  echo = TRUE,
   collapse=TRUE,
   fig.path = "../img/"
 )
