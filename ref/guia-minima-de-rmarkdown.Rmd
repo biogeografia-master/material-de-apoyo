@@ -31,9 +31,19 @@ cat(htmltools::includeText("ejemplo-rmd.Rmd"))
 
 Las tres partes principales son:
 
-* Encabezado YAML, donde defines 
+* Encabezado YAML, la parte inicial rodeada de ---
+* Trozos o bloques de código, rodeados por ```
+* Texto, el cual admite estilos y formatos de texto, como en Markdown, pero con más opciones, dependiendo del tipo de archivo de salida que desees generar.
 
-Cada una de estas partes las encontrarás bien explicadas en el [capítulo 27 de @Wickham2017R](https://es.r4ds.hadley.nz/r-markdown.html), incluyendo una guía de referencia para las opciones. 
+Cada una de estas partes las encontrarás bien explicadas en el [capítulo 27 de @Wickham2017R](https://es.r4ds.hadley.nz/r-markdown.html), incluyendo una lista de opciones y punteros a las "hojas de trucos (*cheatsheet*). Yo no voy a explicar RMarkdown mejor que como está en dicha fuente, así que úsenla como manual de referencia.
+
+Para crear un archivo `.Rmd` ve a `File>New File>R Markdown ...`. Un asistente te preguntará qué tipo de salida necesitas. Por ejemplo, puedes elegir documentos PDF, Word, HTML dentro de la sección `Document` del asistente, pero también podrás elegir plantillas de revistas científicas u otras salidas estándar (como archivos Markdown estilo GitHub), yendo a la sección `From Template`.
+
+<figure><img src="../img/rmd-guide-template.png" width="400"></figure>
+
+Una vez tengas un documento de RMarkdown, y crees bloques de código de R, podrás ejecutarlos poniendo el cursor dentro del bloque que deseas ejecutar y presionando el botón `Run` ![](../img/rmd-guide-run.png), localizado en la barra superior del archivo `.Rmd`; alternativamente puedes usar la combinación de teclas `Ctrl+Shift+Enter`. Puede ejecutar sólo la línea en la que se encuentre el cursor, presionando `Ctrl+Enter`. Puedes (recomiendo) configurar que los bloques de código se ejecuten en la consola, haciendo clic en la rueda dentada de la misma barra y eligiendo `Chunk Output in Console`:
+
+<figure><img src="../img/rmd-guide-chunk-output-console.png" width="200"></figure>
 
 
 ## Referencias

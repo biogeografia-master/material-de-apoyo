@@ -62,10 +62,22 @@ Así comienza y continúa un archivo Rmd que, como verás, es texto plano:
 
 Las tres partes principales son:
 
--   Encabezado, donde defines
+-   Encabezado YAML, la parte inicial rodeada de ---
+-   Trozos o bloques de código, rodeados por \`\`\`
+-   Texto, el cual admite estilos y formatos de texto, como en Markdown, pero con más opciones, dependiendo del tipo de archivo de salida que desees generar.
 
-Cada uno de las partes las encontrarás bien explicadas en el (capítulo 27 de Wickham & Grolemund, 2017)(<https://es.r4ds.hadley.nz/r-markdown.html>), incluyendo una guía de referencia sobre opciones.
+Cada una de estas partes las encontrarás bien explicadas en el (capítulo 27 de Wickham & Grolemund, 2017)(<https://es.r4ds.hadley.nz/r-markdown.html>), incluyendo una guía de referencia para las opciones.
 
+Para crear un archivo `.Rmd` ve a `File>New File>R Markdown ...`. Un asistente te preguntará qué tipo de salida necesitas. Por ejemplo, puedes elegir documentos PDF, Word, HTML en la sección `Document` del asistente, pero también podrías elegir plantillas de revistas científicas u otras salidas estandarizada (como archivos Markdown estilo GitHub) yendo a la sección `From Template`.
+
+<figure>
+<img src="../img/rmd-guide-template.png" width="400">
+</figure>
+Los bloques de código los puede ejecutar con el botón `Run` ![](../img/rmd-guide-run.png), localizado en la barra superior del archivo `.Rmd`. Puedes (recomiendo) configurar que los bloques de código se ejecuten en la consola, haciendo clic en la rueda dentada de la misma barra y eligiendo `Chunk Output in Console`:
+
+<figure>
+<img src="../img/rmd-guide-chunk-output-console.png" width="200">
+</figure>
 Referencias
 -----------
 
