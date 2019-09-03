@@ -32,7 +32,7 @@ cat(htmltools::includeText("ejemplo-rmd.Rmd"))
 Las tres partes principales son:
 
 * Encabezado YAML, la parte inicial rodeada de `---`
-<!-- * Trozos o bloques de código, rodeados por `    ```    ` -->
+* Trozos o bloques de código, rodeados por `    ```    `
 * Texto, el cual admite estilos y formatos de texto, como en Markdown, pero con más opciones, dependiendo del tipo de archivo de salida que desees generar. Dentro del texto también podrás encontrar comentarios, los cuales verás rodeados por estos símbolos `<!-- ... -->`. Los comentarios no son representados en la salida, y sólo quedan visibles en la vista bruta.
 
 Cada una de estas partes las encontrarás bien explicadas en el [capítulo 27 de @Wickham2017R](https://es.r4ds.hadley.nz/r-markdown.html), incluyendo una lista de opciones y punteros a las "hojas de trucos (*cheatsheet*). Yo no voy a explicar RMarkdown mejor que como está en dicha fuente, así que úsenla como manual de referencia.
@@ -41,7 +41,7 @@ Para crear un archivo `.Rmd` ve a `File>New File>R Markdown ...`. Un asistente t
 
 <figure><img src="../img/rmd-guide-template.png" width="400"></figure>
 
-Tan pronto tengas un documento de RMarkdown, y crees bloques de código de R, podrás ejecutarlos antes de generar el documento de salida (un proceso denominado "tejer" o *knit*, y que explico más adelante). De esta manera, vas probando que tu código funciona adecuadamente. Para ello, coloca el cursor dentro del bloque de código que deseas ejecutar.  y presiona el botón `Run` ![](../img/rmd-guide-run.png), localizado en la barra superior del archivo `.Rmd`; alternativamente puedes usar la combinación de teclas `Ctrl+Shift+Enter`. Puedes ejecutar sólo una línea del bloque, colocando el cursor en la línea que te interesa y presionando `Ctrl+Enter`. Puedes (debes) configurar el `.Rmd` para que los bloques de código se ejecuten en la consola, haciendo clic en la rueda dentada de la misma barra y eligiendo `Chunk Output in Console`:
+Tan pronto tengas un documento de RMarkdown, y crees bloques de código de R, podrás ejecutarlos antes de generar el documento de salida (un proceso denominado "tejer" o *knit*, y que explico más adelante). De esta manera, vas probando que tu código funciona adecuadamente. Para ello, coloca el cursor dentro del bloque de código que deseas ejecutar y presiona el botón, localizado en la barra superior del archivo `.Rmd`; alternativamente puedes usar la combinación de teclas `Ctrl+Shift+Enter`. Puedes ejecutar sólo una línea del bloque, colocando el cursor en la línea que te interesa y presionando `Ctrl+Enter`. Puedes (debes) configurar el `.Rmd` para que los bloques de código se ejecuten en la consola, haciendo clic en la rueda dentada de la misma barra y eligiendo `Chunk Output in Console`:
 
 <figure><img src="../img/rmd-guide-chunk-output-console.png" width="200"></figure>
 
