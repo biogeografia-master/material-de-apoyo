@@ -96,7 +96,7 @@ Puedes (debes) configurar el `.Rmd` para que los bloques de código se ejecuten 
 <img src="../img/rmd-guide-chunk-output-console.png" width="200">
 </figure>
 
-Como mencioné arriba, desde el archivo de texto RMarkdown se genera otro de salida de igual nombre pero con extensión diferente, mediante lo que se denomina "tejer" o *knit* (ver figura abajo, la parte de `pandoc` en adelante aplica para otras salidas diferentes a los `.md`).
+Como mencioné arriba, al ejecutar "tejer" o *knit*, desde el archivo de texto RMarkdown se genera otro de igual nombre pero con extensión diferente (ver figura abajo, la parte de `pandoc` en adelante aplica para otras salidas diferentes a los `.md`).
 
 <figure>
 <img src="https://es.r4ds.hadley.nz/images/RMarkdownFlow.png" width="500">
