@@ -3,14 +3,14 @@
 Guía mínima de RMarkdown
 ========================
 
-Con RMarkdown puedes hacer tu artículo, tu trabajo de la universidad, tu informe, tu presentación de diapositivas, tu página web, tu libro y mucho más. RMarkdown integra las distintas partes de tu trabajo en un único lugar: texto, figuras, referencias bibliográficas, ódigo reproducible y los resultados de dicho código.
+Con RMarkdown puedes hacer tu artículo, tu trabajo de la universidad, tu tesis, tu informe, tu presentación de diapositivas, tu página web, tu libro y mucho más. RMarkdown integra las distintas partes de tu trabajo en un único lugar: texto, figuras, referencias bibliográficas, código reproducible y los resultados de dicho código.
 
-RMarkdown es un *notebook* donde puedes hacer todo el flujo de trabajo reproducible para facilitarte la tarea de comunicar tus resultados. Profundiza con la versión en español de Wickham & Grolemund (2017), el cual es igualmente mi referente. No necesitas más justificación, porque pa'colmo, el tali lo exige, qué más justificación que esa. Vamo' al mambo.
+RMarkdown es un *notebook* donde puedes hacer todo el flujo de trabajo reproducible para facilitarte la tarea de comunicar tus resultados. Profundiza tus conocimientos sobre RMarkdown con la versión en español de Wickham & Grolemund (2017), el cual es igualmente mi referente. No necesitas más justificación, porque pa'colmo, el tali te exige usar RMarkdown, qué más justificación que esa. Vamo' al mambo.
 
 Lo básico
 ---------
 
-Así comienza y continúa un archivo Rmd que, como verás, es texto plano:
+Tal como verás en el ejemplo a continuación, un archivo `.Rmd` es texto plano:
 
     ---
     output: github_document
@@ -62,18 +62,23 @@ Así comienza y continúa un archivo Rmd que, como verás, es texto plano:
 
 Las tres partes principales son:
 
--   Encabezado YAML, la parte inicial rodeada de ---
--   Trozos o bloques de código, rodeados por \`\`\`
--   Texto, el cual admite estilos y formatos de texto, como en Markdown, pero con más opciones, dependiendo del tipo de archivo de salida que desees generar.
+-   Encabezado YAML, la parte inicial rodeada de `---`
+-   Trozos o bloques de código, rodeados por ```` ``` ````
+-   Texto, el cual admite estilos y formatos de texto, como en Markdown, pero con más opciones, dependiendo del tipo de archivo de salida que desees generar. Dentro del texto también podrás encontrar comentarios, los cuales verás rodeados por estos símbolos `<!-- ... -->`. Los comentarios no son representados en la salida, y sólo quedan visibles en la vista bruta.
 
-Cada una de estas partes las encontrarás bien explicadas en el (capítulo 27 de Wickham & Grolemund, 2017)(<https://es.r4ds.hadley.nz/r-markdown.html>), incluyendo una guía de referencia para las opciones.
+Cada una de estas partes las encontrarás bien explicadas en el (capítulo 27 de Wickham & Grolemund, 2017)(<https://es.r4ds.hadley.nz/r-markdown.html>), incluyendo una lista de opciones y punteros a las "hojas de trucos (*cheatsheet*). Yo no voy a explicar RMarkdown mejor que como está en dicha fuente, así que úsenla como manual de referencia.
 
-Para crear un archivo `.Rmd` ve a `File>New File>R Markdown ...`. Un asistente te preguntará qué tipo de salida necesitas. Por ejemplo, puedes elegir documentos PDF, Word, HTML en la sección `Document` del asistente, pero también podrías elegir plantillas de revistas científicas u otras salidas estandarizada (como archivos Markdown estilo GitHub) yendo a la sección `From Template`.
+Para crear un archivo `.Rmd` ve a `File>New File>R Markdown ...`. Un asistente te preguntará qué tipo de salida necesitas. Por ejemplo, puedes elegir documentos PDF, Word, HTML dentro de la sección `Document` del asistente, pero también podrás elegir plantillas de revistas científicas u otras salidas estándar (como archivos Markdown estilo GitHub), yendo a la sección `From Template`.
 
 <figure>
 <img src="../img/rmd-guide-template.png" width="400">
 </figure>
-Los bloques de código los puede ejecutar con el botón `Run` ![](../img/rmd-guide-run.png), localizado en la barra superior del archivo `.Rmd`. Puedes (recomiendo) configurar que los bloques de código se ejecuten en la consola, haciendo clic en la rueda dentada de la misma barra y eligiendo `Chunk Output in Console`:
+Como desde el archivo de texto RMarkdown se pueden generar diferentes salidas...
+
+<figure>
+<img src="https://es.r4ds.hadley.nz/images/RMarkdownFlow.png" width="400">
+</figure>
+Tan pronto tengas un documento de RMarkdown, y crees bloques de código de R, podrás ejecutarlos antes de generar el documento de salida (un proceso denominado "tejer" o *knit*, y que explico más adelante). De esta manera, vas probando que tu código funciona adecuadamente. Para ello, coloca el cursor dentro del bloque de código que deseas ejecutar. y presiona el botón `Run` ![](../img/rmd-guide-run.png), localizado en la barra superior del archivo `.Rmd`; alternativamente puedes usar la combinación de teclas `Ctrl+Shift+Enter`. Puedes ejecutar sólo una línea del bloque, colocando el cursor en la línea que te interesa y presionando `Ctrl+Enter`. Puedes (debes) configurar el `.Rmd` para que los bloques de código se ejecuten en la consola, haciendo clic en la rueda dentada de la misma barra y eligiendo `Chunk Output in Console`:
 
 <figure>
 <img src="../img/rmd-guide-chunk-output-console.png" width="200">
