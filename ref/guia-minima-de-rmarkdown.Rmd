@@ -39,7 +39,9 @@ Cada una de estas partes las encontrarás bien explicadas en el [capítulo 27 de
 
 Para crear un archivo `.Rmd` ve a `File>New File>R Markdown ...`. Un asistente te preguntará qué tipo de salida necesitas. Por ejemplo, puedes elegir documentos PDF, Word, HTML dentro de la sección `Document` del asistente, pero también podrás elegir plantillas de revistas científicas u otras salidas estándar (como archivos Markdown estilo GitHub), yendo a la sección `From Template`.
 
+
 <figure><img src="../img/rmd-guide-template.png" width="400"></figure>
+
 
 Cuando tengas un documento de RMarkdown, y crees bloques de código de R, podrás ejecutarlos antes de generar el documento de salida (un proceso denominado "tejer" o *knit*, y que explico más adelante). De esta manera, podrás probar que tu código funciona adecuadamente. Para ello, coloca el cursor dentro del bloque de código que deseas ejecutar y presiona el botón `Run` ![](../img/rmd-guide-run.png), localizado en la barra superior del archivo `.Rmd`; alternativamente puedes usar la combinación de teclas `Ctrl+Shift+Enter`. Puedes ejecutar sólo una línea del bloque, colocando el cursor en la línea que te interesa y presionando `Ctrl+Enter`. Puedes (debes) configurar el `.Rmd` para que los bloques de código se ejecuten en la consola, haciendo clic en la rueda dentada de la misma barra y eligiendo `Chunk Output in Console`:
 
