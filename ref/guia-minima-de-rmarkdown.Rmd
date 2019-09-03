@@ -47,6 +47,7 @@ Cuando tengas un documento de RMarkdown, y crees bloques de código de R, podrá
 
 <figure><img src="../img/rmd-guide-chunk-output-console.png" width="200"></figure>\
 
+
 Como mencioné arriba, desde el archivo de texto RMarkdown se pueden generar diferentes salidas, pero en este curso lo habitual serán Markdown de GitHub (enbezado con `output: github_document`). Pues bien, luego de presionar el botón "tejer", el paquete `knitr` tomará el archivo `.Rmd` y lo convertirá en la salida correspondiente, que en nuestro caso es un documento `.md` (ver figura abajo). Ambos deben "empujarse" (*push*) al repo de GitHub, porque si sólo subes `.Rmd` GitHub no lo representará ("renderizará") en HTML; el `.md` sí lo representará apropiadamente por lo que necesitarás subirlo conjuntamente. Toma nota de este "detallito": si haces cambios en el `.Rmd`, y lo guardas pero no presionas *knit*, el `.md` no se actualizará. Cuando empujes tus archivos hacia el repo, el `.md` no te aparecerá en el *commit* (sólo el `.Rmd`) y, por lo tanto, no se sincronizará nada nuevo del `.md` local con el `.md` remoto. El resultado es que dirás: "Pero si yo lo actualicé ya, y en el repo aparece el viejo".
 
 <figure><img src="https://es.r4ds.hadley.nz/images/RMarkdownFlow.png" width="500"></figure>
