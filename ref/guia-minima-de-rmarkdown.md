@@ -79,7 +79,6 @@ Cuando tengas un documento de RMarkdown, y crees bloques de código de R, podrá
 <figure>
 <img src="../img/rmd-guide-chunk-output-console.png" width="200">
 </figure>
-
 Como desde el archivo de texto RMarkdown se pueden generar diferentes salidas...
 
 <figure>
