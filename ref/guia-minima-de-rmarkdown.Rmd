@@ -19,11 +19,11 @@ knitr::opts_chunk$set(
 
 Con RMarkdown puedes hacer tu artículo, tu trabajo de la universidad, tu tesis, tu informe, tu presentación de diapositivas, tu página web, tu libro y mucho más. RMarkdown integra las distintas partes de tu trabajo en un único lugar: texto, figuras, referencias bibliográficas, código reproducible y los resultados de dicho código.
 
-RMarkdown es un *notebook* donde puedes hacer todo el flujo de trabajo reproducible para facilitarte la tarea de comunicar tus resultados. Profundiza tus conocimientos sobre RMarkdown con la versión en español de @Wickham2017R, el cual es igualmente mi referente. No necesitas más justificación, porque pa'colmo, el tali te exige usar RMarkdown, qué más justificación que esa. Vamo' al mambo.
+RMarkdown es un *notebook* donde puedes hacer todo el flujo de trabajo reproducible para facilitarte la tarea de comunicar tus resultados. Profundiza tus conocimientos sobre RMarkdown con la [versión en español](https://es.r4ds.hadley.nz/r-markdown.html) de @Wickham2017R, el cual es igualmente mi referente para este curso. No necesitas más justificación porque, pa'colmo, el tali te exige usar RMarkdown; qué más justificación que esa. Vamo' al mambo.
 
 ## Lo básico
 
-Tal como verás en el ejemplo a continuación, un archivo `.Rmd` es texto plano:
+A continuación verás un extracto de archivo `.Rmd`. Notarás que es simplemente texto plano:
 
 ```{r echo = FALSE, comment = ""}
 cat(htmltools::includeText("ejemplo-rmd.Rmd"))
@@ -33,27 +33,48 @@ Las tres partes principales son:
 
 * Encabezado YAML, la parte inicial rodeada de `---`
 * Trozos o bloques de código, rodeados por `    ```    `
-* Texto, el cual admite estilos y formatos de texto, como en Markdown pero con más opciones, dependiendo del tipo de archivo de salida que desees generar. Dentro del texto también podrás encontrar comentarios, los cuales verás rodeados por estos símbolos `<!-- ... -->`. Los comentarios no son representados en la salida, y sólo quedan visibles en la vista bruta.
+* Texto, el cual admite estilos y formatos de texto, como en Markdown pero con más opciones, dependiendo del tipo de archivo de salida que desees generar. Dentro del texto también podrás encontrar comentarios, los cuales verás rodeados por estos símbolos `<!-- ... -->`. Los comentarios no son representados ("renderizarán") en la salida, y sólo quedan visibles en la vista de texto bruto.
 
-Cada una de estas partes las encontrarás bien explicadas en el [capítulo 27 de @Wickham2017R](https://es.r4ds.hadley.nz/r-markdown.html), incluyendo una lista de opciones y punteros a las "hojas de trucos (*cheatsheet*). Yo no voy a explicar RMarkdown mejor que como está en dicha fuente, así que úsenla como manual de referencia.
+Cada una de estas partes las encontrarás bien explicadas en el [capítulo 27 de @Wickham2017R](https://es.r4ds.hadley.nz/r-markdown.html), incluyendo una lista de opciones y punteros a las "hojas de trucos" (*cheatsheet*). No voy a explicar RMarkdown mejor que como está en dicha fuente, así que úsala como manual de referencia.
 
-Para crear un archivo `.Rmd` ve a `File>New File>R Markdown ...`. Un asistente te preguntará qué tipo de salida necesitas. Por ejemplo, puedes elegir documentos PDF, Word, HTML dentro de la sección `Document` del asistente, pero también podrás elegir plantillas de revistas científicas u otras salidas estándar (como archivos Markdown estilo GitHub), yendo a la sección `From Template`.
+Para crear un archivo `.Rmd` ve a `File>New File>R Markdown ...`. Un asistente te preguntará qué tipo de salida necesitas. Por ejemplo, puedes elegir documentos PDF, Word, HTML dentro de la sección `Document` del asistente.
+
+
+<figure><img src="../img/rmd-guide-document.png" width="400"></figure>\
+
+
+También podrás elegir plantillas de revistas científicas (debes tener instalado el paquete `rticles`) u otras salidas estándar (como archivos Markdown estilo GitHub), yendo a la sección `From Template`.
 
 
 <figure><img src="../img/rmd-guide-template.png" width="400"></figure>\
 
 
-Cuando tengas un documento de RMarkdown, y crees bloques de código de R, podrás ejecutarlos antes de generar el documento de salida (un proceso denominado "tejer" o *knit*, y que explico más adelante). De esta manera, podrás probar que tu código funciona adecuadamente. Para ello, coloca el cursor dentro del bloque de código que deseas ejecutar y presiona el botón `Run` ![](../img/rmd-guide-run.png), localizado en la barra superior del archivo `.Rmd`; alternativamente puedes usar la combinación de teclas `Ctrl+Shift+Enter`. Puedes ejecutar sólo una línea del bloque, colocando el cursor en la línea que te interesa y presionando `Ctrl+Enter`. Puedes (debes) configurar el `.Rmd` para que los bloques de código se ejecuten en la consola, haciendo clic en la rueda dentada de la misma barra y eligiendo `Chunk Output in Console`:
+Los bloques de código se insertan de la siguiente manera. Coloca el cursor en el lugar que desees iniciar tu código. Presiona el botón verde *Insert* de la barra de herramientas del documento; te aparecerá un menú desde el cual podrás elegir el lenguaje de programación del bloque. Normalmente elegirás R.
+
+
+<figure><img src="../img/rmd-guide-insert.png" width="100"></figure>\
+
+
+Como ruta alterna, en lugar del menú, puedes presionar la combinación de teclas `Alt+Ctrl+I` y te insertará directamente el bloque en el lugar donde se encuentre el cursor.
+
+Antes generar tu documento de salida (un proceso denominado "tejer" o *knit*, y que explico más adelante), a modo de verificación y para garantizar reproducibilidad, podrás ejecutar los bloques de código de R de tu documento `.Rmd`. De esta manera, podrás probar paulatinamente que tu código funciona adecuadamente. Para ello, coloca el cursor dentro del bloque de código que deseas ejecutar y presiona el botón `Run` ![](../img/rmd-guide-run.png), localizado en la barra superior del archivo `.Rmd`; alternativamente puedes usar la combinación de teclas `Ctrl+Shift+Enter`. Puedes ejecutar sólo una línea del bloque, colocando el cursor en la línea que te interesa y presionando `Ctrl+Enter`.
+
+Puedes (debes) configurar el `.Rmd` para que los bloques de código se ejecuten en la consola, haciendo clic en la rueda dentada de la misma barra y eligiendo `Chunk Output in Console`:
 
 <figure><img src="../img/rmd-guide-chunk-output-console.png" width="200"></figure>\
 
 
-Como mencioné arriba, desde el archivo de texto RMarkdown se pueden generar diferentes salidas, pero en este curso lo habitual será Markdown de GitHub (enbezado con `output: github_document`). Visto esto, toma nota de este detalle: luego de presionar el botón "tejer", el paquete `knitr` usará el archivo `.Rmd` y lo convertirá en la salida correspondiente, que en nuestro caso es un documento `.md` (ver figura abajo, la parte de `pandoc` en adelante aplica para otras salidas diferentes a los `.md`). Ambos archivos, el `.Rmd` y el `.md`, deben "empujarse" (*push*) al repo de GitHub, porque si sólo subes `.Rmd` GitHub no lo representará ("renderizará") en HTML; el `.md` sí lo representará apropiadamente, y es por esta razón que necesitarás subirlo conjuntamente.
+Como mencioné arriba, desde el archivo de texto RMarkdown se genera un archivo de salida mediante lo que se denomina "tejer" (*knit*). En este curso lo habitual será general salidas Markdown de GitHub, razón por la que verás en el encabezado de este y otros `.Rmd` del curso la línea `output: github_document`. Para tejer el documento, presiona botón `knit`; alternativamente, usa la combinación de teclas `Ctrl+Shift+K`, el paquete `knitr` usará el archivo `.Rmd` y lo convertirá en la salida correspondiente, que en nuestro caso es un documento `.md` (ver figura abajo, la parte de `pandoc` en adelante aplica para otras salidas diferentes a los `.md`).
 
-<figure><img src="https://es.r4ds.hadley.nz/images/RMarkdownFlow.png" width="500"></figure>
-Fuente: @Wickham2017R
-&nbsp;
-Toma nota de este "detallito": si haces cambios en el `.Rmd`, y lo guardas pero no presionas *knit*, el `.md` no se actualizará. Cuando empujes tus archivos hacia el repo, el `.md` no te aparecerá en el *commit* (sólo el `.Rmd`) y, por lo tanto, no se sincronizará nada nuevo del `.md` local con el `.md` remoto. El resultado es que tendrás un `.md` sin actualizarse y te escucharás diciendo: "Pero si ya lo actualicé, pero en el repo aparece el viejo".
+Es importante que tomes nota de dos detalles importantes.
+
+1. Ambos archivos, el `.Rmd` y el `.md`, deben "empujarse" (*push*) al repo de GitHub, porque si sólo subes `.Rmd` GitHub no lo representará ("renderizará") en HTML; el `.md` sí lo representará apropiadamente, y es por esta razón que necesitarás subirlo conjuntamente.
+
+    <figure><img src="https://es.r4ds.hadley.nz/images/RMarkdownFlow.png" width="500"></figure>
+    Fuente: @Wickham2017R
+    &nbsp;
+
+2. si haces cambios en el `.Rmd`, y lo guardas pero no presionas *knit*, el `.md` no se actualizará. Cuando empujes tus archivos hacia el repo, el `.md` no te aparecerá en el *commit* (sólo el `.Rmd`) y, por lo tanto, no se sincronizará nada nuevo del `.md` local con el `.md` remoto. El resultado es que tendrás un `.md` sin actualizarse y te escucharás diciendo: "Pero si ya lo actualicé, pero en el repo aparece el viejo".
 
 
 ## Servicio público de radio guarachita:
