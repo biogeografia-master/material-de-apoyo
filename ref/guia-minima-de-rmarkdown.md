@@ -96,7 +96,7 @@ Puedes (debes) configurar el `.Rmd` para que los bloques de código se ejecuten 
 <img src="../img/rmd-guide-chunk-output-console.png" width="200">
 </figure>
 
-Como mencioné arriba, desde el archivo de texto RMarkdown se genera un archivo de salida mediante lo que se denomina "tejer" (*knit*). En este curso lo habitual será general salidas Markdown de GitHub, razón por la que verás en el encabezado de este y otros `.Rmd` del curso la línea `output: github_document`. Para tejer el documento, presiona botón `knit`; alternativamente, usa la combinación de teclas `Ctrl+Shift+K`, el paquete `knitr` usará el archivo `.Rmd` y lo convertirá en la salida correspondiente, que en nuestro caso es un documento `.md` (ver figura abajo, la parte de `pandoc` en adelante aplica para otras salidas diferentes a los `.md`).
+Como mencioné arriba, desde el archivo de texto RMarkdown se genera un archivo de salida mediante lo que se denomina "tejer" (*knit*). En este curso lo habitual será general salidas Markdown de GitHub, razón por la que verás en el encabezado de este y otros `.Rmd` del curso la línea `output: github_document`. Para tejer el documento, presiona botón `knit` ![](../img/rmd-guide-knit.png); alternativamente, usa la combinación de teclas `Ctrl+Shift+K`, el paquete `knitr` usará el archivo `.Rmd` y lo convertirá en la salida correspondiente, que en nuestro caso es un documento `.md` (ver figura abajo, la parte de `pandoc` en adelante aplica para otras salidas diferentes a los `.md`).
 
 Es importante que tomes nota de dos detalles importantes.
 
