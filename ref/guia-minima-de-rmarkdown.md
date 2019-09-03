@@ -96,7 +96,7 @@ Puedes (debes) configurar el `.Rmd` para que los bloques de código se ejecuten 
 <img src="../img/rmd-guide-chunk-output-console.png" width="200">
 </figure>
 
-Como mencioné arriba, desde el archivo de texto RMarkdown se genera un archivo de salida mediante lo que se denomina "tejer" (*knit*). En este curso lo habitual será general salidas Markdown de GitHub, razón por la que verás en el encabezado de este y otros `.Rmd` del curso la línea `output: github_document`. Para tejer el documento, presiona botón `knit` ![](../img/rmd-guide-knit.png); alternativamente, usa la combinación de teclas `Ctrl+Shift+K`, el paquete `knitr` usará el archivo `.Rmd` y lo convertirá en la salida correspondiente, que en nuestro caso es un documento `.md` (ver figura abajo, la parte de `pandoc` en adelante aplica para otras salidas diferentes a los `.md`).
+Como mencioné arriba, desde el archivo de texto RMarkdown se genera un archivo de salida mediante lo que se denomina "tejer" o *knit* (ver figura abajo, la parte de `pandoc` en adelante aplica para otras salidas diferentes a los `.md`). En este curso lo habitual será generar salidas Markdown de GitHub, razón por la que verás en el encabezado de este y otros `.Rmd` del curso la línea `output: github_document`. Para tejer el documento, presiona el botón `knit` ![](../img/rmd-guide-knit.png); alternativamente, usa la combinación de teclas `Ctrl+Shift+K`. Esto activará el tejido por parte del paquete `knitr` usando como fuente tu archivo `.Rmd`. El tiempo que se toma "tejiendo" dependerá mucho de la longitud del documento y del código que deba ejecutar. Debes estar pendientes de posibles errores, que normalmente estarán relacionados con la ejecución de tu código (objetos no declarados, paquetes no cargados, etc.). En las asignaciones que te pondré normalmente daré pistas, pero tendrás que resolver los problemas que te surjan; cuando no puedas salir a camino, crea un *issue* **incluyendo código reproducible y mensaje de error**. Una vez `knitr` haya terminado el tejido, lo convertirá en la salida correspondiente, que en nuestro caso es un documento `.md`.
 
 Es importante que tomes nota de dos detalles importantes.
 
@@ -111,6 +111,8 @@ Es importante que tomes nota de dos detalles importantes.
 
 Servicio público de radio guarachita:
 -------------------------------------
+
+-   Si al intentar hacer *knit* el proceso se detiene, no podrás generar el archivo de salida `.md`. Debes observar los mensajes de error y localizar el fallo, que normalmente estará relacionado con código. Si te trancas, *issue* **incluyendo código reproducible y mensaje de error**.
 
 -   Antes de hacer *commit*&gt;*push* al repo, asegúrate de haber guardado y tejido tu `.Rmd`, para que se genere tu documento de salida. Así, cuando hagas *commit*&gt;*push*, elige los dos archivos para que GitHub renderice el `.md` actualizado como HTML.
 
