@@ -48,14 +48,18 @@ Cuando tengas un documento de RMarkdown, y crees bloques de código de R, podrá
 <figure><img src="../img/rmd-guide-chunk-output-console.png" width="200"></figure>\
 
 
-Como mencioné arriba, desde el archivo de texto RMarkdown se pueden generar diferentes salidas, pero en este curso lo habitual serán Markdown de GitHub (enbezado con `output: github_document`). Pues bien, luego de presionar el botón "tejer", el paquete `knitr` tomará el archivo `.Rmd` y lo convertirá en la salida correspondiente, que en nuestro caso es un documento `.md` (ver figura abajo). Ambos deben "empujarse" (*push*) al repo de GitHub, porque si sólo subes `.Rmd` GitHub no lo representará ("renderizará") en HTML; el `.md` sí lo representará apropiadamente por lo que necesitarás subirlo conjuntamente. Toma nota de este "detallito": si haces cambios en el `.Rmd`, y lo guardas pero no presionas *knit*, el `.md` no se actualizará. Cuando empujes tus archivos hacia el repo, el `.md` no te aparecerá en el *commit* (sólo el `.Rmd`) y, por lo tanto, no se sincronizará nada nuevo del `.md` local con el `.md` remoto. El resultado es que dirás: "Pero si yo lo actualicé ya, y en el repo aparece el viejo".
+Como mencioné arriba, desde el archivo de texto RMarkdown se pueden generar diferentes salidas, pero en este curso lo habitual será Markdown de GitHub (enbezado con `output: github_document`). Visto esto, toma nota de este detalle: luego de presionar el botón "tejer", el paquete `knitr` usará el archivo `.Rmd` y lo convertirá en la salida correspondiente, que en nuestro caso es un documento `.md` (ver figura abajo, la parte de `pandoc` en adelante aplica para otras salidas diferentes a los `.md`). Ambos archivos, el `.Rmd` y el `.md`, deben "empujarse" (*push*) al repo de GitHub, porque si sólo subes `.Rmd` GitHub no lo representará ("renderizará") en HTML; el `.md` sí lo representará apropiadamente, y es por esta razón que necesitarás subirlo conjuntamente.
 
 <figure><img src="https://es.r4ds.hadley.nz/images/RMarkdownFlow.png" width="500"></figure>
 Fuente: @Wickham2017R
 
+
+Toma nota de este "detallito": si haces cambios en el `.Rmd`, y lo guardas pero no presionas *knit*, el `.md` no se actualizará. Cuando empujes tus archivos hacia el repo, el `.md` no te aparecerá en el *commit* (sólo el `.Rmd`) y, por lo tanto, no se sincronizará nada nuevo del `.md` local con el `.md` remoto. El resultado es que tendrás un `.md` sin actualizarse y te escucharás diciendo: "Pero si ya lo actualicé, pero en el repo aparece el viejo".
+
+
 ## Servicio público de radio guarachita:
 
-* Antes de hacer *commit*>*push* al repo, asegúrate de haber guardado y tejido tu `.Rmd`, para que se genere tu documento de salida. Así, sincronizarás no sólo tu `.Rmd`, sino también tu `.md` que es el que GitHub renderiza como HTML.
+* Antes de hacer *commit*>*push* al repo, asegúrate de haber guardado y tejido tu `.Rmd`, para que se genere tu documento de salida. Así, cuando hagas *commit*>*push*, elige los dos archivos para que GitHub renderice el `.md` actualizado como HTML.
 
 * Si escribes en un documento RMarkdown con miras a producir un Markdown de GitHub (enbezado con `output: github_document`), **NO** edites el `.md`, porque si luego de hacerlo (sea accidental o intencionalmente) vuelves al `.Rmd` y presionas "tejer", los cambios que hayas hecho en el primero se perderán.
 
