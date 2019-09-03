@@ -62,8 +62,7 @@ Tal como verás en el ejemplo a continuación, un archivo `.Rmd` es texto plano:
 
 Las tres partes principales son:
 
--   Encabezado YAML, la parte inicial rodeada de `---`
--   Trozos o bloques de código, rodeados por ```` ``` ````
+-   Encabezado YAML, la parte inicial rodeada de `---` <!-- * Trozos o bloques de código, rodeados por `    ```    ` -->
 -   Texto, el cual admite estilos y formatos de texto, como en Markdown, pero con más opciones, dependiendo del tipo de archivo de salida que desees generar. Dentro del texto también podrás encontrar comentarios, los cuales verás rodeados por estos símbolos `<!-- ... -->`. Los comentarios no son representados en la salida, y sólo quedan visibles en la vista bruta.
 
 Cada una de estas partes las encontrarás bien explicadas en el (capítulo 27 de Wickham & Grolemund, 2017)(<https://es.r4ds.hadley.nz/r-markdown.html>), incluyendo una lista de opciones y punteros a las "hojas de trucos (*cheatsheet*). Yo no voy a explicar RMarkdown mejor que como está en dicha fuente, así que úsenla como manual de referencia.
