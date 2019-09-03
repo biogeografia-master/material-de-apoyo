@@ -53,7 +53,7 @@ Como mencioné arriba, desde el archivo de texto RMarkdown se pueden generar dif
 <figure><img src="https://es.r4ds.hadley.nz/images/RMarkdownFlow.png" width="500"></figure>
 Fuente: @Wickham2017R
 
-<br>
+&nbsp;
 
 Toma nota de este "detallito": si haces cambios en el `.Rmd`, y lo guardas pero no presionas *knit*, el `.md` no se actualizará. Cuando empujes tus archivos hacia el repo, el `.md` no te aparecerá en el *commit* (sólo el `.Rmd`) y, por lo tanto, no se sincronizará nada nuevo del `.md` local con el `.md` remoto. El resultado es que tendrás un `.md` sin actualizarse y te escucharás diciendo: "Pero si ya lo actualicé, pero en el repo aparece el viejo".
 
