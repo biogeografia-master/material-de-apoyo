@@ -101,7 +101,8 @@ Como mencioné arriba, al ejecutar "tejer" o *knit*, desde el archivo de texto R
 <figure>
 <img src="https://es.r4ds.hadley.nz/images/RMarkdownFlow.png" width="500">
 </figure>
-Fuente: Wickham & Grolemund (2017)  
+Fuente: Wickham & Grolemund (2017)
+ 
 
 En este curso lo habitual será generar salidas Markdown de GitHub, razón por la que verás en el encabezado de este y otros `.Rmd` del curso la línea `output: github_document`. Para tejer el documento, presiona el botón `knit` ![](../img/rmd-guide-knit.png); alternativamente, usa la combinación de teclas `Ctrl+Shift+K`. Esto activará la acción de "tejer" por parte del paquete `knitr` usando como fuente tu archivo `.Rmd`. El tiempo que se tome `knitr` "tejiendo" dependerá mucho de la longitud del documento y del código que tenga que ejecutar.
 
