@@ -96,16 +96,20 @@ Puedes (debes) configurar el `.Rmd` para que los bloques de código se ejecuten 
 <img src="../img/rmd-guide-chunk-output-console.png" width="200">
 </figure>
 
-Como mencioné arriba, desde el archivo de texto RMarkdown se genera un archivo de salida mediante lo que se denomina "tejer" o *knit* (ver figura abajo, la parte de `pandoc` en adelante aplica para otras salidas diferentes a los `.md`). En este curso lo habitual será generar salidas Markdown de GitHub, razón por la que verás en el encabezado de este y otros `.Rmd` del curso la línea `output: github_document`. Para tejer el documento, presiona el botón `knit` ![](../img/rmd-guide-knit.png); alternativamente, usa la combinación de teclas `Ctrl+Shift+K`. Esto activará el tejido por parte del paquete `knitr` usando como fuente tu archivo `.Rmd`. El tiempo que se toma "tejiendo" dependerá mucho de la longitud del documento y del código que deba ejecutar. Debes estar pendientes de posibles errores, que normalmente estarán relacionados con la ejecución de tu código (objetos no declarados, paquetes no cargados, etc.). En las asignaciones que te pondré normalmente daré pistas, pero tendrás que resolver los problemas que te surjan; cuando no puedas salir a camino, crea un *issue* **incluyendo código reproducible y mensaje de error**. Una vez `knitr` haya terminado el tejido, lo convertirá en la salida correspondiente, que en nuestro caso es un documento `.md`.
+Como mencioné arriba, desde el archivo de texto RMarkdown se genera otro de salida de igual nombre pero con extensión diferente, mediante lo que se denomina "tejer" o *knit* (ver figura abajo, la parte de `pandoc` en adelante aplica para otras salidas diferentes a los `.md`).
 
-Es importante que tomes nota de dos detalles importantes.
+<figure>
+<img src="https://es.r4ds.hadley.nz/images/RMarkdownFlow.png" width="500">
+</figure>
+Fuente: Wickham & Grolemund (2017)  
 
-1.  Ambos archivos, el `.Rmd` y el `.md`, deben "empujarse" (*push*) al repo de GitHub, porque si sólo subes `.Rmd` GitHub no lo representará ("renderizará") en HTML; el `.md` sí lo representará apropiadamente, y es por esta razón que necesitarás subirlo conjuntamente.
+En este curso lo habitual será generar salidas Markdown de GitHub, razón por la que verás en el encabezado de este y otros `.Rmd` del curso la línea `output: github_document`. Para tejer el documento, presiona el botón `knit` ![](../img/rmd-guide-knit.png); alternativamente, usa la combinación de teclas `Ctrl+Shift+K`. Esto activará la acción de "tejer" por parte del paquete `knitr` usando como fuente tu archivo `.Rmd`. El tiempo que se tome `knitr` "tejiendo" dependerá mucho de la longitud del documento y del código que tenga que ejecutar.
 
-    <figure>
-    <img src="https://es.r4ds.hadley.nz/images/RMarkdownFlow.png" width="500">
-    </figure>
-    Fuente: Wickham & Grolemund (2017)  
+Debes estar pendiente a los errores (¡vas a tener errores, es inevitable!), que normalmente surgirán tras la ejecución de código mal construido (objetos no declarados, paquetes no cargados, etc.). Por esta razón es importante que, paulatinamente, vayas probando tu código, ejecutándolo en la consola como expliqué arriba. En las asignaciones normalmente daré pistas sobre qué código hay que introducir, pero van surgir problemas y tendrás que resolverlos. Cuando no puedas salir a camino, crea un *issue* **incluyendo código reproducible y mensaje de error**. Una vez `knitr` haya terminado el tejido, creará la salida correspondiente, que en nuestro caso es un documento `.md`.
+
+Toma nota de dos detalles importantes.
+
+1.  Ambos archivos, el `.Rmd` y el `.md`, deberás hacerles *commit*&gt;*push* al repo de GitHub, porque si sólo subes el `.Rmd`, GitHub no lo representará ("renderizará") en HTML; el `.md` sí lo representará apropiadamente, y es por esta razón que necesitarás subirlo conjuntamente.
 
 2.  si haces cambios en el `.Rmd`, y lo guardas pero no presionas *knit*, el `.md` no se actualizará. Cuando empujes tus archivos hacia el repo, el `.md` no te aparecerá en el *commit* (sólo el `.Rmd`) y, por lo tanto, no se sincronizará nada nuevo del `.md` local con el `.md` remoto. El resultado es que tendrás un `.md` sin actualizarse y te escucharás diciendo: "Pero si ya lo actualicé, pero en el repo aparece el viejo".
 
