@@ -66,7 +66,7 @@ Las tres partes principales son:
 -   Trozos o bloques de código, rodeados por ```` ``` ````
 -   Texto, el cual admite estilos y formatos de texto, como en Markdown pero con más opciones, dependiendo del tipo de archivo de salida que desees generar. Dentro del texto también podrás encontrar comentarios, los cuales verás rodeados por estos símbolos `<!-- ... -->`. Los comentarios no son representados ("renderizarán") en la salida, y sólo quedan visibles en la vista de texto bruto.
 
-Cada una de estas partes las encontrarás bien explicadas en el (capítulo 27 de Wickham & Grolemund, 2017)(<https://es.r4ds.hadley.nz/r-markdown.html>), incluyendo una lista de opciones y punteros a las "hojas de trucos" (*cheatsheet*). No voy a explicar RMarkdown mejor que como está en dicha fuente, así que úsala como manual de referencia.
+Cada una de estas partes las encontrarás bien explicadas en el [capítulo 27 del libro R para Ciencia de Datos](https://es.r4ds.hadley.nz/r-markdown.html) (Wickham & Grolemund, 2017), incluyendo una lista de opciones y punteros a las "hojas de trucos" (*cheatsheet*). No voy a explicar RMarkdown mejor que como está en dicha fuente, así que úsala como manual de referencia.
 
 Crear un archivo `.Rmd`
 -----------------------
@@ -99,7 +99,7 @@ Teje (*knit*) tu documento
 
 ### Antes de tejer
 
-Antes generar tu documento de salida (un proceso denominado "tejer" o *knit*, y que explico más adelante), a modo de verificación y para garantizar reproducibilidad, podrás ejecutar los bloques de código de R de tu documento `.Rmd`. De esta manera, podrás probar paulatinamente que tu código funciona adecuadamente. Para ello, coloca el cursor dentro del bloque de código que deseas ejecutar y presiona el botón `Run` ![](../img/rmd-guide-run.png), localizado en la barra superior del archivo `.Rmd`; alternativamente puedes usar la combinación de teclas `Ctrl+Shift+Enter`. Puedes ejecutar sólo una línea del bloque, colocando el cursor en la línea que te interesa y presionando `Ctrl+Enter`.
+Antes de generar tu documento de salida (un proceso denominado "tejer" o *knit*, y que explico más adelante), a modo de verificación y para garantizar reproducibilidad, podrás ejecutar los bloques de código de R de tu documento `.Rmd`. De esta manera, podrás probar paulatinamente que tu código funciona adecuadamente. Para ello, coloca el cursor dentro del bloque de código que deseas ejecutar y presiona el botón `Run` ![](../img/rmd-guide-run.png), localizado en la barra superior del archivo `.Rmd`; alternativamente puedes usar la combinación de teclas `Ctrl+Shift+Enter`. Puedes ejecutar sólo una línea del bloque, colocando el cursor sobre ella y presionando `Ctrl+Enter`.
 
 Puedes (debes) configurar el `.Rmd` para que los bloques de código se ejecuten en la consola, haciendo clic en la rueda dentada de la misma barra y eligiendo `Chunk Output in Console`:
 
@@ -118,9 +118,9 @@ Fuente: Wickham & Grolemund (2017)
 
  
 
-En este curso lo habitual será generar salidas Markdown de GitHub, razón por la que verás en el encabezado de este y otros `.Rmd` del curso la línea `output: github_document`. Para tejer el documento, presiona el botón `knit` ![](../img/rmd-guide-knit.png); alternativamente, usa la combinación de teclas `Ctrl+Shift+K`. Esto activará la acción de "tejer" por parte del paquete `knitr` usando como fuente tu archivo `.Rmd`. El tiempo que se tome `knitr` "tejiendo" dependerá mucho de la longitud del documento y del código que tenga que ejecutar.
+En este curso lo habitual será generar salidas Markdown de GitHub, razón por la que verás en el encabezado de este y otros `.Rmd` del curso la línea `output: github_document`. Para tejer el documento, presiona el botón `knit` ![](../img/rmd-guide-knit.png); alternativamente, usa la combinación de teclas `Ctrl+Shift+K`. Esto activará la acción de "tejer" por parte del paquete `knitr` usando como fuente tu archivo `.Rmd`. El tiempo que se tome `knitr` "tejiendo" dependerá mucho de la longitud del documento y del código que tenga que ejecutar. Tan pronto `knitr` haya terminado el tejido, se creará la salida correspondiente, que en tu caso normalmente será un documento `.md`.
 
-Debes estar pendiente a los errores (¡vas a tener errores, es inevitable!), que normalmente surgirán tras la ejecución de código mal construido (objetos no declarados, paquetes no cargados, etc.). Por esta razón es importante que, paulatinamente, vayas probando tu código, ejecutándolo en la consola como expliqué arriba. En las asignaciones normalmente daré pistas sobre qué código hay que introducir, pero van surgir problemas y tendrás que resolverlos. Cuando no puedas salir a camino, crea un *issue* **incluyendo código reproducible y mensaje de error**. Una vez `knitr` haya terminado el tejido, creará la salida correspondiente, que en nuestro caso es un documento `.md`.
+Debes estar pendiente a los errores (¡vas a tener errores, es inevitable!), que normalmente surgirán tras la ejecución de código mal construido (objetos no declarados, paquetes no cargados, etc.). Por esta razón es importante que, paulatinamente, vayas ejecutando tu código en la consola como expliqué arriba. En las asignaciones normalmente daré pistas sobre qué código hay que introducir, pero van surgir problemas y tendrás que resolverlos. Cuando no puedas salir a camino, crea un *issue* **incluyendo código reproducible y mensaje de error**.
 
 Dos detalles importantes.
 -------------------------
@@ -132,7 +132,7 @@ Dos detalles importantes.
 Servicio público de radio guarachita
 ------------------------------------
 
--   Si al intentar hacer *knit* el proceso se detiene, no podrás generar el archivo de salida `.md`. Debes observar los mensajes de error y localizar el fallo, que normalmente estará relacionado con código. Si te trancas, *issue* **incluyendo código reproducible y mensaje de error**.
+-   Si al intentar hacer *knit* el proceso se detiene porque haya error en el código, no podrás generar el archivo de salida `.md`. Debes observar los mensajes de error y localizar el fallo, que normalmente estará relacionado con código. Si te trancas, *issue* **incluyendo código reproducible y mensaje de error**.
 
 -   Antes de hacer *commit*&gt;*push* al repo, asegúrate de haber guardado y tejido tu `.Rmd`, para que se genere tu documento de salida. Así, cuando hagas *commit*&gt;*push*, elige los dos archivos para que GitHub renderice el `.md` actualizado como HTML.
 
