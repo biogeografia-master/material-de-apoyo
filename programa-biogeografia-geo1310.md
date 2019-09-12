@@ -119,7 +119,7 @@ Bueno, sobre ésto tengo poco que decir, sólo que preferiría no evaluar conten
 
 ## Contenido teórico
 1. Introducción e historia de la biogeografía. Brown y Lomolino (1998) capítulos 1 y 2. Okolodkov (2010) capítulos 1 y 2.
-2. Contexto físico: la "plantilla" geográfica Smith y Smith (2007), segunda parte (capítulos 4 a 6). Brown y Lomolino (1998), capítulo 3.
+2. Contexto físico: la "plantilla" geográfica Smith y Smith (2007), segunda parte (capítulos 3 a 5). Brown y Lomolino (1998), capítulo 3.
 3. Distribución de especies. Brown y Lomolino (1998), capítulo 4.
 4. Distribución de comunidades. Brown y Lomolino (1998), capítulo 5.
 5. Los cambios en la Tierra. Brown y Lomolino (1998), capítulo 6.
