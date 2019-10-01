@@ -108,7 +108,7 @@ set.seed(98)
 doubs$env[sample(1:30, 6), ] #Sólo 6 filas mostradas, elegidas al azar
 ```
 
-`doubs$env` contiene información ambiental de los 30 sitios de colecta (filas) con las siguientes variables (columnas): `dfs`-distancia desde cabecera (en km&nbsp;x&nbsp;10), `alt`-altitud (en m), `slo`-pendiente (log(x+1), donde x es la pendiente en tantos por 1000), `flo`-caudal promedio mínimo (m<sup>3</sup>/s&nbsp;100), `pH` (&nbsp;x&nbsp;10), `har`-dureza del agua (mg/l de calcio), `pho`-fostados (mg/l&nbsp;x&nbsp;100), `nit`-nitratos, `amm`-amoníaco (mg/l&nbsp;x&nbsp;100), `oxy`-oxígeno disuelto (mg/l&nbsp;x&nbsp;100), `bdo`-demanda biológica de oxígeno (mg/l&nbsp;x&nbsp;10)
+`doubs$env` contiene información ambiental de los 30 sitios de colecta (filas) con las siguientes variables (columnas): `dfs`-distancia desde cabecera (en km&nbsp;x&nbsp;10), `alt`-altitud (en m), `slo`-pendiente (log(x+1), donde x es la pendiente en tantos por 1000), `flo`-caudal promedio mínimo (m<sup>3</sup>/s&nbsp;100), `pH` (&nbsp;x&nbsp;10), `har`-dureza del agua (mg/l de calcio), `pho`-fosfatos (mg/l&nbsp;x&nbsp;100), `nit`-nitratos, `amm`-amoníaco (mg/l&nbsp;x&nbsp;100), `oxy`-oxígeno disuelto (mg/l&nbsp;x&nbsp;100), `bdo`-demanda biológica de oxígeno (mg/l&nbsp;x&nbsp;10)
 
 La tabla `doubs$fish`, asociada a la anterior, contiene la abundancia de especies por sitio. Los valores de las celdas no son individuos; la abundancia está representada en una escala semi-cuantitativa específica por especie, que va de 0 a 5, es decir, se trata de una escala de pseudo-abundancia más propiamente. Por lo tanto, los valores no pueden entenderse como estimadores insesgados de la abundancia real o de la biomasa por sitio [@borcard2018numerical].
 
@@ -275,7 +275,7 @@ ggplot(data = doubs$env) +
 
 Lógicamente, como es de esperar, a mayor distancia de la cabecera, mayor el caudal. Destacan también dos observaciones atípicas en el extremo superior derecho del gráfico, que corresponden a dos puntos de colecta que obtuvieron valores de flujo muy altos. Volveré sobre estos valores extremos (*outliers*) maś adelante.
 
-`ggplot` crea el sistema de coordenadas a partir del objeto introducido en el argumento `data`, es decir, a partir del conjunto de datos (`ggplot` convierte este objeto a un `data.frame` si al entrar en la función aún no lo es). Por lo tanto, si ejecutaras `ggplot(data = dfs_flo)` obtendrás un gráfico vacío.
+`ggplot` crea el sistema de coordenadas a partir del objeto introducido en el argumento `data`, es decir, a partir del conjunto de datos. Por lo tanto, si ejecutaras `ggplot(data = doubs$env)` obtendrías un gráfico vacío. Tomar en cuenta que `ggplot` requiere un objeto de clase `data.frame` para el argumento `data`. Si el objeto introducido no lo es, pero es "convertible" (*coercible*) a un `data.frame`, la función lo convertirá, de lo contrario, aparecerá un mensaje de error.
 
 A partir de este punto, se pueden añadir una o más capas. En este caso, se añadió una de puntos mediante `geom_point`. Las capas usan el argumento `mapping` para definir la posición y el rol de cada variable en el gráfico. Por lo tanto, los elementos básicos son crear el sistema de coordenadas (`ggplot`), especificar los datos, crear una capa (e.g. `geom_point`) y decclarar cómo se posicionarán las variables. [Aquí](https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf) tienes una guía de referencia sobre las capas más comunes.
 
