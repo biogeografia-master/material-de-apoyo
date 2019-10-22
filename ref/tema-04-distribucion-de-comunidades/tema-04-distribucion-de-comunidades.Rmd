@@ -1,0 +1,14 @@
+---
+title: "Tema 4. Distribución de comunidades"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Introducción
+
+* **Distribución y abundancia** de una especie siempre resultan afectados por otras especies.
+
+* Debido a las interacciones entre organismos, normalmente las distribuciones de especies suelen ser **mutuamente excluyentes a escala local**, o tienden a ocurrir de forma conjunta en complejas comunidades ecológicas.
