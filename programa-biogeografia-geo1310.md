@@ -19,7 +19,7 @@ La biogeografía es la ciencia que __intenta documentar y entender los patrones 
 
 ## Resultados esperados
 
-Al finalizar la asignatura, esta afirmación debería ser cierta: aplicas y redactas métodos de ecología numérica utilizando tus propios datos, especialmente utilizas código reproducible para aplicar técnicas de diseño de estudios de campo, análisis de la biodiversidad y, quizá, algo de análisis espacial. Complementariamente, intentas aprender en cabeza ajena sobre fundamentos de biogeografía. Comprendes los principios geográficos y ecológicos de la biogeografía, así como los procesos biogeográficos y la historia de la Tierra.
+Al finalizar la asignatura, esta afirmación debería ser cierta: aplicas y redactas métodos de ecología numérica utilizando datos de terceros o propios, especialmente utilizas código reproducible para aplicar técnicas de análisis de la biodiversidad y, quizá, algo de análisis espacial. Complementariamente, intentas aprender en cabeza ajena sobre fundamentos de biogeografía. Comprendes los principios geográficos y ecológicos de la biogeografía, así como los procesos biogeográficos y la historia de la Tierra.
 
 ## Evaluación
 
