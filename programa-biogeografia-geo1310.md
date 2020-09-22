@@ -1,15 +1,17 @@
 # Universidad Autónoma de Santo Domingo (UASD) <br/>
 Programa de Biogeografía (GEO-131) <br/>
-Semestre 2019-02 <br/>
+Semestre 2020-02 <br/>
 *José Ramón Martínez Batlle*
 
 ## Básicos:
 * Profesor: José Ramón Martínez Batlle
 * Carrera: Licenciatura en Geografía (optativa para Licenciatura en Biología)
 * Correo: jmartinez19@uasd.edu.do
-* Página web: https://www.geografiafisica.org/
-* Twitter: @geografiard
-* Lugar y horario: Aula FC-203 (SIGCART), Martes de 2 a 6 pm
+* GitHub: [@geofis](https://github.com/geofis)
+* Página web: https://geografiafisica.org/
+* Twitter: [@geografiard](https://twitter.com/home)
+* Lugar y horario: [UASD virtual](https://uasdvirtual.uasd.edu.do),
+Martes de 4 a 8 pm
 
 ## URLs del contenido del curso:
 * [Programa (hipervínculo recursivo)](programa-biogeografia-geo1310.md)
@@ -22,7 +24,7 @@ La ciencia está en crisis, una crisis de reproducibilidad. Difícilmente un equ
 
 Puedes sospechar desde ya que R estará de fondo (a fin de cuentas, este tali usa mucho R), sobre todo por tratarse de una asignatura meramente ecológica. Sin embargo, son bienvenidos todos los lenguajes de programación que quieras utilizar. Si sabes python, C o cualquier otro lenguaje con el que puedas ayudarte a responder preguntas ecológicas, puedes usarlos sin inconveniente alguno. La única condición es que tienes que publicar tu código y tus fuentes. Hay una comunidad allá fuera que explica cómo atender los típicos desafíos y los mensajes de error, y yo también podré ayudar. Además, esa misma comunidad también podría interesarse por o necesitar tus aportes.
 
-La biogeografía es la ciencia que intenta documentar y entender los patrones espaciales de la diversidad biológica. Modernamente estudia todos los patrones de variación geográfica (y temporal) de la diversidad biológica de elementos naturales (desde genes hasta comunidad y ecosistema) asociados a gradientes de variables tales como el área, el aislamiento, la latitud, la profundidad o la elevación. También se le suele definir como el estudio de la distribución de organismos, tanto en el presente como en el pasado.
+La biogeografía es la ciencia que __intenta documentar y entender los patrones espaciales de la diversidad biológica__. Modernamente estudia todos los patrones de variación geográfica (y temporal) de la diversidad biológica de elementos naturales (desde genes hasta comunidad y ecosistema) asociados a gradientes de variables tales como el área, el aislamiento, la latitud, la profundidad o la elevación. También se le suele definir como el estudio de la distribución de organismos, tanto en el presente como en el pasado.
 
 ## Resultados esperados
 
@@ -30,31 +32,28 @@ Al finalizar la asignatura, esta afirmación debería ser cierta: aplicas y reda
 
 ## Evaluación
 
-| Ítem | % de la \ nota final |
-|-|-:|
-| [Manuscrito](#manuscrito) | 25% |
-| [Presentación oral](#presentación-oral) | 5% |
-| [Trabajo de campo e identificación](#trabajo-de-campo-e-identificación) | 30% |
-| [Código informático reproducible](#código-informático-reproducible) | 20% |
-| [Examen parcial 1](#examen-parcial-1) | 10%<sup>1</sup> |
-| [Examen parcial 2](#examen-parcial-2) | 10%<sup>1</sup> |
+| Ítem                                                       | % de la  nota final |
+| ---------------------------------------------------------- | ------------------: |
+| [Manuscrito (basado en datos pre-existentes)](#manuscrito) |                 50% |
+| [Presentación oral](#presentación-oral)                    |                 20% |
+| [Asignaciones](#asignaciones)                              |                 30% |
 
-<sup>1</sup> Implementaré un sistema adaptativo. Si a la fecha del examen parcial 1 (medio término), has realizado las asignaciones prácticas solicitadas (ver sección [Fechas de evaluación](#fechas-de-evaluación)), el valor de ambos exámenes será el que aparece en la tabla de referencia (10% cada uno). En caso contrario, evaluaré de la siguiente manera: examen parcial 1 50%, examen parcial 50%.
+Sí sí, lo que viste, no hay examen.
 
 Brevemente, cada ítem a evaluar consistirá en lo siguiente (más detalles por medio de asignaciones a lo largo del curso):
 
 ### Manuscrito
 
-Tratará sobre hormigas del campus de la UASD, se elaborará siguiendo las siguientes fases:
+Tratará sobre un grupo de organismos, se elaborará siguiendo las fases enumeradas a continuación:
 1. Formulación del problema/pregunta(s) de investigación, siendo preceptiva la sencillez de diseño. Las preguntas de investigación a responder las diseñarás tú.
-2. Revisión bibliográfica. Busca fuentes en línea, pero evita abrumarte con la enorme disponibilidad de publicaciones científicas sobre biogeografía y ecología. Prefiere las publicaciones disponibles en acceso libre.
+2. Revisión bibliográfica. Busca fuentes en línea, pero evita abrumarte con la enorme disponibilidad de publicaciones científicas sobre biogeografía y ecología. Prefiere las publicaciones disponibles en acceso libre, y no olvides el [Sci-Hub](https://sci-hub.tw).
 3. Selección de metodología, incluyendo técnicas cuantitativas de forma preceptiva. 
-4. Recogida de datos de campo.
+4. Recogida de datos a partir de servicios en línea (guiado por el profesor). Análisis exploratorio-limpieza.
 5. Análisis de datos.
-6. Redacción.
+6. Redacción. Volver a 5 hasta que la redacción quede "nítida".
 
 Los criterios de evaluación que usaré para el manuscrito son:
-1. Cumplimiento de los requisitos exigidos por el Anuario, tanto los de forma (estilos de documento) como los de fondo.
+1. Cumplimiento de los requisitos exigidos por el [Anuario de Investigaciones Científicas](https://www.uasd.edu.do/index.php/publicaciones-cientificas) de la UASD.
 2. Redacción coherente y concisa. 
 3. Resultados, con el debido apoyo estadístico y gráfico, que respondan a las preguntas formuladas.
 4. Concisa extracción de conclusiones. Los resultados negativos son igualmente válidos.
@@ -75,47 +74,34 @@ Para preparar tu manuscrito, sigue las normas para autores/as del [Anuario de In
     * Otros requerimientos (ponle atención también a esta parte en las [normas](docs/instrucciones-para-autores-anuario-investigaciones-cientificas-UASD.pdf)).
 
 Toma en consideración lo siguiente:
+
 * No impartiré lecciones sobre redacción ni sobre procesadores de texto, por lo que se recomienda consultar material tanto vía web como en el economato, como forma de mejorar dichas capacidades. 
+
 * El plagio y la falsificación de datos supondrán la reprobación inmediata de la asignatura.
+
 * Te recomiendo consultar [uno o varios artículos de cualquier número del Anuario](https://www.uasd.edu.do/index.php/publicaciones-cientificas), para que te familiarices con el estilo de redacción.
 
 ### Presentación oral
 
 Dispondrás de 15 minutos para presentar oralmente tu trabajo al final del semestre. Valoraré el dominio que muestres sobre tu trabajo.
 
-### Trabajo de campo e identificación
+## Escribir código/pedir ayuda
 
-Tomarás al menos 10 muestras (a mayor número, mejor) en igual número de polígonos (*plots*) previamente delimitados del campus de la UASD. Utilizarás el método del cebo de atún (en clase explicaré por qué).
+En cuanto a escribir código, te adelanto que, para superar las dificultades y los desafíos inherentes de las asignaciones y el manuscrito, tendrás que:
 
-En cada polígono colocarás al menos 16 estaciones de cebo de atún directamente en el suelo, formando una malla cuadrada de 4x4 estaciones colocada aproximadamente en el centro del polígono. Separarás cada estación al menos 2 metros entre sí, por lo que la malla tendrá 8x8=64m<sup>2</sup> de tamaño.
+1. Contar con el profesor. No te abandonaré a tu suerte al analizar datos. No hay horario para pedirme ayuda, y pregunta lo que quieras preguntar. Intentaré darte soluciones cuando te tranques, pero con la condición de que, antes de preguntarme, intentes avanzar soluciones del problema. Lee los puntos 3 y 4 más abajo.
 
-Dejarás los cebos por 30 minutos y luego colectarás las hormigas que visiten cada estación con un pincel humedecido en alcohol (puedes utilizar otro equipamiento), en el mismo orden que los colocaste. Colectarás las hormigas de las 16 estaciones de un polígono en un único frasco con alcohol al 80% (cualquier pote de compota te vale). Recalco: un polígono contendrá 16 estaciones y las hormigas de todas las estaciones de un mismo polígono se mezclarán en un único frasco. Por lo tanto, al finalizar el trabajo de campo deberás tener 10 frascos, uno por polígono.
+2. Sufrir. Nadie dijo que fajarse con biogeografía/ecología mediante R fuese placentero. A diferencia de los software de pago, aquí no hay un botoncito mágico que lo resuelve todo. Cuesta esfuerzo, mucho; eso sí, es gratis, como todas las cosas buenas. Además, te obliga a la abstracción y a la resolución de problemas, algo que siempre viene bien en términos profesionales y académicos. Adelanto también que este mismo principio aplica a la redacción; escribir concisamente apoyándote en tus resultados es tarea complicada. Por lo tanto, sufre, pero con motivo.
 
-En cada polígono registrarás la actividad de las hormigas, en función del número de ellas que encuentres (daré más detalles). También tomarás algunos datos "ambientales" básicos mediante formularios electrónicos. Fíjate en cuestiones relevantes para las hormigas, por ejemplo si se trata de una zona de paso de personas, si hay basurero cercano, si el suelo es de concreto o de tierra o de hierba, si conoces las especies arbóreas también anótalas, 
+3. Pedir ayuda. Escríbeme o pide ayuda a tus compañeros y compañeras cuando te surjan dudas. Tienes varias alternativas, elige la que prefieras:
+      a. Vía los foros de la plataforma. El foro apropiado será el que cree para la tarea en cuestión, pero también existe un foro en la portada de la asignatura denominado "Foro de dudas e inquietudes".
+      b. A mi correo: jmartinez19\@uasd.edu.do
+      c. Creando *issues* en GitHub.
 
-Identificarás, con mi ayuda, todos los individuos hasta nivel de género; si quieres llegar hasta especie es opción tuya, y existen buenas claves para ello. Dado que las hormigas son insectos sociales, utilizarás datos de presencia/ausencia, por lo que no contarás individuos. Tus análisis se basarán en incidencia. Más detalles en el aula. 
+4. Al hilo del punto anterior, utilizar estrategias proactivas para pedir ayuda. Elimina esta expresión de tu vocabulario: "da error". Con eso nadie podrá ayudarte. Lo importante es informar qué intentaste hacer y qué error o problema te surgió. Por ello, cuando pidas ayuda, deberás ofrecer un ejemplo reproducible. En la medida de lo posible, evita las capturas de pantalla y prefiere código reproducible + error. Si la captura de pantalla es el único camino que tienes para mostrar tu problema, entonces úsala, pero no olvides incluir los dos elementos primordiales: 1) qué intentaste hacer y 2) qué error/problema se te presentó. Otras estrategias son: consultar posibles soluciones a tu problema en foros ya existentes (como stackoverflow), probar alternativas, documentar lo que hiciste, explicar qué entiendes que pudo provocar el error. En definitiva, sólo pide ayuda cuando realmente llegues a un "tranque".
 
-Nota: Si tienes experiencia, o quieres asumir retos, puedes implementar métodos de muestreo diferentes y más intensivos que el planteado. Ahora bien, para la asignatura, sólo es necesario implementar el mencionado.
+No tendrás que preocuparte por el hardware (ya me ensucio yo las manos con esa cosa tan mundana llamada computadora), pero sí ocúpate por escribir código con sentido (y preguntar siempre que lo necesites, no lo olvides), por razonar bien tus asignaciones y, especialmente, por escribir bien tu manuscrito; escribe que se te entienda, yo pediré a monesvol para que te ilumine. Dispondrás de un servidor de RStudio de modestas prestaciones administrado por "yo mesmamente", con los paquetes requeridos en el curso ya pre-instalados. Así podrás realizar tus asignaciones sobre biogeografía y tu manuscrito sin preocuparte de instalaciones de software/paquetes.
 
-### Código informático reproducible
-
-Por correo electrónico, te enviaré asignaciones para desarrollar tu código reproducible.
-Orientaré con ejemplos y soluciones de forma pública a través de `issues` que abrirás tú o yo en el GitHub. De esta forma las discusiones quedan disponibles para otras personas.
-
-Al abrir un `issue` de GitHub debes plantear el problema al que te enfrentas, cómo has intentado resolverlo o qué soluciones has probado. Si se trata de cuestión relacionada con programación o análisis de datos, deberás facilitar **código reproducible y mensaje de error (si lo hubiere)**. Evita el típico comentario "da error", puesto que no conduce a nada.
-
-### Exámenes
-
-Bueno, sobre ésto tengo poco que decir, sólo que preferiría no evaluar contenido teórico.
-
-## Fechas de evaluación
-
-| Fecha | ¿Qué evaluaré? |
-| - | - |
-| 24 de Septiembre | **Manuscrito**: asignaciones sobre introducción y metodología realizadas <br/> **Trabajo de campo e identificación**: todas las asignaciones realizadas <br/> **Código informático reproducible**: lo asignado hasta la semana anterior |
-| 22 de Octubre (medio término) | **Manuscrito**: asignaciones sobre resultados realizadas <br/> **Código informático reproducible**: lo asignado hasta la semana anterior <br/> **Examen parcial 1** |
-| 19 de Noviembre | **Manuscrito**: asignaciones sobre resultados y discusión realizadas <br/> **Código informático reproducible**: lo asignado hasta la semana anterior |
-| Diciembre, por precisar (final) | **Manuscrito**: todas las asignaciones completadas <br/> **Código informático reproducible**: todas las asignaciones completadas <br/> **Examen parcial 2** |
 
 ## Contenido teórico
 1. Introducción e historia de la biogeografía. Brown y Lomolino (1998) capítulos 1 y 2. Okolodkov (2010) capítulos 1 y 2.
