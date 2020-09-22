@@ -4,19 +4,10 @@ Semestre 2020-02 <br/>
 *José Ramón Martínez Batlle*
 
 ## Básicos:
-* Profesor: José Ramón Martínez Batlle
-* Carrera: Licenciatura en Geografía (optativa para Licenciatura en Biología)
 * Correo: jmartinez19@uasd.edu.do
-* GitHub: [@geofis](https://github.com/geofis)
-* Página web: https://geografiafisica.org/
-* Twitter: [@geografiard](https://twitter.com/home)
 * Lugar y horario: [UASD virtual](https://uasdvirtual.uasd.edu.do),
 Martes de 4 a 8 pm
-
-## URLs del contenido del curso:
-* [Programa (hipervínculo recursivo)](programa-biogeografia-geo1310.md)
-* Asignaciones. Se enviarán por correo electrónico.
-* [¿Cómo realizar una asignación?](ref/como-hacer-una-asignacion.md)
+* [Programa (hipervínculo recursivo)](https://github.com/biogeografia-202002/material-de-apoyo/blob/master/programa-biogeografia-geo1310.md)
 
 ## Descripción
 
