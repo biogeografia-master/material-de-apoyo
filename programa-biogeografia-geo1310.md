@@ -1,13 +1,13 @@
 # Universidad Autónoma de Santo Domingo (UASD) <br/>
 Programa de Biogeografía (GEO-131) <br/>
-Semestre 2020-02 <br/>
+9 de Febrero de 2021 (semestre 2021-01) <br/>
 *José Ramón Martínez Batlle*
 
 ## Básicos:
 * Correo: jmartinez19@uasd.edu.do
-* Lugar y horario: [UASD virtual](https://uasdvirtual.uasd.edu.do),
+* Lugar y horario: Zoom,
 Martes de 4 a 8 pm
-* [Programa (hipervínculo recursivo)](https://github.com/biogeografia-202002/material-de-apoyo/blob/master/programa-biogeografia-geo1310.md)
+* [Programa (hipervínculo recursivo)](https://github.com/biogeografia-202101/material-de-apoyo/blob/master/programa-biogeografia-geo1310.md)
 
 ## Descripción
 
@@ -36,20 +36,30 @@ Brevemente, cada ítem a evaluar consistirá en lo siguiente (más detalles por 
 ### Manuscrito
 
 Tratará sobre un grupo de organismos, se elaborará siguiendo las fases enumeradas a continuación:
+
 1. Formulación del problema/pregunta(s) de investigación, siendo preceptiva la sencillez de diseño. Las preguntas de investigación a responder las diseñarás tú.
-2. Revisión bibliográfica. Busca fuentes en línea, pero evita abrumarte con la enorme disponibilidad de publicaciones científicas sobre biogeografía y ecología. Prefiere las publicaciones disponibles en acceso libre, y no olvides el [Sci-Hub](https://sci-hub.tw).
-3. Selección de metodología, incluyendo técnicas cuantitativas de forma preceptiva. 
-4. Recogida de datos a partir de servicios en línea (guiado por el profesor). Análisis exploratorio-limpieza.
+
+2. Revisión bibliográfica. Busca fuentes en línea, pero evita abrumarte con la enorme disponibilidad de publicaciones científicas sobre biogeografía y ecología. Prefiere las publicaciones disponibles en acceso libre, y no olvides el [Sci-Hub](https://sci-hub.se).
+
+3. Selección de metodología, incluyendo técnicas cuantitativas de forma preceptiva.
+
+4. Recogida de datos a partir de servicios en línea (guiado por el profesor), incluyendo análisis exploratorio-limpieza.
+
 5. Análisis de datos.
-6. Redacción. Volver a 5 hasta que la redacción quede "nítida".
+
+6. Redacción. Volver eterna y recursivamente a 5 hasta que la redacción quede "nítida".
 
 Los criterios de evaluación que usaré para el manuscrito son:
+
 1. Cumplimiento de los requisitos exigidos por el [Anuario de Investigaciones Científicas](https://www.uasd.edu.do/index.php/publicaciones-cientificas) de la UASD.
-2. Redacción coherente y concisa. 
+
+2. Redacción coherente y concisa.
+
 3. Resultados, con el debido apoyo estadístico y gráfico, que respondan a las preguntas formuladas.
+
 4. Concisa extracción de conclusiones. Los resultados negativos son igualmente válidos.
 
-Para preparar tu manuscrito, sigue las normas para autores/as del [Anuario de Investigaciones Científicas de la UASD](docs/instrucciones-para-autores-anuario-investigaciones-cientificas-UASD.pdf). Fungiré como editor ficticio de la revista, e incluso como revisor.
+Para preparar tu manuscrito, sigue las normas para autores/as del [Anuario de Investigaciones Científicas de la UASD](docs/instrucciones-para-autores-anuario-investigaciones-cientificas-UASD.pdf). Fungiré como editor ficticio de la revista, e incluso como revisor (*reviewer&nbsp;#2*).
 
 * Como verás, el manuscrito requiere los siguientes ítems:
     * Título.
@@ -61,6 +71,7 @@ Para preparar tu manuscrito, sigue las normas para autores/as del [Anuario de In
     * Discusión.
     * Agradecimientos (optativo).
     * Referencias citadas.
+    * *Script* reproducible
     * Declaración de cumplimientos legales y de no conflictos de intereses (optativo).
     * Otros requerimientos (ponle atención también a esta parte en las [normas](docs/instrucciones-para-autores-anuario-investigaciones-cientificas-UASD.pdf)).
 
@@ -80,16 +91,16 @@ Dispondrás de 15 minutos para presentar oralmente tu trabajo al final del semes
 
 En cuanto a escribir código, te adelanto que, para superar las dificultades y los desafíos inherentes de las asignaciones y el manuscrito, tendrás que:
 
-1. Contar con el profesor. No te abandonaré a tu suerte al analizar datos. No hay horario para pedirme ayuda, y pregunta lo que quieras preguntar. Intentaré darte soluciones cuando te tranques, pero con la condición de que, antes de preguntarme, intentes avanzar soluciones del problema. Lee los puntos 3 y 4 más abajo.
+1. Contar con el profesor. No te abandonaré a tu suerte al analizar datos. No hay horario para pedirme ayuda, y pregunta lo que quieras preguntar, yo responderé cuando pueda. Intentaré darte soluciones cuando te tranques, pero con la condición de que, antes de preguntarme, intentes avanzar soluciones del problema. Lee los puntos 3 y 4 más abajo.
 
 2. Sufrir. Nadie dijo que fajarse con biogeografía/ecología mediante R fuese placentero. A diferencia de los software de pago, aquí no hay un botoncito mágico que lo resuelve todo. Cuesta esfuerzo, mucho; eso sí, es gratis, como todas las cosas buenas. Además, te obliga a la abstracción y a la resolución de problemas, algo que siempre viene bien en términos profesionales y académicos. Adelanto también que este mismo principio aplica a la redacción; escribir concisamente apoyándote en tus resultados es tarea complicada. Por lo tanto, sufre, pero con motivo.
 
 3. Pedir ayuda. Escríbeme o pide ayuda a tus compañeros y compañeras cuando te surjan dudas. Tienes varias alternativas, elige la que prefieras:
-      a. Vía los foros de la plataforma. El foro apropiado será el que cree para la tarea en cuestión, pero también existe un foro en la portada de la asignatura denominado "Foro de dudas e inquietudes".
+      a. Vía el foro de la asignatura (vía más eficiente y preferida).
       b. A mi correo: jmartinez19\@uasd.edu.do
       c. Creando *issues* en GitHub.
 
-4. Al hilo del punto anterior, utilizar estrategias proactivas para pedir ayuda. Elimina esta expresión de tu vocabulario: "da error". Con eso nadie podrá ayudarte. Lo importante es informar qué intentaste hacer y qué error o problema te surgió. Por ello, cuando pidas ayuda, deberás ofrecer un ejemplo reproducible. En la medida de lo posible, evita las capturas de pantalla y prefiere código reproducible + error. Si la captura de pantalla es el único camino que tienes para mostrar tu problema, entonces úsala, pero no olvides incluir los dos elementos primordiales: 1) qué intentaste hacer y 2) qué error/problema se te presentó. Otras estrategias son: consultar posibles soluciones a tu problema en foros ya existentes (como stackoverflow), probar alternativas, documentar lo que hiciste, explicar qué entiendes que pudo provocar el error. En definitiva, sólo pide ayuda cuando realmente llegues a un "tranque".
+4. Al hilo del punto anterior, utilizar estrategias proactivas para pedir ayuda. Elimina esta expresión de tu vocabulario: "da error". Con eso nadie podrá ayudarte. Lo importante es informar qué intentaste hacer y qué error o problema te surgió. Por ello, cuando pidas ayuda, deberás ofrecer un ejemplo reproducible. En su lugar prefiere estas expresiones *"intente este procedimiento ... , dio este error, luego intenté esta solución ... pero no consigo dar con el fallo"*. Plantea tu problema con código reproducible siempre que puedas. Si envías captura de pantalla, no olvides dar contexto: tras qué surgió el error, qué intentaste para resolverlo. Otras estrategias son: consultar posibles soluciones a tu problema en foros ya existentes (como stackoverflow), probar alternativas, documentar lo que hiciste, explicar qué entiendes que pudo provocar el error. En definitiva, sólo pide ayuda cuando realmente llegues a un "tranque" y siempre intenta una solución por tu cuenta.
 
 No tendrás que preocuparte por el hardware (ya me ensucio yo las manos con esa cosa tan mundana llamada computadora), pero sí ocúpate por escribir código con sentido (y preguntar siempre que lo necesites, no lo olvides), por razonar bien tus asignaciones y, especialmente, por escribir bien tu manuscrito; escribe que se te entienda, yo pediré a monesvol para que te ilumine. Dispondrás de un servidor de RStudio de modestas prestaciones administrado por "yo mesmamente", con los paquetes requeridos en el curso ya pre-instalados. Así podrás realizar tus asignaciones sobre biogeografía y tu manuscrito sin preocuparte de instalaciones de software/paquetes.
 
@@ -106,4 +117,4 @@ No tendrás que preocuparte por el hardware (ya me ensucio yo las manos con esa 
 9. Biogeografía insular. Brown y Lomolino (1998), capítulos 13 y 14
 
 ## Referencias bibliográficas
-* Consulta tu buzón de correo.
+* Consulta el foro de la asignatura.
