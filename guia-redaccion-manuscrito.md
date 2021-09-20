@@ -814,8 +814,6 @@ línea de investigación.
 
 -   [Esta guía](guia-redaccion-manuscrito.md).
 
--   [Esta guía en PDF](guia-redaccion-manuscrito.pdf).
-
 -   [Organización de GitHub “biogeografia-202102” (repos de estudiantes
     del semestre actual)](https://github.com/biogeografia-202102/)
 
