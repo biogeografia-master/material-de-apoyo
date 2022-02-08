@@ -1,6 +1,6 @@
 # Universidad Autónoma de Santo Domingo (UASD) <br/>
 Programa de Biogeografía (GEO-131) <br/>
-14 de Septiembre de 2021 (semestre 2021-02) <br/>
+8 de Febrero de 2022 (semestre 2022-01) <br/>
 *José Ramón Martínez Batlle*
 
 ## Básicos:
