@@ -11,6 +11,8 @@ Programa de Biogeografía (GEO-131) <br/>
 
 * [Programa (hipervínculo recursivo)](programa-biogeografia-geo1310.md)
 
+* [Guía para la redacción de tu manuscrito](guia-redaccion-manuscrito.md)
+
 ## Recursos informáticos de la asignatura
 
 Sitúa apropiadamente los recursos de los que dispondrás en esta asignatura, los cuales describo [aquí](guia-redaccion-manuscrito.md#ecosistema).
