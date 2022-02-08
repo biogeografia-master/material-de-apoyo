@@ -3,25 +3,34 @@ Guía para la redacción de tu manuscrito <br> Asignatura Biogeografía
 ================
 José Ramón Martínez Batlle
 
-## El “ecosistema” de servicios que usarás durante la asignatura
+## <a name="ecosistema"></a> El “ecosistema” de servicios que usarás durante la asignatura
 
--   R+RStudio+GRASS GIS. Imprescindible. Dispondrás de una cuenta
-    temporalmente en mi servidor que ya ofrece estos paquetes de
-    software a través del navegador. No obstante, puedes prescindir de
-    mi servidor si instalas R+RStudio+GRASS GIS en tu PC.
+-   R+RStudio. Imprescindible. Dispondrás de una cuenta temporalmente en
+    mi servidor para, a través del navegador, usar estos programas y los
+    paquetes de R requeridos. No obstante, puedes prescindir de mi
+    servidor si instalas R+RStudio en modo “Desktop”. Si te estás
+    preguntando ¿Por qué R?, te recomiendo leer [este
+    texto](https://github.com/geofis/curso-taller-analisis-biodiversidad-r-adebio-2021#por-qu%C3%A9-r).
 
--   Foro. Opcional, aunque imprescindible para resolver dudas. Se trata
-    de un servidor Mattermost, parecido a Slack, pero de código abierto.
-    Envía tus preguntas por esa vía.
+-   Foro. Se trata de un servidor Mattermost, parecido a Slack, pero de
+    código abierto. Envía tus preguntas por esa vía.
 
--   GitHub. Necesitarás una cuenta de GitHub y un token para crear tu
-    manuscrito y hacerle modificaciones. Más adelante te explico.
+-   GitHub. Imprescindible. Necesitarás una cuenta de GitHub (quizá ya
+    dispones de una) y un token para crear tu manuscrito y hacerle
+    modificaciones. Más adelante te explico.
 
 -   Vídeos tutoriales en YouTube y código fuente de ejemplo. Los vídeos
     tutoriales se encuentran alojados en la lista de reproducción
     [“Ecología numérica con
-    R”](https://www.youtube.com/watch?v=Hm6yO_V6NUY&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ).
-    Más detalles sobre cada vídeo en secciones posteriores.
+    R”](https://www.youtube.com/playlist?list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ).
+    Estos vídeos se asocian con *scripts* de R que usarás como fuente
+    para tus análisis (los adaptarás), y se encuentran en el repo
+    [Scripts de análisis de
+    BCI](https://github.com/biogeografia-master/scripts-de-analisis-BCI).
+    No es necesario clonar dicho repo (más adelante explico en detalle),
+    es preferible visualizarlo desde GitHub, tomar código, adaptarlo y
+    ejecutarlo en tu repo propio de manuscrito, como verás en los vídeos
+    tutoriales en cada caso (más detalles en clase).
 
 ## Prepara el “terreno” para tu manuscrito
 
@@ -67,7 +76,7 @@ ilustrada)](https://docs.github.com/es/github/authenticating-to-github/keeping-y
 3.  Rellena el formulario.
 
     -   En *Note* escribe un nombre para el token. Por ejemplo,
-        “Semestre 202102”
+        “Semestre 202201”
 
     -   En *Expiration* elige *Custom* y ponle una fecha posterior al
         término del semestre.
@@ -102,7 +111,7 @@ ilustrada)](https://docs.github.com/es/github/authenticating-to-github/keeping-y
 5.  Tras presionar el botón, se creará una copia remota vacía (un
     “esqueleto”) del repositorio de manuscrito, a partir de una
     plantilla, en la organización
-    [biogeografia-202102](https://github.com/biogeografia-202102).
+    [biogeografia-202201](https://github.com/biogeografia-202201).
     Puedes consultarlo visitando la organización y presionando sobre el
     nombre de tu repo, que será algo tal que
     `unidad-0-asignacion-99-mi-manuscrito-TUNOMBREDEUSUARIOENGITHUB`.
@@ -640,7 +649,7 @@ leer sobre ellos):
 
 ### Calendario de entregas
 
-| Ítem                                | ¿Qué entregas?                                                                                                                                                                | 21/sept/2021                                        | 28/sept/2021                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | 5/oct/2021                                                                                                                                                                                                                                                                                                                                                                                                     | 19/oct/2021                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | 2/nov/2021                                                                                                                                                                                                     | 16/nov/2021                                                                                                                                                                                                                                                                                                        | 30/nov/2021                                             | 30/nov/2021-14/dic/2021                     | 21/dic/2021                                                        |
+| Ítem                                | ¿Qué entregas?                                                                                                                                                                | 15/feb/2022                                         | 22/feb/2022                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | 8/mar/2022                                                                                                                                                                                                                                                                                                                                                                                                     | 22/mar/2022                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | 5/abr/2022                                                                                                                                                                                                     | 19/abr/2022                                                                                                                                                                                                                                                                                                        | 3/may/2022                                              | 3/may/2022-17/may/2022                      | 24/may/2022                                                        |
 |-------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------|---------------------------------------------|--------------------------------------------------------------------|
 | Manuscrito                          | **Secciones de tu manuscrito**, incorporando análisis realizados con lo que aprendas en los tutoriales y en sesiones de seguimiento                                           |                                                     | Editado encabezado YAML, excepto abstract. Iniciada la introducción                                                                                                                                                                                                                                                                                                                                                                                                                                               | Sección Introducción completada                                                                                                                                                                                                                                                                                                                                                                                | Sección Metodología completada                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Avances sobre sección Resultados                                                                                                                                                                               | Sección Resultados completada                                                                                                                                                                                                                                                                                      | Discusión y resumen completados. Manuscrito finalizado. | Recibes mi retroalimentación sobre tu texto | Atendido cada punto señalado por mí. Presentación de diapositivas. |
 | Tutoriales visualizados y adaptados | 1\) **Pruebas** de que comprendes los tutoriales y/o 2) **Scripts de R** (archivos .R) aplicados a tu familia; 3) Tu **manuscrito** refleja lo aprendido en dichos tutoriales | [tutorial1](https://geofis.shinyapps.io/tutorial1/) | Vídeos [1](https://www.youtube.com/watch?v=Hm6yO_V6NUY&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=1) y [2](https://www.youtube.com/watch?v=v1EX8OzAyBw&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=2), [3](https://www.youtube.com/watch?v=5PARNk6QTgY&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=3), [4](https://www.youtube.com/watch?v=vRWoqzJrnk4&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=4) y [5](https://www.youtube.com/watch?v=YiUmteAbLt8&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=5) | Vídeos [6](https://www.youtube.com/watch?v=okMDGdgQ1EM&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=6), [7](https://www.youtube.com/watch?v=qe7qD03n0jI&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=7), [8](https://www.youtube.com/watch?v=xfKGOWNyJVc&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=8) y [9](https://www.youtube.com/watch?v=SNYhP5mqlTQ&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=9) | Vídeos [10](https://www.youtube.com/watch?v=yQ10lp0-nHc&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=10), [11](https://www.youtube.com/watch?v=M3GfFzkJFys&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=11), [12](https://www.youtube.com/watch?v=mef9NIjXBWY&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=12), [13](https://www.youtube.com/watch?v=AW5L-uZlEvk&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=13), [14](https://www.youtube.com/watch?v=y1ZZh9ajT_U&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=14), [15](https://www.youtube.com/watch?v=ZrXpgDAaDo8&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=15) y [16](https://www.youtube.com/watch?v=JK7hq71onKs&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=16) | Vídeos [17](https://www.youtube.com/watch?v=QVfVH2bVJbM&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=19) y [18](https://www.youtube.com/watch?v=rJ67sF0hYuE&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=20) | Vídeos [19](https://www.youtube.com/watch?v=xLFz4WRgoDE&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=17), [20](https://www.youtube.com/watch?v=bKyBGxNotgM&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=18) y [21](https://www.youtube.com/watch?v=vS4Xm0PRxPM&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=21) |                                                         |                                             |                                                                    |
@@ -814,11 +823,11 @@ línea de investigación.
 
 -   [Esta guía](guia-redaccion-manuscrito.md).
 
--   [Organización de GitHub “biogeografia-202102” (repos de estudiantes
-    del semestre actual)](https://github.com/biogeografia-202102/)
+-   [Organización de GitHub “biogeografia-202201” (repos de estudiantes
+    del semestre actual)](https://github.com/biogeografia-202201/)
 
 -   [Programa de la
-    asignatura](https://github.com/biogeografia-202102/material-de-apoyo/blob/master/programa-biogeografia-geo1310.md).
+    asignatura](https://github.com/biogeografia-202201/material-de-apoyo/blob/master/programa-biogeografia-geo1310.md).
 
 -   [Tutorial “Introducción a
     R”](https://geofis.shinyapps.io/tutorial1/).

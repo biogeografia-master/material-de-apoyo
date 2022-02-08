@@ -13,15 +13,7 @@ Programa de Biogeografía (GEO-131) <br/>
 
 ## Recursos informáticos de la asignatura
 
-Sitúa apropiadamente los recursos de los que dispondrás en esta asignatura.
-
-- R+RStudio. Imprescindible. Dispondrás de una cuenta temporalmente en mi servidor que ya ofrece estos programas y los paquetes de R requeridos, para poder acceder a través del navegador. No obstante, puedes prescindir de mi servidor si instalas R+RStudio en modo "Desktop". Si te estás preguntando ¿Por qué R?, te recomiendo leer [este texto](https://github.com/geofis/curso-taller-analisis-biodiversidad-r-adebio-2021#por-qu%C3%A9-r).
-
-- Foro. Opcional pero muy recomendado. Se trata de un servidor Mattermost, parecido a Slack, pero de código abierto. Envía tus dudas o problemas con R por esa vía.
-
-- GitHub. Imprescindible. Quizá ya dispones de una cuenta en GitHub. Sólo la necesitarás para crear/modificar tu propio contenido, como por ejemplo, tu manuscrito (más abajo te explico).
-
-- Vídeos tutoriales en YouTube y repo de Github. Los vídeos tutoriales se encuentran alojados en la lista de reproducción ["Ecología numérica con R"](https://www.youtube.com/playlist?list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ). Estos vídeos se asocian con *scripts* de R que puedes usar como fuente, y se encuentran en el repo [Scripts de análisis de BCI](https://github.com/biogeografia-master/scripts-de-analisis-BCI). No es necesario clonar dicho repo (más adelante explico en detalle), es preferible visualizarlo desde GitHub, como verás en los vídeos tutoriales en cada caso (más detalles en clase).
+Sitúa apropiadamente los recursos de los que dispondrás en esta asignatura, los cuales describo [aquí](guia-redaccion-manuscrito.md#ecosistema).
 
 ## Descripción
 
