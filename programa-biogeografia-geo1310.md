@@ -124,4 +124,4 @@ No tendrás que preocuparte por el hardware (ya me ensucio yo las manos con esa 
 9. Biogeografía insular. Brown y Lomolino (1998), capítulos 13 y 14
 
 ## Referencias bibliográficas
-* Consulta el foro de la asignatura.
+* Consulta la [Guía para la redacción de tu manuscrito](guia-redaccion-manuscrito.md)
