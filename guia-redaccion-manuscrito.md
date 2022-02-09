@@ -102,7 +102,8 @@ ilustrada)](https://docs.github.com/es/github/authenticating-to-github/keeping-y
 2.  También asegúrate de que eres parte de la organización de GitHub de
     la asignatura.
 
-3.  Haz clic en la URL de la asignación (Classroom de GitHub): &lt;&gt;
+3.  Haz clic en la URL de la asignación (Classroom de GitHub):
+    <https://classroom.github.com/a/zUsBFrHz>
 
 4.  Al hacer clic sobre la URL, te preguntará si aceptas la asignación
     del Classroom de GitHub. Presiona el botón *Accept this assignment*.
