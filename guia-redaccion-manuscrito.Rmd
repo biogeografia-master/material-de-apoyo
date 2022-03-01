@@ -125,14 +125,13 @@ Tienes una familia de plantas asignada; localiza la tuya en la siguiente lista a
 |Jang Correa | Fabaceae-papilionoideae | Fabaceae-papilionoideae.Rdata|
 |Jorge Eduardo Diaz Romero | Apocynaceae | Apocynaceae.Rdata|
 |Lewis Jose Cueto Montero | Sapindaceae | Sapindaceae.Rdata|
-|Miguel Landestoy Tejeda | Piperaceae | Piperaceae.Rdata|
+|Miguel Landestoy Tejeda |  |  |
 |Romanti Esther Aquino Payano | Rubiaceae | Rubiaceae.Rdata|
 |Ruseuny Peña Noboa | Fabaceae-mimosoideae | Fabaceae-mimosoideae.Rdata|
 |Saderis Carmona Marte | Euphorbiaceae | Euphorbiaceae.Rdata|
 |Yoel Agustín. Rodríguez Marte | Meliaceae | Meliaceae.Rdata|
 |Wilson Rosario R |  |  |
-|Yan Piero Bello De Lillo |  |  |
-
+|Yan Piero Bello De Lillo | Piperaceae | Piperaceae.Rdata |
 
 El archivo `.Rdata` de tu familia asignada contiene una matriz de comunidad y datos censales.  Necesitarás también la matriz ambiental, que se encuentra en el archivo `matriz_ambiental.Rdata`. Dicha matriz es común para todos, puesto que contiene las variables ambientales de todo BCI. Todos los archivos `.Rdata` (matriz de comunidad+censo y matriz ambiental), se encuentran en el servidor RStudio, dentro de tu repo de manuscrito, en la carpeta `biodata`.
 

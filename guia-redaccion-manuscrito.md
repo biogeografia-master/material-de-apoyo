@@ -5,21 +5,21 @@ José Ramón Martínez Batlle
 
 ## <a name="ecosistema"></a> El “ecosistema” de servicios que usarás durante la asignatura
 
--   R+RStudio. Imprescindible. Dispondrás de una cuenta temporalmente en
+  - R+RStudio. Imprescindible. Dispondrás de una cuenta temporalmente en
     mi servidor para, a través del navegador, usar estos programas y los
     paquetes de R requeridos. No obstante, puedes prescindir de mi
     servidor si instalas R+RStudio en modo “Desktop”. Si te estás
     preguntando ¿Por qué R?, te recomiendo leer [este
     texto](https://github.com/geofis/curso-taller-analisis-biodiversidad-r-adebio-2021#por-qu%C3%A9-r).
 
--   Foro. Se trata de un servidor Mattermost, parecido a Slack, pero de
+  - Foro. Se trata de un servidor Mattermost, parecido a Slack, pero de
     código abierto. Envía tus preguntas por esa vía.
 
--   GitHub. Imprescindible. Necesitarás una cuenta de GitHub (quizá ya
+  - GitHub. Imprescindible. Necesitarás una cuenta de GitHub (quizá ya
     dispones de una) y un token para crear tu manuscrito y hacerle
     modificaciones. Más adelante te explico.
 
--   Vídeos tutoriales en YouTube y código fuente de ejemplo. Los vídeos
+  - Vídeos tutoriales en YouTube y código fuente de ejemplo. Los vídeos
     tutoriales se encuentran alojados en la lista de reproducción
     [“Ecología numérica con
     R”](https://www.youtube.com/playlist?list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ).
@@ -48,8 +48,8 @@ que lo realices y practiques**.
 Tal como te comenté, necesitarás una cuenta de GitHub. Para crearla, ve
 a [github.com](https://github.com/), botón *Sign up* y sigue las
 indicaciones correspondientes. Una vez tengas tu cuenta de GitHub,
-podrás crear repositorios. Tu manuscrito se alojará en un repositorio de
-GitHub, concretamente, en la organización creada al efecto para esta
+podrás crear repositorios. Tu manuscrito se alojará en un repositorio
+de GitHub, concretamente, en la organización creada al efecto para esta
 asignatura, y esta es la razón por la que necesitas una cuenta en dicho
 servicio. **No olvides notificarme tu usuario de GitHub tan pronto lo
 tengas, para invitarte a la organización de la asignatura. Luego de que
@@ -69,26 +69,25 @@ ilustrada)](https://docs.github.com/es/github/authenticating-to-github/keeping-y
 
 1.  Inicia sesión con tu cuenta en [github.com](https://github.com/)
 
-2.  Ve a *Settings* =&gt; *Developer Settings* =&gt; *Personal Access
-    Token* =&gt; *Generate New Token* (probablemente pida tu clave de
-    GitHub)
+2.  Ve a *Settings* =\> *Developer Settings* =\> *Personal Access Token*
+    =\> *Generate New Token* (probablemente pida tu clave de GitHub)
 
 3.  Rellena el formulario.
-
-    -   En *Note* escribe un nombre para el token. Por ejemplo,
+    
+      - En *Note* escribe un nombre para el token. Por ejemplo,
         “Semestre 202201”
-
-    -   En *Expiration* elige *Custom* y ponle una fecha posterior al
+    
+      - En *Expiration* elige *Custom* y ponle una fecha posterior al
         término del semestre.
-
-    -   Activa los permisos del grupo *repo*, tal como se muestra aquí:
-
+    
+      - Activa los permisos del grupo *repo*, tal como se muestra aquí:
+    
     ![](img/permisos-scopes-github.png)
 
 4.  Finalmente presiona *Generate token*. Tu token será una cadena de
     caracteres parecida a esta: “*ghp\_Gsgxfd…*”
 
-5.  **¡IMPORTANTE! Copia el token a un archivo de texto o a un mensaje
+5.  **¡IMPORTANTE\! Copia el token a un archivo de texto o a un mensaje
     de correo; GH no te lo mostrará nuevamente**.
 
 ### Crea tu repositorio remoto para el manuscrito en GitHub
@@ -125,7 +124,7 @@ sincronizarás con GitHub. Para clonar localmente tu repo, necesitarás el
 token que creaste en pasos anteriores, así que tenlo a mano. Pasos para
 crear tu copia local:
 
--   Sigue [este tutorial **HASTA el minuto
+  - Sigue [este tutorial **HASTA el minuto
     5:10**](https://www.youtube.com/watch?v=v1EX8OzAyBw).
 
 > Nota 1. En el minuto 3:42 verás que GitHub solicita clave. En ese paso
@@ -172,10 +171,11 @@ contrario, vuelve atrás y completa lo que te falte.
 ### Familias de plantas asignadas
 
 Tienes una familia de plantas asignada; localiza la tuya en la siguiente
-lista así como el archivo `.Rdata` correspondiente:
+lista así como el archivo `.Rdata`
+correspondiente:
 
 | Estudiante                          | Nombre de la familia asignada | Nombre de archivo `.Rdata` (carpeta `biodata`) |
-|-------------------------------------|-------------------------------|------------------------------------------------|
+| ----------------------------------- | ----------------------------- | ---------------------------------------------- |
 | Andri Jesus Binet Alvarez           | Fabaceae-caesalpinioideae     | Fabaceae-caesalpinioideae.Rdata                |
 | Adalberto Martinez Ramos            | Salicaceae                    | Salicaceae.Rdata                               |
 | Angel Luis Javier Hernandez         | Arecaceae                     | Arecaceae.Rdata                                |
@@ -193,13 +193,13 @@ lista así como el archivo `.Rdata` correspondiente:
 | Jang Correa                         | Fabaceae-papilionoideae       | Fabaceae-papilionoideae.Rdata                  |
 | Jorge Eduardo Diaz Romero           | Apocynaceae                   | Apocynaceae.Rdata                              |
 | Lewis Jose Cueto Montero            | Sapindaceae                   | Sapindaceae.Rdata                              |
-| Miguel Landestoy Tejeda             | Piperaceae                    | Piperaceae.Rdata                               |
+| Miguel Landestoy Tejeda             |                               |                                                |
 | Romanti Esther Aquino Payano        | Rubiaceae                     | Rubiaceae.Rdata                                |
 | Ruseuny Peña Noboa                  | Fabaceae-mimosoideae          | Fabaceae-mimosoideae.Rdata                     |
 | Saderis Carmona Marte               | Euphorbiaceae                 | Euphorbiaceae.Rdata                            |
 | Yoel Agustín. Rodríguez Marte       | Meliaceae                     | Meliaceae.Rdata                                |
 | Wilson Rosario R                    |                               |                                                |
-| Yan Piero Bello De Lillo            |                               |                                                |
+| Yan Piero Bello De Lillo            | Piperaceae                    | Piperaceae.Rdata                               |
 
 El archivo `.Rdata` de tu familia asignada contiene una matriz de
 comunidad y datos censales. Necesitarás también la matriz ambiental, que
@@ -233,36 +233,50 @@ te doy más detalles, pero por lo pronto, lee estas preguntas guía de las
 
 1.  Análisis de agrupamiento (*cluster analysis*, aa):
 
--   Los cuadros (o quadrats) de 1 hectárea, ¿se organizan en grupos
+<!-- end list -->
+
+  - Los cuadros (o quadrats) de 1 hectárea, ¿se organizan en grupos
     discontinuos según la composición de las especies de mi familia
     seleccionada?
--   Si existe algún patrón, ¿es consistente con alguna variable
+  - Si existe algún patrón, ¿es consistente con alguna variable
     ambiental/atributo?
--   ¿Hay especies indicadoras o con preferencia por determinadas
+  - ¿Hay especies indicadoras o con preferencia por determinadas
     condiciones ambientales/atributos?
+
+<!-- end list -->
 
 2.  Técnicas de ordenación (*ordination analysis*, to):
 
--   En un espacio bidimensional, ¿existen tendencias apreciables de
+<!-- end list -->
+
+  - En un espacio bidimensional, ¿existen tendencias apreciables de
     ordenación de las especies de mi familia seleccionada?
--   Si existen tendencias de ordenación, ¿se asocian éstas con variables
+  - Si existen tendencias de ordenación, ¿se asocian éstas con variables
     ambientales/atributos?
+
+<!-- end list -->
 
 3.  Diversidad (di):
 
--   Según los análisis de estimación de riqueza, ¿está suficientemente
+<!-- end list -->
+
+  - Según los análisis de estimación de riqueza, ¿está suficientemente
     representada mi familia? Consideremos como buena representación un
     85%
--   ¿Existe asociación de la diversidad alpha con variables
+  - ¿Existe asociación de la diversidad alpha con variables
     ambientales/atributos? ¿Con cuáles?
--   ¿Existe contribución local o por alguna especie a la diversidad
+  - ¿Existe contribución local o por alguna especie a la diversidad
     beta?
+
+<!-- end list -->
 
 4.  Ecología espacial (ee):
 
--   ¿Alguna(s) especies de mi familia presenta(n) patrón aglomerado?
+<!-- end list -->
+
+  - ¿Alguna(s) especies de mi familia presenta(n) patrón aglomerado?
     ¿Cuál(es)? ¿Se asocia con alguna variable?
--   ¿Predicen bien la ocurrencia de dicha(s) especie(s) los modelos de
+  - ¿Predicen bien la ocurrencia de dicha(s) especie(s) los modelos de
     distribución de especies (SDM)?
 
 Adicionalmente, usarás un conjunto de técnicas denominadas “análisis
@@ -285,7 +299,8 @@ GitHub.
 Los *scripts* de R que usarás como fuente, se encuentran en el repo
 [Scripts de análisis de
 BCI](https://github.com/biogeografia-master/scripts-de-analisis-BCI).
-Este dispone de un DOI que puedes usar para referirlo:
+Este dispone de un DOI que puedes usar para
+referirlo:
 
 [![DOI](https://zenodo.org/badge/303678546.svg)](https://zenodo.org/badge/latestdoi/303678546)
 
@@ -308,40 +323,39 @@ variables necesarias para cualquier análisis de ecología numérica.
 
 #### Vídeos tutoriales
 
--   Sobre BCI
-
-    -   [Vídeo 1: Datos censales parcela permanente 50 ha árboles BCI,
+  - Sobre BCI
+    
+      - [Vídeo 1: Datos censales parcela permanente 50 ha árboles BCI,
         explicado por el
         tali](https://www.youtube.com/watch?v=Hm6yO_V6NUY&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=1)
 
--   Sobre Herramientas Rmarkdown, GitHub
-
-    -   [Vídeo 2. Cómo hacer *commit&gt;push* de cambios a un repo
-        remoto desde un repo local en el servidor RStudio (DESDE el
-        minuto 5:10)](https://www.youtube.com/watch?v=v1EX8OzAyBw). En
-        párrafos anteriores te pedí que practicaras éste vídeo para
-        clonar tu repo localmente en el servidor RStudio. Ahora te pido
-        que continúes desde el minuto 5:10, para que hagas
-        *commit&gt;push*, que es el proceso mediante el cual, tus
-        cambios locales (en el servidor RStudio) se “sincronizan” con
-        los del repo remoto (en GitHub). En el vídeo muestro cómo subir
-        unos cambios sencillos (e hipotéticos) realizados al archivo
-        `manuscrito.Rmd`.
-
+  - Sobre Herramientas Rmarkdown, GitHub
+    
+      - [Vídeo 2. Cómo hacer *commit\>push* de cambios a un repo remoto
+        desde un repo local en el servidor RStudio (DESDE el minuto
+        5:10)](https://www.youtube.com/watch?v=v1EX8OzAyBw). En párrafos
+        anteriores te pedí que practicaras éste vídeo para clonar tu
+        repo localmente en el servidor RStudio. Ahora te pido que
+        continúes desde el minuto 5:10, para que hagas *commit\>push*,
+        que es el proceso mediante el cual, tus cambios locales (en el
+        servidor RStudio) se “sincronizan” con los del repo remoto (en
+        GitHub). En el vídeo muestro cómo subir unos cambios sencillos
+        (e hipotéticos) realizados al archivo `manuscrito.Rmd`.
+    
     > El archivo `manuscrito.Rmd` es el que contendrá toda tu redacción,
     > y desde allí podrás generar tu salida en formato PDF.
-
+    
     Los comandos a ejecutar, mencionados en el vídeo, son los siguientes
     (cambia por tu correo electrónico registrado en GitHub y tu usuario
     de GitHub):
-
+    
         git config --global user.email "you@example.com"
         git config --global user.name "Your Name"
-
+    
     En el minuto 11:54 verás que GitHub pide clave. En tu caso, deberás
     colocar el token que generaste en pasos anteriores.
-
-    -   [Vídeo 3: Cómo introducir referencias bibliográficas citas APA
+    
+      - [Vídeo 3: Cómo introducir referencias bibliográficas citas APA
         usando Bibtex, insertar imágenes y tablas externas (no generadas
         por R en consola) en el manuscrito formato
         RMarkdown](https://www.youtube.com/watch?v=5PARNk6QTgY&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=3)
@@ -353,87 +367,87 @@ variables necesarias para cualquier análisis de ecología numérica.
 > archivo `.md` para ver el resultado “tejido” que obtendrías al
 > ejecutar cada script.
 
--   Análisis exploratorio de datos (aed)
-
-    -   [Vídeo 4: Crear script de análisis para generar objetos, tales
+  - Análisis exploratorio de datos (aed)
+    
+      - [Vídeo 4: Crear script de análisis para generar objetos, tales
         como tablas de R y gráficos (por ejemplo, gráficos de mosaico,
         gráficos de dispersión), e insertarlos en documento de
         manuscrito formato RMarkdown (análisis exploratorio de datos).
         T39:19](https://www.youtube.com/watch?v=vRWoqzJrnk4&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=4)
-
-    -   [Vídeo 5: Tutorial de `tidyverse`. Este vídeo tiene finalidad
+    
+      - [Vídeo 5: Tutorial de `tidyverse`. Este vídeo tiene finalidad
         didáctica. Los análisis mostrados en éste son sólo
         demostrativos, y no tienen por qué terminar en tu manuscrito, a
         menos que así lo desees. En otros vídeos si ejecutaré análisis
         que podrían serte útiles en tu manuscrito, aplicando lo mostrado
         en este tutorial.
         T1:48:09](https://www.youtube.com/watch?v=YiUmteAbLt8&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=5)
-
-    -   [Vídeo 6: Cómo crear mapas de riqueza y abundancia global y de
+    
+      - [Vídeo 6: Cómo crear mapas de riqueza y abundancia global y de
         mi familia de plantas asignada. En este vídeo, verás cómo crear
         mapas interactivos y estáticos de abundancia y riqueza, que
         podrás insertar en tu manuscrito.
         T35:31](https://www.youtube.com/watch?v=okMDGdgQ1EM&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=6)
-
-    -   [Vídeo 7: Cómo crear mapas de variables ambientales.
+    
+      - [Vídeo 7: Cómo crear mapas de variables ambientales.
         T27:37](https://www.youtube.com/watch?v=qe7qD03n0jI&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=7)
-
-    -   [Vídeo 8: Cómo realizar análisis y paneles de correlación entre
+    
+      - [Vídeo 8: Cómo realizar análisis y paneles de correlación entre
         variables ambientales.
         T40:39](https://www.youtube.com/watch?v=xfKGOWNyJVc&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=8)
-
-    -   [Vídeo 9: Mapas de variables ambientales **por lotes**.
+    
+      - [Vídeo 9: Mapas de variables ambientales **por lotes**.
         T15:33](https://www.youtube.com/watch?v=SNYhP5mqlTQ&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=9)
 
--   Medición de asociación (ma)
-
-    -   [Vídeo 10: Modos de análisis Q y R. Paradoja de Orlóci.
+  - Medición de asociación (ma)
+    
+      - [Vídeo 10: Modos de análisis Q y R. Paradoja de Orlóci.
         T29:12](https://www.youtube.com/watch?v=yQ10lp0-nHc&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=10)
-
-    -   [Vídeo 11: Modo de análisis Q, para comparar asociación entre
+    
+      - [Vídeo 11: Modo de análisis Q, para comparar asociación entre
         objetos (sitios) usando métricas de distancia.
         T36:11](https://www.youtube.com/watch?v=M3GfFzkJFys&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=11)
-
-    -   [Vídeo 12: Modo de análisis R, para comparar dependencia entre
+    
+      - [Vídeo 12: Modo de análisis R, para comparar dependencia entre
         descriptores (variables) usando tanto métricas de distancia como
         de correlación.
         T28:16](https://www.youtube.com/watch?v=mef9NIjXBWY&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=12)
 
--   Análisis de agrupamiento (*cluster analysis*, aa)
-
-    -   [Vídeo 13: agrupamiento jerárquico.
+  - Análisis de agrupamiento (*cluster analysis*, aa)
+    
+      - [Vídeo 13: agrupamiento jerárquico.
         T38:14](https://www.youtube.com/watch?v=AW5L-uZlEvk&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=13)
-
-    -   [Vídeo 14: Interpretación y comparación de resultados.
+    
+      - [Vídeo 14: Interpretación y comparación de resultados.
         T1:11:54](https://www.youtube.com/watch?v=y1ZZh9ajT_U&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=14)
-
-    -   [Vídeo 15: Grupos (clústers), variables ambientales y mapas.
+    
+      - [Vídeo 15: Grupos (clústers), variables ambientales y mapas.
         T33:49](https://www.youtube.com/watch?v=ZrXpgDAaDo8&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=15)
-
-    -   [Vídeo 16: Especies indicadoras, especies con preferencia por
+    
+      - [Vídeo 16: Especies indicadoras, especies con preferencia por
         hábitats.
         T55:05](https://www.youtube.com/watch?v=JK7hq71onKs&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=16)
 
--   Análisis de diversidad alpha y beta (di)
-
-    -   [Vídeo 17: Diversidad alpha.
+  - Análisis de diversidad alpha y beta (di)
+    
+      - [Vídeo 17: Diversidad alpha.
         T1:45:15](https://www.youtube.com/watch?v=QVfVH2bVJbM&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=19)
-
-    -   [Vídeo 18: Diversidad beta.
+    
+      - [Vídeo 18: Diversidad beta.
         T23:29](https://www.youtube.com/watch?v=rJ67sF0hYuE&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=20)
 
--   Análisis de ordenación simple (no restringida) y canónica
+  - Análisis de ordenación simple (no restringida) y canónica
     (restringida) (to)
-
-    -   [Vídeo 19: Ordenación no restringida. PCA, CA y PCoA.
+    
+      - [Vídeo 19: Ordenación no restringida. PCA, CA y PCoA.
         T2:08:05](https://www.youtube.com/watch?v=xLFz4WRgoDE&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=17)
-
-    -   [Vídeo 20: Ordenación restringida o ‘canónica’. RDA, CCA.
+    
+      - [Vídeo 20: Ordenación restringida o ‘canónica’. RDA, CCA.
         T1:11:44](https://www.youtube.com/watch?v=bKyBGxNotgM&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=18)
 
--   Ecología espacial (ee)
-
-    -   [Vídeo 21: Análisis espacial de datos ecológicos.
+  - Ecología espacial (ee)
+    
+      - [Vídeo 21: Análisis espacial de datos ecológicos.
         Autocorrelación.
         T1:09:52](https://www.youtube.com/watch?v=vS4Xm0PRxPM&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=21)
 
@@ -444,79 +458,78 @@ variables necesarias para cualquier análisis de ecología numérica.
 La lista de artículos sobre BCI es enorme, pero te incluyo varios
 relevantes (amplía tus horizontes, no te quedes con esta corta lista):
 
--   Citas obligatorias y, por lo tanto, tienes que leerlas diagonalmente
+  - Citas obligatorias y, por lo tanto, tienes que leerlas diagonalmente
     (hay un libro entre ellas, que lógicamente no tienes que leer
     íntegramente, pero debes saber de qué va):
-
-    -   [Hubbell, S.P., Condit, R., and Foster, R.B. 2005. Barro
+    
+      - [Hubbell, S.P., Condit, R., and Foster, R.B. 2005. Barro
         Colorado Forest Census Plot Data. URL
         http://ctfs.si.edu/webatlas/datasets/bci](http://ctfs.si.edu/webatlas/datasets/bci/).
         Esta es la página de entrada al censo de BCI 50-ha plot, por lo
         que es imprescindible citarla.
-
-    -   [Condit, R. 1998. Tropical Forest Census Plots. Springer-Verlag
+    
+      - [Condit, R. 1998. Tropical Forest Census Plots. Springer-Verlag
         and R. G. Landes Company, Berlin, Germany, and Georgetown,
         Texas.](https://drive.google.com/file/d/1sSJv_seBgyYGZJlBRJw2OxLcCG5Pa1iU/view?usp=sharing)
-
-    -   [Hubbell, S.P., R.B. Foster, S.T. O’Brien, K.E. Harms, R.
+    
+      - [Hubbell, S.P., R.B. Foster, S.T. O’Brien, K.E. Harms, R.
         Condit, B. Wechsler, S.J. Wright, and S. Loo de Lao. 1999. Light
         gap disturbances, recruitment limitation, and tree diversity in
-        a neotropical forest. Science 283:
-        554-557.](http://faculty.washington.edu/timbillo/Readings%20and%20documents/forest%20plot%20tree%20dynamics/Hubbell%20et%20al.%201999%20Science%20light%20gap%20disturbances.pdf)
+        a neotropical forest.
+        Science 283: 554-557.](http://faculty.washington.edu/timbillo/Readings%20and%20documents/forest%20plot%20tree%20dynamics/Hubbell%20et%20al.%201999%20Science%20light%20gap%20disturbances.pdf)
 
--   [Beta-Diversity in Tropical Forest
+  - [Beta-Diversity in Tropical Forest
     Trees](https://repository.si.edu/bitstream/handle/10088/1599/Condit_et_al.pdf?sequence=1&isAllowed=y)
 
--   [Condit, R., Ashton, P. S., Manokaran, N., LaFrankie, J. V.,
+  - [Condit, R., Ashton, P. S., Manokaran, N., LaFrankie, J. V.,
     Hubbell, S. P., & Foster, R. B. (1999). Dynamics of the forest
     communities at Pasoh and Barro Colorado: comparing two 50–ha plots.
     Philosophical Transactions of the Royal Society of London. Series B:
-    Biological Sciences, 354(1391),
-    1739-1748.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1692684/pdf/11605618.pdf)
+    Biological
+    Sciences, 354(1391), 1739-1748.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1692684/pdf/11605618.pdf)
 
--   [Condit, R., Hubbell, S. P., Lafrankie, J. V., Sukumar, R.,
+  - [Condit, R., Hubbell, S. P., Lafrankie, J. V., Sukumar, R.,
     Manokaran, N., Foster, R. B., & Ashton, P. S. (1996). Species-area
     and species-individual relationships for tropical trees: a
-    comparison of three 50-ha plots. Journal of Ecology,
-    549-562.](https://repository.si.edu/bitstream/handle/10088/19462/stri_1996_Species_area_and_species_individual_and_Condit_Richard_S.pdf)
+    comparison of three 50-ha plots. Journal of
+    Ecology, 549-562.](https://repository.si.edu/bitstream/handle/10088/19462/stri_1996_Species_area_and_species_individual_and_Condit_Richard_S.pdf)
 
--   [Harms, K. E., Condit, R., Hubbell, S. P., & Foster, R. B. (2001).
+  - [Harms, K. E., Condit, R., Hubbell, S. P., & Foster, R. B. (2001).
     Habitat associations of trees and shrubs in a 50‐ha neotropical
-    forest plot. Journal of Ecology, 89(6),
-    947-959.](https://besjournals.onlinelibrary.wiley.com/doi/pdf/10.1111/j.1365-2745.2001.00615.x)
+    forest plot. Journal of
+    Ecology, 89(6), 947-959.](https://besjournals.onlinelibrary.wiley.com/doi/pdf/10.1111/j.1365-2745.2001.00615.x)
 
--   [Meyer, V., Saatchi, S. S., Chave, J., Dalling, J. W., Bohlman, S.,
+  - [Meyer, V., Saatchi, S. S., Chave, J., Dalling, J. W., Bohlman, S.,
     Fricker, G. A., … & Hubbell, S. (2013). Detecting tropical forest
     biomass dynamics from repeated airborne lidar measurements.
-    Biogeosciences,
-    10(8), 5421.](https://pdfs.semanticscholar.org/2132/00ddbc2bfbd2ba6416d5716133c794ccddf8.pdf)
+    Biogeosciences, 10(8), 5421.](https://pdfs.semanticscholar.org/2132/00ddbc2bfbd2ba6416d5716133c794ccddf8.pdf)
 
--   [Horvát, S., Derzsi, A., Néda, Z., & Balog, A. (2010). A spatially
+  - [Horvát, S., Derzsi, A., Néda, Z., & Balog, A. (2010). A spatially
     explicit model for tropical tree diversity patterns. Journal of
-    theoretical biology, 265(4),
-    517-523.](https://arxiv.org/pdf/0803.3704.pdf)
+    theoretical
+    biology, 265(4), 517-523.](https://arxiv.org/pdf/0803.3704.pdf)
 
 ##### Sobre ecología/biogeografía y, específicamente, ecología de plantas (referencias útiles para la introducción y la discusión)
 
 Esta también es una selección mínima; sé libre, complementa.
 
--   [Lomolino, M. V., Riddle, B. R., Whittaker, R. J., & Brown, J. H.
+  - [Lomolino, M. V., Riddle, B. R., Whittaker, R. J., & Brown, J. H.
     (2010). Biogeography (Sinauer, Sunderland,
     MA).](https://drive.google.com/file/d/1N-7bilXO3g3KKRXWIyEr8cx6lkT2xBXY/view?usp=sharing)
 
--   [Smith, T., & Smith, R. (2007). Ecología (6
+  - [Smith, T., & Smith, R. (2007). Ecología (6
     edición).](https://drive.google.com/file/d/1vfgNkj0D3cVYhnYldtUaY4ldnFGa4x47/view?usp=sharing)
 
--   [Van der Valk, A. G. (2009). Forest Ecology. Recent Advances in
+  - [Van der Valk, A. G. (2009). Forest Ecology. Recent Advances in
     Plant
     Ecology, 358.](https://drive.google.com/file/d/1-xRUcQ7XeRMnrb6EOhnPBHLRVbpg_zSB/view?usp=sharing)
 
--   [Lange, O. L., Nobel, P. S., Osmond, C. B., & Ziegler, H. (2013).
+  - [Lange, O. L., Nobel, P. S., Osmond, C. B., & Ziegler, H. (2013).
     Physiological plant ecology III: Responses to the chemical and
     biological environment (Vol. 12). Springer Science & Business
     Media.](https://drive.google.com/file/d/17tUTjyINYWZm7VjIZUg2jkifqlfS4R7F/view?usp=sharing)
 
--   [Grandtner, M. M., & Chevrette, J. (2013). Dictionary of trees,
+  - [Grandtner, M. M., & Chevrette, J. (2013). Dictionary of trees,
     volume 2: South America: Nomenclature, taxonomy and ecology.
     Academic
     Press](https://drive.google.com/file/d/13eGdtY_1dwn6kitx6lCmZC5UVISqLYPA/view?usp=sharing).
@@ -524,14 +537,14 @@ Esta también es una selección mínima; sé libre, complementa.
     específicos de plantas y posibles patrones de preferencia con
     variables ambientales.**
 
--   Dos notas sobre referencias para la introducción:
-
-    -   Tu familia de plantas y las variables ambientales que resulten
+  - Dos notas sobre referencias para la introducción:
+    
+      - Tu familia de plantas y las variables ambientales que resulten
         finalmente asociadas, son aspectos que aplican específicamente a
         tu caso. Por lo tanto, tu bibliografía contendrá referencias que
         no se encuentran citadas en este mensaje.
-
-    -   Hipotéticamente, iniciaste este estudio “luego de haber
+    
+      - Hipotéticamente, iniciaste este estudio “luego de haber
         explorado patrones y haber descubierto, de manera preliminar,
         que había algún grado de asociación entre la comunidad y su
         medio”. Ya sabemos que no fue así, puesto que se trata de un
@@ -540,22 +553,21 @@ Esta también es una selección mínima; sé libre, complementa.
 
 ##### Sobre ecología numérica (referencias útiles para la metodología)
 
--   [Borcard, D., Gillet, F., & Legendre, P. (2018). Numerical ecology
+  - [Borcard, D., Gillet, F., & Legendre, P. (2018). Numerical ecology
     with R.
     Springer.](https://drive.google.com/file/d/1BqNqYHt9xs9-_7ObJTpJm6Iop3EQeESl/view?usp=sharing)
 
--   [Krebs, C. J. (1989). Ecological methodology (No. QH541. 15. S72.
+  - [Krebs, C. J. (1989). Ecological methodology (No. QH541. 15. S72.
     K74 1999.). New York: Harper &
     Row.](https://drive.google.com/file/d/11ivkaFkzzE_XFoN_o5wU4YBfMeA0UBqc/view?usp=sharing)
 
--   [Magurran, A. E. (2013). Measuring biological diversity. John Wiley
+  - [Magurran, A. E. (2013). Measuring biological diversity. John Wiley
     &
     Sons.](http://www2.ib.unicamp.br/profs/thomas/NE002_2011/maio10/Magurran%202004%20c2-4.pdf)
 
--   [Koleff, P., Gaston, K. J., & Lennon, J. J. (2003). Measuring beta
-    diversity for presence–absence data. Journal of Animal Ecology,
-    72(3),
-    367-382.](https://besjournals.onlinelibrary.wiley.com/doi/pdf/10.1046/j.1365-2656.2003.00710.x%4010.1111/%28ISSN%291365-2745.BIODIV)
+  - [Koleff, P., Gaston, K. J., & Lennon, J. J. (2003). Measuring beta
+    diversity for presence–absence data. Journal of Animal
+    Ecology, 72(3), 367-382.](https://besjournals.onlinelibrary.wiley.com/doi/pdf/10.1046/j.1365-2656.2003.00710.x%4010.1111/%28ISSN%291365-2745.BIODIV)
 
 ##### Sobre R (referencias útiles para la metodología)
 
@@ -576,15 +588,15 @@ modelo para citar a R:
 No olvides los paquetes que más usarás (aprovecha las referencias para
 leer sobre ellos):
 
--   [Oksanen, J. (2013). Vegan: ecological diversity. R
+  - [Oksanen, J. (2013). Vegan: ecological diversity. R
     Project.](http://mirror.linux.duke.edu/cran/web/packages/vegan/vignettes/diversity-vegan.pdf)
 
--   [Multivariate Analysis of Ecological Communities in
+  - [Multivariate Analysis of Ecological Communities in
     R](http://ubio.bioinfo.cnio.es/Cursos/CEU_MDA07_practicals/Further%20reading/Oksanen%202005/R-%20Vegan%20tutorial%20-%20Multivariate%20analysis%20of%20ecological%20communities%20by%20Oksanen.pdf)
 
--   La entrada bibtex de `vegan` es ésta:
+  - La entrada bibtex de `vegan` es ésta:
 
-<!-- -->
+<!-- end list -->
 
     @Manual{,
         title = {vegan: Community Ecology Package},
@@ -594,11 +606,11 @@ leer sobre ellos):
         url = {https://CRAN.R-project.org/package=vegan},
       }
 
--   [El paquete `BiodiversityR` también lo
+  - [El paquete `BiodiversityR` también lo
     usarás](http://apps.worldagroforestry.org/downloads/Publications/PDFS/b13695.pdf).
     Entada bibtex:
 
-<!-- -->
+<!-- end list -->
 
     @Book{,
         title = {Tree diversity analysis. A manual and software for common statistical methods for ecological and biodiversity studies},
@@ -610,10 +622,10 @@ leer sobre ellos):
         url = {http://www.worldagroforestry.org/output/tree-diversity-analysis},
       }
 
--   La colección `tidyverse`, no puedes olvidarla. Dejo la entrada
+  - La colección `tidyverse`, no puedes olvidarla. Dejo la entrada
     bibtex abajo:
 
-<!-- -->
+<!-- end list -->
 
     @Manual{,
         title = {tidyverse: Easily Install and Load the 'Tidyverse'},
@@ -623,17 +635,19 @@ leer sobre ellos):
         url = {https://CRAN.R-project.org/package=tidyverse},
       }
 
--   Paquete `indicspecies`
+  - Paquete `indicspecies`
 
-<!-- -->
+<!-- end list -->
 
-      @Manual{,
-        title = {Associations between species and groups of sites: indices and statistical inference},
-        author = {Miquel {De Caceres} and Pierre Legendre},
-        journal = {Ecology},
-        year = {2009},
-        url = {http://sites.google.com/site/miqueldecaceres/},
-      }
+``` 
+  @Manual{,
+    title = {Associations between species and groups of sites: indices and statistical inference},
+    author = {Miquel {De Caceres} and Pierre Legendre},
+    journal = {Ecology},
+    year = {2009},
+    url = {http://sites.google.com/site/miqueldecaceres/},
+  }
+```
 
 ##### Entrada BibTex para referir el repo Scripts de análisis de BCI
 
@@ -652,9 +666,9 @@ leer sobre ellos):
 ### Calendario de entregas
 
 | Ítem                                | ¿Qué entregas?                                                                                                                                                                | 15/feb/2022                                         | 22/feb/2022                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | 8/mar/2022                                                                                                                                                                                                                                                                                                                                                                                                     | 22/mar/2022                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | 5/abr/2022                                                                                                                                                                                                     | 19/abr/2022                                                                                                                                                                                                                                                                                                        | 3/may/2022                                              | 3/may/2022-17/may/2022                      | 24/may/2022                                                        |
-|-------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------|---------------------------------------------|--------------------------------------------------------------------|
-| Manuscrito                          | **Secciones de tu manuscrito**, incorporando análisis realizados con lo que aprendas en los tutoriales y en sesiones de seguimiento                                           |                                                     | Editado encabezado YAML, excepto abstract. Iniciada la introducción                                                                                                                                                                                                                                                                                                                                                                                                                                               | Sección Introducción completada                                                                                                                                                                                                                                                                                                                                                                                | Sección Metodología completada                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Avances sobre sección Resultados                                                                                                                                                                               | Sección Resultados completada                                                                                                                                                                                                                                                                                      | Discusión y resumen completados. Manuscrito finalizado. | Recibes mi retroalimentación sobre tu texto | Atendido cada punto señalado por mí. Presentación de diapositivas. |
-| Tutoriales visualizados y adaptados | 1\) **Pruebas** de que comprendes los tutoriales y/o 2) **Scripts de R** (archivos .R) aplicados a tu familia; 3) Tu **manuscrito** refleja lo aprendido en dichos tutoriales | [tutorial1](https://geofis.shinyapps.io/tutorial1/) | Vídeos [1](https://www.youtube.com/watch?v=Hm6yO_V6NUY&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=1) y [2](https://www.youtube.com/watch?v=v1EX8OzAyBw&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=2), [3](https://www.youtube.com/watch?v=5PARNk6QTgY&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=3), [4](https://www.youtube.com/watch?v=vRWoqzJrnk4&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=4) y [5](https://www.youtube.com/watch?v=YiUmteAbLt8&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=5) | Vídeos [6](https://www.youtube.com/watch?v=okMDGdgQ1EM&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=6), [7](https://www.youtube.com/watch?v=qe7qD03n0jI&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=7), [8](https://www.youtube.com/watch?v=xfKGOWNyJVc&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=8) y [9](https://www.youtube.com/watch?v=SNYhP5mqlTQ&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=9) | Vídeos [10](https://www.youtube.com/watch?v=yQ10lp0-nHc&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=10), [11](https://www.youtube.com/watch?v=M3GfFzkJFys&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=11), [12](https://www.youtube.com/watch?v=mef9NIjXBWY&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=12), [13](https://www.youtube.com/watch?v=AW5L-uZlEvk&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=13), [14](https://www.youtube.com/watch?v=y1ZZh9ajT_U&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=14), [15](https://www.youtube.com/watch?v=ZrXpgDAaDo8&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=15) y [16](https://www.youtube.com/watch?v=JK7hq71onKs&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=16) | Vídeos [17](https://www.youtube.com/watch?v=QVfVH2bVJbM&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=19) y [18](https://www.youtube.com/watch?v=rJ67sF0hYuE&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=20) | Vídeos [19](https://www.youtube.com/watch?v=xLFz4WRgoDE&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=17), [20](https://www.youtube.com/watch?v=bKyBGxNotgM&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=18) y [21](https://www.youtube.com/watch?v=vS4Xm0PRxPM&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=21) |                                                         |                                             |                                                                    |
+| ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------- | ------------------------------------------- | ------------------------------------------------------------------ |
+| Manuscrito                          | **Secciones de tu manuscrito**, incorporando análisis realizados con lo que aprendas en los tutoriales y en sesiones de seguimiento                                           |                                                     | Editado encabezado YAML, excepto abstract. Iniciada la introducción                                                                                                                                                                                                                                                                                                                                                                                                                                               | Sección Introducción completada                                                                                                                                                                                                                                                                                                                                                                                | Sección Metodología completada                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Avances sobre sección Resultados                                                                                                                                                                               | Sección Resultados completada                                                                                                                                                                                                                                                                                      | Discusión y resumen completados. Manuscrito finalizado. | Recibes mi retroalimentación sobre tu texto | Atendido cada punto señalado por mí. Presentación de diapositivas. |
+| Tutoriales visualizados y adaptados | 1\) **Pruebas** de que comprendes los tutoriales y/o 2) **Scripts de R** (archivos .R) aplicados a tu familia; 3) Tu **manuscrito** refleja lo aprendido en dichos tutoriales | [tutorial1](https://geofis.shinyapps.io/tutorial1/) | Vídeos [1](https://www.youtube.com/watch?v=Hm6yO_V6NUY&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=1) y [2](https://www.youtube.com/watch?v=v1EX8OzAyBw&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=2), [3](https://www.youtube.com/watch?v=5PARNk6QTgY&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=3), [4](https://www.youtube.com/watch?v=vRWoqzJrnk4&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=4) y [5](https://www.youtube.com/watch?v=YiUmteAbLt8&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=5) | Vídeos [6](https://www.youtube.com/watch?v=okMDGdgQ1EM&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=6), [7](https://www.youtube.com/watch?v=qe7qD03n0jI&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=7), [8](https://www.youtube.com/watch?v=xfKGOWNyJVc&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=8) y [9](https://www.youtube.com/watch?v=SNYhP5mqlTQ&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=9) | Vídeos [10](https://www.youtube.com/watch?v=yQ10lp0-nHc&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=10), [11](https://www.youtube.com/watch?v=M3GfFzkJFys&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=11), [12](https://www.youtube.com/watch?v=mef9NIjXBWY&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=12), [13](https://www.youtube.com/watch?v=AW5L-uZlEvk&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=13), [14](https://www.youtube.com/watch?v=y1ZZh9ajT_U&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=14), [15](https://www.youtube.com/watch?v=ZrXpgDAaDo8&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=15) y [16](https://www.youtube.com/watch?v=JK7hq71onKs&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=16) | Vídeos [17](https://www.youtube.com/watch?v=QVfVH2bVJbM&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=19) y [18](https://www.youtube.com/watch?v=rJ67sF0hYuE&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=20) | Vídeos [19](https://www.youtube.com/watch?v=xLFz4WRgoDE&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=17), [20](https://www.youtube.com/watch?v=bKyBGxNotgM&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=18) y [21](https://www.youtube.com/watch?v=vS4Xm0PRxPM&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ&index=21) |                                                         |                                             |                                                                    |
 
 ### Tips de redacción
 
@@ -666,10 +680,10 @@ profundizar.
 
 En tu manuscrito, deberás responder las preguntas de investigación sobre
 ecología numérica. No se trata de un examen en el que rellenas
-“preguntas de desarrollo”; se trata de escribir un manuscrito con todas
-las secciones que tiene el “esqueleto” facilitado por mí (e.g. Resumen,
-Introducción, Metodología, Resultados, Discusión, etc.), siguiendo las
-[normas del Anuario de Investigaciones Científicas de la
+“preguntas de desarrollo”; se trata de escribir un manuscrito con
+todas las secciones que tiene el “esqueleto” facilitado por mí
+(e.g. Resumen, Introducción, Metodología, Resultados, Discusión, etc.),
+siguiendo las [normas del Anuario de Investigaciones Científicas de la
 UASD](docs/instrucciones-para-autores-anuario-investigaciones-cientificas-UASD.pdf).
 Cuentas con la plantilla del manuscrito—y que se encuentra en tu repo de
 manuscrito—que satisface bastante bien los requisitos del Anuario, así
@@ -748,7 +762,7 @@ entrada (hallazgos y su relación con trabajos previos),
 interpretación/implicaciones (¿por qué?), futuro (el cual a veces se
 subdivide en muchas pequeñas partes) y limitaciones.
 
--   Entrada
+  - Entrada
 
 Debe incorporar resumen de ámbito general, es decir, un extracto sobre
 la novedad para el conjunto de las ciencias el/los hallazgos
@@ -784,7 +798,7 @@ con:
 
 “Se confirma / No se confirma …”
 
--   Interpretación/implicaciones
+  - Interpretación/implicaciones
 
 Aquí escribes cómo explicas lo encontrado y, si cabe, qué implicaciones
 tiene. Resumirás “por qué” ocurre lo que ocurre. Debes describir cómo,
@@ -803,7 +817,7 @@ determinadas condiciones de micro-hábitat, …”
 
 (se redacta en presente y quizá alguna parte en futuro)
 
--   Futuro
+  - Futuro
 
 Cualquier hallazgo abre nuevas vías de estudio, ya sea porque se
 necesite confirmación adicional, o porque oriente nuevas líneas de
@@ -813,7 +827,7 @@ importancia del hallazgo para resolver problemas viejos.
 
 (lógicamente, se redacta en futuro)
 
--   Limitaciones
+  - Limitaciones
 
 Sólo si cabe, incluir un párrafo (o los que correspondan) sobre las
 posibles limitaciones del hallazgo, es decir, cuál es su alcance real
@@ -823,25 +837,25 @@ línea de investigación.
 
 ## URLs de referencia
 
--   [Esta guía](guia-redaccion-manuscrito.md).
+  - [Esta guía](guia-redaccion-manuscrito.md).
 
--   [Organización de GitHub “biogeografia-202201” (repos de estudiantes
+  - [Organización de GitHub “biogeografia-202201” (repos de estudiantes
     del semestre actual)](https://github.com/biogeografia-202201/)
 
--   [Programa de la
+  - [Programa de la
     asignatura](https://github.com/biogeografia-202201/material-de-apoyo/blob/master/programa-biogeografia-geo1310.md).
 
--   [Tutorial “Introducción a
+  - [Tutorial “Introducción a
     R”](https://geofis.shinyapps.io/tutorial1/).
 
--   [Drive de Google conteniendo referencias bibliográficas y otras
+  - [Drive de Google conteniendo referencias bibliográficas y otras
     fuentes/recursos](https://drive.google.com/drive/u/1/folders/1cnEPpPjNpFyB-nrfkTxMv0qgyvTH4o28)
 
--   [Drive de Google conteniendo
+  - [Drive de Google conteniendo
     vídeos](https://drive.google.com/drive/folders/1wFq_6NwLtJOS-a-9aZlu8n45_2gJlHqv?usp=sharing)
 
--   [Canal de YouTube del
+  - [Canal de YouTube del
     profesor](https://www.youtube.com/user/pelempito1)
 
--   [Lista de reproducción **Ecología numérica con
+  - [Lista de reproducción **Ecología numérica con
     R**](https://www.youtube.com/watch?v=v1EX8OzAyBw&list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ)
